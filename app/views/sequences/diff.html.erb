@@ -1,0 +1,36 @@
+<% content_for :title, "Diff - Sequences - Docs - i2x" %>
+
+<article id="diff">
+    <h3>Translate Diff to COEUS knowledge base</h3>
+
+    <h6 class="subheader">Triplifying data.</h6>
+    <%= link_to image_tag("diff.png", {width: 640}), image_path('diff.png'), :class => 'th' %>
+    <br>
+
+    <div class="panel">
+        <h5>Goal</h5>
+
+        <p>Generate a semantic abstraction of the identified changes and store it in COEUS kb.</p>
+    </div>
+
+    <div>
+        <ol>
+            <li>Push/Hook Diff <em>*-FluxCapacitor</em>: The Flux Capacitor receives new data, pushed from the STD or hooked other external systems</li>
+
+            <li>Check ETL <em>FluxCapacitor-COEUS</em>: The FC checks COEUS knowledge base for the semantic ETL templates</li>
+
+            <li>Return ETL <em>COEUS-FluxCapacitor</em>: COEUS returns the matching ETL templates</li>
+
+            <li>Translate <em>FluxCapacitor-Translator</em>: The Flux Capacitor sends the received data and the ETL templates for the Translator
+
+                <ul>
+                    <li>Translator is the translation engine, similar to COEUS&apos;</li>
+                </ul>
+            </li>
+
+            <li>Return graph <em>Translator-FluxCapacitor</em>: The Translator returns a new semantic data abstraction, generated from the translation ETL template</li>
+
+            <li>Store graph <em>FluxCapacitor-COEUS</em>: The Flux Capacitor stores the translated graph in COEUS kb</li>
+        </ol>
+    </div>
+</article>

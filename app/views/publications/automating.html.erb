@@ -1,0 +1,28 @@
+  <% content_for :title, "Automating - Publications - Docs - i2x" %>
+
+  <article id="automating">
+    <h3>Automating biomedical data integration</h3>
+
+    <h6 class="subheader">Conference paper architecture overview.</h6>
+
+    <div class="row">
+        <ul>
+            <li>detail framework and bioinformatics use case</li>
+        </ul>
+    </div>
+</article>
+<hr>
+
+<article id="automating2">
+    <h3>Automating semantic data integration tasks for life sciences researchers</h3>
+
+    <h6 class="subheader">Journal of Biomedical Semantics.</h6>
+
+    <p>Web service and agent automation has been a major software engineering challenge over the last decade. Recently, common service interoperability strategies, such as mashups and workflows, are giving place to the concept of Integration-as-a-Service (IaaS). IaaS strategies are used to perform a lightweight control of a clearly defined set of cloud-based services. In summary, these allow the coordination of multiple services without a custom ad-hoc controller. This results in automated data exchanges, where data flows between interoperable services happen in the cloud environment, triggered by specific events.</p>
+
+    <p>In this context, Labour.IO arises as a framework for creating new IaaS environments, without interfering with the used services&apos; implementation. Labour.IO revolves around three key elements: Agents, Events and Workers, and each can be customized to fit a particular scenario. Agents access defined data sources to monitor for specific content changes. For instance, a server log monitoring agent could detect when a new error was logged and a SPARQL endpoint monitor agent could detect when specific query results change. These contextual content changes are Events. When Agents detect Events, Events will in their turn trigger Workers. An Event can have one or more associated Workers. These can be configured to perform any number and kind of operations. A basic Worker will send an email with the respective Event data whereas a more complex Worker will access a given service with parameters extracted from the Event metadata.</p>
+
+    <p>With Labour.IO&apos;s flexibility and dynamics, developers can create custom Agent-Event-Worker pipelines to tackle miscellaneous integration and interoperability challenges in an automated fashion. Life sciences scenarios can benefit from this approach for automating data processing tasks or result sharing workflows. Likewise, CRM or B2B environments can be improved with the creation of dedicated Labour.IO instances, enabling the automation of a broad number of tasks, ranging from invoice processing to customer contact.</p>
+
+    <div class="row"></div>
+</article>

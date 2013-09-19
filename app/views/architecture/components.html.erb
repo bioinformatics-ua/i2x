@@ -1,0 +1,130 @@
+  <% content_for :title, "Components - Architecture - Docs - i2x" %>
+  <article id="components">
+    <h3>Components</h3>
+
+    <h6 class="subheader">The pieces of the puzzle.</h6>
+
+    <h4>STD: Spot The Differences</h4>
+
+    <ul>
+        <li>change detection engine</li>
+
+        <li>connects to external resources (according to preconfigured settings), and detects what has changed since the last successful integration</li>
+    </ul>
+
+    <h4>Ruler</h4>
+
+    <ul>
+        <li>backward chaining and forward changing rule processor for events</li>
+
+        <li>rules are semantic based</li>
+
+        <li>samples
+
+            <ul>
+                <li>regular expression matching</li>
+
+                <li>backward chaining
+
+                    <ul>
+                        <li>pre conditions asserts</li>
+                    </ul>
+                </li>
+
+                <li>forward chaining
+
+                    <ul>
+                        <li>post conditions asserts</li>
+                    </ul>
+                </li>
+
+                <li>infer on semantic context
+
+                    <ul>
+                        <li>p1 &gt; p2</li>
+
+                        <li>p1 + p2 &gt; 10</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li>reads rules from COEUS</li>
+    </ul>
+
+    <h4>Flux Capacitor</h4>
+
+    <ul>
+        <li>controls everything</li>
+
+        <li>open door for receiving data for delivery
+
+            <ul>
+                <li>can receive from web hooks</li>
+
+                <li>can receive from event detector</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>COEUS KB</h4>
+
+    <ul>
+        <li>the knowledge base</li>
+
+        <li>store
+
+            <ul>
+                <li>rules</li>
+
+                <li>temporary semantic storage
+
+                    <ul>
+                        <li>for diffs</li>
+                    </ul>
+                </li>
+
+                <li>templates</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Log</h4>
+
+    <ul>
+        <li>logs everything
+
+            <ul>
+                <li>Sentry?</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Forwarder/Worker</h4>
+
+    <ul>
+        <li>processes delivery actions
+
+            <ul>
+                <li>sends transformed data to destination</li>
+            </ul>
+        </li>
+
+        <li>template-based
+
+            <ul>
+                <li>SQL query</li>
+
+                <li>XML file</li>
+
+                <li>REST call</li>
+
+                <li>system call</li>
+
+                <li>mail call</li>
+
+                <li>...</li>
+            </ul>
+        </li>
+    </ul>
+</article>

@@ -1,0 +1,44 @@
+<% content_for :title, "Content - Sequences - Docs - i2x" %>
+<article id="content">
+    <h3>Check Content Changes</h3>
+
+    <h6 class="subheader">Verify what has changed since last visit.</h6>
+    <%= link_to image_tag("content.png", {width: 720}), image_path('content.png'), :class => 'th' %>
+    <br>
+    <br>
+
+    <div class="panel">
+        <h5>Goal</h5>
+
+        <p>Check configured data sources for changes in content from the previous integration.</p>
+    </div>
+
+    <div class="row">
+        <ol>
+            <li>Pool Content <em>STD-DataSource</em>: connect to external Data Source and load content
+
+                <ul class="square">
+                    <li>Data can be loaded from CSV, XML or JSON files, or from SQL or SPARQL query results (COEUS-like)</li>
+                </ul>
+            </li>
+
+            <li>Return Content <em>DataSource-STD</em>: The Data Source returns with the requested content</li>
+
+            <li>Check Changes <em>STD-ContentStore</em>: The STD imports the data into the internal Content Store and check if there have been any changes since the last update (the diff)
+
+                <ul>
+                    <li>External content is processes from the initial queries in a COEUS-like approach: XPath, JSONPath, SQL variables, column numbers…</li>
+                </ul>
+            </li>
+
+            <li>Return Diff <em>ContentStore-STD</em>: The ContentStore analyses the newly submitted content and returns a diff with the unique new content</li>
+
+            <li>Push Diff <em>STD-FluxCapacitor</em>: If new content was actually found, it is sent to Flux Capacitor for processing
+
+                <ul>
+                    <li>The FluxCapactior can receive every and any format for further processing, meaning that it can be a service hook for external systems supporting this paradigm</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</article>

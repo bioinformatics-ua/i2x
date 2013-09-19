@@ -1,0 +1,43 @@
+<% content_for :title, "Rules - Sequences - Docs - i2x" %>
+
+<article id="rules">
+    <h1>Apply Integration Rules</h1>
+
+    <h6 class="subheader">Validate data transfer.</h6>
+    <%= link_to image_tag("rules.png", {width: 640}), image_path('rules.png'), :class => 'th' %>
+    <br>
+    <br>
+
+    <div class="panel">
+        <h5>Goal</h5>
+
+        <p>Verify if integration task has validation rules and apply them.</p>
+    </div>
+
+    <div>
+        <ol>
+            <li>Get Graph <em>FluxCapacitor-COEUS</em>: Load the action graph for processing from COEUS</li>
+
+            <li>Return Graph <em>COEUS-FluxCapacitor</em>: the Flux Capacitor receives the unique action graph for rule processing</li>
+
+            <li>Get Rules <em>FluxCapacitor-COEUS</em>: the Flux Capacitor gets the action integration rules form COEUS</li>
+
+            <li>Return Matching Rules <em>COEUS-Flux Capacitor</em>: COEUS returns the matching rules, if existing</li>
+
+            <li>Process Graph <em>Flux Capacitor-Ruler</em>: Apply matched rules to action/task graph
+
+                <ul>
+                    <li>precondition rules: performs operations before data forward</li>
+
+                    <li>postcondition rules: adds post-forward operations to pending list</li>
+
+                    <li>regex: only forwards if regex match</li>
+
+                    <li>complex: only forwards if complex (&lt;, &gt;, LIKE, =, !=)</li>
+                </ul>
+            </li>
+
+            <li>Forward Graph <em>Flux Capacitor-Forwarder</em>: send (final) processed graph to the Forwarder for delivery</li>
+        </ol>
+    </div>
+</article>

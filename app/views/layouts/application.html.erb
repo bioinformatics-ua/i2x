@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+ <meta charset="utf-8" />
+
+ <!-- Uncomment to make IE8 render like IE7 -->
+ <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+ <!-- Set the viewport width to device width for mobile -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <%= favicon_link_tag 'favicon.ico' %>
+ <title><%= content_for?(:title) ? yield(:title) : "i2x" %></title>
+
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600' rel='stylesheet' type='text/css'>
+ <%= stylesheet_link_tag    "application" %>
+ <%= javascript_include_tag "vendor/custom.modernizr" %>
+ <%= csrf_meta_tags %>
+</head>
+
+<body>
+   <div class="fixed">
+    <nav class="top-bar">
+        <ul class="title-area">
+            <!-- Title Area -->
+
+            <li class="name">
+                <h1><a href="/">i2x</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+
+            <ul class="right">
+                <li class="has-dropdown">
+                    <a href="#">Research</a>
+                    <ul class="dropdown">
+                        <li><%= link_to "Others", :controller => 'research', :action => 'others' %></li>
+                        <li><%= link_to "SWOT", :controller => 'research', :action => 'swot' %></li>
+                        <li><%= link_to "Comparison", :controller => 'research', :action => 'comparison' %></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a href="#">Architecture</a>
+                    <ul class="dropdown">
+                        <li><%= link_to "Models", :controller => 'architecture', :action => 'models' %></li>
+                        <li><%= link_to "Components", :controller => 'architecture', :action => 'components' %></li>
+                        <li><%= link_to "Flows", :controller => 'architecture', :action => 'flows' %></li>
+                        <li><label>Sequences</label></li>
+                        <li><%= link_to "Check Content Changes", :controller => 'sequences', :action => 'content' %></li>
+                        <li><%= link_to "Translate Diff", :controller => 'sequences', :action => 'diff' %></li>
+                        <li><%= link_to "Apply Integration Rules", :controller => 'sequences', :action => 'rules' %></li>
+                        <li><%= link_to "Apply Worker Template", :controller => 'sequences', :action => 'template' %></li>
+                        <li><%= link_to "Full Sequence Diagram", :controller => 'sequences', :action => 'full' %></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <%= link_to "Use Cases", :controller => 'usecases', :action => 'index' %>
+
+                    <ul class="dropdown">
+                     <li><%= link_to "Variome Integration", :controller => 'usecases', :action => 'variome' %></li>
+                     <li><%= link_to "Project Management", :controller => 'usecases', :action => 'management' %></li>
+                     <li><%= link_to "Medical Imaging", :controller => 'usecases', :action => 'medical' %></li>
+                     <li><%= link_to "Newborn Management", :controller => 'usecases', :action => 'newborn' %></li>
+                     <li><%= link_to "CRM", :controller => 'usecases', :action => 'crm' %></li>
+                 </ul>
+             </li>
+             <li class="divider"></li>
+             <li><%= link_to "Reference", :controller => 'reference' %></li>            
+             <li class="divider"></li>
+             <li class="has-dropdown">
+                <a href="#">Publications</a>
+                <ul class="dropdown">
+                    <li><label>Bioinformatics</label></li>
+                    <li><%= link_to "Automating biomedical integration", :controller => 'publications', :action => 'automating' %></li>
+                    <li><%= link_to "WAVe", :controller => 'publications', :action => 'wave' %></li>
+                    <li><label>Technical</label></li>
+                    <li><%= link_to "Framework for active data integration", :controller => 'publications', :action => 'framework' %></li>
+                    <li><%= link_to "Template-based autonomous integration", :controller => 'publications', :action => 'template' %></li>
+                    <li><%= link_to "Exploring semantic rule-based integration", :controller => 'publications', :action => 'rule' %></li>
+                    <li><%= link_to "Architecture for content change detection", :controller => 'publications', :action => 'content' %></li>
+                    <li><%= link_to "Semantics", :controller => 'publications', :action => 'semantic' %></li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li><%= link_to "Contact", :controller => 'contact' %></li>
+        </ul>
+    </section>
+</nav>
+</div><!-- End Top Bar -->
+<!-- Start main content -->
+<div class="row">
+  <%= yield %>
+</div>
+<!-- Finish main content -->
+<!-- Footer -->
+
+<footer class="row">
+    <div class="large-12 columns">
+        
+        <div class="row">
+            <div class="large-6 columns">
+                <blockquote>
+                    i2x is under development at the University of Aveiro <cite><a href="http://pedrolopes.net" target="_blank">@pedrolopes</a></cite>
+                </blockquote>
+            </div>
+
+            <div class="large-6 columns">
+                <ul class="inline-list right">
+                    <li><a target="_blank" href="http://www.ua.pt">UA</a></li>
+                    <li><a target="_blank" href="http://www.ieeta.pt">IEETA</a></li>
+                    <li><a target="_blank" href="http://bioinformatics.ua.pt/">UA.PT Bioinformatics</a></li>                        
+                    <li><a target="_blank" href="http://bmd-software.com/">BMD Software</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+<%= javascript_include_tag "application" %>
+</body>
+</html>
+<!--
+ _  ____        
+(_)|___ \ __  __
+| |  __) |\ \/ /
+| | / __/  >  < 
+|_||_____|/_/\_\
+                
+-->

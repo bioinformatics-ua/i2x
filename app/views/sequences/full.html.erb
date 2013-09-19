@@ -1,0 +1,85 @@
+<% content_for :title, "Full - Sequences - Docs - i2x" %>
+
+
+<article id="full">
+    <h3>i2x Sequence Diagram</h3>
+
+    <h6 class="subheader">From start to finish.</h6>
+    <%= link_to image_tag("full.png", {width: 640}), image_path('full.png'), :class => 'th' %>
+    <br>
+    <br>
+
+    <div class="panel">
+        <h5>Goal</h5>
+
+        <p>Integrate everything.</p>
+    </div>
+
+    <div>
+        <ol>
+            <li>Pool Content <em>STD-DataSource</em>: connect to external Data Source and load content
+
+                <ul>
+                    <li>Data can be loaded from CSV, XMl or JSON files, or from SQL or SPARQL query results (COEUS-like)</li>
+                </ul>
+            </li>
+
+            <li>Return Content <em>DataSource-STD</em>: The Data Source returns with the requested content</li>
+
+            <li>Check Changes <em>STD-ContentStore</em>: The STD imports the data into the internal Content Store and check if there have been any changes since the last update (the diff)
+
+                <ul>
+                    <li>External content is processes from the initial queries in a COEUS-like approach: XPath, JSONPath, SQL variables, column numbers…</li>
+                </ul>
+            </li>
+
+            <li>Return Diff <em>ContentStore-STD</em>: The ContentStore analyses the newly submitted content and returns a diff with the unique new content</li>
+
+            <li>Push/Hook Diff <em>*-FluxCapacitor</em>: The Flux Capacitor receives new data, pushed from the STD or hooked other external systems</li>
+
+            <li>Check ETL <em>FluxCapacitor-COEUS</em>: The FC checks COEUS knowledge base for the semantic ETL templates</li>
+
+            <li>Return ETL <em>COEUS-FluxCapacitor</em>: COEUS returns the matching ETL templates</li>
+
+            <li>Translate <em>FluxCapacitor-Translator</em>: The Flux Capacitor sends the received data and the ETL templates for the Translator
+
+                <ul>
+                    <li>Translator is the translation engine, similar to COEUS&apos;</li>
+                </ul>
+            </li>
+
+            <li>Return graph <em>Translator-FluxCapacitor</em>: The Translator returns a new semantic data abstraction, generated from the translation ETL template</li>
+
+            <li>Store graph <em>FluxCapacitor-COEUS</em>: The Flux Capacitor stores the translated graph in COEUS kb</li>
+
+            <li>Get Graph <em>FluxCapacitor-COEUS</em>: Load the action graph for processing from COEUS</li>
+
+            <li>Return Graph <em>COEUS-FluxCapacitor</em>: the Flux Capacitor receives the unique action graph for rule processing</li>
+
+            <li>Get Rules <em>FluxCapacitor-COEUS</em>: the Flux Capacitor gets the action integration rules form COEUS</li>
+
+            <li>Return Matching Rules <em>COEUS-Flux Capacitor</em>: COEUS returns the matching rules, if existing</li>
+
+            <li>Process &amp; Forward Graph <em>Flux Capacitor-Ruler-Forwarder</em>: Apply matched rules to action/task graph. When applied, send to forwarder. Rules:
+
+                <ul>
+                    <li>precondition rules: performs operations before data forward</li>
+
+                    <li>postcondition rules: adds post-forward operations to pending list</li>
+
+                    <li>regex: only forwards if regex match</li>
+
+                    <li>complex: only forwards if complex (&lt;, &gt;, LIKE, =, !=)</li>
+                </ul>
+            </li>
+
+            <li>Get Template <em>Forwarder-COEUS</em>: check COEUS kb for final delivery template</li>
+
+            <li>Return Template <em>COEUS-Forwarder</em>: return the final delivery template to be applied to the graph</li>
+
+            <li>Process Graph <em>Flux Capacitor-Worker</em>: use graph data to fill in the delivery template, and execute associated action</li>
+
+            <li>Return status <em>Worker-Flux Capacitor</em>: return the execution status</li>
+        </ol>
+    </div>
+</article>

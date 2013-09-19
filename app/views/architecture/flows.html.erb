@@ -1,0 +1,47 @@
+<% content_for :title, "Flows - Architecture - Docs - i2x" %>
+<article id="flows">
+    <h3>Flows</h3>
+
+    <h6 class="subheader">Notes on interoperability workflows.</h6>
+    <%= link_to image_tag("std.png", {width: 640}), image_path('std.png') %><br>
+    <br>
+
+    <div class="panel">
+        <h5>Spotting The Differences</h5>
+
+        <p>There are two ways to start a new integration task:</p>
+
+        <ol>
+            <li>The STD connects to an external source, imports the data and generates a &quot;diff&quot; from the previous import, pushing it to the Flux Capacitor</li>
+
+            <li>Smaller (diff) changed portions are hooked directly into Flux Capacitor for processing</li>
+        </ol>
+    </div>
+    <%= link_to image_tag("rules_flow.png", {width: 640}), image_path('rules_flow.png') %><br>
+    <br>
+
+    <div class="panel">
+        <h5>General rule processing overview</h5>
+
+        <p>With the inclusion of a semantic rules processor, the idea is to apply complex semantics to validate specific conditions before, during and after the integration task. This Ruler process works as follows:</p>
+
+        <ol>
+            <li>Data gets into the platform for processing (hook/push diff data)</li>
+
+            <li>Data are abstracted to a semantic web environment, using custom ETL rules, and storing the graph in COEUS</li>
+
+            <li>The graph abstraction is sent for rule processing, assessing specific components of the graph</li>
+
+            <li>Once all defined rules pass, the integration is ready for delivery</li>
+        </ol>
+    </div>
+    <%= link_to image_tag("full_flow.png", {width: 640}), image_path('full_flow.png') %></a><br>
+    <br>
+
+    <div class="panel">
+        <h5>Overview</h5>
+
+        <p>From start to finish.</p>
+    </div>
+</article>
+

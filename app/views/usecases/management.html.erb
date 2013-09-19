@@ -1,0 +1,26 @@
+<% content_for :title, "Project Management - Use Cases - Docs - i2x" %>
+<article id="management">
+	<h3>Project Management</h3>
+
+	<h6 class="subheader">Redmine headaches go away.</h6>
+
+	<p>In most companies and research units the project management tasks span multiple tools. Hence, developers have to ensure consistency amongst issues in GitHub, tasks in Redmine and, sometimes, their own personal lists. Integrative tools that can exchange data between these distributed systems will greatly improve the management workflow.</p>
+	<h4 id="why_1">Why</h4>
+	<ul>
+		<li>Enable automated integration between multiple project management information systems (GitHub &lt;-&gt; Redmine)</li>
+	</ul>
+	<h4 id="what_1">What</h4>
+	<ul>
+		<li>Register custom Flux Capacitor endpoint as GitHub service hook</li>
+		<li>Process hook input, submit to Redmine services</li>
+	</ul>
+	<h4 id="how_1">How</h4>
+	<h5 id="input_1">Input</h5>
+	<ul>
+		<li>JSON from GitHub service hook</li>
+	</ul>
+	<h5 id="output_1">Output</h5>
+	<ul>
+		<li>POST a new issue to custom Redmine web service</li>
+	</ul>
+</article>
