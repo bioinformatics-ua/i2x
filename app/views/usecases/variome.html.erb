@@ -1,34 +1,8 @@
 <% content_for :title, "Variome Integration - Use Cases - Docs - i2x" %>
 
 <article id="variome">
-	<h3>Variome Integration</h3>
-
+	<h1>Variome Integration</h1>
 	<h6 class="subheader">The second WAVe.</h6>
 
-	<p>With next-generation sequencing technologies generating huge amounts of data at an ever-increasing pace, it is critical to develop integration strategies that can maintain up-to-date knowledge bases with the most relevant human variome information.</p>
-	<h4 id="why">Why</h4>
-	<ul>
-		<li>Real-time variant data integration from distributed LSDBs</li>
-		<li>Automating data flows from LOVD to WAVe</li>
-	</ul>
-	<h4 id="what">What</h4>
-	<ul>
-		<li>LOVD has RSS/XML API</li>
-		<li>Configured as data source</li>
-		<li>Ping data source, check changes, integrate in WAVe (SQL template?)</li>
-	</ul>
-	<h4 id="how">How</h4>
-	<h5 id="input">Input</h5>
-	<ul>
-		<li>Loop throuhg LSDB property list: iterate all LSDBs</li>
-		<li>XML (RSS) format: read XML LOVD web service output</li>
-		<li>XPath processors: access unique variation entries</li>
-		<li>Regex validation: validate variation description</li>
-	</ul>
-	<h5 id="output">Output</h5>
-	<ul>
-		<li>Call WAVe web service (POST to REST interface): service does not exist yet...</li>
-		<li>Execute one or more SQL queries (INSERT; UPDATE):  write a SQL template, i2x just needs to fill in the gaps with graph data</li>
-	</ul>                   
+	<%= @content.html_safe %>                  
 </article>
-

@@ -1,34 +1,7 @@
 <% content_for :title, "Medical Imaging - Use Cases - Docs - i2x" %>
 
 <article id="medical">
-	<h3>Medical Imaging Indexing</h3>
-
+	<h1>Medical Imaging Indexing</h1>
 	<h6 class="subheader">From PACS to Dicoogle.</h6>
-
-	<blockquote>
-		<p>In medical imaging there are are large repositories, continually growing and every day, i.e. there are several exams incoming to the medical repositories non-stop. In each hospital or institution, they often have different codifications and different equipment/manufacturers which fill in the metadata of medical images in an heterogeneous way. For clinical research purposes and also for medical studies these data need to be up to date and harmonised in an integrative platform.</p>
-		<blockquote>
-			<p>Luís Bastião</p>
-		</blockquote>
-	</blockquote>
-	<h4 id="why_2">Why</h4>
-	<ul>
-		<li>Provide automated indexing/processing features to interinstitutional PACS platforms</li>
-	</ul>
-	<h4 id="what_2">What</h4>
-	<ul>
-		<li>Check PACS for new medical imaging DICOM files</li>
-		<li>Evaluate what is new</li>
-		<li>Index in Dicoogle, send to Viewer repository...</li>
-	</ul>
-	<h4 id="how_2">How</h4>
-	<h5 id="input_2">Input</h5>
-	<ul>
-		<li>Timed checkup on PACS platform image list</li>
-		<li>DICOM file properties + content</li>
-	</ul>
-	<h5 id="output_2">Output</h5>
-	<ul>
-		<li>Web Service execution</li>
-	</ul>
+	<%= @content.html_safe %>
 </article>

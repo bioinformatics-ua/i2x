@@ -1,30 +1,11 @@
 <% content_for :title, "Template - Sequences - Docs - i2x" %>
 
 <article id="template">
-    <h3>Apply Worker Template</h3>
+    <h1>Apply Worker Template</h1>
 
     <h6 class="subheader">Deliver everywhere.</h6>
     <%= link_to image_tag("template.png", {width: 640}), image_path('template.png'), :class => 'th' %>
     <br>
-    <br>
-
-    <div class="panel">
-        <h5>Goal</h5>
-
-        <p>Check final delivery template and use semantic abstraction data to generate final action.</p>
-    </div>
-
-    <div>
-        <ol>
-            <li>Forward Graph <em>Flux Capacitor-Forwarder</em>: send a graph for processing to the Forwarder</li>
-
-            <li>Get Template <em>Forwarder-COEUS</em>: check COEUS kb for final delivery template</li>
-
-            <li>Return Template <em>COEUS-Forwarder</em>: return the final delivery template to be applied to the graph</li>
-
-            <li>Process Graph <em>Flux Capacitor-Worker</em>: use graph data to fill in the delivery template, and execute associated action</li>
-
-            <li>Return status <em>Worker-Flux Capacitor</em>: return the execution status</li>
-        </ol>
-    </div>
+    
+    <%= @content.html_safe %>
 </article>

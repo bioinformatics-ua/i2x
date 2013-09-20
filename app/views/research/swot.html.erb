@@ -2,33 +2,9 @@
 
 <article id="swot">
 	<h1>SWOT</h1>
-
 	<h6 class="subheader">Strengths, Weaknesses, Opportunities, Threats</h6>
-	<%= link_to image_tag("swot.png", {width: 720}), image_path('swot.png'), :class => 'th' %><br>
+	<%= link_to image_tag("swot.png", {width: 720}), image_path('swot.png'), :class => 'th' %>
 	<br>
-
-	<div>
-		<h4 id="strengths">Strengths</h4>
-		<ul>
-			<li><strong>Integration</strong>: flexible support for multiple formats in &amp; multiple formats out (although does not replace static strategies like COEUS)</li>
-			<li><strong>Templates</strong>: ability to write custom output delivery templates (open door for future plugin-based architecture)</li>
-			<li><strong>Rules</strong>: pre- and post-process integrated data with backward- and forward-chaining rules</li>
-		</ul>
-		<h4 id="weaknesses">Weaknesses</h4>
-		<ul>
-			<li>Cumbersome <strong>planning</strong> &amp; <strong>development</strong>: huge amount of features, dynamics, variables, controllers, services, methods...</li>
-			<li><strong>Architecture</strong>: too complex, too many components, too many points of failure.</li>
-		</ul>
-		<h4 id="opportunities">Opportunities</h4>
-		<ul>
-			<li><strong>Integration-as-a-Service</strong>: lots of integration frameworks, not too many working on (near) real-time automated data integration</li>
-			<li><strong>Bioinformatics</strong>: automated and real-time are good  selling points to compete with more static  integration tools (Galaxy, Taverna, COEUS, Kettle, …)</li>
-		</ul>
-		<h4 id="threats">Threats</h4>
-		<ul>
-			<li><strong>Competition</strong>: despite the lack of academia competition, there are plenty business tools already focused on these strategies</li>
-			<li><strong>Use cases</strong>: not good enough to justify building a new framework at this scale</li>
-			<li><strong>Usage</strong>: another framework that nobody (internally &amp; externally) will use</li>
-		</ul>                </div>
-	</article>
+	<%= @content.html_safe %>	
+</article>
 

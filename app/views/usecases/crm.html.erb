@@ -1,29 +1,7 @@
 <% content_for :title, "CRM - Use Cases - Docs - i2x" %>
 
 <article id="crm">
-	<h3>CRM</h3>
-
+	<h1>CRM</h1>
 	<h6 class="subheader">Improve customer relationship management tasks</h6>
-	<p>Managing businesses usually requires the acquisition of data from various entry points. Contact data, invoice generation, mailing list management... A strategy that could automate these digital (even if its a simple email to new clients) tasks would greatly improve everyday management activities.</p>
-	<h4 id="why_4">Why</h4>
-	<ul>
-		<li>Automate customers management<ul>
-			<li>Generate invoices, add to contacts, send newsletters, just "ping"..</li>
-		</ul>
-	</li>
-</ul>
-<h4 id="what_4">What</h4>
-<ul>
-	<li>Reduce and simplify customer relationship management workflow</li>
-</ul>
-<h4 id="how_4">How</h4>
-<h5 id="input_4">Input</h5>
-<ul>
-	<li>Customer databases (SQL, CSV)</li>
-</ul>
-<h5 id="output_4">Output</h5>
-<ul>
-	<li>Publish to invoice systems (XML, REST)</li>
-	<li>Generate new emails</li>
-	<li>Generate content files</li>
-</ul>            </article>
+	<%= @content.html_safe %>
+</article>

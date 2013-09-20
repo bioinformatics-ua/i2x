@@ -1,28 +1,7 @@
 <% content_for :title, "Newborn Management - Use Cases - Docs - i2x" %>
 
 <article id="newborn">
-	<h3>Automate newborn data management tasks</h3>
-
+	<h1>Automate newborn data management tasks</h1>
 	<h6 class="subheader">i2x + neobox + neoscreen</h6>
-
-	<p>Within the NeoBox system, information about each newborn traverses multiple applications (and, consequently, databases). These actions require manual input or some kind of hard coding within the application scope. With <strong>i2x</strong> we can employ an automated strategy to migrate records between databases and publish data to multiple sources.</p>
-	<h4 id="why_3">Why</h4>
-	<ul>
-		<li>Automate NeoBox data migration/publishing tasks</li>
-	</ul>
-	<h4 id="what_3">What</h4>
-	<ul>
-		<li>Check complete newborn data or flagged newborn data tables</li>
-		<li>Assess changes</li>
-		<li>Publish to NeoWeb, send to NeoScreen DB</li>
-	</ul>
-	<h4 id="how_3">How</h4>
-	<h5 id="input_3">Input</h5>
-	<ul>
-		<li>Constant checkup on Newborn status (SQL SELECT query)</li>
-	</ul>
-	<h5 id="output_3">Output</h5>
-	<ul>
-		<li>Update NeoWeb results database on distinct server (SQL INSERT/UPDATE query)</li>
-		<li>Update NeoScreen flagged table on distinct database server (SQL UPDATE)</li>
-	</ul>            </article>
+	<%= @content.html_safe %>            
+</article>
