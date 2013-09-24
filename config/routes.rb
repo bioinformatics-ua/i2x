@@ -1,7 +1,9 @@
 I2x::Application.routes.draw do
   
+
   root  'home#index'
 
+  get "postman/deliver"
   get "usecases/variome"
   get "usecases/management"
   get "usecases/medical"
@@ -36,6 +38,11 @@ I2x::Application.routes.draw do
   get 'usecases'  => 'useasecases/index' 
 
   get "home/index"
+
+  # testing Postman routes
+  get "postman/:key", to: "postman#deliver"
+  post "postman/:key", to: "postman#action"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
