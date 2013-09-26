@@ -1,9 +1,10 @@
 <% content_for :title, "Content - Sequences - Docs - i2x" %>
 <article id="content">
-    <h1>Check Content Changes</h1>
+    <h1>Poll Content Changes</h1>
 
     <h6 class="subheader">Verify what has changed since last visit.</h6>
-    <%= link_to image_tag("content.png", {width: 720}), image_path('content.png'), :class => 'th' %>
+    <%= link_to image_tag("seq_polling.png", {width: 640}), image_path('seq_polling.png'), :class => 'th' %>
+    <br>
     <br>
     <%= @content.html_safe %>
 </article>

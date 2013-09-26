@@ -5,24 +5,24 @@
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
- <meta charset="utf-8" />
+   <meta charset="utf-8" />
 
- <!-- Uncomment to make IE8 render like IE7 -->
- <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+   <!-- Uncomment to make IE8 render like IE7 -->
+   <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
- <!-- Set the viewport width to device width for mobile -->
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <%= favicon_link_tag 'favicon.ico' %>
- <title><%= content_for?(:title) ? yield(:title) : "i2x" %></title>
+   <!-- Set the viewport width to device width for mobile -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <%= favicon_link_tag 'favicon.ico' %>
+   <title><%= content_for?(:title) ? yield(:title) : "i2x" %></title>
 
- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600' rel='stylesheet' type='text/css'>
- <%= stylesheet_link_tag    "application" %>
- <%= javascript_include_tag "vendor/custom.modernizr" %>
- <%= csrf_meta_tags %>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600' rel='stylesheet' type='text/css'>
+   <%= stylesheet_link_tag    "application" %>
+   <%= javascript_include_tag "vendor/custom.modernizr" %>
+   <%= csrf_meta_tags %>
 </head>
 
 <body>
-   <div class="fixed">
+ <div class="fixed">
     <nav class="top-bar">
         <ul class="title-area">
             <!-- Title Area -->
@@ -40,57 +40,57 @@
                 <li class="has-dropdown">
                     <a href="#">Research</a>
                     <ul class="dropdown">
-                        <li><%= link_to "Others", :controller => 'research', :action => 'others' %></li>
-                        <li><%= link_to "SWOT", :controller => 'research', :action => 'swot' %></li>
-                        <li><%= link_to "Comparison", :controller => 'research', :action => 'comparison' %></li>
+                        <li><%= link_to "Others", :controller => '/research', :action => 'others' %></li>
+                        <li><%= link_to "SWOT", :controller => '/research', :action => 'swot' %></li>
+                        <li><%= link_to "Comparison", :controller => '/research', :action => 'comparison' %></li>
                     </ul>
                 </li>
                 <li class="divider"></li>
                 <li class="has-dropdown">
                     <a href="#">Architecture</a>
                     <ul class="dropdown">
-                        <li><%= link_to "Models", :controller => 'architecture', :action => 'models' %></li>
-                        <li><%= link_to "Components", :controller => 'architecture', :action => 'components' %></li>
-                        <li><%= link_to "Flows", :controller => 'architecture', :action => 'flows' %></li>
+                        <li><%= link_to "Models", :controller => '/architecture', :action => 'models' %></li>
+                        <li><%= link_to "Components", :controller => '/architecture', :action => 'components' %></li>
+                        <li><%= link_to "Flows", :controller => '/architecture', :action => 'flows' %></li>
                         <li><label>Sequences</label></li>
-                        <li><%= link_to "Check Content Changes", :controller => 'sequences', :action => 'content' %></li>
-                        <li><%= link_to "Translate Diff", :controller => 'sequences', :action => 'diff' %></li>
-                        <li><%= link_to "Apply Integration Rules", :controller => 'sequences', :action => 'rules' %></li>
-                        <li><%= link_to "Apply Worker Template", :controller => 'sequences', :action => 'template' %></li>
-                        <li><%= link_to "Full Sequence Diagram", :controller => 'sequences', :action => 'full' %></li>
+                        <li><%= link_to "Poll Content Changes", :controller => '/sequences', :action => 'content' %></li>
+                        <li><%= link_to "Translate Diff", :controller => '/sequences', :action => 'diff' %></li>
+                        <li><%= link_to "Apply Integration Rules", :controller => '/sequences', :action => 'rules' %></li>
+                        <li><%= link_to "Execute Delivery Template", :controller => '/sequences', :action => 'template' %></li>
+                        <li><%= link_to "Full Sequence Diagram", :controller => '/sequences', :action => 'full' %></li>
                     </ul>
                 </li>
                 <li class="divider"></li>
                 <li class="has-dropdown">
-                    <%= link_to "Use Cases", :controller => 'usecases', :action => 'index' %>
+                    <%= link_to "Use Cases", :controller => '/usecases', :action => 'index' %>
 
                     <ul class="dropdown">
-                     <li><%= link_to "Variome Integration", :controller => 'usecases', :action => 'variome' %></li>
-                     <li><%= link_to "Project Management", :controller => 'usecases', :action => 'management' %></li>
-                     <li><%= link_to "Medical Imaging", :controller => 'usecases', :action => 'medical' %></li>
-                     <li><%= link_to "Newborn Management", :controller => 'usecases', :action => 'newborn' %></li>
-                     <li><%= link_to "CRM", :controller => 'usecases', :action => 'crm' %></li>
-                 </ul>
-             </li>
-             <li class="divider"></li>
-             <li><%= link_to "Reference", :controller => 'reference' %></li>            
-             <li class="divider"></li>
-             <li class="has-dropdown">
+                       <li><%= link_to "Variome Integration", :controller => '/usecases', :action => 'variome' %></li>
+                       <li><%= link_to "Project Management", :controller => '/usecases', :action => 'management' %></li>
+                       <li><%= link_to "Medical Imaging", :controller => '/usecases', :action => 'medical' %></li>
+                       <li><%= link_to "Newborn Management", :controller => '/usecases', :action => 'newborn' %></li>
+                       <li><%= link_to "CRM", :controller => '/usecases', :action => 'crm' %></li>
+                   </ul>
+               </li>
+               <li class="divider"></li>
+               <li><%= link_to "Reference", :controller => '/reference' %></li>            
+               <li class="divider"></li>
+               <li class="has-dropdown">
                 <a href="#">Publications</a>
                 <ul class="dropdown">
                     <li><label>Bioinformatics</label></li>
-                    <li><%= link_to "Automating biomedical integration", :controller => 'publications', :action => 'automating' %></li>
-                    <li><%= link_to "WAVe", :controller => 'publications', :action => 'wave' %></li>
+                    <li><%= link_to "Automating biomedical integration", :controller => '/publications', :action => 'automating' %></li>
+                    <li><%= link_to "WAVe", :controller => '/publications', :action => 'wave' %></li>
                     <li><label>Technical</label></li>
-                    <li><%= link_to "Framework for active data integration", :controller => 'publications', :action => 'framework' %></li>
-                    <li><%= link_to "Template-based autonomous integration", :controller => 'publications', :action => 'template' %></li>
-                    <li><%= link_to "Exploring semantic rule-based integration", :controller => 'publications', :action => 'rule' %></li>
-                    <li><%= link_to "Architecture for content change detection", :controller => 'publications', :action => 'content' %></li>
-                    <li><%= link_to "Semantics", :controller => 'publications', :action => 'semantic' %></li>
+                    <li><%= link_to "Framework for active data integration", :controller => '/publications', :action => 'framework' %></li>
+                    <li><%= link_to "Template-based autonomous integration", :controller => '/publications', :action => 'template' %></li>
+                    <li><%= link_to "Exploring semantic rule-based integration", :controller => '/publications', :action => 'rule' %></li>
+                    <li><%= link_to "Architecture for content change detection", :controller => '/publications', :action => 'content' %></li>
+                    <li><%= link_to "Semantics", :controller => '/publications', :action => 'semantic' %></li>
                 </ul>
             </li>
             <li class="divider"></li>
-            <li><%= link_to "Contact", :controller => 'contact' %></li>
+            <li><%= link_to "Contact", :controller => '/contact' %></li>
         </ul>
     </section>
 </nav>
@@ -124,6 +124,22 @@
     </div>
 </footer><!-- End Footer -->
 <%= javascript_include_tag "application" %>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+var pluginUrl = 
+'//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-12230872-9']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
 </body>
 </html>
 <!--

@@ -1,6 +1,7 @@
 I2x::Application.routes.draw do
   
 
+  devise_for :users
   root  'home#index'
 
   get "postman/deliver"
@@ -42,6 +43,9 @@ I2x::Application.routes.draw do
   # testing Postman routes
   get "postman/:key", to: "postman#deliver"
   post "postman/:key", to: "postman#action"
+
+  # i2x image hack
+  get '/i2x/images/*all', to: redirect('/images/%{all}.png')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
