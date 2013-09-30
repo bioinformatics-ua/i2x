@@ -26,4 +26,6 @@ I2x::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.host = 'http://i2x.dev/'
 end

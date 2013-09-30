@@ -1,0 +1,33 @@
+<h1>Listing stds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Label</th>
+      <th>Help</th>
+      <th>Visited</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stds.each do |std| %>
+      <tr>
+        <td><%= std.key %></td>
+        <td><%= std.label %></td>
+        <td><%= std.help %></td>
+        <td><%= std.visited %></td>
+        <td><%= link_to 'Show', std %></td>
+        <td><%= link_to 'Edit', edit_std_path(std) %></td>
+        <td><%= link_to 'Destroy', std, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Std', new_std_path %>

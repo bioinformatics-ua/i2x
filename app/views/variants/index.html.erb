@@ -1,0 +1,33 @@
+<h1>Listing variants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Refseq</th>
+      <th>Gene</th>
+      <th>Variant</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @variants.each do |variant| %>
+      <tr>
+        <td><%= variant.refseq %></td>
+        <td><%= variant.gene %></td>
+        <td><%= variant.variant %></td>
+        <td><%= variant.url %></td>
+        <td><%= link_to 'Show', variant %></td>
+        <td><%= link_to 'Edit', edit_variant_path(variant) %></td>
+        <td><%= link_to 'Destroy', variant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Variant', new_variant_path %>

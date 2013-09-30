@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130925151857) do
+ActiveRecord::Schema.define(version: 20130927103826) do
 
   create_table "bttf", force: true do |t|
     t.timestamp "ts",          null: false
     t.string    "title"
     t.text      "description"
+  end
+
+  create_table "stds", force: true do |t|
+    t.string   "key"
+    t.string   "label"
+    t.string   "help"
+    t.integer  "visited"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -32,9 +41,21 @@ ActiveRecord::Schema.define(version: 20130925151857) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "username"
+    t.string   "apikey"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "variants", force: true do |t|
+    t.string   "refseq"
+    t.string   "gene"
+    t.string   "variant"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

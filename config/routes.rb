@@ -1,6 +1,12 @@
 I2x::Application.routes.draw do
   
 
+  resources :stds
+
+  resources :variants
+
+  get "delivery/get"
+  get "delivery/go"
   devise_for :users
   root  'home#index'
 

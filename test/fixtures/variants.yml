@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  refseq: MyString
+  gene: MyString
+  variant: MyString
+  url: MyString
+
+two:
+  refseq: MyString
+  gene: MyString
+  variant: MyString
+  url: MyString

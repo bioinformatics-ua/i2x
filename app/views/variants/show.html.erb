@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Refseq:</strong>
+  <%= @variant.refseq %>
+</p>
+
+<p>
+  <strong>Gene:</strong>
+  <%= @variant.gene %>
+</p>
+
+<p>
+  <strong>Variant:</strong>
+  <%= @variant.variant %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @variant.url %>
+</p>
+
+<%= link_to 'Edit', edit_variant_path(@variant) %> |
+<%= link_to 'Back', variants_path %>
