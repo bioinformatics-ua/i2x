@@ -102,27 +102,33 @@ A comma separated string that will be turned into a select field for limiting th
 
 # Delivery Templates
 
- Programmatically, each **Delivery Template** is a set of key/value pairs describing the associated [delivery][].
+Programmatically, each **Delivery Template** is a set of key/value pairs describing the associated [delivery][deliveries].
 
 ## Metadata
 
-### Key
+### Identifier
 
 A key for consumption by the [Postman][]. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
 
-**Example**: *mapper* or *isse*
+**Example**: *mapper* or *issue*
 
-### Label
+**Property**: `identifier` (maps to `dc:identifier`)
 
-A human readable Label shown in the UI as a user works to complete an [Action][].
+### Title
+
+A human readable Title shown in the UI as a user works to complete an [Action][action].
 
 **Example**: *Variant* or *Title*
+
+**Property**: `label` (maps to `dc:title`)
 
 ### Help Text
 
 Human readable description of an action field, useful for describing some detail you couldn't list in the Label.
 
-*Example*: *Choose which room to send the message to.* or *Add a title to the note.*
+**Example**: *Choose which room to send the message to.* or *Add a title to the note.*
+
+**Property**: `help` (maps to `dc:description`)
 
 ### Type
 
@@ -130,16 +136,33 @@ The type of Action that will be delivered by the Postman.
 
 **Available Types**: *url*, *sql*, *sparql*, *mail*, *file*, *json*...
 
+**Property**: `type`  (maps to `dc:type`)
+
+### Variables
+
+An array containing all the variables that will be replaced by the integration Action data.
+
+**Example**: *["id","subject"]* or *["title","key"]*
+
+**Property**: `variables` (maps to `i2x:variable` set)
+
+### Payload
+
+Object containing the set of properties specific to each [delivery][delivery] type.
+
+**Example**: *{"id":"%{id}","subject":"%{subject}"}* or *{"title":"%{title}","key":"%{key}"}*
+
+**Property**: `payload` (related to `i2x:payload` object)
+
 ## Sample
 
-Sample configuration for exchanged data between the application controller and the [Actions][]. Each [Deliverable Template][] type will have its own set of configuration properties, defined in the object payload.
+Sample configuration for exchanged data between the application controller and the [Actions][actions]. Each [Deliverable Template][deliverabletemplate] type will have its own set of configuration properties, defined in the object payload.
 
     {
       "type": "url",
-      "key": "i2x",
-      "label": "label",
-      "id": "123",
-      "template": {
+      "identifier": "i2x",
+      "title": "label",
+      "payload": {
         "url": "http://www.example.com",
         "method": "post"
         ...
@@ -148,19 +171,87 @@ Sample configuration for exchanged data between the application controller and t
 
 # Delivery Types
 
-[Delivery Templates] have one (and only one) type. This defines what processing is required by in the [Postman][] engine for successful delivery of the data.
+[Delivery Templates] have one (and only one) type. This defines what processing is required by in the [Postman][postman] engine for successful delivery of the data. Variables in each template are marked within `%{ }` characters.
+
+## Email
+
+### Metadata
+
+#### Subject
+
+The subject for the new mail to be sent by the [Postman][postman].
+
+**Example**: *[i2x] new mail for %{i2x.action_identifier}*
+
+#### To
+
+An array with the main destination for the email.
+
+**Example**: *["johndoe@gmail.com", "%{to}"]*
+
+#### CC
+
+An array with the CC destination for the email.
+
+**Example**: *["johndoe@gmail.com", "%{to}"]*
+
+#### BCC
+
+An array with the BCC destination for the email.
+
+**Example**: *["johndoe@gmail.com", "%{to}"]*
+
+#### Message
+
+## File Management
+
+### Metadata
+
+#### Content
+
+Template for the content being written to the selected file.
+
+**Example**: *%{id},%{i2x.datetime}\n*
+
+**Property**: `content` (maps to `i2x:content`)
+
+#### Method
+
+Defines what is the type of the change that will be performed in the file by the [Postman][postman].
+
+**Example**: *append*, *create*, *delete*
+
+**Property**: `method` (maps to `i2x:method`)
+
+##### Append
+
+The _append_ method will add the content (from the property `content`) to the specified file.
+
+##### Create
+
+The _create_ method will create a new file with the generated content (from the property `content`).
+
+#### URI
+
+The file URI. Not that filenames can include _variables_.
+
+**Example**: *file://Temp/log.csv*
+
+**Property**: `uri` (mas to `i2x:uri`)
 
 ## SQL Query
 
-The SQL Query [Delivery Template][] will execute the specified SQL query in the destination database. 
+The SQL Query [Delivery Template][deliverytemplate] will execute the specified SQL query in the destination database. 
  
-### Configuration
+### Metadata
 
 #### Server
 
 A string matching the available database servers.
 
-**Available servers**: *sqlserver*, *mysql*, *postgres*, *sqlite*
+**Example**: *sqlserver*, *mysql*, *postgres*, *sqlite*
+
+**Property**: `server` (maps to `i2x:server`)
 
 #### Host
 
@@ -168,17 +259,23 @@ Address for the database host. This value defaults to `localhost` if no data is 
 
 **Example**: *localhost*, *192.168.2.5*
 
+**Property**: `host` (maps to `i2x:host`)
+
 #### Port
 
 Port open for connection in the database host. This value defaults to the standard server port (Ex: `3306` for `mysql`) if no data is provided.
 
 **Example**: *3306*, *1255*
 
+**Property**: `port` (maps to `i2x:port`)
+
 #### Database Name
 
-Database name where the query will be performed. This value defaults to the [delivery template][] key if no data is provided.
+Database name where the query will be performed. This value defaults to the [delivery template][deliverytemplate] key if no data is provided.
 
 **Example**: *wave10*, *issues*
+
+**Property**: `database` (maps to `i2x:database`)
 
 #### Username
 
@@ -186,42 +283,65 @@ Database user.
 
 **Example**: *john_doe*
 
+**Property**: `username` (maps to `i2x:username`)
+
 #### Password
 
 User password. The password is hashed before being exchanged between any service.
 
 **Example**: *qwerty§12345*
 
+**Property**: `password` (maps to `i2x:password`)
+
 #### Query
 
-The query that will be executed by the [Postman][] in the configured database.
+The query that will be executed by the [Postman][postman] in the configured database. 
 
-**Example**: *INSERT INTO issues (title, description, timestamp) VALUES (#title#, #description#, getdate());
+**Example**: *INSERT INTO issues (title, description, timestamp) VALUES ('{%title}, '%{description}', getdate());*
+
+**Property**: `query` (maps to `i2x:server`)
 
 ## URL Route
 
-### Configuration
+### Metadata
 
-#### Type
+#### Method
+
+Defines what is the type of the request that will be executed by the [Postman][postman].
+
+**Example**: *get*, *post*, *delete*
+
+**Property**: `method` (maps to `i2x:method`)
 
 ##### GET
 
-The URL Route [Delivery Template][] will issue a GET request to the defined URL route. URI `keys` are used to match [Action Fields][].
+The URL Route [Delivery Template][] will issue a GET request to the defined URL. URI *keys* are used to match [Action Fields][] defined in the [variables][variables].
 
-**Example**: http://example.com/services/`#id#`/`#description#`/`#otherpayload#`
+**Example**: http://example.com/services/`%{id}`/`%{description}`/`%{otherpayload}`
 
 ##### POST
 
-This URL Route POSTs extracted data to the defined URL route. [Action Fields][] are mapped to specific key/value in the request metadata. The POSTed payload is inclued in the `payload` object in the received message.
+This URL Route POSTs extracted data to the defined URL route. [Action Fields][actionfields] are mapped to specific key/value pairs in the request metadata. The POSTed payload is included in the `payload` object in the template.
 
-__Example__:
+**Example**:
 
-    {
-      "type": "#type#",
-      "key": "#key#",
-      "label": "#label#",
-      "id": "#id#"
+    "payload": {
+      "type": "%{type}",
+      "key": "%{key}",
+      "label": "%{label}",
+      "id": "%{id}"
     }
+
+**Property**: `payload` (related to `i2x:payload` object)
+
+#### URI
+
+The destination URL for the request.
+
+**Example**: *http://bioinformatics.ua.pt/i2x/postman/%{id}*, *http://bmd-software.com/*
+
+**Property**: `uri` (mas to `i2x:uri`)
+
 
 # Events
 
@@ -233,15 +353,16 @@ __Example__:
 
 You can think of an Event as the ignition of a new data integration Action.
 
-Basically, they're things that happen in monitored systems which cause a defined action to happen. Additionally, events supply data about what happened. These data will be passed on to the Actions controller, which validates them and moves them to the Postman for execution in the [Delivery Template][].
+Basically, they're things that happen in monitored systems which cause a defined action to happen. Additionally, events supply data about what happened. These data will be passed on to the Actions controller, which validates them and moves them to the Postman for execution in the [Delivery Template][deliverytemplate].
 
-For example, say a service has a "New Row Added" event being monitored. We will detect when this event happens by [polling][]. The general event data will be something like this:
+For example, say a service has a "New Row Added" event being monitored. We will detect when this event happens by [polling][payload]. The general event data will be something like this:
 
     {
       "id": 987654,
       "owner_id": 321,
       "date_created": "Mon, 17 Sep 2013 15:07:01 0000",
       "description": "Row added",
+      "type": "sql",
       "payload": { ... }
     }
 
@@ -249,13 +370,13 @@ These key/value objects are available for mapping into the action as required.
 
 ## Metadata
 
-### Label
+### Title
 
 Human readable, short name of the event. Shown in various places in our interface.
 
 **Example**: *New Ticket Created* or *New Email with Label*
 
-### Key
+### Identifier
 
 This is a field only really used internally for both prefill and scripting references. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
 
@@ -269,7 +390,7 @@ A longer description of what this event actually watches for.
 
 ## Hooks
 
-The traditional workflow uses the [STD][] to detect new [events][]. However, [events][] can be pushed in the system using the Web/REST hooks interface. In this case, the hook payload is directly proxied to the [Action][] in the `payload` object.
+The traditional workflow uses the [STD][std] to detect new [events][events]. However, [events][events] can be pushed in the system using the Web/REST hooks interface. In this case, the hook payload is directly proxied to the [Action][actions] in the `payload` object.
 
 # Field Types
 
@@ -281,7 +402,6 @@ The following is a list of available field types. Normally, you'd choose one of 
 - Float `float`: Like integers, this will coerce any text down to a floating point number with the addition of allowed characters like . and ,.
 - Boolean `bool`: We apply some natural language parsing to try and coerce any text into True or False. This UI field is also replaced with a dropdown allowing the user to specifically pick "Yes" or "No" explicitly.
 - DateTime `datetime`: Our most complex coersion. We'll attempt to convert any given date format into an internal DateTime representation. It is quite robust supporting epoch timestamps, ISO-8061 and even natural language parsing! On the developer platform, datetimes are automatically converted into an ISO-8061 datetime for actions. You can use moment.js via the Scripting API to parse and replace if your servers expect a different format sent to it. |
-
 
 ## Choices
 
@@ -296,6 +416,23 @@ You can provide a choices array which will be mapped automatically into a valiat
         "choices": ["none", "green", "yellow", "orange", "red", "purple", "blue"]
       }
     ]
+
+# Helper Functions
+
+**i2x** included several internal functions allowing quick access to general variables that can be used in all templates. These functions allow the templates to retrieve information such as date/time, random numbers or strings, action names, among many others.
+
+## Usage
+
+**i2x** helper functions are used just like the template variables. These reserved variable keywords start are written as `i2x._function name_`.
+
+## Function list
+
+* `date`: returns the system date
+* `datetime`: returns the system date with time included (until _ms_)
+* `action_identifier`: returns the ongoing action identifier
+* `template_identifier`: returns the ongoing delivery template
+* `environment`: returns the server execution environment (from Rails)
+* `hostname`: returns the postman server hostname
 
 # Monitor Types
 
@@ -390,6 +527,7 @@ The **STD** engine will perform the [polling][] of configured [sources][]. Spot 
 [Actions]:            #actions
 [action fields]:      #action-fields
 [delivery]:           #deliveries
+[deliverytemplate]:   #delivery-templates
 [delivery template]:  #delivery-templates
 [delivery templates]: #delivery-templates
 [event]:              #events
@@ -400,3 +538,4 @@ The **STD** engine will perform the [polling][] of configured [sources][]. Spot 
 [source]:             #sources
 [sources]:            #sources
 [STD]:                #std
+[variables]:          #variables

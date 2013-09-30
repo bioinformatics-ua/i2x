@@ -44934,3 +44934,319 @@ Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m
   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 1 AND `stds`.`label` = 'variant'
   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-30 15:12:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 324ms (Views: 302.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reference/index" for 127.0.0.1 at 2013-09-30 15:12:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ReferenceController#index as HTML
+  Rendered reference/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 476ms (Views: 264.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/architecture.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/contact.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/delivery.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/publications.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/research.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/sequences.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/postman.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/reference.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/usecases.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/st_ds.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/variants.css?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:05 +0100
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/architecture.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/contact.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/delivery.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/postman.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/publications.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/reference.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/research.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/sequences.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/st_ds.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/usecases.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/variants.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-30 15:12:06 +0100
+
+
+Started GET "/reference/index" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+Processing by ReferenceController#index as HTML
+  Rendered reference/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 170ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/architecture.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/contact.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/delivery.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/publications.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/postman.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/research.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/reference.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/sequences.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/st_ds.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/variants.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/usecases.css?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:01 +0100
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/architecture.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/contact.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/delivery.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/postman.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/research.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/publications.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/sequences.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/reference.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/st_ds.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/usecases.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/variants.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-30 15:20:02 +0100
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 1 AND `stds`.`label` = 'variant'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 1 AND `stds`.`label` = 'variant'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 1 AND `stds`.`label` = 'variant'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 1 AND `stds`.`label` = 'variant'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `stds` WHERE `stds`.`visited` = 2 AND `stds`.`label` = 'variant'[0m

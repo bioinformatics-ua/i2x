@@ -81,5 +81,6 @@ I2x::Application.configure do
   # devise config
 
   config.action_mailer.default_url_options = { :host => 'i2x.dev' }
+  config.host = 'http://bioinformatics.ua.pt/i2x/'
 
 end

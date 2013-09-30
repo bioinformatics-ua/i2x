@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'rufus/scheduler'
 require 'mysql2'
-require 'CSV'
+#require 'CSV'
 require 'net/http'
 require 'socket'
 
@@ -34,10 +34,10 @@ scheduler.every '10m' do
         #  puts "#{std.id} integrated at #{std.created_at}"
         #end
       end
-      dt = Time.new
-      CSV.open('data/log.csv', 'a') do |csv|
-        csv << [dt.to_time, 'variant', row[:id]]
-      end
+      #dt = Time.new
+      #CSV.open('data/log.csv', 'a') do |csv|
+       # csv << [dt.to_time, 'variant', row[:id]]
+      #end
     end
   end
 

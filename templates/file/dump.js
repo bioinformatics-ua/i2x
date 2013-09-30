@@ -1,0 +1,12 @@
+{
+	"identifier": "dump",
+	"title": "dumper",
+	"help": "Dump id to server and save on log file",
+	"type":"file",
+	"variables":["id"],
+	"payload": {
+		"method":"append",
+		"uri":"file:///Users/pedrolopes/Temp/i2log.csv",
+		"content":"%{i2x.date},%{id}\n"
+	}
+}
