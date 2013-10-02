@@ -2,7 +2,7 @@
 	"identifier": "pinger",
 	"title": "pinger",
 	"help": "Ping server and save on log file",
-	"type":"url",
+	"publisher":"url",
 	"variables":["id"],
 	"payload": {
 		"method":"get",

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @template.identifier %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @template.title %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @template.help %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @template.publisher %>
+</p>
+
+<p>
+  <strong>Variables:</strong>
+  <%= @template.variables %>
+</p>
+
+<p>
+  <strong>Payload:</strong>
+  <%= @template.payload %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @template.memory %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @template.count %>
+</p>
+
+<p>
+  <strong>Last execute at:</strong>
+  <%= @template.last_execute_at %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @template.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @template.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Back', templates_path %>

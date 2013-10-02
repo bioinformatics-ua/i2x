@@ -1,6 +1,8 @@
 I2x::Application.routes.draw do
   
 
+  resources :templates
+
   resources :stds
 
   resources :variants
@@ -10,6 +12,7 @@ I2x::Application.routes.draw do
   devise_for :users
   root  'home#index'
 
+  get "postman/go"
   get "postman/deliver"
   get "usecases/variome"
   get "usecases/management"

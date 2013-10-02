@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  identifier: MyString
+  title: MyText
+  help: MyText
+  publisher: MyString
+  variables: MyText
+  payload: MyText
+  memory: MyText
+  count: 1
+  last_execute_at: 2013-10-01 15:54:17
+  created_at: 2013-10-01 15:54:17
+  updated_at: 2013-10-01 15:54:17
+
+two:
+  identifier: MyString
+  title: MyText
+  help: MyText
+  publisher: MyString
+  variables: MyText
+  payload: MyText
+  memory: MyText
+  count: 1
+  last_execute_at: 2013-10-01 15:54:17
+  created_at: 2013-10-01 15:54:17
+  updated_at: 2013-10-01 15:54:17

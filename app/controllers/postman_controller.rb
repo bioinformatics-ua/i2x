@@ -1,3 +1,6 @@
+require "helper"
+require "template"
+
 class PostmanController < ApplicationController
 	def deliver
 		@key = params[:key]
@@ -42,6 +45,21 @@ class PostmanController < ApplicationController
 			}
 		end
 		
+	end
+
+	def go
+		@host = Services::Helper.hostname
+		@date = Services::Helper.date
+		@time = Services::Helper.datetime
+
+		t = Template.first
+		#attrs = JSON.parse(IO.read("templates/file/dump.js"))
+		#t = Template.create! attrs
+		#j = t[:payload].symbolize_keys!
+	 	
+	 	#o = ActiveSupport::JSON.decode(t[:payload]).symbolize_keys!
+	 	#t.symbolize #[:payload] = t[:payload].symbolize_keys!
+		@lol = t[:payload][:method]
 	end
 
 end

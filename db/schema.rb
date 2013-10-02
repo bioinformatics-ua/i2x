@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130927103826) do
+ActiveRecord::Schema.define(version: 20131001145417) do
 
   create_table "bttf", force: true do |t|
     t.timestamp "ts",          null: false
@@ -24,6 +24,20 @@ ActiveRecord::Schema.define(version: 20130927103826) do
     t.string   "label"
     t.string   "help"
     t.integer  "visited"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "templates", force: true do |t|
+    t.string   "identifier"
+    t.text     "title"
+    t.text     "help"
+    t.string   "publisher"
+    t.text     "variables"
+    t.text     "payload"
+    t.text     "memory"
+    t.integer  "count"
+    t.datetime "last_execute_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

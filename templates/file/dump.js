@@ -2,7 +2,7 @@
 	"identifier": "dump",
 	"title": "dumper",
 	"help": "Dump id to server and save on log file",
-	"type":"file",
+	"publisher":"file",
 	"variables":["id"],
 	"payload": {
 		"method":"append",

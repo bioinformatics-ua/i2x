@@ -175,6 +175,8 @@ Sample configuration for exchanged data between the application controller and t
 
 ## Email
 
+Note that emails are sent from the server configured in **i2x**'s Rails settings.
+
 ### Metadata
 
 #### Subject
@@ -183,11 +185,15 @@ The subject for the new mail to be sent by the [Postman][postman].
 
 **Example**: *[i2x] new mail for %{i2x.action_identifier}*
 
+**Property**: `subject` (maps to `dc:subject`)
+
 #### To
 
 An array with the main destination for the email.
 
 **Example**: *["johndoe@gmail.com", "%{to}"]*
+
+**Property**: `to` (maps to `i2x:to`)
 
 #### CC
 
@@ -195,13 +201,23 @@ An array with the CC destination for the email.
 
 **Example**: *["johndoe@gmail.com", "%{to}"]*
 
+**Property**: `cc` (maps to `i2x:cc`)
+
 #### BCC
 
 An array with the BCC destination for the email.
 
 **Example**: *["johndoe@gmail.com", "%{to}"]*
 
-#### Message
+**Property**: `bcc` (maps to `i2x:bcc`)
+
+#### Body
+
+The body for the message being sent.
+
+**Example**: *Hello %{first_name}! Welcome to i2x!--\n%{i2x.datetime}*
+
+**Property**: `body` (maps to `i2x:body`)
 
 ## File Management
 
@@ -341,7 +357,6 @@ The destination URL for the request.
 **Example**: *http://bioinformatics.ua.pt/i2x/postman/%{id}*, *http://bmd-software.com/*
 
 **Property**: `uri` (mas to `i2x:uri`)
-
 
 # Events
 
