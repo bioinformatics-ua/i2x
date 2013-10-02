@@ -1,9 +1,35 @@
 require "helper"
-require "template"
 
 class PostmanController < ApplicationController
 	def deliver
 		@key = params[:key]
+	end
+
+	def load
+		begin
+			@t = Template.where(identifier: params[:identifier], publisher: params[:publisher])
+			if @t.count > 0 then
+				response = { :status => "402", :message => "[i2x]: template #{params[:identifier]} already exists"}
+			else 
+				attrs = JSON.parse(IO.read("templates/#{params[:publisher]}/#{params[:identifier]}.js"))
+				t = Template.create! attrs
+				response = { :status => "200", :message => "[i2x]: template #{params[:identifier]} loaded", :id => "#{t[:id]}" }
+			end			
+		rescue
+			response = { :status => "401", :message => "Error: template not found for #{params[:publisher]} with name #{params[:key]}.", :error =>  $!}
+		end
+
+		respond_to do |format|			
+			format.json  { 
+				render :json => response    		
+			}		
+			format.xml {
+				render :xml => response
+			}
+			format.js  { 
+				render :json => response    		
+			}	
+		end
 	end
 
 	def action
@@ -52,14 +78,12 @@ class PostmanController < ApplicationController
 		@date = Services::Helper.date
 		@time = Services::Helper.datetime
 
-		t = Template.first
-		#attrs = JSON.parse(IO.read("templates/file/dump.js"))
-		#t = Template.create! attrs
-		#j = t[:payload].symbolize_keys!
-	 	
-	 	#o = ActiveSupport::JSON.decode(t[:payload]).symbolize_keys!
-	 	#t.symbolize #[:payload] = t[:payload].symbolize_keys!
-		@lol = t[:payload][:method]
+		t = Template.find_by identifier: params[:identifier]
+		
+		if t[:publisher] == 'sql' then
+	 		@lol = t[:payload][:host] #[:method]
+	 	else 
+	 		@lol = t[:payload][:uri]
+	 	end
+	 end
 	end
-
-end

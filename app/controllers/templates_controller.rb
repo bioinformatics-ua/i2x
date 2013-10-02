@@ -14,7 +14,9 @@ class TemplatesController < ApplicationController
 
   # GET /templates/new
   def new
+
     @template = Template.new
+    
   end
 
   # GET /templates/1/edit
@@ -25,7 +27,6 @@ class TemplatesController < ApplicationController
   # POST /templates.json
   def create
     @template = Template.new(template_params)
-
     respond_to do |format|
       if @template.save
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
@@ -61,6 +62,21 @@ class TemplatesController < ApplicationController
     end
   end
 
+  def start
+    @template = Template.new
+    if request.post? then
+      puts params[:message]
+      attrs = JSON.parse(params[:message])
+      @template = Template.create! attrs
+      response = { :status => "200", :message => "[i2x]: template #{params[:identifier]} loaded", :id => "#{@template[:id]}" }
+      respond_to do |format|
+        format.html { redirect_to templates_url }
+        format.json { head :no_content }
+      end
+    else 
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template
@@ -71,4 +87,4 @@ class TemplatesController < ApplicationController
     def template_params
       params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at)
     end
-end
+  end

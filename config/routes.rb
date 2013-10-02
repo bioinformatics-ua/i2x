@@ -1,6 +1,7 @@
 I2x::Application.routes.draw do
   
-
+  post "templates/start"
+  get "templates/start"
   resources :templates
 
   resources :stds
@@ -12,8 +13,7 @@ I2x::Application.routes.draw do
   devise_for :users
   root  'home#index'
 
-  get "postman/go"
-  get "postman/deliver"
+  
   get "usecases/variome"
   get "usecases/management"
   get "usecases/medical"
@@ -50,8 +50,12 @@ I2x::Application.routes.draw do
   get "home/index"
 
   # testing Postman routes
+  get "postman/load/:publisher/:identifier", to: "postman#load"
+  get "postman/go/:identifier", to: 'postman#go'
+  get "postman/deliver"
   get "postman/:key", to: "postman#deliver"
   post "postman/:key", to: "postman#action"
+
 
   # i2x image hack
   get '/i2x/images/*all', to: redirect('/images/%{all}.png')

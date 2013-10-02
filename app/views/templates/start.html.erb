@@ -39,23 +39,7 @@
     <%= f.label :memory %><br>
     <%= f.text_area :memory %>
   </div>
-  <div class="field">
-    <%= f.label :count %><br>
-    <%= f.number_field :count %>
-  </div>
-  <div class="field">
-    <%= f.label :last_execute_at %><br>
-    <%= f.datetime_select :last_execute_at %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br>
-    <%= f.datetime_select :updated_at %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <a class="button success" id="start">Submit</a>
   </div>
 <% end %>
