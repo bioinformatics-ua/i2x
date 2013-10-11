@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
   before_filter	:generate_content
   skip_before_filter :verify_authenticity_token 
+  
+
 
   def generate_content
   	begin

@@ -16,6 +16,17 @@ class TemplatesController < ApplicationController
   def new
 
     @template = Template.new
+    if request.post? then
+      puts params[:message]
+      attrs = JSON.parse(params[:message])
+      @template = Template.create! attrs
+      response = { :status => 200, :message => "[i2x]: template #{params[:identifier]} loaded", :id => @template[:id] }
+      respond_to do |format|
+        format.html { redirect_to templates_url }
+        format.json { render :json => response}
+      end
+    else 
+    end
     
   end
 
@@ -68,10 +79,10 @@ class TemplatesController < ApplicationController
       puts params[:message]
       attrs = JSON.parse(params[:message])
       @template = Template.create! attrs
-      response = { :status => "200", :message => "[i2x]: template #{params[:identifier]} loaded", :id => "#{@template[:id]}" }
+      response = { :status => 200, :message => "[i2x]: template #{params[:identifier]} loaded", :id => @template[:id] }
       respond_to do |format|
         format.html { redirect_to templates_url }
-        format.json { head :no_content }
+        format.json { render :json => response}
       end
     else 
     end

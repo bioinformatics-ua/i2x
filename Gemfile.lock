@@ -89,6 +89,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    require_reloader (0.1.6)
     rufus-scheduler (2.0.24)
       tzinfo (>= 0.3.22)
     sass (3.2.10)
@@ -139,6 +140,7 @@ DEPENDENCIES
   kramdown
   mysql2
   rails (= 4.0.0)
+  require_reloader
   rufus-scheduler
   sass-rails (~> 4.0.0)
   sdoc

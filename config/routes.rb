@@ -1,6 +1,6 @@
 I2x::Application.routes.draw do
   
-  post "templates/start"
+  post "templates/new"
   get "templates/start"
   resources :templates
 
@@ -52,7 +52,8 @@ I2x::Application.routes.draw do
   # testing Postman routes
   get "postman/load/:publisher/:identifier", to: "postman#load"
   get "postman/go/:identifier", to: 'postman#go'
-  get "postman/deliver"
+  get "postman/deliver/:publisher/:identifier", to: "postman#deliver"
+  post "postman/deliver/:publisher/:identifier", to: "postman#deliver"
   get "postman/:key", to: "postman#deliver"
   post "postman/:key", to: "postman#action"
 

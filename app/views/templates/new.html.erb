@@ -1,5 +1,192 @@
 <h1>New template</h1>
+<%= form_for(@template) do |f| %>
+<% if @template.errors.any? %>
+<div id="error_explanation" class="alert-box alert">
+  <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
 
-<%= render 'form' %>
+  <ul>
+    <% @template.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<fieldset>
+  <legend>Template Properties</legend>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :identifier, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_field :identifier, :tabindex => 1, :autofocus => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :title, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_area :title, :tabindex => 2 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :help, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_area :help, :tabindex => 3 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :publisher, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['File','file']], {:selected => 'sql'}), :tabindex => 4) %>  
+    </div>  
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :variables, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <div class="row collapse" id="template_variables_include">
+      </div>
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input type="text" class="template_variable_text template_variables_base" tabindex="5" data-id="1" placeholder="E.g.: id" id="template_variables_text_1">
+        </div>
+        <div class="small-2 columns">
+          <a href="#" data-id="1" class="button prefix template_variables_add" tabindex="6" id="template_variables_button_1">Add</a>
+        </div>
+    </div>
+  </div>
+</fieldset>
+<div class="publisher_sql">
+  <fieldset><legend>SQL Publisher Properties</legend>
+    <div class="row">
+     <div class="small-3 columns">
+      <label for="publisher_sql_server" class="right inline">Server</label>
+    </div>
+    <div class="small-9 columns">
+      <select id="publisher_sql_server" tabindex="8">
+        <option selected="selected" value="mysql">MySQL</option>
+        <option value="sqlserver">SQL Server</option>
+        <option value="postgres">Postgres</option>
+        <option value="sqlite">SQLite</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_host" class="right inline">Host</label>
+    </div>
+    <div class="small-9 columns">
+      <input type="text" id="publisher_sql_host" tabindex="9" placeholder="E.g.: localhost">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_port" class="right inline">Port</label>
+    </div>
+    <div class="small-9 columns">
+      <input type="number" id="publisher_sql_port" tabindex="10" placeholder="E.g.: 3306">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_database" class="right inline">Database</label>
+    </div>
+    <div class="small-9 columns">
+      <input type="text" id="publisher_sql_database" tabindex="11" placeholder="E.g.: i2x">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_username" class="right inline">Username</label>
+    </div>
+    <div class="small-9 columns">
+      <input type="text" id="publisher_sql_username" tabindex="12" placeholder="E.g.: root">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_password" class="right inline">Password</label>
+    </div>
+    <div class="small-9 columns">
+      <input type="text" id="publisher_sql_password" tabindex="13" placeholder="E.g.: 12345">
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label for="publisher_sql_query" class="right inline">Query</label>
+    </div>
+    <div class="small-9 columns">
+      <textarea id="publisher_sql_query" tabindex="14" placeholder="E.g.: INSERT INTO..."></textarea>
+    </div>
+  </div>
+</fieldset>
+</div>
+<div class="field publisher_url">
+ <fieldset><legend>URL Publisher Properties</legend>
+  <div class="row">
+   <div class="small-3 columns">
+    <label for="publisher_url_method" class="right inline">Method</label>
+  </div>
+  <div class="small-9 columns">
+    <select id="publisher_url_method" tabindex="15">
+      <option selected="selected" value="get">GET</option>
+      <option value="post">POST</option>
+      <option value="update">UPDATE</option>
+      <option value="delete">DELETE</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="publisher_url_uri" class="right inline">URI</label>
+  </div>
+  <div class="small-9 columns">
+   <input type="url" tabindex="16" id="publisher_url_uri" placeholder="E.g.: http://bioinformatics.ua.pt/i2x/...">
+ </div>
+</div>
+</fieldset>
+</div>
+<div class="field publisher_file">
+ <fieldset><legend>File Publisher Properties</legend>
+  <div class="row">
+   <div class="small-3 columns">
+    <label for="publisher_file_method" class="right inline">Method</label>
+  </div>
+  <div class="small-9 columns">
+    <select id="publisher_file_method" tabindex="17">
+      <option selected="selected" value="append">Append</option>
+      <option value="create">Create</option>
+      <option value="delete">Delete</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="publisher_file_uri" class="right inline">URI</label>
+  </div>
+  <div class="small-9 columns">
+   <input type="url" id="publisher_file_uri" tabindex="17" placeholder="E.g.: file:///home/user/this.csv">
+ </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="publisher_file_content" class="right inline">Content</label>
+  </div>
+  <div class="small-9 columns">
+   <textarea type="text" id="publisher_file_content" tabindex="18" placeholder="E.g.: %{i2x.date},%{id}\n"></textarea>
+ </div>
+</div>
+</fieldset>
+</div>
+<div class="actions">
+  <a class="button right success" tabindex="40" id="start">Submit</a>
+</div>
+<% end %>
 
 <%= link_to 'Back', templates_path %>

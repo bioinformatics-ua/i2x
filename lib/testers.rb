@@ -1,10 +1,10 @@
-require 'json'
-require 'ActiveSupport::JSON'
+#require 'json'
+#require 'ActiveSupport::JSON'
 
-json = IO.read('../templates/sql/variant.js')
+#json = IO.read('../templates/sql/variant.js')
 
-j = ActiveSupport::JSON
+#j = ActiveSupport::JSON
 
-obj = j.decode(json)
+#obj = j.decode(json)
 
-puts obj[:type]
+#puts obj[:type]
