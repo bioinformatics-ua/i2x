@@ -1,7 +1,7 @@
 require 'delivery'
 
 module Services
-	class File < Delivery
+	class SQLTemplate < Delivery
 
 		def initialize identifier, publisher
 			super

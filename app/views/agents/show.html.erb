@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @agent.type %>
+</p>
+
+<p>
+  <strong>Options:</strong>
+  <%= @agent.options %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @agent.memory %>
+</p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @agent.identifier %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @agent.title %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @agent.help %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @agent.schedule %>
+</p>
+
+<p>
+  <strong>Events count:</strong>
+  <%= @agent.events_count %>
+</p>
+
+<p>
+  <strong>Last check at:</strong>
+  <%= @agent.last_check_at %>
+</p>
+
+<p>
+  <strong>Last event:</strong>
+  <%= @agent.last_event %>
+</p>
+
+<p>
+  <strong>Seed:</strong>
+  <%= @agent.seed %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @agent.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @agent.updated_at %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @agent.action %>
+</p>
+
+<%= link_to 'Edit', edit_agent_path(@agent) %> |
+<%= link_to 'Back', agents_path %>

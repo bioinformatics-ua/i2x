@@ -28,8 +28,4 @@ I2x::Application.configure do
   config.assets.debug = true
 
   config.host = 'http://i2x.dev/'
-
-   RequireReloader.watch :helper
-   RequireReloader.watch :delivery
-   RequireReloader.watch :sql
 end

@@ -1,6 +1,8 @@
 require 'helper'
 require 'delivery'
-require 'sql'
+require 'sqltemplate'
+require 'filetemplate'
+require 'urltemplate'
 
 class PostmanController < ApplicationController
 	def deliver
@@ -12,9 +14,9 @@ class PostmanController < ApplicationController
 				when 'sql'
 					@delivery = Services::SQL.new(params[:identifier], params[:publisher])
 				when 'file'
-					@delivery = Services::File.new(params[:identifier], params[:publisher])
+					@delivery = Services::FileTemplate.new(params[:identifier], params[:publisher])
 				when 'url'
-					@delivery = Services::URL.new(params[:identifier], params[:publisher])
+					@delivery = Services::URLTemplate.new(params[:identifier], params[:publisher])
 			end
 		rescue Exception => e
 			@response = { :status => "401", :message => "[i2x] Unable to load selected Delivery Template", :identifier => params[:identifier], :publisher => params[:publisher], :error => e }
@@ -29,7 +31,7 @@ class PostmanController < ApplicationController
 		begin
 			@response = @delivery.execute
 		rescue Exception => e
-			@response = { :status => "403", :message => "[i2x] Unable to perform final delivery", :identifier => params[:identifier], :publisher => params[:publisher], :error => e, :template => @template }
+			@response = { :status => "403", :message => "[i2x] Unable to perform final delivery, #{e}", :identifier => params[:identifier], :publisher => params[:publisher], :error => e, :template => @template }
 		end
 		
 		respond_to do |format|	

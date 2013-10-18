@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  options: MyText
+  memory: MyText
+  identifier: MyString
+  title: MyString
+  help: MyText
+  schedule: MyString
+  events_count: 1
+  last_check_at: 2013-10-18 16:39:10
+  last_event: 2013-10-18 16:39:10
+  seed: MyText
+  created_at: 2013-10-18 16:39:10
+  updated_at: 2013-10-18 16:39:10
+  action: MyString
+
+two:
+  type: 
+  options: MyText
+  memory: MyText
+  identifier: MyString
+  title: MyString
+  help: MyText
+  schedule: MyString
+  events_count: 1
+  last_check_at: 2013-10-18 16:39:10
+  last_event: 2013-10-18 16:39:10
+  seed: MyText
+  created_at: 2013-10-18 16:39:10
+  updated_at: 2013-10-18 16:39:10
+  action: MyString

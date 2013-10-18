@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001145417) do
+ActiveRecord::Schema.define(version: 20131018153910) do
+
+  create_table "agents", force: true do |t|
+    t.string   "type"
+    t.text     "options"
+    t.text     "memory"
+    t.string   "identifier"
+    t.string   "title"
+    t.text     "help"
+    t.string   "schedule"
+    t.integer  "events_count"
+    t.datetime "last_check_at"
+    t.datetime "last_event"
+    t.text     "seed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "action"
+  end
 
   create_table "bttf", force: true do |t|
     t.timestamp "ts",          null: false

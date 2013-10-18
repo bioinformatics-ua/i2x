@@ -8,7 +8,7 @@ require 'socket'
 scheduler = Rufus::Scheduler.start_new
 
 
-scheduler.every '10m' do
+scheduler.every '10d' do
   # propogate!(mutex)
     #puts 'Hello Dave!'
     #dt = Time.new

@@ -29,17 +29,22 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'compass-rails' 
 
+# Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
 gem 'zurb-foundation'
 
+# Advanced markdown to HTML converter. Read more: http://kramdown.rubyforge.org
 gem 'kramdown'
 
 gem  'mysql2'
 
+# Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
 
+# Scheduling agent. Still missing "delayed_jobs"?!. Read more: https://github.com/jmettraux/rufus-scheduler
 gem "rufus-scheduler"
 
-gem 'require_reloader'
+# Simplest way to perform REST request (for URL Delivery Templates). Read more: https://github.com/rest-client/rest-client
+gem 'rest-client'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

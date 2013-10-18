@@ -1,0 +1,73 @@
+<%= form_for(@agent) do |f| %>
+  <% if @agent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
+
+      <ul>
+      <% @agent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :options %><br>
+    <%= f.text_area :options %>
+  </div>
+  <div class="field">
+    <%= f.label :memory %><br>
+    <%= f.text_area :memory %>
+  </div>
+  <div class="field">
+    <%= f.label :identifier %><br>
+    <%= f.text_field :identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :help %><br>
+    <%= f.text_area :help %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br>
+    <%= f.text_field :schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :events_count %><br>
+    <%= f.number_field :events_count %>
+  </div>
+  <div class="field">
+    <%= f.label :last_check_at %><br>
+    <%= f.datetime_select :last_check_at %>
+  </div>
+  <div class="field">
+    <%= f.label :last_event %><br>
+    <%= f.datetime_select :last_event %>
+  </div>
+  <div class="field">
+    <%= f.label :seed %><br>
+    <%= f.text_area :seed %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :action %><br>
+    <%= f.text_field :action %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

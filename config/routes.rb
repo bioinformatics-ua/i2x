@@ -1,5 +1,7 @@
 I2x::Application.routes.draw do
   
+  resources :agents
+
   post "templates/new"
   get "templates/start"
   resources :templates
@@ -9,6 +11,7 @@ I2x::Application.routes.draw do
   resources :variants
 
   get "delivery/get"
+  post "delivery/post"
   get "delivery/go"
   devise_for :users
   root  'home#index'
