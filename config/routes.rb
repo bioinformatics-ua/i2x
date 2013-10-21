@@ -1,12 +1,18 @@
 I2x::Application.routes.draw do
+
+  get "tester/regex", to: 'tester#regex'
+
+  resources :caches
+
+  get "tester/agent/:identifier", to: 'tester#agent'
   
+  get "agents/import/:identifier", to: "agents#import"
   resources :agents
+
 
   post "templates/new"
   get "templates/start"
   resources :templates
-
-  resources :stds
 
   resources :variants
 

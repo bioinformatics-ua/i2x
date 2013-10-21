@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131018153910) do
+ActiveRecord::Schema.define(version: 20131021140135) do
 
   create_table "agents", force: true do |t|
-    t.string   "type"
+    t.string   "publisher"
     t.text     "options"
     t.text     "memory"
     t.string   "identifier"
@@ -30,17 +30,11 @@ ActiveRecord::Schema.define(version: 20131018153910) do
     t.string   "action"
   end
 
-  create_table "bttf", force: true do |t|
-    t.timestamp "ts",          null: false
-    t.string    "title"
-    t.text      "description"
-  end
-
-  create_table "stds", force: true do |t|
-    t.string   "key"
-    t.string   "label"
-    t.string   "help"
-    t.integer  "visited"
+  create_table "caches", force: true do |t|
+    t.string   "publisher"
+    t.integer  "agent_id"
+    t.text     "payload"
+    t.text     "memory"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

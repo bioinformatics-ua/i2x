@@ -1,0 +1,37 @@
+<%= form_for(@cach) do |f| %>
+  <% if @cach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cach.errors.count, "error") %> prohibited this cach from being saved:</h2>
+
+      <ul>
+      <% @cach.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hash %><br>
+    <%= f.text_field :hash %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br>
+    <%= f.text_field :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :agent %><br>
+    <%= f.text_field :agent %>
+  </div>
+  <div class="field">
+    <%= f.label :payload %><br>
+    <%= f.text_area :payload %>
+  </div>
+  <div class="field">
+    <%= f.label :memory %><br>
+    <%= f.text_area :memory %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

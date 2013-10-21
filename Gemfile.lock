@@ -52,6 +52,7 @@ GEM
     execjs (2.0.1)
     fssm (0.2.10)
     hike (1.2.3)
+    hiredis (0.4.5)
     i18n (0.6.5)
     jbuilder (1.5.1)
       activesupport (>= 3.0.0)
@@ -65,9 +66,12 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.8.0)
     mysql2 (0.3.13)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -89,6 +93,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redis (3.0.5)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rufus-scheduler (2.0.24)
@@ -136,11 +141,14 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails
   devise
+  hiredis
   jbuilder (~> 1.2)
   jquery-rails
   kramdown
   mysql2
+  nokogiri
   rails (= 4.0.0)
+  redis
   rest-client
   rufus-scheduler
   sass-rails (~> 4.0.0)

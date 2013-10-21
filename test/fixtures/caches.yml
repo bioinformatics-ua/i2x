@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hash: MyString
+  publisher: MyString
+  agent: 
+  payload: MyText
+  memory: MyText
+
+two:
+  hash: MyString
+  publisher: MyString
+  agent: 
+  payload: MyText
+  memory: MyText

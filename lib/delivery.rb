@@ -2,10 +2,11 @@ require 'helper'
 
 module Services
 	
+	
 	##
 	# = Delivery
 	#
-	# Main Delivery class, to be inherited by SQL, File and URL
+	# Main Delivery class, to be inherited by SQL, File and URL templates
 	#
 	class Delivery
 		attr_accessor :template, :identifier, :publisher
@@ -14,7 +15,8 @@ module Services
 			@identifier = identifier
 			@publisher = publisher
 			@template = Template.find_by! identifier: @identifier, publisher: @publisher
-
+			@help = Services::Helper.new
+			
 			self.process_helpers
 		end
 
@@ -27,14 +29,15 @@ module Services
 	  	# * +params+ - the Postman URL POST request parameters
 	  	# 
 	  	def process params
-	  		@template[:variables].each do |variable|
-	  			begin
-	  				@template[:payload].each_pair do |key,value|
-	  					@template[:payload][key].gsub!("%{#{variable}}", params[variable])
+	  		begin
+	  			@template[:payload].each_pair do |key,value|
+	  				variables = @help.identify_variables @template[:payload][key]
+	  				variables.each do |v|
+	  					@template[:payload][key].gsub!("%{#{v}}", params[v])
 	  				end
-	  			rescue => e
-	  				puts e
-	  			end
+	  			end	  			
+	  		rescue Exception => e
+	  			puts e
 	  		end
 	  	end
 
@@ -42,8 +45,6 @@ module Services
 	  	# Replaces all identified helpers with the matching helper functions output in the payload
 	  	#
 	  	def process_helpers
-	  		@help = Services::Helper.new
-
 	  		begin
 	  			@template[:payload].each_pair do |key, value|
 	  				@help.replacements.each {|replacement| @template[:payload][key].gsub!(replacement[0], replacement[1])}

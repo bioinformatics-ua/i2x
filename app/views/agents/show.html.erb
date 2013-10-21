@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @agent.type %>
+  <strong>Publisher:</strong>
+  <%= @agent.publisher %>
 </p>
 
 <p>
   <strong>Options:</strong>
   <%= @agent.options %>
+  <%=
+    if @agent.publisher == 'xml' then
+      @agent.options[:uri]
+    end 
+  %>
 </p>
 
 <p>

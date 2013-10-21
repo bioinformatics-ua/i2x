@@ -1,0 +1,35 @@
+<h1>Listing caches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hash</th>
+      <th>Publisher</th>
+      <th>Agent</th>
+      <th>Payload</th>
+      <th>Memory</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caches.each do |cach| %>
+      <tr>
+        <td><%= cach.hash %></td>
+        <td><%= cach.publisher %></td>
+        <td><%= cach.agent %></td>
+        <td><%= cach.payload %></td>
+        <td><%= cach.memory %></td>
+        <td><%= link_to 'Show', cach %></td>
+        <td><%= link_to 'Edit', edit_cach_path(cach) %></td>
+        <td><%= link_to 'Destroy', cach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cache', new_cach_path %>

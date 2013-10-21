@@ -12,7 +12,7 @@ class PostmanController < ApplicationController
 		begin
 			case params[:publisher]
 				when 'sql'
-					@delivery = Services::SQL.new(params[:identifier], params[:publisher])
+					@delivery = Services::SQLTemplate.new(params[:identifier], params[:publisher])
 				when 'file'
 					@delivery = Services::FileTemplate.new(params[:identifier], params[:publisher])
 				when 'url'

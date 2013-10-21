@@ -1,4 +1,9 @@
 module Services
+
+	##
+	# = Helper
+	# Miscellaneous helper methods and utils to deal with data.
+	#
 	class Helper
 		attr_accessor :replacements	
 		@replacements
@@ -19,6 +24,22 @@ module Services
 
 		def date
 			Time.now.strftime("%Y-%m-%d").to_s			
+		end
+
+		##
+		# == identify
+		# => Identifies variables on string set
+		#
+		# * +text+ - string to be scanned
+		#
+		def identify_variables text
+			results = Array.new
+
+			text.scan(/%{(.*?)}/).each do |m|
+				results.push m[0]
+			end
+
+			results
 		end
 	end
 end

@@ -61,6 +61,17 @@ class AgentsController < ApplicationController
     end
   end
 
+  def import
+    @file = File.read("data/agents/agents_#{params[:identifier]}.js")
+    puts @file
+    @agent = Agent.create! JSON.parse(@file)
+    response = { :status => 200, :message => "[i2x]: agent #{params[:identifier]} imported", :id => @agent[:id] }
+    respond_to do |format|
+      format.json { render :json => response}
+      format.xml { render :xml => response}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_agent
@@ -71,4 +82,4 @@ class AgentsController < ApplicationController
     def agent_params
       params.require(:agent).permit(:type, :options, :memory, :identifier, :title, :help, :schedule, :events_count, :last_check_at, :last_event, :seed, :created_at, :updated_at, :action)
     end
-end
+  end

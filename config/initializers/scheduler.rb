@@ -10,7 +10,7 @@ scheduler = Rufus::Scheduler.start_new
 
 scheduler.every '10d' do
   # propogate!(mutex)
-    #puts 'Hello Dave!'
+    #puts 'Hello Dave!' 
     #dt = Time.new
     #CSV.open('data/log.csv', 'a') do |csv|
     #  csv << [dt.to_time, 'checked']

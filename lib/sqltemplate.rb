@@ -3,10 +3,6 @@ require 'delivery'
 module Services
 	class SQLTemplate < Delivery
 
-		def initialize identifier, publisher
-			super
-		end
-
 		public
 
 		##

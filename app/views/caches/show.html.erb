@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hash:</strong>
+  <%= @cach.hash %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @cach.publisher %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @cach.agent %>
+</p>
+
+<p>
+  <strong>Payload:</strong>
+  <%= @cach.payload %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @cach.memory %>
+</p>
+
+<%= link_to 'Edit', edit_cach_path(@cach) %> |
+<%= link_to 'Back', caches_path %>

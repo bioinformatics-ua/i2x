@@ -2,11 +2,7 @@ require 'delivery'
 
 module Services
 	class FileTemplate < Delivery
-
-		def initialize identifier, publisher
-			super
-		end
-
+		
 		public
 
 		##

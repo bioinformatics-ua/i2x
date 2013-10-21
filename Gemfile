@@ -46,6 +46,13 @@ gem "rufus-scheduler"
 # Simplest way to perform REST request (for URL Delivery Templates). Read more: https://github.com/rest-client/rest-client
 gem 'rest-client'
 
+# XML, HTML, Reader parser.
+gem 'nokogiri'
+
+# Redis cache access
+gem 'hiredis'
+gem 'redis'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
