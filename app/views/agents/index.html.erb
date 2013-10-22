@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
-      <th>Options</th>
+      <th>Publisher</th>
+      <th>Payload</th>
       <th>Memory</th>
       <th>Identifier</th>
       <th>Title</th>
@@ -26,8 +26,8 @@
   <tbody>
     <% @agents.each do |agent| %>
       <tr>
-        <td><%= agent.type %></td>
-        <td><%= agent.options %></td>
+        <td><%= agent.publisher %></td>
+        <td><%= agent.payload %></td>
         <td><%= agent.memory %></td>
         <td><%= agent.identifier %></td>
         <td><%= agent.title %></td>

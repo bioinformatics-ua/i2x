@@ -1,8 +1,8 @@
 module Services
 
 	##
-	# = Helper
-	# Miscellaneous helper methods and utils to deal with data.
+	# = Helper Class
+	# => Miscellaneous helper methods and utils to deal with data.
 	#
 	class Helper
 		attr_accessor :replacements	
@@ -27,8 +27,9 @@ module Services
 		end
 
 		##
-		# == identify
-		# => Identifies variables on string set
+		# == Identify Variables
+		# => Identifies variables on string set, generates array with all scanned variables for processing.
+		# => Variables are enclosed in %{variable} string.
 		#
 		# * +text+ - string to be scanned
 		#
@@ -40,6 +41,85 @@ module Services
 			end
 
 			results
+		end
+
+		##
+		# == Validate payload
+		# => Validates content payload.
+		#
+		# + *publisher* - for publisher-specific validations
+		# + *payload* - content for validation
+		#
+		def self.validate_payload publisher, payload
+			@database_servers = ["mysql","sqlite","postgresql"]
+
+			valid = true
+
+			case publisher
+			when 'csv', 'xml', 'json', 'file', 'js'
+				# file content URI is mandatory
+				if payload[:uri].nil? then
+					valid = false
+				end
+			when 'sql'
+				
+				# check if database server is available
+				unless database_servers.include? payload[:server] then
+					valid = false
+				end
+
+				# database username is mandatory
+				if payload[:username].nil? then
+					valid = false
+				end
+
+				# database user password is mandatory
+				if payload[:password].nil? then
+					valid = false
+				end
+
+				# database name is mandatory
+				if payload[:database].nil? then
+					valid = false
+				end
+
+				# database query is mandatory
+				if payload[:query].nil? then
+					valid = false
+				end
+			end
+
+			valid
+		end
+
+		##
+		# == Validate Seed
+		# => Validates Seed-specific properties
+		# 
+		# + *publisher* - for publisher-specific validations
+		# + *seed* - the seed hash
+		#
+		def self.validate_seed publisher, seed
+			valid = self.validate_payload publisher, seed
+			if valid then
+				# seed must have selectors
+				if seed[:selectors].nil? then
+					valid = false
+				end
+			else
+				valid = false
+			end
+			valid
+		end
+
+		##
+		# == Validate Agent
+		# => Validates Agent-specific properties
+		# 
+		# + *agent* - the agent for validation
+		#
+		def self.validate_agent 
+			valid = self.validate_seed(agent[:publisher], agent[:payload]) && self.validate_payload(agent[:publisher], agent[:payload])
 		end
 	end
 end

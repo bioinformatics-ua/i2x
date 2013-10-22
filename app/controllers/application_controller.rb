@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def generate_content
   	begin
-  		@content = Kramdown::Document.new(File.read('raw/i2x_' + controller_name + '_' + action_name + '.md')).to_html
+  		@content = Kramdown::Document.new(File.read('raw/i2x_' + controller_name + '_' + action_name + '.md'), :toc_levels => '1,2').to_html
   	rescue
   	end
   end

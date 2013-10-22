@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021140135) do
+ActiveRecord::Schema.define(version: 20131022133314) do
 
   create_table "agents", force: true do |t|
     t.string   "publisher"
-    t.text     "options"
+    t.text     "payload"
     t.text     "memory"
     t.string   "identifier"
     t.string   "title"

@@ -6,6 +6,6 @@
 	"variables":["id"],
 	"payload": {
 		"method":"get",
-		"uri":"http://i2x.dev/ping/%{id}"
+		"uri":"http://i2x.dev/ping/%{id}"	
 	}
 }

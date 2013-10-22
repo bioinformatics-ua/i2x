@@ -62,7 +62,7 @@ class AgentsController < ApplicationController
   end
 
   def import
-    @file = File.read("data/agents/agents_#{params[:identifier]}.js")
+    @file = File.read("data/agents/#{params[:identifier]}.js")
     puts @file
     @agent = Agent.create! JSON.parse(@file)
     response = { :status => 200, :message => "[i2x]: agent #{params[:identifier]} imported", :id => @agent[:id] }
@@ -80,6 +80,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:type, :options, :memory, :identifier, :title, :help, :schedule, :events_count, :last_check_at, :last_event, :seed, :created_at, :updated_at, :action)
+      params.require(:agent).permit(:publisher, :payload, :memory, :identifier, :title, :help, :schedule, :events_count, :last_check_at, :last_event, :seed, :created_at, :updated_at, :action)
     end
   end

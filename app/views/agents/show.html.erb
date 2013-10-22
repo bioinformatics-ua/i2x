@@ -6,11 +6,11 @@
 </p>
 
 <p>
-  <strong>Options:</strong>
-  <%= @agent.options %>
+  <strong>Payload:</strong>
+  <%= @agent.payload %>
   <%=
     if @agent.publisher == 'xml' then
-      @agent.options[:uri]
+      @agent.payload[:uri]
     end 
   %>
 </p>

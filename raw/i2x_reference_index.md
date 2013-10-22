@@ -1,4 +1,4 @@
-<aside class="large-3 columns" markdown="1">
+<aside class="large-3 columns" markdown="1" style="position:fixed;font-size:80%;">
 
 ##### Outline
 {:.no_toc}
@@ -39,11 +39,6 @@ This is a field only really used internally for both prefill and scripting refer
 This is some human-readable explanatory text, usually something that clarifies what the action does.
 
 **Example**: *Adds a new variant to the configured database*.
-
-## Related
-
-- Postman
-- Delivery Template
 
 # Action Fields
 
@@ -98,17 +93,17 @@ A comma separated string that will be turned into a select field for limiting th
 
 # Deliveries
 
-**Deliveries** are associated with [Actions][] and define what will be executed by the [Postman][].
+**Deliveries** are associated with [Actions][actions] and define what will be executed by the [Postman][postman].
 
 # Delivery Templates
 
-Programmatically, each **Delivery Template** is a set of key/value pairs describing the associated [delivery][deliveries].
+Programmatically, each **Delivery Template** is metadata describing the associated [delivery][delivery].
 
 ## Metadata
 
 ### Identifier
 
-A key for consumption by the [Postman][]. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
+A key for consumption by the [Postman][postman]. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
 
 **Example**: *mapper* or *issue*
 
@@ -130,21 +125,13 @@ Human readable description of an action field, useful for describing some detail
 
 **Property**: `help` (maps to `dc:description`)
 
-### Type
+### Publisher
 
-The type of Action that will be delivered by the Postman.
+The Action publisher that will be delivered by the Postman.
 
-**Available Types**: *url*, *sql*, *sparql*, *mail*, *file*, *json*...
+**Available Publishers**: *url*, *sql*, *sparql*, *mail*, *file*, *json*...
 
-**Property**: `type`  (maps to `dc:type`)
-
-### Variables
-
-An array containing all the variables that will be replaced by the integration Action data.
-
-**Example**: *["id","subject"]* or *["title","key"]*
-
-**Property**: `variables` (maps to `i2x:variable` set)
+**Property**: `publisher`  (maps to `dc:publisher`)
 
 ### Payload
 
@@ -175,7 +162,7 @@ Sample configuration for exchanged data between the application controller and t
 
 ## Email
 
-Note that emails are sent from the server configured in **i2x**'s Rails settings.
+Sends custom emails to the configured recipients. **Note*** that emails are sent from the server configured in **i2x**'s Rails settings.
 
 ### Metadata
 
@@ -221,6 +208,8 @@ The body for the message being sent.
 
 ## File Management
 
+Changes files directly on the file system. 
+
 ### Metadata
 
 #### Content
@@ -249,7 +238,7 @@ The _create_ method will create a new file with the generated content (from the 
 
 #### URI
 
-The file URI. Not that filenames can include _variables_.
+The file URI. Not that filenames can include _variables_. The use of full system file URIs (starting with _file://_) is advised.
 
 **Example**: *file://Temp/log.csv*
 
@@ -287,11 +276,11 @@ Port open for connection in the database host. This value defaults to the standa
 
 #### Database Name
 
-Database name where the query will be performed. This value defaults to the [delivery template][deliverytemplate] key if no data is provided.
+Database name where the query will be performed. 
 
 **Example**: *wave10*, *issues*
 
-**Property**: `database` (maps to `i2x:database`)
+**Property**: `database` (maps to `i2x:database`) (**mandatory**)
 
 #### Username
 
@@ -299,7 +288,7 @@ Database user.
 
 **Example**: *john_doe*
 
-**Property**: `username` (maps to `i2x:username`)
+**Property**: `username` (maps to `i2x:username`) (**mandatory**)
 
 #### Password
 
@@ -307,7 +296,7 @@ User password. The password is hashed before being exchanged between any service
 
 **Example**: *qwerty§12345*
 
-**Property**: `password` (maps to `i2x:password`)
+**Property**: `password` (maps to `i2x:password`) (**mandatory**)
 
 #### Query
 
@@ -315,9 +304,11 @@ The query that will be executed by the [Postman][postman] in the configured data
 
 **Example**: *INSERT INTO issues (title, description, timestamp) VALUES ('{%title}, '%{description}', getdate());*
 
-**Property**: `query` (maps to `i2x:server`)
+**Property**: `query` (maps to `i2x:server`) (**mandatory**)
 
 ## URL Route
+
+Perform the selected request type on the configured URL, passing on configured parameters.
 
 ### Metadata
 
@@ -356,7 +347,7 @@ The destination URL for the request.
 
 **Example**: *http://bioinformatics.ua.pt/i2x/postman/%{id}*, *http://bmd-software.com/*
 
-**Property**: `uri` (mas to `i2x:uri`)
+**Property**: `uri` (maps to `i2x:uri`)
 
 # Events
 
@@ -534,6 +525,11 @@ Sample configuration for exchanged data between the application controller and t
 # STD: Spot The Differences
 
 The **STD** engine will perform the [polling][] of configured [sources][]. Spot the Differences monitors specified resources looking for changes in the output content. **STD**'s algorithm identifies what has changed since the last visit to a data source (using hashes and id matching). When content changes are detected, the **STD** triggers a new event. **Events** will then be processed through configured **i2x** integration ruless. In the system, detected events are sent for processing to the Flux Capacitor.
+
+# Variables
+
+Agents, [Actions][] and [Deliveries][delivery] can have an endless number of variables being matched within **i2x**. 
+
 </div>
 
 

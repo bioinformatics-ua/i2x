@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  type: 
-  options: MyText
+  publisher: 
+  payload: MyText
   memory: MyText
   identifier: MyString
   title: MyString
@@ -17,8 +17,8 @@ one:
   action: MyString
 
 two:
-  type: 
-  options: MyText
+  publisher: 
+  payload: MyText
   memory: MyText
   identifier: MyString
   title: MyString
