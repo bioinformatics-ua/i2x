@@ -1,0 +1,73 @@
+<div class="row">	
+	<fieldset><legend>SQL Publisher Properties</legend>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_sqlserver" class="right inline">Server</label>
+			</div>
+			<div class="small-9 columns">
+				<select id="agent_sqlserver" name="agent[sqlserver]" tabindex="8">
+					<option selected="selected" value="mysql">MySQL</option>
+					<option value="sqlserver">SQL Server</option>
+					<option value="postgres">Postgres</option>
+					<option value="sqlite">SQLite</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_host" class="right inline">Host</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" id="agent_host" tabindex="9" name="agent[host]"  placeholder="E.g.: localhost">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_port" class="right inline">Port</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="number" id="agent_port" name="agent[port]"  tabindex="10" placeholder="E.g.: 3306">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_database" class="right inline">Database</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" id="agent_database" name="agent[database]"  tabindex="11" placeholder="E.g.: i2x">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_username" class="right inline">Username</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" id="agent_username" name="agent[username]"  tabindex="12" placeholder="E.g.: root">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_password" class="right inline">Password</label>
+			</div>
+			<div class="small-9 columns">
+				<input type="text" id="agent_password" name="agent[password]"  tabindex="13" placeholder="E.g.: 12345">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label for="agent_query" class="right inline">Query</label>
+			</div>
+			<div class="small-9 columns">
+				<textarea id="agent_query" tabindex="14" name="agent[query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label class="right inline">Cache</label>
+			</div>
+			<div class="small-9 columns">
+				<input id="agent_cache" name="agent[cache]" type="text">
+			</div>
+		</div>
+	</fieldset>
+</div>

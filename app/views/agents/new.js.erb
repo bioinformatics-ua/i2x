@@ -1,0 +1,39 @@
+$(function(){ 
+	$('#agent_publisher').on('change', agent_update_publisher_view )
+
+	$('#seed').on('change', agent_update_seed_view )	
+});
+
+/**
+*	Toggle form content according to Agent publisher
+**/
+function agent_update_publisher_view(event) {
+	publisher = $(this).find(':selected').val();
+
+	if( publisher === 'csv') {	
+		$('#publisher_content').html("<%= j render(:partial => 'publisher_csv') %>");
+	} else if(publisher === 'xml') {
+		$('#publisher_content').html("<%= j render(:partial => 'publisher_xml') %>");
+	} else if(publisher === 'json') {
+		$('#publisher_content').html("<%= j render(:partial => 'publisher_json') %>");
+	} else if(publisher === 'sql') {
+		$('#publisher_content').html("<%= j render(:partial => 'publisher_sql') %>");
+	} 
+}
+
+/**
+*	Toggle form content according to Agent seed
+**/
+function agent_update_seed_view(event) {
+	seed = $(this).find(':selected').val();
+
+	if( seed === 'csv') {	
+		$('#seed_content').html("<%= j render(:partial => 'seed_csv') %>");
+	} else if(seed === 'xml') {
+		$('#seed_content').html("<%= j render(:partial => 'seed_xml') %>");
+	} else if(seed === 'json') {
+		$('#seed_content').html("<%= j render(:partial => 'seed_json') %>");
+	} else if(seed === 'sql') {
+		$('#seed_content').html("<%= j render(:partial => 'seed_sql') %>");
+	} 
+}

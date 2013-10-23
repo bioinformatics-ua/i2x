@@ -5,8 +5,8 @@
 	"publisher":"xml",
 	"schedule":"2h",
 	"action":"lovd",
-	"options": {
+	"payload": {
         "uri": "https://eds.gene.le.ac.uk/api/rest.php/variants/COL3A1",
-        "content_id": "//title"
+        "cache": "//title"
     }
 }

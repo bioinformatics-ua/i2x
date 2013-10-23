@@ -1,0 +1,33 @@
+$(function(){ 
+	$('#publisher').on('change', agent_update_publisher_view )
+	
+});
+
+/**
+*	Toggle form content according to Template publisher
+**/
+function agent_update_publisher_view(event) {
+	
+	type = $(this).find(':selected').val();
+
+
+	if( type === 'csv') {
+	
+		$('#publisher_content').html("<%= j render(:partial => 'publishercsv') %>");
+
+	/*	$('.publisher_sql').show();			
+		$('.publisher_file').hide();
+		$('.publisher_url').hide();
+
+	} else if (type === 'url') {
+		$('.publisher_sql').hide();			
+		$('.publisher_file').hide();
+		$('.publisher_url').show();
+
+	} else if (type === 'file') {
+		$('.publisher_sql').hide();			
+		$('.publisher_file').show();
+		$('.publisher_url').hide();
+*/
+	}
+}

@@ -24,7 +24,7 @@
         "password": "telematica",
         "database": "i2x",
         "query": "SELECT * FROM variants WHERE gene LIKE '%{gene}';",
-        "memory": "id",
+        "cache": "id",
         "selectors": [
             {
                 "refseq": "refseq"

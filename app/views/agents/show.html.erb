@@ -8,16 +8,6 @@
 <p>
   <strong>Payload:</strong>
   <%= @agent.payload %>
-  <%=
-    if @agent.publisher == 'xml' then
-      @agent.payload[:uri]
-    end 
-  %>
-</p>
-
-<p>
-  <strong>Memory:</strong>
-  <%= @agent.memory %>
 </p>
 
 <p>

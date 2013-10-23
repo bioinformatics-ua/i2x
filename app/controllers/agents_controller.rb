@@ -15,6 +15,11 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
+
+    respond_to do |format|
+      format.html {render action: "new"}
+      format.js { render layout: "application" }
+    end
   end
 
   # GET /agents/1/edit
@@ -72,6 +77,10 @@ class AgentsController < ApplicationController
     end
   end
 
+  def partials
+    render :partial => "publisher#{params[:identifier]}"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_agent
@@ -80,6 +89,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:publisher, :payload, :memory, :identifier, :title, :help, :schedule, :events_count, :last_check_at, :last_event, :seed, :created_at, :updated_at, :action)
+      params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query)
     end
   end

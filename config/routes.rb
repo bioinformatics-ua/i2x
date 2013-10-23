@@ -5,7 +5,7 @@ I2x::Application.routes.draw do
   resources :caches
 
   get "tester/agent/:identifier", to: 'tester#agent'
-  
+  get "agents/partials/:identifier", to: 'agents#partials'
   get "agents/import/:identifier", to: "agents#import"
   resources :agents
 

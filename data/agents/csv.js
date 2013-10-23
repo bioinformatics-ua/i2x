@@ -9,6 +9,6 @@
         "uri": "http://pedrolopes.net/i2x/log.csv",
         "headers": true,
         "delimiter": ",",
-        "memory": "0"
+        "cache": "0"
     }
 }

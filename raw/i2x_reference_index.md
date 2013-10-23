@@ -91,6 +91,10 @@ A comma separated string that will be turned into a select field for limiting th
 
 **Example**: *choice_a,choice_b,choice_c* or *Yesterday, Today, Tomorrow*
 
+# Agents
+
+Agents are used by the [STD][] to monitor external resources for content changes.
+
 # Deliveries
 
 **Deliveries** are associated with [Actions][actions] and define what will be executed by the [Postman][postman].
@@ -528,7 +532,13 @@ The **STD** engine will perform the [polling][] of configured [sources][]. Spot 
 
 # Variables
 
-Agents, [Actions][] and [Deliveries][delivery] can have an endless number of variables being matched within **i2x**. 
+Agents, [Actions][] and [Deliveries][delivery] can have an endless number of variables being matched within **i2x**. Variables are available in the _seed_ and _payload_ objects in any configuration.
+
+## Usage
+
+**i2x** identifies variables by matching content in property values within `%{ }`. On processing, each variable is replaced with content from the sent payload. Variables can be included in SQL queries, URIs or request parameters. **Note** that **i2x** helper functions are also variables.
+
+**Example**:  `%{name}` is replaced by the `name` property in the calling function parameters hash. 
 
 </div>
 
