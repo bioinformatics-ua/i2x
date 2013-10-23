@@ -89,6 +89,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query)
+      params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :payload_uri, :payload_cache, :payload_headers, :payload_delimiter, :payload_sqlserver, :payload_host, :payload_port, :payload_database, :payload_username, :payload_password, :payload_query, :payload_selectors, :seed_uri, :seed_cache, :seed_headers, :seed_delimiter, :seed_sqlserver, :seed_host, :seed_port, :seed_database, :seed_username, :seed_password, :seed_query, :seed_selectors)
     end
   end

@@ -2,10 +2,14 @@ $(function(){
 	$('#agent_publisher').on('change', agent_update_publisher_view )
 
 	$('#seed').on('change', agent_update_seed_view )	
-});
+
+		// Manage payload selectors list
+		$('.payload_selector_add').on('click', add_payload_selector_from_click)
+		$('.payload_selector_value').on('keypress', add_payload_selector_from_keypress)
+	});
 
 /**
-*	Toggle form content according to Agent publisher
+*	Toggle form according to Agent publisher
 **/
 function agent_update_publisher_view(event) {
 	publisher = $(this).find(':selected').val();
@@ -22,7 +26,7 @@ function agent_update_publisher_view(event) {
 }
 
 /**
-*	Toggle form content according to Agent seed
+*	Toggle form according to Agent seed
 **/
 function agent_update_seed_view(event) {
 	seed = $(this).find(':selected').val();
@@ -36,4 +40,111 @@ function agent_update_seed_view(event) {
 	} else if(seed === 'sql') {
 		$('#seed_content').html("<%= j render(:partial => 'seed_sql') %>");
 	} 
+}
+
+/**
+*	Add POST param to list
+**/
+function add_payload_selector(id) {	
+	
+	var selectors = JSON.parse($('#payload_selector_hidden').val());
+
+	var destination = $('#payload_selector_include');
+	var next_id = id + 1;	
+	var origin_key_text = $('#payload_selector_key_' + id);
+	var origin_value_text = $('#payload_selector_value_' + id);
+	var origin_button = $('#payload_selector_button_' + id); 
+
+	// update hidden content
+	var selector = '{"' + origin_key_text.val() + '":"' +origin_value_text.val() + '"}'
+	selectors.push(JSON.parse(selector))
+	$('#payload_selector_hidden').val(JSON.stringify(selectors));
+	
+	// cleanup POST params form
+	origin_key_text.parent().removeClass('error');
+	origin_value_text.parent().removeClass('error');
+
+	// validate POST params form
+	if(!destination.is(':visible')) {
+		destination.show();	
+	}	
+	if(origin_key_text.val() === '') {
+		origin_key_text.parent().addClass('error');
+	} else if (origin_value_text.val() === '') {
+		origin_value_text.parent().addClass('error');
+	} else {
+		// process
+		destination.append('<div class="payload_selector_new_' + id + '"><div class="small-3 columns left">&nbsp</div><div class="small-3 columns payload_selector_key_' + id + '"><input data-id="' + id  + '" type="text" placeholder="E.g.: id" disabled class="disabled payload_selector_key" value="' + origin_key_text.val() + '"></div><div class="small-3 columns payload_selector_value_' + id + '"><input id="payload_selector_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-3 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id +'" class="button prefix alert payload_selector_remove">Remove</a></div></div>');
+		origin_key_text.removeAttr('id');
+		origin_value_text.removeAttr('id');
+		origin_button.removeAttr('id')
+		origin_key_text.attr('id', 'payload_selector_key_' + next_id);
+		origin_value_text.attr('id', 'payload_selector_value_' + next_id);
+		origin_button.attr('id', 'payload_selector_button_' + next_id);
+		origin_key_text.val('');
+		origin_value_text.val('');
+		origin_key_text.data('id', next_id);
+		origin_value_text.data('id', next_id);
+		origin_button.data('id', next_id);
+		origin_key_text.focus();
+		update_payload_selector_remove();
+	}
+	
+}
+
+/**
+*	Add URL POST param  handler for button click
+**/
+function add_payload_selector_from_click(event) {
+	event.preventDefault();
+	add_payload_selector($(this).data('id'));
+
+}
+
+/**
+*	Add URL POST param handler for "enter" keypress
+**/
+function add_payload_selector_from_keypress(event) {
+	if(event.which == 13) {
+		add_payload_selector($(this).data('id'));
+	}	
+}
+
+/**
+*	Removes existing POST param
+**/
+function remove_payload_selector(event) {
+	event.preventDefault();
+	var id = $(this).data('id');
+	var selectors = JSON.parse($('#payload_selector_hidden').val());
+	var key = $('#payload_selector_key_' + id).val();
+	var value = $('#payload_selector_value_' + id).val();
+	selectors = remove_obj_from_array(selectors, JSON.parse('{"' + key + '":"' + value + '"}'));
+	$('#payload_selector_hidden').val(JSON.stringify(selectors));
+	$('.payload_selector_new_' + $(this).data('id')).remove();
+}
+
+/**
+*	Reload jQuery model to listen to new events for POST params "Remove" button
+**/
+function update_payload_selector_remove() {
+	$('.payload_selector_remove').on('click', remove_payload_selector);
+}
+
+function remove_obj_from_array(list, val) {
+
+	for (var i = 0; i < list.length; i++) {
+		var json_obj = list[i];
+		for (var key in json_obj) {
+			for (var k in val) {
+				if (json_obj[key] === val[k]) {
+					list.splice(i, 1);
+					i--;
+				}
+			}
+			
+			
+		}
+	}
+	return list;
 }
