@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @integration.identifier %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @integration.title %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @integration.help %>
+</p>
+
+<p>
+  <strong>Payload:</strong>
+  <%= @integration.payload %>
+</p>
+
+<p>
+  <strong>Memory:</strong>
+  <%= @integration.memory %>
+</p>
+
+<%= link_to 'Edit', edit_integration_path(@integration) %> |
+<%= link_to 'Back', integrations_path %>

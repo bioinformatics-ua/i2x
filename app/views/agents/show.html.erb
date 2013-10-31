@@ -1,3 +1,4 @@
+<h1><%= @agent.title %></h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -15,10 +16,6 @@
   <%= @agent.identifier %>
 </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @agent.title %>
-</p>
 
 <p>
   <strong>Help:</strong>
@@ -47,7 +44,8 @@
 
 <p>
   <strong>Seed:</strong>
-  <%= @agent.seed %>
+  <br />
+  <%= render :partial => "seeds/show", :locals => {:seed => @seed} %>
 </p>
 
 <p>

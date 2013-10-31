@@ -5,7 +5,7 @@
 			<label for="agent_payload_sqlserver" class="right inline">Server</label>
 		</div>
 		<div class="small-9 columns">
-			<select id="agent_sqlserver" name="agent[payload_sqlserver]" tabindex="8">
+			<select id="agent_sqlserver" name="agent[sqlserver]" tabindex="8">
 				<option selected="selected" value="mysql">MySQL</option>
 				<option value="sqlserver">SQL Server</option>
 				<option value="postgres">Postgres</option>
@@ -18,7 +18,7 @@
 			<label for="agent_payload_host" class="right inline">Host</label>
 		</div>
 		<div class="small-9 columns">
-			<input type="text" id="agent_payload_host" tabindex="9" name="agent[payload_host]"  placeholder="E.g.: localhost">
+			<input type="text" id="agent_payload_host" tabindex="9" name="agent[host]"  placeholder="E.g.: localhost">
 		</div>
 	</div>
 	<div class="row">
@@ -26,7 +26,7 @@
 			<label for="agent_payload_port" class="right inline">Port</label>
 		</div>
 		<div class="small-9 columns">
-			<input type="number" id="agent_payload_port" name="agent[payload_port]"  tabindex="10" placeholder="E.g.: 3306">
+			<input type="number" id="agent_payload_port" name="agent[port]"  tabindex="10" placeholder="E.g.: 3306">
 		</div>
 	</div>
 	<div class="row">
@@ -34,7 +34,7 @@
 			<label for="agent_payload_database" class="right inline">Database</label>
 		</div>
 		<div class="small-9 columns">
-			<input type="text" id="agent_payload_database" name="agent[payload_database]"  tabindex="11" placeholder="E.g.: i2x">
+			<input type="text" id="agent_payload_database" name="agent[database]"  tabindex="11" placeholder="E.g.: i2x">
 		</div>
 	</div>
 	<div class="row">
@@ -42,7 +42,7 @@
 			<label for="agent_payload_username" class="right inline">Username</label>
 		</div>
 		<div class="small-9 columns">
-			<input type="text" id="agent_payload_username" name="agent[payload_username]"  tabindex="12" placeholder="E.g.: root">
+			<input type="text" id="agent_payload_username" name="agent[username]"  tabindex="12" placeholder="E.g.: root">
 		</div>
 	</div>
 	<div class="row">
@@ -50,7 +50,7 @@
 			<label for="agent_payload_password" class="right inline">Password</label>
 		</div>
 		<div class="small-9 columns">
-			<input type="text" id="agent_payload_password" name="agent[payload_password]"  tabindex="13" placeholder="E.g.: 12345">
+			<input type="text" id="agent_payload_password" name="agent[password]"  tabindex="13" placeholder="E.g.: 12345">
 		</div>
 	</div>
 	<div class="row">
@@ -58,7 +58,7 @@
 			<label for="agent_payload_query" class="right inline">Query</label>
 		</div>
 		<div class="small-9 columns">
-			<textarea id="agent_payload_query" tabindex="14" name="agent[payload_query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
+			<textarea id="agent_payload_query" tabindex="14" name="agent[query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
 		</div>
 	</div>
 	<div class="row">
@@ -66,11 +66,11 @@
 			<label class="right inline">Cache</label>
 		</div>
 		<div class="small-9 columns">
-			<input id="agent_payload_cache" name="agent[payload_cache]" type="text">
+			<input id="agent_payload_cache" name="agent[cache]" type="text">
 		</div>
 	</div>
 	<div class="row">
-		<input type="hidden" id="payload_selector_hidden" name="agent[payload_selectors]" value='[]'>
+		<input type="hidden" id="payload_selector_hidden" name="agent[selectors]" value='[]'>
 		<div id="payload_selector_include">
 
 		</div>

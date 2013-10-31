@@ -40,8 +40,17 @@ gem  'mysql2'
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
 
+# Daemons for delayed job execution. Read more: https://github.com/collectiveidea/delayed_job
+gem 'daemons'
+
 # Scheduling agent. Still missing "delayed_jobs"?!. Read more: https://github.com/jmettraux/rufus-scheduler
 gem "rufus-scheduler"
+
+# Delaying jobs for async processing. Read more: https://github.com/collectiveidea/delayed_job
+gem 'delayed_job_active_record'
+
+# Web interface for delayed jobs. Read more: https://github.com/ejschmitt/delayed_job_web
+gem "delayed_job_web"
 
 # Simplest way to perform REST request (for URL Delivery Templates). Read more: https://github.com/rest-client/rest-client
 gem 'rest-client'

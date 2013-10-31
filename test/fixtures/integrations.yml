@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  identifier: MyString
+  title: MyString
+  help: MyText
+  payload: MyText
+  memory: MyText
+
+two:
+  identifier: MyString
+  title: MyString
+  help: MyText
+  payload: MyText
+  memory: MyText

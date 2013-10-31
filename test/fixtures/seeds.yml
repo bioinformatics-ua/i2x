@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  identifier: MyString
+  title: MyString
+  publisher: MyString
+  help: MyText
+  payload: MyText
+  memmory: MyText
+
+two:
+  identifier: MyString
+  title: MyString
+  publisher: MyString
+  help: MyText
+  payload: MyText
+  memmory: MyText

@@ -3,6 +3,12 @@ class Template < ActiveRecord::Base
 	store	:memory
 	serialize	:variables
 
+	##
+	# => Use IntegrationMappings to connect Integrations
+	#
+	has_many	:integration_mapping
+	has_many	:integration, :through => :integration_mapping
+
 #	after_initialize	:symbolize
 #	before_save	:normalize
 

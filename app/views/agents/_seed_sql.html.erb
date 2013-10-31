@@ -2,10 +2,26 @@
 	<fieldset><legend>SQL Seed Properties</legend>
 		<div class="row">
 			<div class="small-3 columns">
+				<label class="right inline">Identifier</label>
+			</div>
+			<div class="small-9 columns">
+				<input id="agent_seed_identifier" name="seed[identifier]" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
+				<label class="right inline">Title</label>
+			</div>
+			<div class="small-9 columns">
+				<input id="agent_seed_identifier" name="seed[title]" type="text">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
 				<label for="agent_seed_sqlserver" class="right inline">Server</label>
 			</div>
 			<div class="small-9 columns">
-				<select id="agent_sqlserver" name="agent[seed_sqlserver]" tabindex="8">
+				<select id="agent_sqlserver" name="agent[sqlserver]" tabindex="8">
 					<option selected="selected" value="mysql">MySQL</option>
 					<option value="sqlserver">SQL Server</option>
 					<option value="postgres">Postgres</option>
@@ -18,7 +34,7 @@
 				<label for="agent_seed_host" class="right inline">Host</label>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" id="agent_seed_host" tabindex="9" name="agent[seed_host]"  placeholder="E.g.: localhost">
+				<input type="text" id="agent_seed_host" tabindex="9" name="agent[host]"  placeholder="E.g.: localhost">
 			</div>
 		</div>
 		<div class="row">
@@ -26,7 +42,7 @@
 				<label for="agent_seed_port" class="right inline">Port</label>
 			</div>
 			<div class="small-9 columns">
-				<input type="number" id="agent_seed_port" name="agent[seed_port]"  tabindex="10" placeholder="E.g.: 3306">
+				<input type="number" id="agent_seed_port" name="agent[port]"  tabindex="10" placeholder="E.g.: 3306">
 			</div>
 		</div>
 		<div class="row">
@@ -34,7 +50,7 @@
 				<label for="agent_seed_database" class="right inline">Database</label>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" id="agent_seed_database" name="agent[seed_database]"  tabindex="11" placeholder="E.g.: i2x">
+				<input type="text" id="agent_seed_database" name="agent[database]"  tabindex="11" placeholder="E.g.: i2x">
 			</div>
 		</div>
 		<div class="row">
@@ -42,7 +58,7 @@
 				<label for="agent_seed_username" class="right inline">Username</label>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" id="agent_seed_username" name="agent[seed_username]"  tabindex="12" placeholder="E.g.: root">
+				<input type="text" id="agent_seed_username" name="agent[username]"  tabindex="12" placeholder="E.g.: root">
 			</div>
 		</div>
 		<div class="row">
@@ -50,7 +66,7 @@
 				<label for="agent_seed_password" class="right inline">Password</label>
 			</div>
 			<div class="small-9 columns">
-				<input type="text" id="agent_seed_password" name="agent[seed_password]"  tabindex="13" placeholder="E.g.: 12345">
+				<input type="text" id="agent_seed_password" name="agent[password]"  tabindex="13" placeholder="E.g.: 12345">
 			</div>
 		</div>
 		<div class="row">
@@ -58,7 +74,7 @@
 				<label for="agent_seed_query" class="right inline">Query</label>
 			</div>
 			<div class="small-9 columns">
-				<textarea id="agent_seed_query" tabindex="14" name="agent[seed_query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
+				<textarea id="agent_seed_query" tabindex="14" name="agent[query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
 			</div>
 		</div>
 		<div class="row">
@@ -66,7 +82,7 @@
 				<label class="right inline">Cache</label>
 			</div>
 			<div class="small-9 columns">
-				<input id="agent_seed_cache" name="agent[seed_cache]" type="text">
+				<input id="agent_seed_cache" name="agent[cache]" type="text">
 			</div>
 		</div>
 	</fieldset>

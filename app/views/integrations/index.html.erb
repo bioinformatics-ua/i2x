@@ -1,0 +1,35 @@
+<h1>Listing integrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Title</th>
+      <th>Help</th>
+      <th>Payload</th>
+      <th>Memory</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @integrations.each do |integration| %>
+      <tr>
+        <td><%= integration.identifier %></td>
+        <td><%= integration.title %></td>
+        <td><%= integration.help %></td>
+        <td><%= integration.payload %></td>
+        <td><%= integration.memory %></td>
+        <td><%= link_to 'Show', integration %></td>
+        <td><%= link_to 'Edit', edit_integration_path(integration) %></td>
+        <td><%= link_to 'Destroy', integration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Integration', new_integration_path %>

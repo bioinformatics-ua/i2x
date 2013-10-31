@@ -1,5 +1,9 @@
 I2x::Application.routes.draw do
 
+  resources :integrations
+
+  resources :seeds
+
   get "tester/regex", to: 'tester#regex'
 
   resources :caches
@@ -66,6 +70,8 @@ I2x::Application.routes.draw do
   get "postman/:key", to: "postman#deliver"
   post "postman/:key", to: "postman#action"
 
+  # delayed job web interface
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
   # i2x image hack
   get '/i2x/images/*all', to: redirect('/images/%{all}.png')

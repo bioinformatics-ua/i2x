@@ -1,0 +1,931 @@
+# Logfile created on 2013-10-31 16:23:04 +0000 by logger.rb/36483
+I, [2013-10-31T16:23:04.024780 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Starting job worker
+I, [2013-10-31T16:23:04.179980 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=31) RUNNING
+I, [2013-10-31T16:23:04.183016 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=31) COMPLETED after 0.0026
+I, [2013-10-31T16:23:04.188354 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=32) RUNNING
+I, [2013-10-31T16:23:04.191107 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=32) COMPLETED after 0.0024
+I, [2013-10-31T16:23:04.195407 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=33) RUNNING
+I, [2013-10-31T16:23:04.197405 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=33) COMPLETED after 0.0017
+I, [2013-10-31T16:23:04.199626 #73225]  INFO -- : 2013-10-31T16:23:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 17.2067 j/s, 0 failed
+I, [2013-10-31T16:23:09.210478 #73225]  INFO -- : 2013-10-31T16:23:09+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=34) RUNNING
+I, [2013-10-31T16:23:09.212529 #73225]  INFO -- : 2013-10-31T16:23:09+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=34) COMPLETED after 0.0018
+I, [2013-10-31T16:23:09.213918 #73225]  INFO -- : 2013-10-31T16:23:09+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 80.9913 j/s, 0 failed
+I, [2013-10-31T16:23:39.239145 #73225]  INFO -- : 2013-10-31T16:23:39+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=35) RUNNING
+I, [2013-10-31T16:23:39.240963 #73225]  INFO -- : 2013-10-31T16:23:39+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=35) COMPLETED after 0.0014
+I, [2013-10-31T16:23:39.242480 #73225]  INFO -- : 2013-10-31T16:23:39+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 91.4328 j/s, 0 failed
+I, [2013-10-31T16:28:34.437160 #73225]  INFO -- : 2013-10-31T16:28:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=36) RUNNING
+I, [2013-10-31T16:28:34.439344 #73225]  INFO -- : 2013-10-31T16:28:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=36) COMPLETED after 0.0018
+I, [2013-10-31T16:28:34.441327 #73225]  INFO -- : 2013-10-31T16:28:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 87.7501 j/s, 0 failed
+I, [2013-10-31T16:29:04.469096 #73225]  INFO -- : 2013-10-31T16:29:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=37) RUNNING
+I, [2013-10-31T16:29:04.471760 #73225]  INFO -- : 2013-10-31T16:29:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=37) COMPLETED after 0.0022
+I, [2013-10-31T16:29:04.476408 #73225]  INFO -- : 2013-10-31T16:29:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=38) RUNNING
+I, [2013-10-31T16:29:04.478528 #73225]  INFO -- : 2013-10-31T16:29:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=38) COMPLETED after 0.0018
+I, [2013-10-31T16:29:04.480483 #73225]  INFO -- : 2013-10-31T16:29:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 2 jobs processed at 101.7501 j/s, 0 failed
+I, [2013-10-31T16:29:34.507749 #73225]  INFO -- : 2013-10-31T16:29:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=39) RUNNING
+I, [2013-10-31T16:29:34.510433 #73225]  INFO -- : 2013-10-31T16:29:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=39) COMPLETED after 0.0023
+I, [2013-10-31T16:29:34.512498 #73225]  INFO -- : 2013-10-31T16:29:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 72.4638 j/s, 0 failed
+I, [2013-10-31T16:30:04.539976 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=40) RUNNING
+I, [2013-10-31T16:30:04.542253 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=40) COMPLETED after 0.0019
+I, [2013-10-31T16:30:04.546867 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=41) RUNNING
+I, [2013-10-31T16:30:04.548724 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=41) COMPLETED after 0.0015
+I, [2013-10-31T16:30:04.552284 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=42) RUNNING
+I, [2013-10-31T16:30:04.553883 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=42) COMPLETED after 0.0014
+I, [2013-10-31T16:30:04.555240 #73225]  INFO -- : 2013-10-31T16:30:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 126.4276 j/s, 0 failed
+I, [2013-10-31T16:30:34.582957 #73225]  INFO -- : 2013-10-31T16:30:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=43) RUNNING
+I, [2013-10-31T16:30:34.585590 #73225]  INFO -- : 2013-10-31T16:30:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=43) COMPLETED after 0.0023
+I, [2013-10-31T16:30:34.587344 #73225]  INFO -- : 2013-10-31T16:30:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 83.1255 j/s, 0 failed
+I, [2013-10-31T16:31:04.615401 #73225]  INFO -- : 2013-10-31T16:31:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=44) RUNNING
+I, [2013-10-31T16:31:04.617795 #73225]  INFO -- : 2013-10-31T16:31:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=44) COMPLETED after 0.0019
+I, [2013-10-31T16:31:04.623505 #73225]  INFO -- : 2013-10-31T16:31:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=45) RUNNING
+I, [2013-10-31T16:31:04.625580 #73225]  INFO -- : 2013-10-31T16:31:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=45) COMPLETED after 0.0017
+I, [2013-10-31T16:31:04.627644 #73225]  INFO -- : 2013-10-31T16:31:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 2 jobs processed at 93.3925 j/s, 0 failed
+I, [2013-10-31T16:31:34.648823 #73225]  INFO -- : 2013-10-31T16:31:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=46) RUNNING
+I, [2013-10-31T16:31:34.650441 #73225]  INFO -- : 2013-10-31T16:31:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=46) COMPLETED after 0.0014
+I, [2013-10-31T16:31:34.652200 #73225]  INFO -- : 2013-10-31T16:31:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 117.3296 j/s, 0 failed
+I, [2013-10-31T16:32:04.678043 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=47) RUNNING
+I, [2013-10-31T16:32:04.680133 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=47) COMPLETED after 0.0018
+I, [2013-10-31T16:32:04.683875 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=48) RUNNING
+I, [2013-10-31T16:32:04.685327 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=48) COMPLETED after 0.0012
+I, [2013-10-31T16:32:04.688409 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=49) RUNNING
+I, [2013-10-31T16:32:04.689710 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=49) COMPLETED after 0.0011
+I, [2013-10-31T16:32:04.691066 #73225]  INFO -- : 2013-10-31T16:32:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 155.5855 j/s, 0 failed
+I, [2013-10-31T16:32:34.716964 #73225]  INFO -- : 2013-10-31T16:32:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=50) RUNNING
+I, [2013-10-31T16:32:34.719508 #73225]  INFO -- : 2013-10-31T16:32:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=50) COMPLETED after 0.0021
+I, [2013-10-31T16:32:34.721557 #73225]  INFO -- : 2013-10-31T16:32:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 82.3859 j/s, 0 failed
+I, [2013-10-31T16:33:04.748532 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=51) RUNNING
+I, [2013-10-31T16:33:04.751512 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=51) COMPLETED after 0.0025
+I, [2013-10-31T16:33:04.756547 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=52) RUNNING
+I, [2013-10-31T16:33:04.758671 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=52) COMPLETED after 0.0018
+I, [2013-10-31T16:33:04.762980 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=53) RUNNING
+I, [2013-10-31T16:33:04.764765 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=53) COMPLETED after 0.0016
+I, [2013-10-31T16:33:04.766088 #73225]  INFO -- : 2013-10-31T16:33:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 112.9008 j/s, 0 failed
+I, [2013-10-31T16:33:34.796529 #73225]  INFO -- : 2013-10-31T16:33:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=54) RUNNING
+I, [2013-10-31T16:33:34.799429 #73225]  INFO -- : 2013-10-31T16:33:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=54) COMPLETED after 0.0024
+I, [2013-10-31T16:33:34.801607 #73225]  INFO -- : 2013-10-31T16:33:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 66.1332 j/s, 0 failed
+I, [2013-10-31T16:34:04.825164 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=55) RUNNING
+I, [2013-10-31T16:34:04.827721 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=55) COMPLETED after 0.0021
+I, [2013-10-31T16:34:04.832336 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=56) RUNNING
+I, [2013-10-31T16:34:04.834387 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=56) COMPLETED after 0.0016
+I, [2013-10-31T16:34:04.838071 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=57) RUNNING
+I, [2013-10-31T16:34:04.839566 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=57) COMPLETED after 0.0012
+I, [2013-10-31T16:34:04.840908 #73225]  INFO -- : 2013-10-31T16:34:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 128.2325 j/s, 0 failed
+I, [2013-10-31T16:34:34.862235 #73225]  INFO -- : 2013-10-31T16:34:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=58) RUNNING
+I, [2013-10-31T16:34:34.863799 #73225]  INFO -- : 2013-10-31T16:34:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=58) COMPLETED after 0.0013
+I, [2013-10-31T16:34:34.865099 #73225]  INFO -- : 2013-10-31T16:34:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 158.3531 j/s, 0 failed
+I, [2013-10-31T16:35:04.889943 #73225]  INFO -- : 2013-10-31T16:35:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=59) RUNNING
+I, [2013-10-31T16:35:04.892366 #73225]  INFO -- : 2013-10-31T16:35:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=59) COMPLETED after 0.0020
+I, [2013-10-31T16:35:04.897132 #73225]  INFO -- : 2013-10-31T16:35:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=60) RUNNING
+I, [2013-10-31T16:35:04.899852 #73225]  INFO -- : 2013-10-31T16:35:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=60) COMPLETED after 0.0024
+I, [2013-10-31T16:35:04.901639 #73225]  INFO -- : 2013-10-31T16:35:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 2 jobs processed at 101.2453 j/s, 0 failed
+I, [2013-10-31T16:35:34.923943 #73225]  INFO -- : 2013-10-31T16:35:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=61) RUNNING
+I, [2013-10-31T16:35:34.925708 #73225]  INFO -- : 2013-10-31T16:35:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=61) COMPLETED after 0.0015
+I, [2013-10-31T16:35:34.927254 #73225]  INFO -- : 2013-10-31T16:35:34+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 1 jobs processed at 125.4863 j/s, 0 failed
+I, [2013-10-31T16:36:04.954561 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=62) RUNNING
+I, [2013-10-31T16:36:04.956982 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=62) COMPLETED after 0.0020
+I, [2013-10-31T16:36:04.961439 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=63) RUNNING
+I, [2013-10-31T16:36:04.963416 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=63) COMPLETED after 0.0016
+I, [2013-10-31T16:36:04.967910 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=64) RUNNING
+I, [2013-10-31T16:36:04.969517 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] Job Services::Checkup#check_without_delay (id=64) COMPLETED after 0.0014
+I, [2013-10-31T16:36:04.970876 #73225]  INFO -- : 2013-10-31T16:36:04+0000: [Worker(delayed_job host:expression.clients.ua.pt pid:73225)] 3 jobs processed at 128.4357 j/s, 0 failed
+I, [2013-10-31T16:36:34.998873 #73225]  INFO -- : 2013-10-31T16:36:34+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=65) RUNNING
+I, [2013-10-31T16:36:35.001201 #73225]  INFO -- : 2013-10-31T16:36:35+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=65) COMPLETED after 0.0019
+I, [2013-10-31T16:36:35.003202 #73225]  INFO -- : 2013-10-31T16:36:35+0000: [Worker(delayed_job host:Infinity.local pid:73225)] 1 jobs processed at 81.0504 j/s, 0 failed
+I, [2013-10-31T16:37:19.974556 #73225]  INFO -- : 2013-10-31T16:37:19+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=66) RUNNING
+I, [2013-10-31T16:37:19.977193 #73225]  INFO -- : 2013-10-31T16:37:19+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=66) COMPLETED after 0.0022
+I, [2013-10-31T16:37:19.982421 #73225]  INFO -- : 2013-10-31T16:37:19+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=67) RUNNING
+I, [2013-10-31T16:37:19.984389 #73225]  INFO -- : 2013-10-31T16:37:19+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=67) COMPLETED after 0.0016
+I, [2013-10-31T16:37:19.986292 #73225]  INFO -- : 2013-10-31T16:37:19+0000: [Worker(delayed_job host:Infinity.local pid:73225)] 2 jobs processed at 97.3047 j/s, 0 failed
+I, [2013-10-31T16:37:35.004778 #73225]  INFO -- : 2013-10-31T16:37:35+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=68) RUNNING
+I, [2013-10-31T16:37:35.007007 #73225]  INFO -- : 2013-10-31T16:37:35+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=68) COMPLETED after 0.0019
+I, [2013-10-31T16:37:35.008987 #73225]  INFO -- : 2013-10-31T16:37:35+0000: [Worker(delayed_job host:Infinity.local pid:73225)] 1 jobs processed at 82.8706 j/s, 0 failed
+I, [2013-10-31T18:04:55.970449 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=69) RUNNING
+I, [2013-10-31T18:04:55.973335 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=69) COMPLETED after 0.0024
+I, [2013-10-31T18:04:55.978235 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=70) RUNNING
+I, [2013-10-31T18:04:55.980290 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=70) COMPLETED after 0.0017
+I, [2013-10-31T18:04:55.984536 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=71) RUNNING
+I, [2013-10-31T18:04:55.986478 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=71) COMPLETED after 0.0017
+I, [2013-10-31T18:04:55.989906 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=72) RUNNING
+I, [2013-10-31T18:04:55.991361 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=72) COMPLETED after 0.0012
+I, [2013-10-31T18:04:55.994459 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=73) RUNNING
+I, [2013-10-31T18:04:55.996084 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=73) COMPLETED after 0.0014
+I, [2013-10-31T18:04:55.999350 #73225]  INFO -- : 2013-10-31T18:04:55+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=74) RUNNING
+I, [2013-10-31T18:04:56.001146 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=74) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.004394 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=75) RUNNING
+I, [2013-10-31T18:04:56.005823 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=75) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.009089 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=76) RUNNING
+I, [2013-10-31T18:04:56.010725 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=76) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.013999 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=77) RUNNING
+I, [2013-10-31T18:04:56.015506 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=77) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.018762 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=78) RUNNING
+I, [2013-10-31T18:04:56.020374 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=78) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.023672 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=79) RUNNING
+I, [2013-10-31T18:04:56.025806 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=79) COMPLETED after 0.0019
+I, [2013-10-31T18:04:56.029185 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=80) RUNNING
+I, [2013-10-31T18:04:56.030728 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=80) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.033889 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=81) RUNNING
+I, [2013-10-31T18:04:56.035765 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=81) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.038950 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=82) RUNNING
+I, [2013-10-31T18:04:56.040525 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=82) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.044437 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=83) RUNNING
+I, [2013-10-31T18:04:56.046048 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=83) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.049181 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=84) RUNNING
+I, [2013-10-31T18:04:56.051262 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=84) COMPLETED after 0.0018
+I, [2013-10-31T18:04:56.054544 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=85) RUNNING
+I, [2013-10-31T18:04:56.056192 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=85) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.059513 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=86) RUNNING
+I, [2013-10-31T18:04:56.061117 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=86) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.064441 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=87) RUNNING
+I, [2013-10-31T18:04:56.065908 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=87) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.069113 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=88) RUNNING
+I, [2013-10-31T18:04:56.070605 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=88) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.074051 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=89) RUNNING
+I, [2013-10-31T18:04:56.075799 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=89) COMPLETED after 0.0015
+I, [2013-10-31T18:04:56.079186 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=90) RUNNING
+I, [2013-10-31T18:04:56.080542 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=90) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.084175 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=91) RUNNING
+I, [2013-10-31T18:04:56.085573 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=91) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.088859 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=92) RUNNING
+I, [2013-10-31T18:04:56.090450 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=92) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.093915 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=93) RUNNING
+I, [2013-10-31T18:04:56.095518 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=93) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.099027 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=94) RUNNING
+I, [2013-10-31T18:04:56.100711 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=94) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.103938 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=95) RUNNING
+I, [2013-10-31T18:04:56.105493 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=95) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.108845 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=96) RUNNING
+I, [2013-10-31T18:04:56.110356 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=96) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.113696 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=97) RUNNING
+I, [2013-10-31T18:04:56.115235 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=97) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.118340 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=98) RUNNING
+I, [2013-10-31T18:04:56.119914 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=98) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.123135 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=99) RUNNING
+I, [2013-10-31T18:04:56.124709 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=99) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.127792 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=100) RUNNING
+I, [2013-10-31T18:04:56.129217 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=100) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.132319 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=101) RUNNING
+I, [2013-10-31T18:04:56.133883 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=101) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.137062 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=102) RUNNING
+I, [2013-10-31T18:04:56.138448 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=102) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.141742 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=103) RUNNING
+I, [2013-10-31T18:04:56.143578 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=103) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.146882 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=104) RUNNING
+I, [2013-10-31T18:04:56.148642 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=104) COMPLETED after 0.0015
+I, [2013-10-31T18:04:56.151800 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=105) RUNNING
+I, [2013-10-31T18:04:56.153391 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=105) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.156672 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=106) RUNNING
+I, [2013-10-31T18:04:56.158146 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=106) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.161341 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=107) RUNNING
+I, [2013-10-31T18:04:56.163146 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=107) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.166420 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=108) RUNNING
+I, [2013-10-31T18:04:56.168332 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=108) COMPLETED after 0.0017
+I, [2013-10-31T18:04:56.171642 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=109) RUNNING
+I, [2013-10-31T18:04:56.173016 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=109) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.176157 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=110) RUNNING
+I, [2013-10-31T18:04:56.177786 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=110) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.180872 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=111) RUNNING
+I, [2013-10-31T18:04:56.182311 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=111) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.185347 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=112) RUNNING
+I, [2013-10-31T18:04:56.187370 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=112) COMPLETED after 0.0018
+I, [2013-10-31T18:04:56.190945 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=113) RUNNING
+I, [2013-10-31T18:04:56.192350 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=113) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.195581 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=114) RUNNING
+I, [2013-10-31T18:04:56.197071 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=114) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.200137 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=115) RUNNING
+I, [2013-10-31T18:04:56.201651 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=115) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.204946 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=116) RUNNING
+I, [2013-10-31T18:04:56.206463 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=116) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.209960 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=117) RUNNING
+I, [2013-10-31T18:04:56.211359 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=117) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.214678 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=118) RUNNING
+I, [2013-10-31T18:04:56.216533 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=118) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.219823 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=119) RUNNING
+I, [2013-10-31T18:04:56.221315 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=119) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.224545 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=120) RUNNING
+I, [2013-10-31T18:04:56.226139 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=120) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.229315 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=121) RUNNING
+I, [2013-10-31T18:04:56.230793 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=121) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.233960 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=122) RUNNING
+I, [2013-10-31T18:04:56.284952 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=122) COMPLETED after 0.0505
+I, [2013-10-31T18:04:56.291042 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=123) RUNNING
+I, [2013-10-31T18:04:56.293050 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=123) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.297949 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=124) RUNNING
+I, [2013-10-31T18:04:56.300120 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=124) COMPLETED after 0.0019
+I, [2013-10-31T18:04:56.303519 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=125) RUNNING
+I, [2013-10-31T18:04:56.305189 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=125) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.308485 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=126) RUNNING
+I, [2013-10-31T18:04:56.309904 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=126) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.313150 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=127) RUNNING
+I, [2013-10-31T18:04:56.314788 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=127) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.318001 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=128) RUNNING
+I, [2013-10-31T18:04:56.319538 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=128) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.322548 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=129) RUNNING
+I, [2013-10-31T18:04:56.324086 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=129) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.327314 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=130) RUNNING
+I, [2013-10-31T18:04:56.328743 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=130) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.331912 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=131) RUNNING
+I, [2013-10-31T18:04:56.333482 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=131) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.336770 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=132) RUNNING
+I, [2013-10-31T18:04:56.338169 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=132) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.341305 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=133) RUNNING
+I, [2013-10-31T18:04:56.342694 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=133) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.345742 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=134) RUNNING
+I, [2013-10-31T18:04:56.347710 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=134) COMPLETED after 0.0017
+I, [2013-10-31T18:04:56.350936 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=135) RUNNING
+I, [2013-10-31T18:04:56.352281 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=135) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.355419 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=136) RUNNING
+I, [2013-10-31T18:04:56.356975 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=136) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.360444 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=137) RUNNING
+I, [2013-10-31T18:04:56.361886 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=137) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.365024 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=138) RUNNING
+I, [2013-10-31T18:04:56.366475 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=138) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.369447 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=139) RUNNING
+I, [2013-10-31T18:04:56.370947 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=139) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.374036 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=140) RUNNING
+I, [2013-10-31T18:04:56.375498 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=140) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.378527 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=141) RUNNING
+I, [2013-10-31T18:04:56.380185 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=141) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.383589 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=142) RUNNING
+I, [2013-10-31T18:04:56.385075 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=142) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.388032 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=143) RUNNING
+I, [2013-10-31T18:04:56.389594 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=143) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.392798 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=144) RUNNING
+I, [2013-10-31T18:04:56.395032 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=144) COMPLETED after 0.0020
+I, [2013-10-31T18:04:56.398220 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=145) RUNNING
+I, [2013-10-31T18:04:56.400132 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=145) COMPLETED after 0.0017
+I, [2013-10-31T18:04:56.403200 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=146) RUNNING
+I, [2013-10-31T18:04:56.405795 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=146) COMPLETED after 0.0024
+I, [2013-10-31T18:04:56.408991 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=147) RUNNING
+I, [2013-10-31T18:04:56.410568 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=147) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.413727 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=148) RUNNING
+I, [2013-10-31T18:04:56.415202 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=148) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.418433 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=149) RUNNING
+I, [2013-10-31T18:04:56.420030 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=149) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.423300 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=150) RUNNING
+I, [2013-10-31T18:04:56.424919 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=150) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.427970 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=151) RUNNING
+I, [2013-10-31T18:04:56.429624 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=151) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.432763 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=152) RUNNING
+I, [2013-10-31T18:04:56.434222 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=152) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.437358 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=153) RUNNING
+I, [2013-10-31T18:04:56.439350 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=153) COMPLETED after 0.0017
+I, [2013-10-31T18:04:56.442411 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=154) RUNNING
+I, [2013-10-31T18:04:56.443758 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=154) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.446823 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=155) RUNNING
+I, [2013-10-31T18:04:56.448305 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=155) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.451414 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=156) RUNNING
+I, [2013-10-31T18:04:56.452943 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=156) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.456248 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=157) RUNNING
+I, [2013-10-31T18:04:56.457694 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=157) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.460909 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=158) RUNNING
+I, [2013-10-31T18:04:56.463118 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=158) COMPLETED after 0.0020
+I, [2013-10-31T18:04:56.466319 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=159) RUNNING
+I, [2013-10-31T18:04:56.467814 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=159) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.470821 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=160) RUNNING
+I, [2013-10-31T18:04:56.472887 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=160) COMPLETED after 0.0018
+I, [2013-10-31T18:04:56.476060 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=161) RUNNING
+I, [2013-10-31T18:04:56.477993 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=161) COMPLETED after 0.0017
+I, [2013-10-31T18:04:56.481107 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=162) RUNNING
+I, [2013-10-31T18:04:56.482695 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=162) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.485627 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=163) RUNNING
+I, [2013-10-31T18:04:56.487104 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=163) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.490043 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=164) RUNNING
+I, [2013-10-31T18:04:56.491595 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=164) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.494694 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=165) RUNNING
+I, [2013-10-31T18:04:56.496279 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=165) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.499249 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=166) RUNNING
+I, [2013-10-31T18:04:56.500674 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=166) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.503655 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=167) RUNNING
+I, [2013-10-31T18:04:56.505220 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=167) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.508121 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=168) RUNNING
+I, [2013-10-31T18:04:56.509555 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=168) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.509772 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] 100 jobs processed at 182.6381 j/s, 0 failed
+I, [2013-10-31T18:04:56.512753 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=169) RUNNING
+I, [2013-10-31T18:04:56.514294 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=169) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.517286 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=170) RUNNING
+I, [2013-10-31T18:04:56.518859 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=170) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.522138 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=171) RUNNING
+I, [2013-10-31T18:04:56.524017 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=171) COMPLETED after 0.0016
+I, [2013-10-31T18:04:56.527094 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=172) RUNNING
+I, [2013-10-31T18:04:56.528756 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=172) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.531815 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=173) RUNNING
+I, [2013-10-31T18:04:56.533246 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=173) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.536294 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=174) RUNNING
+I, [2013-10-31T18:04:56.537728 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=174) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.540961 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=175) RUNNING
+I, [2013-10-31T18:04:56.542522 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=175) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.545655 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=176) RUNNING
+I, [2013-10-31T18:04:56.547238 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=176) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.550245 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=177) RUNNING
+I, [2013-10-31T18:04:56.551873 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=177) COMPLETED after 0.0014
+I, [2013-10-31T18:04:56.554881 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=178) RUNNING
+I, [2013-10-31T18:04:56.556213 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=178) COMPLETED after 0.0011
+I, [2013-10-31T18:04:56.559354 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=179) RUNNING
+I, [2013-10-31T18:04:56.560895 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=179) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.564102 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=180) RUNNING
+I, [2013-10-31T18:04:56.565525 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=180) COMPLETED after 0.0012
+I, [2013-10-31T18:04:56.568377 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=181) RUNNING
+I, [2013-10-31T18:04:56.569864 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] Job Services::Checkup#check_without_delay (id=181) COMPLETED after 0.0013
+I, [2013-10-31T18:04:56.571168 #73225]  INFO -- : 2013-10-31T18:04:56+0000: [Worker(delayed_job host:Infinity.local pid:73225)] 13 jobs processed at 212.5572 j/s, 0 failed
+I, [2013-10-31T18:09:41.776651 #73225]  INFO -- : 2013-10-31T18:09:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=182) RUNNING
+I, [2013-10-31T18:09:41.778997 #73225]  INFO -- : 2013-10-31T18:09:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=182) COMPLETED after 0.0019
+I, [2013-10-31T18:09:41.781021 #73225]  INFO -- : 2013-10-31T18:09:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 81.0504 j/s, 0 failed
+I, [2013-10-31T18:09:51.796276 #73225]  INFO -- : 2013-10-31T18:09:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=183) RUNNING
+I, [2013-10-31T18:09:51.798965 #73225]  INFO -- : 2013-10-31T18:09:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=183) COMPLETED after 0.0023
+I, [2013-10-31T18:09:51.801027 #73225]  INFO -- : 2013-10-31T18:09:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.3754 j/s, 0 failed
+I, [2013-10-31T18:10:01.816182 #73225]  INFO -- : 2013-10-31T18:10:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=184) RUNNING
+I, [2013-10-31T18:10:01.818729 #73225]  INFO -- : 2013-10-31T18:10:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=184) COMPLETED after 0.0021
+I, [2013-10-31T18:10:01.823706 #73225]  INFO -- : 2013-10-31T18:10:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=185) RUNNING
+I, [2013-10-31T18:10:01.825752 #73225]  INFO -- : 2013-10-31T18:10:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=185) COMPLETED after 0.0017
+I, [2013-10-31T18:10:01.827721 #73225]  INFO -- : 2013-10-31T18:10:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 102.1607 j/s, 0 failed
+I, [2013-10-31T18:12:41.950518 #73225]  INFO -- : 2013-10-31T18:12:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=186) RUNNING
+I, [2013-10-31T18:12:41.953373 #73225]  INFO -- : 2013-10-31T18:12:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=186) COMPLETED after 0.0024
+I, [2013-10-31T18:12:41.955451 #73225]  INFO -- : 2013-10-31T18:12:41+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.7847 j/s, 0 failed
+I, [2013-10-31T18:12:51.969669 #73225]  INFO -- : 2013-10-31T18:12:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=187) RUNNING
+I, [2013-10-31T18:12:51.972757 #73225]  INFO -- : 2013-10-31T18:12:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=187) COMPLETED after 0.0026
+I, [2013-10-31T18:12:51.975071 #73225]  INFO -- : 2013-10-31T18:12:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.4694 j/s, 0 failed
+I, [2013-10-31T18:13:01.989862 #73225]  INFO -- : 2013-10-31T18:13:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=188) RUNNING
+I, [2013-10-31T18:13:01.992982 #73225]  INFO -- : 2013-10-31T18:13:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=188) COMPLETED after 0.0027
+I, [2013-10-31T18:13:01.997832 #73225]  INFO -- : 2013-10-31T18:13:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=189) RUNNING
+I, [2013-10-31T18:13:01.999877 #73225]  INFO -- : 2013-10-31T18:13:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=189) COMPLETED after 0.0017
+I, [2013-10-31T18:13:02.001832 #73225]  INFO -- : 2013-10-31T18:13:02+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 91.2076 j/s, 0 failed
+I, [2013-10-31T18:14:52.082916 #73225]  INFO -- : 2013-10-31T18:14:52+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=190) RUNNING
+I, [2013-10-31T18:14:52.085457 #73225]  INFO -- : 2013-10-31T18:14:52+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=190) COMPLETED after 0.0021
+I, [2013-10-31T18:14:52.087446 #73225]  INFO -- : 2013-10-31T18:14:52+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 93.3794 j/s, 0 failed
+I, [2013-10-31T18:15:02.098339 #73225]  INFO -- : 2013-10-31T18:15:02+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=191) RUNNING
+I, [2013-10-31T18:15:02.100306 #73225]  INFO -- : 2013-10-31T18:15:02+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=191) COMPLETED after 0.0017
+I, [2013-10-31T18:15:02.101735 #73225]  INFO -- : 2013-10-31T18:15:02+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 123.5941 j/s, 0 failed
+I, [2013-10-31T18:15:12.114205 #73225]  INFO -- : 2013-10-31T18:15:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=192) RUNNING
+I, [2013-10-31T18:15:12.116557 #73225]  INFO -- : 2013-10-31T18:15:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=192) COMPLETED after 0.0019
+I, [2013-10-31T18:15:12.121489 #73225]  INFO -- : 2013-10-31T18:15:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=193) RUNNING
+I, [2013-10-31T18:15:12.123361 #73225]  INFO -- : 2013-10-31T18:15:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=193) COMPLETED after 0.0015
+I, [2013-10-31T18:15:12.125126 #73225]  INFO -- : 2013-10-31T18:15:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 109.4032 j/s, 0 failed
+I, [2013-10-31T18:18:12.252971 #73225]  INFO -- : 2013-10-31T18:18:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=194) RUNNING
+I, [2013-10-31T18:18:12.256124 #73225]  INFO -- : 2013-10-31T18:18:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=194) COMPLETED after 0.0027
+I, [2013-10-31T18:18:12.258650 #73225]  INFO -- : 2013-10-31T18:18:12+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.1035 j/s, 0 failed
+I, [2013-10-31T18:18:22.273533 #73225]  INFO -- : 2013-10-31T18:18:22+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=195) RUNNING
+I, [2013-10-31T18:18:22.276341 #73225]  INFO -- : 2013-10-31T18:18:22+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=195) COMPLETED after 0.0023
+I, [2013-10-31T18:18:22.278460 #73225]  INFO -- : 2013-10-31T18:18:22+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 73.3245 j/s, 0 failed
+I, [2013-10-31T18:18:32.293220 #73225]  INFO -- : 2013-10-31T18:18:32+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=196) RUNNING
+I, [2013-10-31T18:18:32.295819 #73225]  INFO -- : 2013-10-31T18:18:32+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=196) COMPLETED after 0.0022
+I, [2013-10-31T18:18:32.300869 #73225]  INFO -- : 2013-10-31T18:18:32+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=197) RUNNING
+I, [2013-10-31T18:18:32.302780 #73225]  INFO -- : 2013-10-31T18:18:32+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=197) COMPLETED after 0.0016
+I, [2013-10-31T18:18:32.304484 #73225]  INFO -- : 2013-10-31T18:18:32+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 103.6001 j/s, 0 failed
+I, [2013-10-31T18:23:37.528348 #73225]  INFO -- : 2013-10-31T18:23:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=198) RUNNING
+I, [2013-10-31T18:23:37.530831 #73225]  INFO -- : 2013-10-31T18:23:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=198) COMPLETED after 0.0021
+I, [2013-10-31T18:23:37.532813 #73225]  INFO -- : 2013-10-31T18:23:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.7257 j/s, 0 failed
+I, [2013-10-31T18:23:47.549491 #73225]  INFO -- : 2013-10-31T18:23:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=199) RUNNING
+I, [2013-10-31T18:23:47.552130 #73225]  INFO -- : 2013-10-31T18:23:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=199) COMPLETED after 0.0022
+I, [2013-10-31T18:23:47.554204 #73225]  INFO -- : 2013-10-31T18:23:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.5052 j/s, 0 failed
+I, [2013-10-31T18:23:57.569030 #73225]  INFO -- : 2013-10-31T18:23:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=200) RUNNING
+I, [2013-10-31T18:23:57.571456 #73225]  INFO -- : 2013-10-31T18:23:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=200) COMPLETED after 0.0020
+I, [2013-10-31T18:23:57.575849 #73225]  INFO -- : 2013-10-31T18:23:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=201) RUNNING
+I, [2013-10-31T18:23:57.577652 #73225]  INFO -- : 2013-10-31T18:23:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=201) COMPLETED after 0.0015
+I, [2013-10-31T18:23:57.579035 #73225]  INFO -- : 2013-10-31T18:23:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 113.9796 j/s, 0 failed
+I, [2013-10-31T18:24:07.591698 #73225]  INFO -- : 2013-10-31T18:24:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=202) RUNNING
+I, [2013-10-31T18:24:07.594573 #73225]  INFO -- : 2013-10-31T18:24:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=202) COMPLETED after 0.0024
+I, [2013-10-31T18:24:07.597166 #73225]  INFO -- : 2013-10-31T18:24:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 81.3206 j/s, 0 failed
+I, [2013-10-31T18:24:17.613442 #73225]  INFO -- : 2013-10-31T18:24:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=203) RUNNING
+I, [2013-10-31T18:24:17.616100 #73225]  INFO -- : 2013-10-31T18:24:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=203) COMPLETED after 0.0022
+I, [2013-10-31T18:24:17.618541 #73225]  INFO -- : 2013-10-31T18:24:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.8442 j/s, 0 failed
+I, [2013-10-31T18:24:27.629320 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=204) RUNNING
+I, [2013-10-31T18:24:27.630821 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=204) COMPLETED after 0.0013
+I, [2013-10-31T18:24:27.633841 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=205) RUNNING
+I, [2013-10-31T18:24:27.635187 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=205) COMPLETED after 0.0011
+I, [2013-10-31T18:24:27.638162 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=206) RUNNING
+I, [2013-10-31T18:24:27.639852 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=206) COMPLETED after 0.0014
+I, [2013-10-31T18:24:27.641199 #73225]  INFO -- : 2013-10-31T18:24:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 183.8461 j/s, 0 failed
+I, [2013-10-31T18:24:37.656567 #73225]  INFO -- : 2013-10-31T18:24:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=207) RUNNING
+I, [2013-10-31T18:24:37.659588 #73225]  INFO -- : 2013-10-31T18:24:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=207) COMPLETED after 0.0026
+I, [2013-10-31T18:24:37.661917 #73225]  INFO -- : 2013-10-31T18:24:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 67.1366 j/s, 0 failed
+I, [2013-10-31T18:27:17.785160 #73225]  INFO -- : 2013-10-31T18:27:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=208) RUNNING
+I, [2013-10-31T18:27:17.788044 #73225]  INFO -- : 2013-10-31T18:27:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=208) COMPLETED after 0.0024
+I, [2013-10-31T18:27:17.790517 #73225]  INFO -- : 2013-10-31T18:27:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 71.8133 j/s, 0 failed
+I, [2013-10-31T18:27:27.804330 #73225]  INFO -- : 2013-10-31T18:27:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=209) RUNNING
+I, [2013-10-31T18:27:27.806816 #73225]  INFO -- : 2013-10-31T18:27:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=209) COMPLETED after 0.0020
+I, [2013-10-31T18:27:27.808888 #73225]  INFO -- : 2013-10-31T18:27:27+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 80.4570 j/s, 0 failed
+I, [2013-10-31T18:27:37.820864 #73225]  INFO -- : 2013-10-31T18:27:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=210) RUNNING
+I, [2013-10-31T18:27:37.822420 #73225]  INFO -- : 2013-10-31T18:27:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=210) COMPLETED after 0.0013
+I, [2013-10-31T18:27:37.825730 #73225]  INFO -- : 2013-10-31T18:27:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=211) RUNNING
+I, [2013-10-31T18:27:37.827396 #73225]  INFO -- : 2013-10-31T18:27:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=211) COMPLETED after 0.0014
+I, [2013-10-31T18:27:37.828828 #73225]  INFO -- : 2013-10-31T18:27:37+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 150.9890 j/s, 0 failed
+I, [2013-10-31T18:27:47.841794 #73225]  INFO -- : 2013-10-31T18:27:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=212) RUNNING
+I, [2013-10-31T18:27:47.844841 #73225]  INFO -- : 2013-10-31T18:27:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=212) COMPLETED after 0.0026
+I, [2013-10-31T18:27:47.847116 #73225]  INFO -- : 2013-10-31T18:27:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 84.1114 j/s, 0 failed
+I, [2013-10-31T18:27:57.862258 #73225]  INFO -- : 2013-10-31T18:27:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=213) RUNNING
+I, [2013-10-31T18:27:57.864666 #73225]  INFO -- : 2013-10-31T18:27:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=213) COMPLETED after 0.0020
+I, [2013-10-31T18:27:57.866729 #73225]  INFO -- : 2013-10-31T18:27:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.6305 j/s, 0 failed
+I, [2013-10-31T18:28:47.910682 #73225]  INFO -- : 2013-10-31T18:28:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=226) RUNNING
+I, [2013-10-31T18:28:47.912139 #73225]  INFO -- : 2013-10-31T18:28:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=226) COMPLETED after 0.0012
+I, [2013-10-31T18:28:47.913530 #73225]  INFO -- : 2013-10-31T18:28:47+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 136.9300 j/s, 0 failed
+I, [2013-10-31T18:28:57.925634 #73225]  INFO -- : 2013-10-31T18:28:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=227) RUNNING
+I, [2013-10-31T18:28:57.928391 #73225]  INFO -- : 2013-10-31T18:28:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=227) COMPLETED after 0.0023
+I, [2013-10-31T18:28:57.930452 #73225]  INFO -- : 2013-10-31T18:28:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.7001 j/s, 0 failed
+I, [2013-10-31T18:29:07.944852 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=228) RUNNING
+I, [2013-10-31T18:29:07.947214 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=228) COMPLETED after 0.0019
+I, [2013-10-31T18:29:07.951961 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=229) RUNNING
+I, [2013-10-31T18:29:07.953909 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=229) COMPLETED after 0.0016
+I, [2013-10-31T18:29:07.958076 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=230) RUNNING
+I, [2013-10-31T18:29:07.959795 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=230) COMPLETED after 0.0015
+I, [2013-10-31T18:29:07.962933 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=231) RUNNING
+I, [2013-10-31T18:29:07.964409 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=231) COMPLETED after 0.0012
+I, [2013-10-31T18:29:07.965683 #73225]  INFO -- : 2013-10-31T18:29:07+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 139.7429 j/s, 0 failed
+I, [2013-10-31T18:29:17.980617 #73225]  INFO -- : 2013-10-31T18:29:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=232) RUNNING
+I, [2013-10-31T18:29:17.983843 #73225]  INFO -- : 2013-10-31T18:29:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=232) COMPLETED after 0.0027
+I, [2013-10-31T18:29:17.986488 #73225]  INFO -- : 2013-10-31T18:29:17+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 70.0378 j/s, 0 failed
+I, [2013-10-31T18:29:28.002055 #73225]  INFO -- : 2013-10-31T18:29:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=233) RUNNING
+I, [2013-10-31T18:29:28.004683 #73225]  INFO -- : 2013-10-31T18:29:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=233) COMPLETED after 0.0022
+I, [2013-10-31T18:29:28.006869 #73225]  INFO -- : 2013-10-31T18:29:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 75.7174 j/s, 0 failed
+I, [2013-10-31T18:29:38.022265 #73225]  INFO -- : 2013-10-31T18:29:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=234) RUNNING
+I, [2013-10-31T18:29:38.024616 #73225]  INFO -- : 2013-10-31T18:29:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=234) COMPLETED after 0.0019
+I, [2013-10-31T18:29:38.029808 #73225]  INFO -- : 2013-10-31T18:29:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=235) RUNNING
+I, [2013-10-31T18:29:38.031834 #73225]  INFO -- : 2013-10-31T18:29:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=235) COMPLETED after 0.0017
+I, [2013-10-31T18:29:38.033556 #73225]  INFO -- : 2013-10-31T18:29:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 102.8119 j/s, 0 failed
+I, [2013-10-31T18:29:48.046762 #73225]  INFO -- : 2013-10-31T18:29:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=236) RUNNING
+I, [2013-10-31T18:29:48.049327 #73225]  INFO -- : 2013-10-31T18:29:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=236) COMPLETED after 0.0021
+I, [2013-10-31T18:29:48.051458 #73225]  INFO -- : 2013-10-31T18:29:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 86.1030 j/s, 0 failed
+I, [2013-10-31T18:29:58.066265 #73225]  INFO -- : 2013-10-31T18:29:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=237) RUNNING
+I, [2013-10-31T18:29:58.069069 #73225]  INFO -- : 2013-10-31T18:29:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=237) COMPLETED after 0.0022
+I, [2013-10-31T18:29:58.071180 #73225]  INFO -- : 2013-10-31T18:29:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 78.9453 j/s, 0 failed
+I, [2013-10-31T18:30:08.176438 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=238) RUNNING
+I, [2013-10-31T18:30:08.179444 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=238) COMPLETED after 0.0025
+I, [2013-10-31T18:30:08.184770 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=239) RUNNING
+I, [2013-10-31T18:30:08.187105 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=239) COMPLETED after 0.0019
+I, [2013-10-31T18:30:08.191708 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=240) RUNNING
+I, [2013-10-31T18:30:08.193722 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=240) COMPLETED after 0.0017
+I, [2013-10-31T18:30:08.195406 #73225]  INFO -- : 2013-10-31T18:30:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 35.5231 j/s, 0 failed
+I, [2013-10-31T18:30:18.207998 #73225]  INFO -- : 2013-10-31T18:30:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=241) RUNNING
+I, [2013-10-31T18:30:18.210519 #73225]  INFO -- : 2013-10-31T18:30:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=241) COMPLETED after 0.0021
+I, [2013-10-31T18:30:18.212899 #73225]  INFO -- : 2013-10-31T18:30:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 81.8666 j/s, 0 failed
+I, [2013-10-31T18:30:28.227727 #73225]  INFO -- : 2013-10-31T18:30:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=242) RUNNING
+I, [2013-10-31T18:30:28.230117 #73225]  INFO -- : 2013-10-31T18:30:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=242) COMPLETED after 0.0020
+I, [2013-10-31T18:30:28.232115 #73225]  INFO -- : 2013-10-31T18:30:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 82.6446 j/s, 0 failed
+I, [2013-10-31T18:30:38.245645 #73225]  INFO -- : 2013-10-31T18:30:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=243) RUNNING
+I, [2013-10-31T18:30:38.248068 #73225]  INFO -- : 2013-10-31T18:30:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=243) COMPLETED after 0.0020
+I, [2013-10-31T18:30:38.252479 #73225]  INFO -- : 2013-10-31T18:30:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=244) RUNNING
+I, [2013-10-31T18:30:38.254218 #73225]  INFO -- : 2013-10-31T18:30:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=244) COMPLETED after 0.0014
+I, [2013-10-31T18:30:38.255923 #73225]  INFO -- : 2013-10-31T18:30:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 110.4301 j/s, 0 failed
+I, [2013-10-31T18:30:48.268439 #73225]  INFO -- : 2013-10-31T18:30:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=245) RUNNING
+I, [2013-10-31T18:30:48.270717 #73225]  INFO -- : 2013-10-31T18:30:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=245) COMPLETED after 0.0017
+I, [2013-10-31T18:30:48.273521 #73225]  INFO -- : 2013-10-31T18:30:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 96.3670 j/s, 0 failed
+I, [2013-10-31T18:30:58.289028 #73225]  INFO -- : 2013-10-31T18:30:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=246) RUNNING
+I, [2013-10-31T18:30:58.291498 #73225]  INFO -- : 2013-10-31T18:30:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=246) COMPLETED after 0.0020
+I, [2013-10-31T18:30:58.293516 #73225]  INFO -- : 2013-10-31T18:30:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.1891 j/s, 0 failed
+I, [2013-10-31T18:31:08.302715 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=247) RUNNING
+I, [2013-10-31T18:31:08.304407 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=247) COMPLETED after 0.0014
+I, [2013-10-31T18:31:08.309277 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=248) RUNNING
+I, [2013-10-31T18:31:08.310856 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=248) COMPLETED after 0.0012
+I, [2013-10-31T18:31:08.315216 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=249) RUNNING
+I, [2013-10-31T18:31:08.316821 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=249) COMPLETED after 0.0012
+I, [2013-10-31T18:31:08.321521 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=250) RUNNING
+I, [2013-10-31T18:31:08.323241 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=250) COMPLETED after 0.0013
+I, [2013-10-31T18:31:08.325206 #73225]  INFO -- : 2013-10-31T18:31:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 146.4665 j/s, 0 failed
+I, [2013-10-31T18:31:18.339629 #73225]  INFO -- : 2013-10-31T18:31:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=251) RUNNING
+I, [2013-10-31T18:31:18.342443 #73225]  INFO -- : 2013-10-31T18:31:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=251) COMPLETED after 0.0024
+I, [2013-10-31T18:31:18.344485 #73225]  INFO -- : 2013-10-31T18:31:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.7484 j/s, 0 failed
+I, [2013-10-31T18:31:28.359113 #73225]  INFO -- : 2013-10-31T18:31:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=252) RUNNING
+I, [2013-10-31T18:31:28.361628 #73225]  INFO -- : 2013-10-31T18:31:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=252) COMPLETED after 0.0021
+I, [2013-10-31T18:31:28.363644 #73225]  INFO -- : 2013-10-31T18:31:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 83.0979 j/s, 0 failed
+I, [2013-10-31T18:31:38.378475 #73225]  INFO -- : 2013-10-31T18:31:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=253) RUNNING
+I, [2013-10-31T18:31:38.380880 #73225]  INFO -- : 2013-10-31T18:31:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=253) COMPLETED after 0.0019
+I, [2013-10-31T18:31:38.385881 #73225]  INFO -- : 2013-10-31T18:31:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=254) RUNNING
+I, [2013-10-31T18:31:38.387854 #73225]  INFO -- : 2013-10-31T18:31:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=254) COMPLETED after 0.0016
+I, [2013-10-31T18:31:38.389617 #73225]  INFO -- : 2013-10-31T18:31:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 101.0969 j/s, 0 failed
+I, [2013-10-31T18:31:48.401782 #73225]  INFO -- : 2013-10-31T18:31:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=255) RUNNING
+I, [2013-10-31T18:31:48.403971 #73225]  INFO -- : 2013-10-31T18:31:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=255) COMPLETED after 0.0018
+I, [2013-10-31T18:31:48.406015 #73225]  INFO -- : 2013-10-31T18:31:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 99.9300 j/s, 0 failed
+I, [2013-10-31T18:31:58.420695 #73225]  INFO -- : 2013-10-31T18:31:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=256) RUNNING
+I, [2013-10-31T18:31:58.423328 #73225]  INFO -- : 2013-10-31T18:31:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=256) COMPLETED after 0.0022
+I, [2013-10-31T18:31:58.425377 #73225]  INFO -- : 2013-10-31T18:31:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 76.3184 j/s, 0 failed
+I, [2013-10-31T18:32:08.439637 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=257) RUNNING
+I, [2013-10-31T18:32:08.442912 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=257) COMPLETED after 0.0028
+I, [2013-10-31T18:32:08.448024 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=258) RUNNING
+I, [2013-10-31T18:32:08.450105 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=258) COMPLETED after 0.0017
+I, [2013-10-31T18:32:08.454204 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=259) RUNNING
+I, [2013-10-31T18:32:08.455996 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=259) COMPLETED after 0.0015
+I, [2013-10-31T18:32:08.459084 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=260) RUNNING
+I, [2013-10-31T18:32:08.460513 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=260) COMPLETED after 0.0012
+I, [2013-10-31T18:32:08.461825 #73225]  INFO -- : 2013-10-31T18:32:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 130.8515 j/s, 0 failed
+I, [2013-10-31T18:32:18.473555 #73225]  INFO -- : 2013-10-31T18:32:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=261) RUNNING
+I, [2013-10-31T18:32:18.475697 #73225]  INFO -- : 2013-10-31T18:32:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=261) COMPLETED after 0.0018
+I, [2013-10-31T18:32:18.477778 #73225]  INFO -- : 2013-10-31T18:32:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 101.5022 j/s, 0 failed
+I, [2013-10-31T18:32:28.492970 #73225]  INFO -- : 2013-10-31T18:32:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=262) RUNNING
+I, [2013-10-31T18:32:28.496004 #73225]  INFO -- : 2013-10-31T18:32:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=262) COMPLETED after 0.0026
+I, [2013-10-31T18:32:28.498063 #73225]  INFO -- : 2013-10-31T18:32:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 75.4945 j/s, 0 failed
+I, [2013-10-31T18:32:38.512995 #73225]  INFO -- : 2013-10-31T18:32:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=263) RUNNING
+I, [2013-10-31T18:32:38.515905 #73225]  INFO -- : 2013-10-31T18:32:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=263) COMPLETED after 0.0025
+I, [2013-10-31T18:32:38.520414 #73225]  INFO -- : 2013-10-31T18:32:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=264) RUNNING
+I, [2013-10-31T18:32:38.522212 #73225]  INFO -- : 2013-10-31T18:32:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=264) COMPLETED after 0.0015
+I, [2013-10-31T18:32:38.523552 #73225]  INFO -- : 2013-10-31T18:32:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 107.0091 j/s, 0 failed
+I, [2013-10-31T18:32:48.532265 #73225]  INFO -- : 2013-10-31T18:32:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=265) RUNNING
+I, [2013-10-31T18:32:48.534057 #73225]  INFO -- : 2013-10-31T18:32:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=265) COMPLETED after 0.0015
+I, [2013-10-31T18:32:48.535767 #73225]  INFO -- : 2013-10-31T18:32:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 143.9885 j/s, 0 failed
+I, [2013-10-31T18:32:58.550652 #73225]  INFO -- : 2013-10-31T18:32:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=266) RUNNING
+I, [2013-10-31T18:32:58.553205 #73225]  INFO -- : 2013-10-31T18:32:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=266) COMPLETED after 0.0021
+I, [2013-10-31T18:32:58.555237 #73225]  INFO -- : 2013-10-31T18:32:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.0119 j/s, 0 failed
+I, [2013-10-31T18:33:08.566074 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=267) RUNNING
+I, [2013-10-31T18:33:08.567725 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=267) COMPLETED after 0.0014
+I, [2013-10-31T18:33:08.571044 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=268) RUNNING
+I, [2013-10-31T18:33:08.572611 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=268) COMPLETED after 0.0013
+I, [2013-10-31T18:33:08.576494 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=269) RUNNING
+I, [2013-10-31T18:33:08.578289 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=269) COMPLETED after 0.0015
+I, [2013-10-31T18:33:08.581977 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=270) RUNNING
+I, [2013-10-31T18:33:08.583599 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=270) COMPLETED after 0.0014
+I, [2013-10-31T18:33:08.584998 #73225]  INFO -- : 2013-10-31T18:33:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 167.4621 j/s, 0 failed
+I, [2013-10-31T18:33:18.596232 #73225]  INFO -- : 2013-10-31T18:33:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=271) RUNNING
+I, [2013-10-31T18:33:18.597724 #73225]  INFO -- : 2013-10-31T18:33:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=271) COMPLETED after 0.0012
+I, [2013-10-31T18:33:18.599131 #73225]  INFO -- : 2013-10-31T18:33:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 128.7830 j/s, 0 failed
+I, [2013-10-31T18:33:28.608858 #73225]  INFO -- : 2013-10-31T18:33:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=272) RUNNING
+I, [2013-10-31T18:33:28.610883 #73225]  INFO -- : 2013-10-31T18:33:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=272) COMPLETED after 0.0017
+I, [2013-10-31T18:33:28.612557 #73225]  INFO -- : 2013-10-31T18:33:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 105.3741 j/s, 0 failed
+I, [2013-10-31T18:33:38.625547 #73225]  INFO -- : 2013-10-31T18:33:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=273) RUNNING
+I, [2013-10-31T18:33:38.628609 #73225]  INFO -- : 2013-10-31T18:33:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=273) COMPLETED after 0.0026
+I, [2013-10-31T18:33:38.633804 #73225]  INFO -- : 2013-10-31T18:33:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=274) RUNNING
+I, [2013-10-31T18:33:38.635862 #73225]  INFO -- : 2013-10-31T18:33:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=274) COMPLETED after 0.0017
+I, [2013-10-31T18:33:38.637855 #73225]  INFO -- : 2013-10-31T18:33:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 98.3429 j/s, 0 failed
+I, [2013-10-31T18:33:48.653219 #73225]  INFO -- : 2013-10-31T18:33:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=275) RUNNING
+I, [2013-10-31T18:33:48.656357 #73225]  INFO -- : 2013-10-31T18:33:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=275) COMPLETED after 0.0027
+I, [2013-10-31T18:33:48.658806 #73225]  INFO -- : 2013-10-31T18:33:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 70.0182 j/s, 0 failed
+I, [2013-10-31T18:33:58.673833 #73225]  INFO -- : 2013-10-31T18:33:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=276) RUNNING
+I, [2013-10-31T18:33:58.676363 #73225]  INFO -- : 2013-10-31T18:33:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=276) COMPLETED after 0.0021
+I, [2013-10-31T18:33:58.678396 #73225]  INFO -- : 2013-10-31T18:33:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 76.6166 j/s, 0 failed
+I, [2013-10-31T18:34:08.692480 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=277) RUNNING
+I, [2013-10-31T18:34:08.695031 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=277) COMPLETED after 0.0021
+I, [2013-10-31T18:34:08.700322 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=278) RUNNING
+I, [2013-10-31T18:34:08.702411 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=278) COMPLETED after 0.0017
+I, [2013-10-31T18:34:08.706887 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=279) RUNNING
+I, [2013-10-31T18:34:08.708752 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=279) COMPLETED after 0.0015
+I, [2013-10-31T18:34:08.710325 #73225]  INFO -- : 2013-10-31T18:34:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 116.3783 j/s, 0 failed
+I, [2013-10-31T18:34:18.721601 #73225]  INFO -- : 2013-10-31T18:34:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=280) RUNNING
+I, [2013-10-31T18:34:18.724007 #73225]  INFO -- : 2013-10-31T18:34:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=280) COMPLETED after 0.0020
+I, [2013-10-31T18:34:18.726003 #73225]  INFO -- : 2013-10-31T18:34:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 87.6732 j/s, 0 failed
+I, [2013-10-31T18:34:28.740444 #73225]  INFO -- : 2013-10-31T18:34:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=281) RUNNING
+I, [2013-10-31T18:34:28.742881 #73225]  INFO -- : 2013-10-31T18:34:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=281) COMPLETED after 0.0020
+I, [2013-10-31T18:34:28.744901 #73225]  INFO -- : 2013-10-31T18:34:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 76.7872 j/s, 0 failed
+I, [2013-10-31T18:34:38.759651 #73225]  INFO -- : 2013-10-31T18:34:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=282) RUNNING
+I, [2013-10-31T18:34:38.762579 #73225]  INFO -- : 2013-10-31T18:34:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=282) COMPLETED after 0.0025
+I, [2013-10-31T18:34:38.768225 #73225]  INFO -- : 2013-10-31T18:34:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=283) RUNNING
+I, [2013-10-31T18:34:38.770179 #73225]  INFO -- : 2013-10-31T18:34:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=283) COMPLETED after 0.0016
+I, [2013-10-31T18:34:38.771955 #73225]  INFO -- : 2013-10-31T18:34:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 99.3443 j/s, 0 failed
+I, [2013-10-31T18:34:48.785368 #73225]  INFO -- : 2013-10-31T18:34:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=284) RUNNING
+I, [2013-10-31T18:34:48.787758 #73225]  INFO -- : 2013-10-31T18:34:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=284) COMPLETED after 0.0020
+I, [2013-10-31T18:34:48.789762 #73225]  INFO -- : 2013-10-31T18:34:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 87.1156 j/s, 0 failed
+I, [2013-10-31T18:34:58.805390 #73225]  INFO -- : 2013-10-31T18:34:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=285) RUNNING
+I, [2013-10-31T18:34:58.808005 #73225]  INFO -- : 2013-10-31T18:34:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=285) COMPLETED after 0.0021
+I, [2013-10-31T18:34:58.810628 #73225]  INFO -- : 2013-10-31T18:34:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 72.5268 j/s, 0 failed
+I, [2013-10-31T18:35:08.825986 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=286) RUNNING
+I, [2013-10-31T18:35:08.828426 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=286) COMPLETED after 0.0020
+I, [2013-10-31T18:35:08.833468 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=287) RUNNING
+I, [2013-10-31T18:35:08.835333 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=287) COMPLETED after 0.0015
+I, [2013-10-31T18:35:08.839026 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=288) RUNNING
+I, [2013-10-31T18:35:08.840465 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=288) COMPLETED after 0.0012
+I, [2013-10-31T18:35:08.843431 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=289) RUNNING
+I, [2013-10-31T18:35:08.844854 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=289) COMPLETED after 0.0012
+I, [2013-10-31T18:35:08.846149 #73225]  INFO -- : 2013-10-31T18:35:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 141.6581 j/s, 0 failed
+I, [2013-10-31T18:35:18.858416 #73225]  INFO -- : 2013-10-31T18:35:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=290) RUNNING
+I, [2013-10-31T18:35:18.860786 #73225]  INFO -- : 2013-10-31T18:35:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=290) COMPLETED after 0.0020
+I, [2013-10-31T18:35:18.862905 #73225]  INFO -- : 2013-10-31T18:35:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 90.6947 j/s, 0 failed
+I, [2013-10-31T18:35:28.878204 #73225]  INFO -- : 2013-10-31T18:35:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=291) RUNNING
+I, [2013-10-31T18:35:28.880773 #73225]  INFO -- : 2013-10-31T18:35:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=291) COMPLETED after 0.0022
+I, [2013-10-31T18:35:28.882722 #73225]  INFO -- : 2013-10-31T18:35:28+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 80.2246 j/s, 0 failed
+I, [2013-10-31T18:35:38.897792 #73225]  INFO -- : 2013-10-31T18:35:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=292) RUNNING
+I, [2013-10-31T18:35:38.900458 #73225]  INFO -- : 2013-10-31T18:35:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=292) COMPLETED after 0.0022
+I, [2013-10-31T18:35:38.905158 #73225]  INFO -- : 2013-10-31T18:35:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=293) RUNNING
+I, [2013-10-31T18:35:38.907698 #73225]  INFO -- : 2013-10-31T18:35:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=293) COMPLETED after 0.0022
+I, [2013-10-31T18:35:38.909695 #73225]  INFO -- : 2013-10-31T18:35:38+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 100.4773 j/s, 0 failed
+I, [2013-10-31T18:35:48.922693 #73225]  INFO -- : 2013-10-31T18:35:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=294) RUNNING
+I, [2013-10-31T18:35:48.925146 #73225]  INFO -- : 2013-10-31T18:35:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=294) COMPLETED after 0.0021
+I, [2013-10-31T18:35:48.926890 #73225]  INFO -- : 2013-10-31T18:35:48+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 92.1574 j/s, 0 failed
+I, [2013-10-31T18:35:58.941022 #73225]  INFO -- : 2013-10-31T18:35:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=295) RUNNING
+I, [2013-10-31T18:35:58.943697 #73225]  INFO -- : 2013-10-31T18:35:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=295) COMPLETED after 0.0022
+I, [2013-10-31T18:35:58.945946 #73225]  INFO -- : 2013-10-31T18:35:58+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.8271 j/s, 0 failed
+I, [2013-10-31T18:36:08.958965 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=296) RUNNING
+I, [2013-10-31T18:36:08.961570 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=296) COMPLETED after 0.0022
+I, [2013-10-31T18:36:08.965820 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=297) RUNNING
+I, [2013-10-31T18:36:08.967493 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=297) COMPLETED after 0.0014
+I, [2013-10-31T18:36:08.970429 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=298) RUNNING
+I, [2013-10-31T18:36:08.972137 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=298) COMPLETED after 0.0015
+I, [2013-10-31T18:36:08.973408 #73225]  INFO -- : 2013-10-31T18:36:08+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 140.3312 j/s, 0 failed
+I, [2013-10-31T18:36:18.984009 #73225]  INFO -- : 2013-10-31T18:36:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=299) RUNNING
+I, [2013-10-31T18:36:18.985951 #73225]  INFO -- : 2013-10-31T18:36:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=299) COMPLETED after 0.0016
+I, [2013-10-31T18:36:18.988077 #73225]  INFO -- : 2013-10-31T18:36:18+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 109.2299 j/s, 0 failed
+I, [2013-10-31T18:36:29.001637 #73225]  INFO -- : 2013-10-31T18:36:29+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=300) RUNNING
+I, [2013-10-31T18:36:29.004643 #73225]  INFO -- : 2013-10-31T18:36:29+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=300) COMPLETED after 0.0025
+I, [2013-10-31T18:36:29.006676 #73225]  INFO -- : 2013-10-31T18:36:29+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 83.7942 j/s, 0 failed
+I, [2013-10-31T18:36:39.018697 #73225]  INFO -- : 2013-10-31T18:36:39+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=301) RUNNING
+I, [2013-10-31T18:36:39.020387 #73225]  INFO -- : 2013-10-31T18:36:39+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=301) COMPLETED after 0.0014
+I, [2013-10-31T18:36:39.023585 #73225]  INFO -- : 2013-10-31T18:36:39+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=302) RUNNING
+I, [2013-10-31T18:36:39.025015 #73225]  INFO -- : 2013-10-31T18:36:39+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=302) COMPLETED after 0.0012
+I, [2013-10-31T18:36:39.026310 #73225]  INFO -- : 2013-10-31T18:36:39+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 142.2880 j/s, 0 failed
+I, [2013-10-31T18:36:49.037055 #73225]  INFO -- : 2013-10-31T18:36:49+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=303) RUNNING
+I, [2013-10-31T18:36:49.039164 #73225]  INFO -- : 2013-10-31T18:36:49+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=303) COMPLETED after 0.0017
+I, [2013-10-31T18:36:49.040903 #73225]  INFO -- : 2013-10-31T18:36:49+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 107.9914 j/s, 0 failed
+I, [2013-10-31T18:37:14.063102 #73225]  INFO -- : 2013-10-31T18:37:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=304) RUNNING
+I, [2013-10-31T18:37:14.065684 #73225]  INFO -- : 2013-10-31T18:37:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=304) COMPLETED after 0.0022
+I, [2013-10-31T18:37:14.067702 #73225]  INFO -- : 2013-10-31T18:37:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 83.4237 j/s, 0 failed
+I, [2013-10-31T18:37:24.082916 #73225]  INFO -- : 2013-10-31T18:37:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=305) RUNNING
+I, [2013-10-31T18:37:24.085425 #73225]  INFO -- : 2013-10-31T18:37:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=305) COMPLETED after 0.0021
+I, [2013-10-31T18:37:24.087431 #73225]  INFO -- : 2013-10-31T18:37:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.6518 j/s, 0 failed
+I, [2013-10-31T18:37:34.099791 #73225]  INFO -- : 2013-10-31T18:37:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=306) RUNNING
+I, [2013-10-31T18:37:34.102452 #73225]  INFO -- : 2013-10-31T18:37:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=306) COMPLETED after 0.0023
+I, [2013-10-31T18:37:34.107007 #73225]  INFO -- : 2013-10-31T18:37:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=307) RUNNING
+I, [2013-10-31T18:37:34.108885 #73225]  INFO -- : 2013-10-31T18:37:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=307) COMPLETED after 0.0016
+I, [2013-10-31T18:37:34.110282 #73225]  INFO -- : 2013-10-31T18:37:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 108.3013 j/s, 0 failed
+I, [2013-10-31T18:37:44.120500 #73225]  INFO -- : 2013-10-31T18:37:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=308) RUNNING
+I, [2013-10-31T18:37:44.122933 #73225]  INFO -- : 2013-10-31T18:37:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=308) COMPLETED after 0.0021
+I, [2013-10-31T18:37:44.124532 #73225]  INFO -- : 2013-10-31T18:37:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 114.1944 j/s, 0 failed
+I, [2013-10-31T18:37:54.138560 #73225]  INFO -- : 2013-10-31T18:37:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=309) RUNNING
+I, [2013-10-31T18:37:54.141462 #73225]  INFO -- : 2013-10-31T18:37:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=309) COMPLETED after 0.0024
+I, [2013-10-31T18:37:54.143656 #73225]  INFO -- : 2013-10-31T18:37:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 73.5727 j/s, 0 failed
+I, [2013-10-31T18:38:04.157980 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=310) RUNNING
+I, [2013-10-31T18:38:04.160222 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=310) COMPLETED after 0.0019
+I, [2013-10-31T18:38:04.164803 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=311) RUNNING
+I, [2013-10-31T18:38:04.166651 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=311) COMPLETED after 0.0015
+I, [2013-10-31T18:38:04.169945 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=312) RUNNING
+I, [2013-10-31T18:38:04.171601 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=312) COMPLETED after 0.0014
+I, [2013-10-31T18:38:04.172911 #73225]  INFO -- : 2013-10-31T18:38:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 131.5328 j/s, 0 failed
+I, [2013-10-31T18:38:14.184196 #73225]  INFO -- : 2013-10-31T18:38:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=313) RUNNING
+I, [2013-10-31T18:38:14.186110 #73225]  INFO -- : 2013-10-31T18:38:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=313) COMPLETED after 0.0015
+I, [2013-10-31T18:38:14.187758 #73225]  INFO -- : 2013-10-31T18:38:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 119.0476 j/s, 0 failed
+I, [2013-10-31T18:38:24.200315 #73225]  INFO -- : 2013-10-31T18:38:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=314) RUNNING
+I, [2013-10-31T18:38:24.201881 #73225]  INFO -- : 2013-10-31T18:38:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=314) COMPLETED after 0.0013
+I, [2013-10-31T18:38:24.203319 #73225]  INFO -- : 2013-10-31T18:38:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 112.1076 j/s, 0 failed
+I, [2013-10-31T18:38:34.214355 #73225]  INFO -- : 2013-10-31T18:38:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=315) RUNNING
+I, [2013-10-31T18:38:34.216409 #73225]  INFO -- : 2013-10-31T18:38:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=315) COMPLETED after 0.0016
+I, [2013-10-31T18:38:34.220250 #73225]  INFO -- : 2013-10-31T18:38:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=316) RUNNING
+I, [2013-10-31T18:38:34.221788 #73225]  INFO -- : 2013-10-31T18:38:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=316) COMPLETED after 0.0013
+I, [2013-10-31T18:38:34.223140 #73225]  INFO -- : 2013-10-31T18:38:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 131.2164 j/s, 0 failed
+I, [2013-10-31T18:38:44.232943 #73225]  INFO -- : 2013-10-31T18:38:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=317) RUNNING
+I, [2013-10-31T18:38:44.235467 #73225]  INFO -- : 2013-10-31T18:38:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=317) COMPLETED after 0.0021
+I, [2013-10-31T18:38:44.237432 #73225]  INFO -- : 2013-10-31T18:38:44+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 97.2101 j/s, 0 failed
+I, [2013-10-31T18:38:54.251836 #73225]  INFO -- : 2013-10-31T18:38:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=318) RUNNING
+I, [2013-10-31T18:38:54.254848 #73225]  INFO -- : 2013-10-31T18:38:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=318) COMPLETED after 0.0025
+I, [2013-10-31T18:38:54.260171 #73225]  INFO -- : 2013-10-31T18:38:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=319) RUNNING
+I, [2013-10-31T18:38:54.262295 #73225]  INFO -- : 2013-10-31T18:38:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=319) COMPLETED after 0.0018
+I, [2013-10-31T18:38:54.264075 #73225]  INFO -- : 2013-10-31T18:38:54+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 99.0197 j/s, 0 failed
+I, [2013-10-31T18:39:04.274268 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=321) RUNNING
+I, [2013-10-31T18:39:04.275812 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=321) COMPLETED after 0.0013
+I, [2013-10-31T18:39:04.278910 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=322) RUNNING
+I, [2013-10-31T18:39:04.280797 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=322) COMPLETED after 0.0016
+I, [2013-10-31T18:39:04.284223 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=323) RUNNING
+I, [2013-10-31T18:39:04.285730 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=323) COMPLETED after 0.0013
+I, [2013-10-31T18:39:04.288801 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=324) RUNNING
+I, [2013-10-31T18:39:04.290373 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=324) COMPLETED after 0.0013
+I, [2013-10-31T18:39:04.291652 #73225]  INFO -- : 2013-10-31T18:39:04+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 182.5067 j/s, 0 failed
+I, [2013-10-31T18:39:09.300401 #73225]  INFO -- : 2013-10-31T18:39:09+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=325) RUNNING
+I, [2013-10-31T18:39:09.303322 #73225]  INFO -- : 2013-10-31T18:39:09+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=325) COMPLETED after 0.0025
+I, [2013-10-31T18:39:09.308120 #73225]  INFO -- : 2013-10-31T18:39:09+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=326) RUNNING
+I, [2013-10-31T18:39:09.310176 #73225]  INFO -- : 2013-10-31T18:39:09+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=326) COMPLETED after 0.0017
+I, [2013-10-31T18:39:09.312111 #73225]  INFO -- : 2013-10-31T18:39:09+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 111.3462 j/s, 0 failed
+I, [2013-10-31T18:39:14.322951 #73225]  INFO -- : 2013-10-31T18:39:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=327) RUNNING
+I, [2013-10-31T18:39:14.325643 #73225]  INFO -- : 2013-10-31T18:39:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=327) COMPLETED after 0.0022
+I, [2013-10-31T18:39:14.328057 #73225]  INFO -- : 2013-10-31T18:39:14+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 75.0976 j/s, 0 failed
+I, [2013-10-31T18:39:19.339451 #73225]  INFO -- : 2013-10-31T18:39:19+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=328) RUNNING
+I, [2013-10-31T18:39:19.341883 #73225]  INFO -- : 2013-10-31T18:39:19+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=328) COMPLETED after 0.0020
+I, [2013-10-31T18:39:19.346281 #73225]  INFO -- : 2013-10-31T18:39:19+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 66.4673 j/s, 0 failed
+I, [2013-10-31T18:39:24.354689 #73225]  INFO -- : 2013-10-31T18:39:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=329) RUNNING
+I, [2013-10-31T18:39:24.357121 #73225]  INFO -- : 2013-10-31T18:39:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=329) COMPLETED after 0.0020
+I, [2013-10-31T18:39:24.359187 #73225]  INFO -- : 2013-10-31T18:39:24+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 92.4813 j/s, 0 failed
+I, [2013-10-31T18:39:34.370643 #73225]  INFO -- : 2013-10-31T18:39:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=331) RUNNING
+I, [2013-10-31T18:39:34.372792 #73225]  INFO -- : 2013-10-31T18:39:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=331) COMPLETED after 0.0018
+I, [2013-10-31T18:39:34.376983 #73225]  INFO -- : 2013-10-31T18:39:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=332) RUNNING
+I, [2013-10-31T18:39:34.379145 #73225]  INFO -- : 2013-10-31T18:39:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=332) COMPLETED after 0.0019
+I, [2013-10-31T18:39:34.380427 #73225]  INFO -- : 2013-10-31T18:39:34+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 130.5824 j/s, 0 failed
+I, [2013-10-31T18:42:35.274067 #73225]  INFO -- : 2013-10-31T18:42:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=333) RUNNING
+I, [2013-10-31T18:42:35.277077 #73225]  INFO -- : 2013-10-31T18:42:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=333) COMPLETED after 0.0026
+I, [2013-10-31T18:42:35.279123 #73225]  INFO -- : 2013-10-31T18:42:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 73.6377 j/s, 0 failed
+I, [2013-10-31T18:42:45.294415 #73225]  INFO -- : 2013-10-31T18:42:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=334) RUNNING
+I, [2013-10-31T18:42:45.297844 #73225]  INFO -- : 2013-10-31T18:42:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=334) COMPLETED after 0.0030
+I, [2013-10-31T18:42:45.299972 #73225]  INFO -- : 2013-10-31T18:42:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 72.6375 j/s, 0 failed
+I, [2013-10-31T18:42:55.313010 #73225]  INFO -- : 2013-10-31T18:42:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=335) RUNNING
+I, [2013-10-31T18:42:55.315314 #73225]  INFO -- : 2013-10-31T18:42:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=335) COMPLETED after 0.0019
+I, [2013-10-31T18:42:55.319773 #73225]  INFO -- : 2013-10-31T18:42:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=336) RUNNING
+I, [2013-10-31T18:42:55.322148 #73225]  INFO -- : 2013-10-31T18:42:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=336) COMPLETED after 0.0021
+I, [2013-10-31T18:42:55.323829 #73225]  INFO -- : 2013-10-31T18:42:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 113.0071 j/s, 0 failed
+I, [2013-10-31T18:43:05.336931 #73225]  INFO -- : 2013-10-31T18:43:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=337) RUNNING
+I, [2013-10-31T18:43:05.340214 #73225]  INFO -- : 2013-10-31T18:43:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=337) COMPLETED after 0.0028
+I, [2013-10-31T18:43:05.342586 #73225]  INFO -- : 2013-10-31T18:43:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.7061 j/s, 0 failed
+I, [2013-10-31T18:43:15.356860 #73225]  INFO -- : 2013-10-31T18:43:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=338) RUNNING
+I, [2013-10-31T18:43:15.359411 #73225]  INFO -- : 2013-10-31T18:43:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=338) COMPLETED after 0.0021
+I, [2013-10-31T18:43:15.361783 #73225]  INFO -- : 2013-10-31T18:43:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 78.2963 j/s, 0 failed
+I, [2013-10-31T18:43:25.375802 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=339) RUNNING
+I, [2013-10-31T18:43:25.378465 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=339) COMPLETED after 0.0022
+I, [2013-10-31T18:43:25.383567 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=340) RUNNING
+I, [2013-10-31T18:43:25.385611 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=340) COMPLETED after 0.0017
+I, [2013-10-31T18:43:25.389908 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=341) RUNNING
+I, [2013-10-31T18:43:25.392328 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=341) COMPLETED after 0.0021
+I, [2013-10-31T18:43:25.393995 #73225]  INFO -- : 2013-10-31T18:43:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 114.7623 j/s, 0 failed
+I, [2013-10-31T18:43:35.403973 #73225]  INFO -- : 2013-10-31T18:43:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=342) RUNNING
+I, [2013-10-31T18:43:35.405606 #73225]  INFO -- : 2013-10-31T18:43:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=342) COMPLETED after 0.0014
+I, [2013-10-31T18:43:35.407013 #73225]  INFO -- : 2013-10-31T18:43:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 126.7588 j/s, 0 failed
+I, [2013-10-31T18:43:45.418936 #73225]  INFO -- : 2013-10-31T18:43:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=343) RUNNING
+I, [2013-10-31T18:43:45.421273 #73225]  INFO -- : 2013-10-31T18:43:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=343) COMPLETED after 0.0019
+I, [2013-10-31T18:43:45.423281 #73225]  INFO -- : 2013-10-31T18:43:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 92.2509 j/s, 0 failed
+I, [2013-10-31T18:43:55.437348 #73225]  INFO -- : 2013-10-31T18:43:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=344) RUNNING
+I, [2013-10-31T18:43:55.439804 #73225]  INFO -- : 2013-10-31T18:43:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=344) COMPLETED after 0.0020
+I, [2013-10-31T18:43:55.444610 #73225]  INFO -- : 2013-10-31T18:43:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=345) RUNNING
+I, [2013-10-31T18:43:55.446543 #73225]  INFO -- : 2013-10-31T18:43:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=345) COMPLETED after 0.0016
+I, [2013-10-31T18:43:55.448282 #73225]  INFO -- : 2013-10-31T18:43:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 107.3422 j/s, 0 failed
+I, [2013-10-31T18:44:05.459939 #73225]  INFO -- : 2013-10-31T18:44:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=346) RUNNING
+I, [2013-10-31T18:44:05.462239 #73225]  INFO -- : 2013-10-31T18:44:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=346) COMPLETED after 0.0019
+I, [2013-10-31T18:44:05.464329 #73225]  INFO -- : 2013-10-31T18:44:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 107.1352 j/s, 0 failed
+I, [2013-10-31T18:44:15.479526 #73225]  INFO -- : 2013-10-31T18:44:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=347) RUNNING
+I, [2013-10-31T18:44:15.481703 #73225]  INFO -- : 2013-10-31T18:44:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=347) COMPLETED after 0.0018
+I, [2013-10-31T18:44:15.483727 #73225]  INFO -- : 2013-10-31T18:44:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 82.9531 j/s, 0 failed
+I, [2013-10-31T18:44:25.498332 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=348) RUNNING
+I, [2013-10-31T18:44:25.500669 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=348) COMPLETED after 0.0019
+I, [2013-10-31T18:44:25.505247 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=349) RUNNING
+I, [2013-10-31T18:44:25.506962 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=349) COMPLETED after 0.0014
+I, [2013-10-31T18:44:25.510817 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=350) RUNNING
+I, [2013-10-31T18:44:25.512212 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=350) COMPLETED after 0.0012
+I, [2013-10-31T18:44:25.515126 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=351) RUNNING
+I, [2013-10-31T18:44:25.517288 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=351) COMPLETED after 0.0019
+I, [2013-10-31T18:44:25.518579 #73225]  INFO -- : 2013-10-31T18:44:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 143.0564 j/s, 0 failed
+I, [2013-10-31T18:44:35.529452 #73225]  INFO -- : 2013-10-31T18:44:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=352) RUNNING
+I, [2013-10-31T18:44:35.531474 #73225]  INFO -- : 2013-10-31T18:44:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=352) COMPLETED after 0.0016
+I, [2013-10-31T18:44:35.533425 #73225]  INFO -- : 2013-10-31T18:44:35+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 99.8403 j/s, 0 failed
+I, [2013-10-31T18:44:45.548663 #73225]  INFO -- : 2013-10-31T18:44:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=353) RUNNING
+I, [2013-10-31T18:44:45.550770 #73225]  INFO -- : 2013-10-31T18:44:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=353) COMPLETED after 0.0017
+I, [2013-10-31T18:44:45.552812 #73225]  INFO -- : 2013-10-31T18:44:45+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 82.9050 j/s, 0 failed
+I, [2013-10-31T18:44:55.568557 #73225]  INFO -- : 2013-10-31T18:44:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=354) RUNNING
+I, [2013-10-31T18:44:55.570689 #73225]  INFO -- : 2013-10-31T18:44:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=354) COMPLETED after 0.0017
+I, [2013-10-31T18:44:55.575296 #73225]  INFO -- : 2013-10-31T18:44:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=355) RUNNING
+I, [2013-10-31T18:44:55.577059 #73225]  INFO -- : 2013-10-31T18:44:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=355) COMPLETED after 0.0014
+I, [2013-10-31T18:44:55.578719 #73225]  INFO -- : 2013-10-31T18:44:55+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 106.3151 j/s, 0 failed
+I, [2013-10-31T18:45:05.590887 #73225]  INFO -- : 2013-10-31T18:45:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=356) RUNNING
+I, [2013-10-31T18:45:05.593321 #73225]  INFO -- : 2013-10-31T18:45:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=356) COMPLETED after 0.0021
+I, [2013-10-31T18:45:05.595327 #73225]  INFO -- : 2013-10-31T18:45:05+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 101.9160 j/s, 0 failed
+I, [2013-10-31T18:45:15.609953 #73225]  INFO -- : 2013-10-31T18:45:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=357) RUNNING
+I, [2013-10-31T18:45:15.612280 #73225]  INFO -- : 2013-10-31T18:45:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=357) COMPLETED after 0.0019
+I, [2013-10-31T18:45:15.614377 #73225]  INFO -- : 2013-10-31T18:45:15+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.8148 j/s, 0 failed
+I, [2013-10-31T18:45:25.682081 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=358) RUNNING
+I, [2013-10-31T18:45:25.684650 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=358) COMPLETED after 0.0021
+I, [2013-10-31T18:45:25.689482 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=359) RUNNING
+I, [2013-10-31T18:45:25.692103 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=359) COMPLETED after 0.0023
+I, [2013-10-31T18:45:25.696025 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=360) RUNNING
+I, [2013-10-31T18:45:25.697563 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=360) COMPLETED after 0.0013
+I, [2013-10-31T18:45:25.698838 #73225]  INFO -- : 2013-10-31T18:45:25+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 120.7001 j/s, 0 failed
+I, [2013-10-31T18:52:36.023100 #73225]  INFO -- : 2013-10-31T18:52:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=361) RUNNING
+I, [2013-10-31T18:52:36.025422 #73225]  INFO -- : 2013-10-31T18:52:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=361) COMPLETED after 0.0019
+I, [2013-10-31T18:52:36.027434 #73225]  INFO -- : 2013-10-31T18:52:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 81.3405 j/s, 0 failed
+I, [2013-10-31T18:52:46.041948 #73225]  INFO -- : 2013-10-31T18:52:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=362) RUNNING
+I, [2013-10-31T18:52:46.044194 #73225]  INFO -- : 2013-10-31T18:52:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=362) COMPLETED after 0.0019
+I, [2013-10-31T18:52:46.046267 #73225]  INFO -- : 2013-10-31T18:52:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 82.1625 j/s, 0 failed
+I, [2013-10-31T18:52:56.059973 #73225]  INFO -- : 2013-10-31T18:52:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=363) RUNNING
+I, [2013-10-31T18:52:56.062494 #73225]  INFO -- : 2013-10-31T18:52:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=363) COMPLETED after 0.0021
+I, [2013-10-31T18:52:56.067018 #73225]  INFO -- : 2013-10-31T18:52:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=364) RUNNING
+I, [2013-10-31T18:52:56.068799 #73225]  INFO -- : 2013-10-31T18:52:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=364) COMPLETED after 0.0014
+I, [2013-10-31T18:52:56.070484 #73225]  INFO -- : 2013-10-31T18:52:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 107.1237 j/s, 0 failed
+I, [2013-10-31T18:53:06.085414 #73225]  INFO -- : 2013-10-31T18:53:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=365) RUNNING
+I, [2013-10-31T18:53:06.087886 #73225]  INFO -- : 2013-10-31T18:53:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=365) COMPLETED after 0.0021
+I, [2013-10-31T18:53:06.089956 #73225]  INFO -- : 2013-10-31T18:53:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.3273 j/s, 0 failed
+I, [2013-10-31T18:53:16.105630 #73225]  INFO -- : 2013-10-31T18:53:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=366) RUNNING
+I, [2013-10-31T18:53:16.108483 #73225]  INFO -- : 2013-10-31T18:53:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=366) COMPLETED after 0.0024
+I, [2013-10-31T18:53:16.110491 #73225]  INFO -- : 2013-10-31T18:53:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 78.6349 j/s, 0 failed
+I, [2013-10-31T18:53:26.126117 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=367) RUNNING
+I, [2013-10-31T18:53:26.128666 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=367) COMPLETED after 0.0021
+I, [2013-10-31T18:53:26.133741 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=368) RUNNING
+I, [2013-10-31T18:53:26.135674 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=368) COMPLETED after 0.0016
+I, [2013-10-31T18:53:26.139567 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=369) RUNNING
+I, [2013-10-31T18:53:26.141206 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=369) COMPLETED after 0.0014
+I, [2013-10-31T18:53:26.142559 #73225]  INFO -- : 2013-10-31T18:53:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 118.9579 j/s, 0 failed
+I, [2013-10-31T18:53:36.156509 #73225]  INFO -- : 2013-10-31T18:53:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=370) RUNNING
+I, [2013-10-31T18:53:36.159320 #73225]  INFO -- : 2013-10-31T18:53:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=370) COMPLETED after 0.0023
+I, [2013-10-31T18:53:36.162295 #73225]  INFO -- : 2013-10-31T18:53:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 74.8279 j/s, 0 failed
+I, [2013-10-31T18:53:46.177623 #73225]  INFO -- : 2013-10-31T18:53:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=371) RUNNING
+I, [2013-10-31T18:53:46.180065 #73225]  INFO -- : 2013-10-31T18:53:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=371) COMPLETED after 0.0020
+I, [2013-10-31T18:53:46.182030 #73225]  INFO -- : 2013-10-31T18:53:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.7385 j/s, 0 failed
+I, [2013-10-31T18:53:56.197268 #73225]  INFO -- : 2013-10-31T18:53:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=372) RUNNING
+I, [2013-10-31T18:53:56.199708 #73225]  INFO -- : 2013-10-31T18:53:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=372) COMPLETED after 0.0020
+I, [2013-10-31T18:53:56.204289 #73225]  INFO -- : 2013-10-31T18:53:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=373) RUNNING
+I, [2013-10-31T18:53:56.206360 #73225]  INFO -- : 2013-10-31T18:53:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=373) COMPLETED after 0.0017
+I, [2013-10-31T18:53:56.208311 #73225]  INFO -- : 2013-10-31T18:53:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 104.9593 j/s, 0 failed
+I, [2013-10-31T18:55:56.306629 #73225]  INFO -- : 2013-10-31T18:55:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=374) RUNNING
+I, [2013-10-31T18:55:56.309097 #73225]  INFO -- : 2013-10-31T18:55:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=374) COMPLETED after 0.0020
+I, [2013-10-31T18:55:56.311147 #73225]  INFO -- : 2013-10-31T18:55:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 79.7448 j/s, 0 failed
+I, [2013-10-31T18:56:06.326404 #73225]  INFO -- : 2013-10-31T18:56:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=375) RUNNING
+I, [2013-10-31T18:56:06.328680 #73225]  INFO -- : 2013-10-31T18:56:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=375) COMPLETED after 0.0019
+I, [2013-10-31T18:56:06.330654 #73225]  INFO -- : 2013-10-31T18:56:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 80.6972 j/s, 0 failed
+I, [2013-10-31T18:56:16.345566 #73225]  INFO -- : 2013-10-31T18:56:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=376) RUNNING
+I, [2013-10-31T18:56:16.348204 #73225]  INFO -- : 2013-10-31T18:56:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=376) COMPLETED after 0.0022
+I, [2013-10-31T18:56:16.352861 #73225]  INFO -- : 2013-10-31T18:56:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=377) RUNNING
+I, [2013-10-31T18:56:16.354843 #73225]  INFO -- : 2013-10-31T18:56:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=377) COMPLETED after 0.0016
+I, [2013-10-31T18:56:16.356614 #73225]  INFO -- : 2013-10-31T18:56:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 101.1378 j/s, 0 failed
+I, [2013-10-31T18:56:26.371207 #73225]  INFO -- : 2013-10-31T18:56:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=378) RUNNING
+I, [2013-10-31T18:56:26.373828 #73225]  INFO -- : 2013-10-31T18:56:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=378) COMPLETED after 0.0022
+I, [2013-10-31T18:56:26.375929 #73225]  INFO -- : 2013-10-31T18:56:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 77.4234 j/s, 0 failed
+I, [2013-10-31T18:56:36.387294 #73225]  INFO -- : 2013-10-31T18:56:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=379) RUNNING
+I, [2013-10-31T18:56:36.388892 #73225]  INFO -- : 2013-10-31T18:56:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=379) COMPLETED after 0.0013
+I, [2013-10-31T18:56:36.390485 #73225]  INFO -- : 2013-10-31T18:56:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 127.5510 j/s, 0 failed
+I, [2013-10-31T18:56:46.402842 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=380) RUNNING
+I, [2013-10-31T18:56:46.404744 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=380) COMPLETED after 0.0016
+I, [2013-10-31T18:56:46.408139 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=381) RUNNING
+I, [2013-10-31T18:56:46.409682 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=381) COMPLETED after 0.0013
+I, [2013-10-31T18:56:46.412738 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=382) RUNNING
+I, [2013-10-31T18:56:46.414174 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=382) COMPLETED after 0.0012
+I, [2013-10-31T18:56:46.415490 #73225]  INFO -- : 2013-10-31T18:56:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 3 jobs processed at 157.1750 j/s, 0 failed
+I, [2013-10-31T18:56:56.428993 #73225]  INFO -- : 2013-10-31T18:56:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=383) RUNNING
+I, [2013-10-31T18:56:56.431650 #73225]  INFO -- : 2013-10-31T18:56:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=383) COMPLETED after 0.0022
+I, [2013-10-31T18:56:56.433810 #73225]  INFO -- : 2013-10-31T18:56:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 78.1433 j/s, 0 failed
+I, [2013-10-31T18:57:06.445342 #73225]  INFO -- : 2013-10-31T18:57:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=384) RUNNING
+I, [2013-10-31T18:57:06.447481 #73225]  INFO -- : 2013-10-31T18:57:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=384) COMPLETED after 0.0018
+I, [2013-10-31T18:57:06.449475 #73225]  INFO -- : 2013-10-31T18:57:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 89.1027 j/s, 0 failed
+I, [2013-10-31T18:57:16.462901 #73225]  INFO -- : 2013-10-31T18:57:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=385) RUNNING
+I, [2013-10-31T18:57:16.465229 #73225]  INFO -- : 2013-10-31T18:57:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=385) COMPLETED after 0.0019
+I, [2013-10-31T18:57:16.470132 #73225]  INFO -- : 2013-10-31T18:57:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=386) RUNNING
+I, [2013-10-31T18:57:16.472067 #73225]  INFO -- : 2013-10-31T18:57:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=386) COMPLETED after 0.0016
+I, [2013-10-31T18:57:16.473786 #73225]  INFO -- : 2013-10-31T18:57:16+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 111.2409 j/s, 0 failed
+I, [2013-10-31T18:57:26.486258 #73225]  INFO -- : 2013-10-31T18:57:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=387) RUNNING
+I, [2013-10-31T18:57:26.489002 #73225]  INFO -- : 2013-10-31T18:57:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=387) COMPLETED after 0.0023
+I, [2013-10-31T18:57:26.491400 #73225]  INFO -- : 2013-10-31T18:57:26+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 86.4827 j/s, 0 failed
+I, [2013-10-31T18:57:36.505534 #73225]  INFO -- : 2013-10-31T18:57:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=388) RUNNING
+I, [2013-10-31T18:57:36.507726 #73225]  INFO -- : 2013-10-31T18:57:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=388) COMPLETED after 0.0018
+I, [2013-10-31T18:57:36.509762 #73225]  INFO -- : 2013-10-31T18:57:36+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 91.0332 j/s, 0 failed
+I, [2013-10-31T18:57:46.524130 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=389) RUNNING
+I, [2013-10-31T18:57:46.526604 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=389) COMPLETED after 0.0020
+I, [2013-10-31T18:57:46.531344 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=390) RUNNING
+I, [2013-10-31T18:57:46.533477 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=390) COMPLETED after 0.0018
+I, [2013-10-31T18:57:46.537502 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=391) RUNNING
+I, [2013-10-31T18:57:46.539038 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=391) COMPLETED after 0.0013
+I, [2013-10-31T18:57:46.542068 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=392) RUNNING
+I, [2013-10-31T18:57:46.543650 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=392) COMPLETED after 0.0013
+I, [2013-10-31T18:57:46.544954 #73225]  INFO -- : 2013-10-31T18:57:46+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 4 jobs processed at 137.0238 j/s, 0 failed
+I, [2013-10-31T18:57:56.554238 #73225]  INFO -- : 2013-10-31T18:57:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=393) RUNNING
+I, [2013-10-31T18:57:56.555786 #73225]  INFO -- : 2013-10-31T18:57:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=393) COMPLETED after 0.0013
+I, [2013-10-31T18:57:56.557367 #73225]  INFO -- : 2013-10-31T18:57:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 151.9064 j/s, 0 failed
+I, [2013-10-31T18:58:06.571217 #73225]  INFO -- : 2013-10-31T18:58:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=394) RUNNING
+I, [2013-10-31T18:58:06.574377 #73225]  INFO -- : 2013-10-31T18:58:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=394) COMPLETED after 0.0026
+I, [2013-10-31T18:58:06.576895 #73225]  INFO -- : 2013-10-31T18:58:06+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 70.3928 j/s, 0 failed
+I, [2013-10-31T19:07:01.947399 #73225]  INFO -- : 2013-10-31T19:07:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=395) RUNNING
+I, [2013-10-31T19:07:01.948929 #73225]  INFO -- : 2013-10-31T19:07:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=395) COMPLETED after 0.0013
+I, [2013-10-31T19:07:01.950403 #73225]  INFO -- : 2013-10-31T19:07:01+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 1 jobs processed at 128.0574 j/s, 0 failed
+I, [2013-10-31T19:07:23.268271 #73798]  INFO -- : 2013-10-31T19:07:23+0000: [Worker(host:infinity.lan pid:73798)] Starting job worker
+I, [2013-10-31T19:07:25.407319 #73800]  INFO -- : 2013-10-31T19:07:25+0000: [Worker(host:infinity.lan pid:73800)] Starting job worker
+I, [2013-10-31T19:07:27.538957 #73801]  INFO -- : 2013-10-31T19:07:27+0000: [Worker(host:infinity.lan pid:73801)] Starting job worker
+I, [2013-10-31T19:07:29.678982 #73802]  INFO -- : 2013-10-31T19:07:29+0000: [Worker(host:infinity.lan pid:73802)] Starting job worker
+I, [2013-10-31T19:07:31.808832 #73803]  INFO -- : 2013-10-31T19:07:31+0000: [Worker(host:infinity.lan pid:73803)] Starting job worker
+I, [2013-10-31T19:07:31.899968 #73803]  INFO -- : 2013-10-31T19:07:31+0000: [Worker(host:infinity.lan pid:73803)] Job Services::Checkup#check_without_delay (id=396) RUNNING
+I, [2013-10-31T19:07:31.902564 #73803]  INFO -- : 2013-10-31T19:07:31+0000: [Worker(host:infinity.lan pid:73803)] Job Services::Checkup#check_without_delay (id=396) COMPLETED after 0.0024
+I, [2013-10-31T19:07:31.903913 #73803]  INFO -- : 2013-10-31T19:07:31+0000: [Worker(host:infinity.lan pid:73803)] 1 jobs processed at 10.5364 j/s, 0 failed
+I, [2013-10-31T19:07:33.336042 #73798]  INFO -- : 2013-10-31T19:07:33+0000: [Worker(host:infinity.lan pid:73798)] Job Services::Checkup#check_without_delay (id=397) RUNNING
+I, [2013-10-31T19:07:33.338778 #73798]  INFO -- : 2013-10-31T19:07:33+0000: [Worker(host:infinity.lan pid:73798)] Job Services::Checkup#check_without_delay (id=397) COMPLETED after 0.0026
+I, [2013-10-31T19:07:33.340187 #73798]  INFO -- : 2013-10-31T19:07:33+0000: [Worker(host:infinity.lan pid:73798)] 1 jobs processed at 73.3299 j/s, 0 failed
+I, [2013-10-31T19:07:33.992145 #73804]  INFO -- : 2013-10-31T19:07:33+0000: [Worker(host:infinity.lan pid:73804)] Starting job worker
+I, [2013-10-31T19:07:35.473904 #73800]  INFO -- : 2013-10-31T19:07:35+0000: [Worker(host:infinity.lan pid:73800)] Job Services::Checkup#check_without_delay (id=398) RUNNING
+I, [2013-10-31T19:07:35.476433 #73800]  INFO -- : 2013-10-31T19:07:35+0000: [Worker(host:infinity.lan pid:73800)] Job Services::Checkup#check_without_delay (id=398) COMPLETED after 0.0024
+I, [2013-10-31T19:07:35.477739 #73800]  INFO -- : 2013-10-31T19:07:35+0000: [Worker(host:infinity.lan pid:73800)] 1 jobs processed at 73.3730 j/s, 0 failed
+I, [2013-10-31T19:07:36.162782 #73806]  INFO -- : 2013-10-31T19:07:36+0000: [Worker(host:infinity.lan pid:73806)] Starting job worker
+I, [2013-10-31T19:07:37.607123 #73801]  INFO -- : 2013-10-31T19:07:37+0000: [Worker(host:infinity.lan pid:73801)] Job Services::Checkup#check_without_delay (id=399) RUNNING
+I, [2013-10-31T19:07:37.609780 #73801]  INFO -- : 2013-10-31T19:07:37+0000: [Worker(host:infinity.lan pid:73801)] Job Services::Checkup#check_without_delay (id=399) COMPLETED after 0.0025
+I, [2013-10-31T19:07:37.611224 #73801]  INFO -- : 2013-10-31T19:07:37+0000: [Worker(host:infinity.lan pid:73801)] 1 jobs processed at 70.0967 j/s, 0 failed
+I, [2013-10-31T19:07:38.311281 #73807]  INFO -- : 2013-10-31T19:07:38+0000: [Worker(host:infinity.lan pid:73807)] Starting job worker
+I, [2013-10-31T19:07:39.746546 #73802]  INFO -- : 2013-10-31T19:07:39+0000: [Worker(host:infinity.lan pid:73802)] Job Services::Checkup#check_without_delay (id=400) RUNNING
+I, [2013-10-31T19:07:39.749183 #73802]  INFO -- : 2013-10-31T19:07:39+0000: [Worker(host:infinity.lan pid:73802)] Job Services::Checkup#check_without_delay (id=400) COMPLETED after 0.0025
+I, [2013-10-31T19:07:39.750605 #73802]  INFO -- : 2013-10-31T19:07:39+0000: [Worker(host:infinity.lan pid:73802)] 1 jobs processed at 74.3605 j/s, 0 failed
+I, [2013-10-31T19:07:40.449676 #73808]  INFO -- : 2013-10-31T19:07:40+0000: [Worker(host:infinity.lan pid:73808)] Starting job worker
+I, [2013-10-31T19:07:41.254141 #73806]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73806)] Job Services::Checkup#check_without_delay (id=401) RUNNING
+I, [2013-10-31T19:07:41.256754 #73806]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73806)] Job Services::Checkup#check_without_delay (id=401) COMPLETED after 0.0025
+I, [2013-10-31T19:07:41.258106 #73806]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73806)] 1 jobs processed at 24.3855 j/s, 0 failed
+I, [2013-10-31T19:07:41.911121 #73803]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73803)] Job Services::Checkup#check_without_delay (id=402) RUNNING
+I, [2013-10-31T19:07:41.913216 #73803]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73803)] Job Services::Checkup#check_without_delay (id=402) COMPLETED after 0.0020
+I, [2013-10-31T19:07:41.914353 #73803]  INFO -- : 2013-10-31T19:07:41+0000: [Worker(host:infinity.lan pid:73803)] 1 jobs processed at 146.0707 j/s, 0 failed
+I, [2013-10-31T19:07:42.682609 #73809]  INFO -- : 2013-10-31T19:07:42+0000: [Worker(host:infinity.lan pid:73809)] Starting job worker
+I, [2013-10-31T19:07:43.346389 #73798]  INFO -- : 2013-10-31T19:07:43+0000: [Worker(host:infinity.lan pid:73798)] Job Services::Checkup#check_without_delay (id=403) RUNNING
+I, [2013-10-31T19:07:43.348012 #73798]  INFO -- : 2013-10-31T19:07:43+0000: [Worker(host:infinity.lan pid:73798)] Job Services::Checkup#check_without_delay (id=403) COMPLETED after 0.0015
+I, [2013-10-31T19:07:43.348910 #73798]  INFO -- : 2013-10-31T19:07:43+0000: [Worker(host:infinity.lan pid:73798)] 1 jobs processed at 187.5469 j/s, 0 failed
+I, [2013-10-31T19:07:44.060412 #73804]  INFO -- : 2013-10-31T19:07:44+0000: [Worker(host:infinity.lan pid:73804)] Job Services::Checkup#check_without_delay (id=404) RUNNING
+I, [2013-10-31T19:07:44.062751 #73804]  INFO -- : 2013-10-31T19:07:44+0000: [Worker(host:infinity.lan pid:73804)] Job Services::Checkup#check_without_delay (id=404) COMPLETED after 0.0022
+I, [2013-10-31T19:07:44.063994 #73804]  INFO -- : 2013-10-31T19:07:44+0000: [Worker(host:infinity.lan pid:73804)] 1 jobs processed at 74.7887 j/s, 0 failed
+I, [2013-10-31T19:07:44.962616 #73810]  INFO -- : 2013-10-31T19:07:44+0000: [Worker(host:infinity.lan pid:73810)] Starting job worker
+I, [2013-10-31T19:07:45.485204 #73800]  INFO -- : 2013-10-31T19:07:45+0000: [Worker(host:infinity.lan pid:73800)] Job Services::Checkup#check_without_delay (id=405) RUNNING
+I, [2013-10-31T19:07:45.486916 #73800]  INFO -- : 2013-10-31T19:07:45+0000: [Worker(host:infinity.lan pid:73800)] Job Services::Checkup#check_without_delay (id=405) COMPLETED after 0.0016
+I, [2013-10-31T19:07:45.488008 #73800]  INFO -- : 2013-10-31T19:07:45+0000: [Worker(host:infinity.lan pid:73800)] 1 jobs processed at 147.5144 j/s, 0 failed
+I, [2013-10-31T19:07:46.263309 #73806]  INFO -- : 2013-10-31T19:07:46+0000: [Worker(host:infinity.lan pid:73806)] Job Services::Checkup#check_without_delay (id=406) RUNNING
+I, [2013-10-31T19:07:46.265243 #73806]  INFO -- : 2013-10-31T19:07:46+0000: [Worker(host:infinity.lan pid:73806)] Job Services::Checkup#check_without_delay (id=406) COMPLETED after 0.0018
+I, [2013-10-31T19:07:46.266271 #73806]  INFO -- : 2013-10-31T19:07:46+0000: [Worker(host:infinity.lan pid:73806)] 1 jobs processed at 155.1590 j/s, 0 failed
+I, [2013-10-31T19:07:47.151116 #73811]  INFO -- : 2013-10-31T19:07:47+0000: [Worker(host:infinity.lan pid:73811)] Starting job worker
+I, [2013-10-31T19:07:47.619491 #73801]  INFO -- : 2013-10-31T19:07:47+0000: [Worker(host:infinity.lan pid:73801)] Job Services::Checkup#check_without_delay (id=407) RUNNING
+I, [2013-10-31T19:07:47.621161 #73801]  INFO -- : 2013-10-31T19:07:47+0000: [Worker(host:infinity.lan pid:73801)] Job Services::Checkup#check_without_delay (id=407) COMPLETED after 0.0016
+I, [2013-10-31T19:07:47.622222 #73801]  INFO -- : 2013-10-31T19:07:47+0000: [Worker(host:infinity.lan pid:73801)] 1 jobs processed at 148.9869 j/s, 0 failed
+I, [2013-10-31T19:07:48.377550 #73807]  INFO -- : 2013-10-31T19:07:48+0000: [Worker(host:infinity.lan pid:73807)] Job Services::Checkup#check_without_delay (id=408) RUNNING
+I, [2013-10-31T19:07:48.379999 #73807]  INFO -- : 2013-10-31T19:07:48+0000: [Worker(host:infinity.lan pid:73807)] Job Services::Checkup#check_without_delay (id=408) COMPLETED after 0.0023
+I, [2013-10-31T19:07:48.381287 #73807]  INFO -- : 2013-10-31T19:07:48+0000: [Worker(host:infinity.lan pid:73807)] 1 jobs processed at 75.1484 j/s, 0 failed
+I, [2013-10-31T19:07:49.373282 #73812]  INFO -- : 2013-10-31T19:07:49+0000: [Worker(host:infinity.lan pid:73812)] Starting job worker
+I, [2013-10-31T19:07:49.758037 #73802]  INFO -- : 2013-10-31T19:07:49+0000: [Worker(host:infinity.lan pid:73802)] Job Services::Checkup#check_without_delay (id=409) RUNNING
+I, [2013-10-31T19:07:49.759901 #73802]  INFO -- : 2013-10-31T19:07:49+0000: [Worker(host:infinity.lan pid:73802)] Job Services::Checkup#check_without_delay (id=409) COMPLETED after 0.0017
+I, [2013-10-31T19:07:49.761039 #73802]  INFO -- : 2013-10-31T19:07:49+0000: [Worker(host:infinity.lan pid:73802)] 1 jobs processed at 141.4627 j/s, 0 failed
+I, [2013-10-31T19:07:51.980537 #73225]  INFO -- : 2013-10-31T19:07:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=410) RUNNING
+I, [2013-10-31T19:07:51.982342 #73225]  INFO -- : 2013-10-31T19:07:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=410) COMPLETED after 0.0014
+I, [2013-10-31T19:07:51.985632 #73225]  INFO -- : 2013-10-31T19:07:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=411) RUNNING
+I, [2013-10-31T19:07:51.987161 #73225]  INFO -- : 2013-10-31T19:07:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=411) COMPLETED after 0.0013
+I, [2013-10-31T19:07:51.988574 #73225]  INFO -- : 2013-10-31T19:07:51+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 2 jobs processed at 158.8184 j/s, 0 failed
+I, [2013-10-31T19:07:56.997404 #73225]  INFO -- : 2013-10-31T19:07:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=412) RUNNING
+I, [2013-10-31T19:07:56.999817 #73225]  INFO -- : 2013-10-31T19:07:56+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=412) COMPLETED after 0.0020
+I, [2013-10-31T19:07:57.004281 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=413) RUNNING
+I, [2013-10-31T19:07:57.006596 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=413) COMPLETED after 0.0020
+I, [2013-10-31T19:07:57.010343 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=414) RUNNING
+I, [2013-10-31T19:07:57.011957 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=414) COMPLETED after 0.0014
+I, [2013-10-31T19:07:57.015090 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=415) RUNNING
+I, [2013-10-31T19:07:57.016638 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=415) COMPLETED after 0.0013
+I, [2013-10-31T19:07:57.019695 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=416) RUNNING
+I, [2013-10-31T19:07:57.021085 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] Job Services::Checkup#check_without_delay (id=416) COMPLETED after 0.0012
+I, [2013-10-31T19:07:57.022342 #73225]  INFO -- : 2013-10-31T19:07:57+0000: [Worker(delayed_job host:infinity.lan pid:73225)] 5 jobs processed at 158.6093 j/s, 0 failed

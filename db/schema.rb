@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022133314) do
+ActiveRecord::Schema.define(version: 20131031154644) do
 
   create_table "agents", force: true do |t|
     t.string   "publisher"
@@ -24,15 +24,64 @@ ActiveRecord::Schema.define(version: 20131022133314) do
     t.integer  "events_count"
     t.datetime "last_check_at"
     t.datetime "last_event"
-    t.text     "seed"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "action"
   end
 
   create_table "caches", force: true do |t|
     t.string   "publisher"
     t.integer  "agent_id"
+    t.text     "payload"
+    t.text     "memory"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "integration_mappings", force: true do |t|
+    t.integer  "integration_id"
+    t.integer  "template_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "integrations", force: true do |t|
+    t.string   "identifier"
+    t.string   "title"
+    t.text     "help"
+    t.text     "payload"
+    t.text     "memory"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seed_mappings", force: true do |t|
+    t.integer  "agent_id"
+    t.integer  "seed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seeds", force: true do |t|
+    t.string   "identifier"
+    t.string   "title"
+    t.string   "publisher"
+    t.text     "help"
     t.text     "payload"
     t.text     "memory"
     t.datetime "created_at"

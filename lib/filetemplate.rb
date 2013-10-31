@@ -39,6 +39,7 @@ module Services
 
 			response
 		end
+  		handle_asynchronously :execute
 
 		##
 		# => Validates the server connection properties
