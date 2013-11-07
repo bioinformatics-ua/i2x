@@ -62,9 +62,12 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.1)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     fssm (0.2.10)
     haml (4.0.3)
       tilt
+    hashie (2.0.5)
     hike (1.2.3)
     hiredis (0.4.5)
     i18n (0.6.5)
@@ -83,6 +86,7 @@ GEM
     mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.8.0)
+    multipart-post (1.2.0)
     mysql2 (0.3.13)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -93,6 +97,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.1)
     rails (4.0.0)
       actionmailer (= 4.0.0)
       actionpack (= 4.0.0)
@@ -122,6 +127,10 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    sentry-raven (0.6.0)
+      faraday (>= 0.7.6)
+      hashie (>= 1.1.0)
+      uuidtools
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -149,6 +158,7 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
     zurb-foundation (4.2.3)
@@ -170,12 +180,14 @@ DEPENDENCIES
   kramdown
   mysql2
   nokogiri
+  railroady
   rails (= 4.0.0)
   redis
   rest-client
   rufus-scheduler
   sass-rails (~> 4.0.0)
   sdoc
+  sentry-raven
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

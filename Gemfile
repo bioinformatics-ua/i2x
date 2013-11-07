@@ -62,6 +62,14 @@ gem 'nokogiri'
 gem 'hiredis'
 gem 'redis'
 
+# Sentry logger access. Read more: https://github.com/getsentry/raven-ruby
+gem "sentry-raven"
+
+group :development, :test do
+# Generates UML from Model.
+    gem 'railroady'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

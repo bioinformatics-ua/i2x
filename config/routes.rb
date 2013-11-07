@@ -1,4 +1,4 @@
-I2x::Application.routes.draw do
+I2X::Application.routes.draw do
 
   resources :integrations
 
@@ -65,9 +65,7 @@ I2x::Application.routes.draw do
   # testing Postman routes
   get "postman/load/:publisher/:identifier", to: "postman#load"
   get "postman/go/:identifier", to: 'postman#go'
-  get "postman/deliver/:publisher/:identifier", to: "postman#deliver"
-  post "postman/deliver/:publisher/:identifier", to: "postman#deliver"
-  get "postman/:key", to: "postman#deliver"
+  post "postman/deliver/:identifier", to: "postman#deliver"
   post "postman/:key", to: "postman#action"
 
   # delayed job web interface

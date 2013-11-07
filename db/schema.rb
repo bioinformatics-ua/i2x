@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131031154644) do
+ActiveRecord::Schema.define(version: 20131106174708) do
+
+  create_table "agent_mappings", force: true do |t|
+    t.integer  "integration_id"
+    t.integer  "agent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "agents", force: true do |t|
     t.string   "publisher"

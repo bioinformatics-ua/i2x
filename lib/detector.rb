@@ -12,7 +12,7 @@ module Services
 			begin
 				@agent = Agent.find_by! identifier: identifier
 			rescue Exception => e
-				
+				puts e
 			end
 		end
 	end

@@ -1,5 +1,6 @@
 require 'helper'
 require 'cashier'
+require 'mysql2'
 
 module Services
 
@@ -13,29 +14,52 @@ module Services
 		public
 
 		def checkup
-			
+			@response = Hash.new
 			@help = Services::Helper.new
 			begin
-				@client = Mysql2::Client.new(:host => @agent[:options][:host], :username => @agent[:options][:username] , :password => @agent[:options][:password] , :database => @agent[:options][:database])
+				@client = Mysql2::Client.new(:host => @agent[:payload][:host], :username => @agent[:payload][:username] , :password => @agent[:payload][:password] , :database => @agent[:payload][:database])
 			rescue Exception => e
-				@response = {:status => 404, :message => "[i2x][SQLDetector] failed to load database connection, #{e}"}
+				@response = {:status => 404, :message => "[i2x][SQLDetector] failed to load database connection, #{e.inspect}", :agent => @agent}
 				puts "[i2x][SQLDetector] failed to load database connection, #{e}"
 			end
 
 			# Execute Agent query on SQL database, check if content has been seen before
 			#
-			begin
-				@client.query(@agent[:options][:query]).each(:symbolize_keys => false) do |row|
-					unless @agent[:options][:content_id].nil? then
-						@response = Cashier.verify row[@agent[:options][:content_id]], @agent, row
+			begin	
+				@payloads = []			
+				@client.query(@agent[:payload][:query]).each(:symbolize_keys => false) do |row|
+					unless @agent[:payload][:cache].nil? then
+						@cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row
 					else
-						@response = Cashier.verify row["id"], @agent, row
+						@cache = Cashier.verify row["id"], @agent, row
 					end
-				end
+
+					# The actual processing
+					#
+					if @cache[:status] == 100 then
+
+							# add row data to payload from selectors (key => key, value => column name)
+							payload = Hash.new
+							JSON.parse(@agent[:payload][:selectors]).each do |selector|
+								
+								selector.each do |k,v|
+									payload[k] = row[v]
+								end
+							end
+							# add payload object to payloads list
+							@payloads.push payload
+							# increase detected events count
+							@agent.increment!(:events_count)					
+							
+						end
+					end
+					
+					@response = { :payload => @payloads, :status => 100}
 			rescue Exception => e
-				@response = {:status => 404, :message => "[i2x][SQLDetector] failed to load data from database, #{e}" }	
+				@response = {:status => 404, :message => "[i2x][SQLDetector] failed to load data from database, #{e}", :agent => @agent }	
 				puts "[i2x][SQLDetector] failed to load data from database, #{e}"
 			end
+
 
 			# Update agent checkup timestamp
 			#

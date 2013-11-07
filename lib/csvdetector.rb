@@ -14,18 +14,37 @@ module Services
 		public
 
 		def checkup
+			@payloads = []
 			@help = Services::Helper.new
 			begin
 				#@content
-				 #open(@agent[:options][:uri]) {|f| @content = f.read()}
-				 CSV.new(open(@agent[:options][:uri]), :headers => :first_row).each do |row|
-				 	unless @agent[:options][:content_id].nil? then
-						@response = Cashier.verify row[@agent[:options][:content_id]], @agent, row
+				 #open(@agent[:payload][:uri]) {|f| @content = f.read()}
+				 CSV.new(open(@agent[:payload][:uri]), :headers => :first_row).each do |row|
+				 	unless @agent[:payload][:cache].nil? then
+						@cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row
 					else
-						@response = Cashier.verify row[0], @agent, row
+						@cache = Cashier.verify row[0], @agent, row
 					end
-				end
-				@response = {:status => 200}
+				# The actual processing
+					#
+					if @cache[:status] == 100 then
+
+							# add row data to payload from selectors (key => key, value => column name)
+							payload = Hash.new
+							JSON.parse(@agent[:payload][:selectors]).each do |selector|								
+								selector.each do |k,v|
+									payload[k] = row[v]
+								end
+							end
+							# add payload object to payloads list
+							@payloads.push payload
+							# increase detected events count
+							@agent.increment!(:events_count)					
+							
+						end
+					end
+					
+					@response = { :payload => @payloads, :status => 100}
 			rescue Exception => e
 				@response = {:status => 404, :message => "[i2x][CSVDetector] failed to load CSV doc, #{e}"}
 				puts "[i2x][CSVDetector] failed to load CSV doc, #{e}"

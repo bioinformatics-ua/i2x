@@ -1,4 +1,4 @@
-I2x::Application.configure do
+I2X::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -27,5 +27,5 @@ I2x::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.host = 'http://i2x.dev/'
+  config.host = 'http://localhost:3000/'
 end

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-I2x::Application.config.secret_key_base = 'fe6399150c5b08d732820592954f5a8846392a9ada104c3736c2fdda9866a7f3e9a306f07d40b2dbdfadc2582bdcf3a5a159fd21a17c2e1436ee1f64450de1c2'
+I2X::Application.config.secret_key_base = 'fe6399150c5b08d732820592954f5a8846392a9ada104c3736c2fdda9866a7f3e9a306f07d40b2dbdfadc2582bdcf3a5a159fd21a17c2e1436ee1f64450de1c2'

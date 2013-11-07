@@ -11,18 +11,18 @@ scheduler = Rufus::Scheduler.start_new
 
 
 
-#%w[10s 30s 1m 2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
-%w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|  
+%w[10s 30s 1m 2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
+#%w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|  
   scheduler.every schedule do
-    puts "Checking for #{schedule}..."
     begin
       unless ActiveRecord::Base.connected?
         ActiveRecord::Base.connection.verify!(0)
       end
       
-      Services::Checkup.new.check  
+      Services::Checkup.new.check(schedule)
     rescue Exception => e
-      status e.inspect
+      puts e.inspect
+      #status e.inspect
     ensure
       ActiveRecord::Base.connection_pool.release_connection
     end

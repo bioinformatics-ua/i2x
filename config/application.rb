@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module I2x
+module I2X
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -22,6 +22,12 @@ module I2x
     config.autoload_paths += %W(#{config.root}/app/workers)
     config.autoload_paths += %W(#{config.root}/app/helpers)
     config.autoload_paths += %W(#{config.root}/lib)
-    
+
+    Raven.configure do |config|
+        config.dsn = 'http://f7613acf782045ed8d08a8e2262891d0:10bfbe80ae07446e8f07f100f7849f84@0.0.0.0:9000/1'
+         config.environments = %w[ production development test ]
+    end    
   end
+
+
 end

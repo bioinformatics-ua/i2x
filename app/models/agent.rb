@@ -11,4 +11,10 @@ class Agent < ActiveRecord::Base
 	#
 	has_many	:seed_mapping
 	has_many	:seed, :through => :seed_mapping
+
+	##
+	# => Use  Agents Mappings to connect Agents
+	#
+	has_many	:agent_mapping
+	has_many	:agent, :through => :agent_mapping
 end

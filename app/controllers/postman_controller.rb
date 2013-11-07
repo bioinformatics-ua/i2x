@@ -6,6 +6,51 @@ require 'urltemplate'
 
 class PostmanController < ApplicationController
 	def deliver
+		@delivery
+		begin
+			@template = Template.find_by! identifier: params[:identifier]
+			puts "Delivery for #{@template.title}"
+			case @template[:publisher]
+				when 'sql'
+					@delivery = Services::SQLTemplate.new @template
+				when 'file'
+					@delivery = Services::FileTemplate.new @template
+				when 'url'
+					@delivery = Services::URLTemplate.new @template
+			end
+		rescue Exception => e
+			puts e
+			@response = { :status => "401", :message => "[i2x] Unable to load selected Delivery Template", :identifier => params[:identifier], :error => e }
+		end
+
+		begin
+			@delivery.process params
+		rescue Exception => e
+			puts e
+			@response = { :status => "402", :message => "[i2x] Unable to process input parameters", :identifier => params[:identifier], :error => e, :template => @template }
+		end
+
+		begin
+			@response = @delivery.execute
+		rescue Exception => e
+			@response = { :status => "403", :message => "[i2x] Unable to perform final delivery, #{e}", :identifier => params[:identifier], :error => e, :template => @template }
+		end
+
+		respond_to do |format|	
+			format.json  { 
+				render :json => @response    		
+			}	
+			format.js  { 
+				render :json => @response    		
+			}
+			format.xml  { 
+				render :xml => @response    		
+			}
+		end
+	end
+
+	# not working!
+	def delivering
 
 		@delivery
 

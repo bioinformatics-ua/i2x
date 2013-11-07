@@ -22,7 +22,7 @@ module Services
 			end
 			response
 		end
-  		handle_asynchronously :execute
+  		#handle_asynchronously :execute
 
 
 		##

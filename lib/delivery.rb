@@ -11,10 +11,10 @@ module Services
 	class Delivery
 		attr_accessor :template, :identifier, :publisher
 
-		def initialize identifier, publisher
-			@identifier = identifier
-			@publisher = publisher
-			@template = Template.find_by! identifier: @identifier, publisher: @publisher
+		def initialize template
+			@identifier = template[:identifier]
+			@publisher = template[:publisher]
+			@template = template
 			@help = Services::Helper.new
 			
 			self.process_helpers
