@@ -1,4 +1,4 @@
 class IntegrationMapping < ActiveRecord::Base
-	belongs_to	:integration
-	belongs_to	:template
+  belongs_to	:integration
+  belongs_to	:template
 end

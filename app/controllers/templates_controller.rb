@@ -25,9 +25,9 @@ class TemplatesController < ApplicationController
         format.html { redirect_to templates_url }
         format.json { render :json => response}
       end
-    else 
+    else
     end
-    
+
   end
 
   # GET /templates/1/edit
@@ -84,18 +84,18 @@ class TemplatesController < ApplicationController
         format.html { redirect_to templates_url }
         format.json { render :json => response}
       end
-    else 
+    else
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_template
-      @template = Template.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def template_params
-      params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_template
+    @template = Template.find(params[:id])
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def template_params
+    params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at)
+  end
+end

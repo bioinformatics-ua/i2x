@@ -62,13 +62,13 @@ class SeedsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_seed
-      @seed = Seed.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_seed
+    @seed = Seed.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def seed_params
-      params.require(:seed).permit(:identifier, :title, :publisher, :help, :payload, :memmory)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def seed_params
+    params.require(:seed).permit(:identifier, :title, :publisher, :help, :payload, :memmory)
+  end
 end

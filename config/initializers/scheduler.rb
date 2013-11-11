@@ -10,74 +10,74 @@ require 'raven'
 
 scheduler = Rufus::Scheduler.new
 
-   
+
 
 %w[10s 30s 1m 2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
-#%w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|  
+  #%w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
   scheduler.every schedule do
 
- begin
-   unless ActiveRecord::Base.connected?
-     ActiveRecord::Base.connection.verify!(0)
-   end
-   
-   Services::Checkup.new.check('10s')
- rescue Exception => e
-   #uts e.inspect
-   #status e.inspect
-   Raven.capture_exception(e)
- ensure
-   ActiveRecord::Base.connection_pool.release_connection
- end
+    begin
+      unless ActiveRecord::Base.connected?
+        ActiveRecord::Base.connection.verify!(0)
+      end
+
+      Services::Checkup.new.check('10s')
+    rescue Exception => e
+      #uts e.inspect
+      #status e.inspect
+      Raven.capture_exception(e)
+    ensure
+      ActiveRecord::Base.connection_pool.release_connection
+    end
 
   end
 end
 
 #scheduler.every '12h' do
- # system("RAILS_ENV=production bin/delayed_job restart")
+# system("RAILS_ENV=production bin/delayed_job restart")
 #end
 
 #scheduler.every '10d' do
-  # propogate!(mutex)
-    #puts 'Hello Dave!' 
-    #dt = Time.new
-    #CSV.open('data/log.csv', 'a') do |csv|
-    #  csv << [dt.to_time, 'checked']
-    #end
- #   checkup
-    #puts Rails.configuration.host
-  #end
+# propogate!(mutex)
+#puts 'Hello Dave!'
+#dt = Time.new
+#CSV.open('data/log.csv', 'a') do |csv|
+#  csv << [dt.to_time, 'checked']
+#end
+#   checkup
+#puts Rails.configuration.host
+#end
 
-  #def checkup
-   # client = Mysql2::Client.new(:host => 'localhost', :username => 'root' , :password => 'telematica' , :database => 'i2x')
-    #client.query('SELECT * FROM variants;').each(:symbolize_keys => true) do |row|
-    #results = Std.where visited: row[:id], label: 'variant'
-      #results = client.query("SELECT * FROM stds WHERE label LIKE 'variant' AND visited = #{row[:id]};")
-     # if results.size == 0 then
-      #  response = Net::HTTP.post_form(URI.parse("#{Rails.configuration.host}postman/variant.json"), { 'type' => 'sql', 'id' => row[:id], 'refseq' => row[:refseq], 'variant' => row[:variant]})
+#def checkup
+# client = Mysql2::Client.new(:host => 'localhost', :username => 'root' , :password => 'telematica' , :database => 'i2x')
+#client.query('SELECT * FROM variants;').each(:symbolize_keys => true) do |row|
+#results = Std.where visited: row[:id], label: 'variant'
+#results = client.query("SELECT * FROM stds WHERE label LIKE 'variant' AND visited = #{row[:id]};")
+# if results.size == 0 then
+#  response = Net::HTTP.post_form(URI.parse("#{Rails.configuration.host}postman/variant.json"), { 'type' => 'sql', 'id' => row[:id], 'refseq' => row[:refseq], 'variant' => row[:variant]})
 
-        #client.query("INSERT INTO stds(label, help, visited) VALUES('variant', '#{row[:refseq]}:#{row[:variant]}', #{row[:id]});")
-       # warn "Not found, adding #{row[:id]}..."
-      #else
-        #results.each do |std|
-        #  puts "#{std.id} integrated at #{std.created_at}"
-        #end
-      #end
-      #dt = Time.new
-      #CSV.open('data/log.csv', 'a') do |csv|
-       # csv << [dt.to_time, 'variant', row[:id]]
-      #end
-    #end
-  #end
+#client.query("INSERT INTO stds(label, help, visited) VALUES('variant', '#{row[:refseq]}:#{row[:variant]}', #{row[:id]});")
+# warn "Not found, adding #{row[:id]}..."
+#else
+#results.each do |std|
+#  puts "#{std.id} integrated at #{std.created_at}"
+#end
+#end
+#dt = Time.new
+#CSV.open('data/log.csv', 'a') do |csv|
+# csv << [dt.to_time, 'variant', row[:id]]
+#end
+#end
+#end
 
-  #handle_asynchronously :checkup
+#handle_asynchronously :checkup
 
 
 # Schedule repeating events.
 
 #%w[2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
 #  scheduler.every schedule do
-    # run_schedule "every_#{schedule}", mutex
+# run_schedule "every_#{schedule}", mutex
 #  end
 #end
 

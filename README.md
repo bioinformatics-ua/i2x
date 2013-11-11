@@ -6,6 +6,10 @@ i2x documentation
 Changelog
 =========
 
+2013-11-11
+
+* accomplished full integration
+
 2013-09-20
 
 * main release for docs to http://bioinformatics.ua.pt/i2x

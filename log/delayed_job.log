@@ -152,3 +152,733 @@ I, [2013-11-11T10:13:40.210979 #14034]  INFO -- : 2013-11-11T10:13:40+0000: [Wor
 I, [2013-11-11T10:13:40.246184 #14034]  INFO -- : 2013-11-11T10:13:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=67) RUNNING
 I, [2013-11-11T10:13:40.272213 #14034]  INFO -- : 2013-11-11T10:13:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=67) COMPLETED after 0.0255
 I, [2013-11-11T10:13:40.274216 #14034]  INFO -- : 2013-11-11T10:13:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 8.6505 j/s, 0 failed
+I, [2013-11-11T10:13:50.282721 #14034]  INFO -- : 2013-11-11T10:13:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=68) RUNNING
+I, [2013-11-11T10:13:50.285706 #14034]  INFO -- : 2013-11-11T10:13:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=68) COMPLETED after 0.0029
+I, [2013-11-11T10:13:50.286732 #14034]  INFO -- : 2013-11-11T10:13:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 125.0000 j/s, 0 failed
+I, [2013-11-11T10:14:00.296202 #14034]  INFO -- : 2013-11-11T10:14:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=69) RUNNING
+I, [2013-11-11T10:14:00.300664 #14034]  INFO -- : 2013-11-11T10:14:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=69) COMPLETED after 0.0043
+I, [2013-11-11T10:14:00.302150 #14034]  INFO -- : 2013-11-11T10:14:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.5607 j/s, 0 failed
+I, [2013-11-11T10:14:05.310334 #14034]  INFO -- : 2013-11-11T10:14:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=70) RUNNING
+I, [2013-11-11T10:14:05.314700 #14034]  INFO -- : 2013-11-11T10:14:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=70) COMPLETED after 0.0041
+I, [2013-11-11T10:14:05.316220 #14034]  INFO -- : 2013-11-11T10:14:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.4585 j/s, 0 failed
+I, [2013-11-11T10:14:10.320743 #14034]  INFO -- : 2013-11-11T10:14:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=71) RUNNING
+I, [2013-11-11T10:14:10.580118 #14034]  INFO -- : 2013-11-11T10:14:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=71) COMPLETED after 0.2592
+I, [2013-11-11T10:14:10.582116 #14034]  INFO -- : 2013-11-11T10:14:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 3.7828 j/s, 0 failed
+I, [2013-11-11T10:14:20.591206 #14034]  INFO -- : 2013-11-11T10:14:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=72) RUNNING
+I, [2013-11-11T10:14:20.593850 #14034]  INFO -- : 2013-11-11T10:14:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=72) COMPLETED after 0.0025
+I, [2013-11-11T10:14:20.594901 #14034]  INFO -- : 2013-11-11T10:14:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 115.4068 j/s, 0 failed
+I, [2013-11-11T10:14:30.649227 #14034]  INFO -- : 2013-11-11T10:14:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=73) RUNNING
+I, [2013-11-11T10:14:30.652060 #14034]  INFO -- : 2013-11-11T10:14:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=73) COMPLETED after 0.0027
+I, [2013-11-11T10:14:30.653166 #14034]  INFO -- : 2013-11-11T10:14:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 142.8776 j/s, 0 failed
+I, [2013-11-11T10:14:35.657975 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=74) RUNNING
+I, [2013-11-11T10:14:35.660672 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=74) COMPLETED after 0.0026
+I, [2013-11-11T10:14:35.662983 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=75) RUNNING
+I, [2013-11-11T10:14:35.665360 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=75) COMPLETED after 0.0023
+I, [2013-11-11T10:14:35.667919 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=76) RUNNING
+I, [2013-11-11T10:14:35.670376 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=76) COMPLETED after 0.0024
+I, [2013-11-11T10:14:35.671321 #14034]  INFO -- : 2013-11-11T10:14:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 182.9380 j/s, 0 failed
+I, [2013-11-11T10:14:40.678365 #14034]  INFO -- : 2013-11-11T10:14:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=77) RUNNING
+I, [2013-11-11T10:14:43.670218 #14034]  INFO -- : 2013-11-11T10:14:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=77) COMPLETED after 2.9917
+I, [2013-11-11T10:14:43.671513 #14034]  INFO -- : 2013-11-11T10:14:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3335 j/s, 0 failed
+I, [2013-11-11T10:14:48.679721 #14034]  INFO -- : 2013-11-11T10:14:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=78) RUNNING
+I, [2013-11-11T10:14:48.682783 #14034]  INFO -- : 2013-11-11T10:14:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=78) COMPLETED after 0.0029
+I, [2013-11-11T10:14:48.683811 #14034]  INFO -- : 2013-11-11T10:14:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 97.2006 j/s, 0 failed
+I, [2013-11-11T10:14:58.692111 #14034]  INFO -- : 2013-11-11T10:14:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=79) RUNNING
+I, [2013-11-11T10:14:58.696282 #14034]  INFO -- : 2013-11-11T10:14:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=79) COMPLETED after 0.0040
+I, [2013-11-11T10:14:58.697774 #14034]  INFO -- : 2013-11-11T10:14:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 98.1354 j/s, 0 failed
+I, [2013-11-11T10:15:08.708906 #14034]  INFO -- : 2013-11-11T10:15:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=80) RUNNING
+I, [2013-11-11T10:15:08.713289 #14034]  INFO -- : 2013-11-11T10:15:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=80) COMPLETED after 0.0042
+I, [2013-11-11T10:15:08.716558 #14034]  INFO -- : 2013-11-11T10:15:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=81) RUNNING
+I, [2013-11-11T10:15:08.719785 #14034]  INFO -- : 2013-11-11T10:15:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=81) COMPLETED after 0.0031
+I, [2013-11-11T10:15:08.720978 #14034]  INFO -- : 2013-11-11T10:15:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 109.6431 j/s, 0 failed
+I, [2013-11-11T10:15:18.729988 #14034]  INFO -- : 2013-11-11T10:15:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=82) RUNNING
+I, [2013-11-11T10:15:18.734093 #14034]  INFO -- : 2013-11-11T10:15:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=82) COMPLETED after 0.0039
+I, [2013-11-11T10:15:18.735500 #14034]  INFO -- : 2013-11-11T10:15:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 97.5800 j/s, 0 failed
+I, [2013-11-11T10:15:33.749598 #14034]  INFO -- : 2013-11-11T10:15:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=83) RUNNING
+I, [2013-11-11T10:15:33.754175 #14034]  INFO -- : 2013-11-11T10:15:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=83) COMPLETED after 0.0044
+I, [2013-11-11T10:15:33.755878 #14034]  INFO -- : 2013-11-11T10:15:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 70.7314 j/s, 0 failed
+I, [2013-11-11T10:15:38.765688 #14034]  INFO -- : 2013-11-11T10:15:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=84) RUNNING
+I, [2013-11-11T10:15:38.770027 #14034]  INFO -- : 2013-11-11T10:15:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=84) COMPLETED after 0.0042
+I, [2013-11-11T10:15:38.773343 #14034]  INFO -- : 2013-11-11T10:15:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=85) RUNNING
+I, [2013-11-11T10:15:38.776772 #14034]  INFO -- : 2013-11-11T10:15:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=85) COMPLETED after 0.0033
+I, [2013-11-11T10:15:38.778040 #14034]  INFO -- : 2013-11-11T10:15:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 102.5536 j/s, 0 failed
+I, [2013-11-11T10:15:43.785220 #14034]  INFO -- : 2013-11-11T10:15:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=86) RUNNING
+I, [2013-11-11T10:15:43.789509 #14034]  INFO -- : 2013-11-11T10:15:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=86) COMPLETED after 0.0041
+I, [2013-11-11T10:15:43.790948 #14034]  INFO -- : 2013-11-11T10:15:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 93.3271 j/s, 0 failed
+I, [2013-11-11T10:15:53.803118 #14034]  INFO -- : 2013-11-11T10:15:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=87) RUNNING
+I, [2013-11-11T10:15:53.807162 #14034]  INFO -- : 2013-11-11T10:15:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=87) COMPLETED after 0.0039
+I, [2013-11-11T10:15:53.808665 #14034]  INFO -- : 2013-11-11T10:15:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 77.2380 j/s, 0 failed
+I, [2013-11-11T10:16:03.818546 #14034]  INFO -- : 2013-11-11T10:16:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=88) RUNNING
+I, [2013-11-11T10:16:03.822611 #14034]  INFO -- : 2013-11-11T10:16:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=88) COMPLETED after 0.0039
+I, [2013-11-11T10:16:03.823796 #14034]  INFO -- : 2013-11-11T10:16:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 92.7472 j/s, 0 failed
+I, [2013-11-11T10:16:08.832761 #14034]  INFO -- : 2013-11-11T10:16:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=89) RUNNING
+I, [2013-11-11T10:16:08.837861 #14034]  INFO -- : 2013-11-11T10:16:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=89) COMPLETED after 0.0049
+I, [2013-11-11T10:16:08.839400 #14034]  INFO -- : 2013-11-11T10:16:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 73.9262 j/s, 0 failed
+I, [2013-11-11T10:16:13.846297 #14034]  INFO -- : 2013-11-11T10:16:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=90) RUNNING
+I, [2013-11-11T10:16:13.850691 #14034]  INFO -- : 2013-11-11T10:16:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=90) COMPLETED after 0.0042
+I, [2013-11-11T10:16:13.852211 #14034]  INFO -- : 2013-11-11T10:16:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 90.5797 j/s, 0 failed
+I, [2013-11-11T10:16:23.864100 #14034]  INFO -- : 2013-11-11T10:16:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=91) RUNNING
+I, [2013-11-11T10:16:23.868884 #14034]  INFO -- : 2013-11-11T10:16:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=91) COMPLETED after 0.0046
+I, [2013-11-11T10:16:23.870344 #14034]  INFO -- : 2013-11-11T10:16:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.3923 j/s, 0 failed
+I, [2013-11-11T10:16:33.882026 #14034]  INFO -- : 2013-11-11T10:16:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=92) RUNNING
+I, [2013-11-11T10:16:33.886285 #14034]  INFO -- : 2013-11-11T10:16:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=92) COMPLETED after 0.0041
+I, [2013-11-11T10:16:33.887858 #14034]  INFO -- : 2013-11-11T10:16:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 75.3069 j/s, 0 failed
+I, [2013-11-11T10:16:38.897651 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=93) RUNNING
+I, [2013-11-11T10:16:38.902974 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=93) COMPLETED after 0.0051
+I, [2013-11-11T10:16:38.906814 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=94) RUNNING
+I, [2013-11-11T10:16:38.910245 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=94) COMPLETED after 0.0033
+I, [2013-11-11T10:16:38.913721 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=95) RUNNING
+I, [2013-11-11T10:16:38.917028 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=95) COMPLETED after 0.0032
+I, [2013-11-11T10:16:38.917971 #14034]  INFO -- : 2013-11-11T10:16:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 108.2915 j/s, 0 failed
+I, [2013-11-11T10:16:43.921988 #14034]  INFO -- : 2013-11-11T10:16:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=96) RUNNING
+I, [2013-11-11T10:16:43.925223 #14034]  INFO -- : 2013-11-11T10:16:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=96) COMPLETED after 0.0031
+I, [2013-11-11T10:16:43.926319 #14034]  INFO -- : 2013-11-11T10:16:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 134.5171 j/s, 0 failed
+I, [2013-11-11T10:16:53.935468 #14034]  INFO -- : 2013-11-11T10:16:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=97) RUNNING
+I, [2013-11-11T10:16:56.807476 #14034]  INFO -- : 2013-11-11T10:16:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=97) COMPLETED after 2.8719
+I, [2013-11-11T10:16:56.808608 #14034]  INFO -- : 2013-11-11T10:16:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3473 j/s, 0 failed
+I, [2013-11-11T10:17:01.817165 #14034]  INFO -- : 2013-11-11T10:17:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=98) RUNNING
+I, [2013-11-11T10:17:01.821705 #14034]  INFO -- : 2013-11-11T10:17:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=98) COMPLETED after 0.0044
+I, [2013-11-11T10:17:01.823314 #14034]  INFO -- : 2013-11-11T10:17:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 72.7802 j/s, 0 failed
+I, [2013-11-11T10:17:06.829056 #14034]  INFO -- : 2013-11-11T10:17:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=99) RUNNING
+I, [2013-11-11T10:17:06.831597 #14034]  INFO -- : 2013-11-11T10:17:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=99) COMPLETED after 0.0024
+I, [2013-11-11T10:17:06.832485 #14034]  INFO -- : 2013-11-11T10:17:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 137.0990 j/s, 0 failed
+I, [2013-11-11T10:17:11.837347 #14034]  INFO -- : 2013-11-11T10:17:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=100) RUNNING
+I, [2013-11-11T10:17:11.839869 #14034]  INFO -- : 2013-11-11T10:17:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=100) COMPLETED after 0.0024
+I, [2013-11-11T10:17:11.840803 #14034]  INFO -- : 2013-11-11T10:17:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 147.4491 j/s, 0 failed
+I, [2013-11-11T10:17:21.850634 #14034]  INFO -- : 2013-11-11T10:17:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=101) RUNNING
+I, [2013-11-11T10:17:21.854229 #14034]  INFO -- : 2013-11-11T10:17:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=101) COMPLETED after 0.0034
+I, [2013-11-11T10:17:21.855636 #14034]  INFO -- : 2013-11-11T10:17:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 97.0214 j/s, 0 failed
+I, [2013-11-11T10:17:31.866640 #14034]  INFO -- : 2013-11-11T10:17:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=102) RUNNING
+I, [2013-11-11T10:17:31.871167 #14034]  INFO -- : 2013-11-11T10:17:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=102) COMPLETED after 0.0043
+I, [2013-11-11T10:17:31.872790 #14034]  INFO -- : 2013-11-11T10:17:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.0769 j/s, 0 failed
+I, [2013-11-11T10:17:36.880073 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=103) RUNNING
+I, [2013-11-11T10:17:36.883136 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=103) COMPLETED after 0.0029
+I, [2013-11-11T10:17:36.886048 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=104) RUNNING
+I, [2013-11-11T10:17:36.889691 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=104) COMPLETED after 0.0035
+I, [2013-11-11T10:17:36.891772 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=105) RUNNING
+I, [2013-11-11T10:17:36.893930 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=105) COMPLETED after 0.0021
+I, [2013-11-11T10:17:36.894791 #14034]  INFO -- : 2013-11-11T10:17:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 149.4917 j/s, 0 failed
+I, [2013-11-11T10:17:46.904923 #14034]  INFO -- : 2013-11-11T10:17:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=106) RUNNING
+I, [2013-11-11T10:17:46.909062 #14034]  INFO -- : 2013-11-11T10:17:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=106) COMPLETED after 0.0040
+I, [2013-11-11T10:17:46.910560 #14034]  INFO -- : 2013-11-11T10:17:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.2570 j/s, 0 failed
+I, [2013-11-11T10:17:56.921050 #14034]  INFO -- : 2013-11-11T10:17:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=107) RUNNING
+I, [2013-11-11T10:17:56.923812 #14034]  INFO -- : 2013-11-11T10:17:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=107) COMPLETED after 0.0026
+I, [2013-11-11T10:17:56.924765 #14034]  INFO -- : 2013-11-11T10:17:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 113.8434 j/s, 0 failed
+I, [2013-11-11T10:18:06.936078 #14034]  INFO -- : 2013-11-11T10:18:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=108) RUNNING
+I, [2013-11-11T10:18:06.939933 #14034]  INFO -- : 2013-11-11T10:18:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=108) COMPLETED after 0.0037
+I, [2013-11-11T10:18:06.943044 #14034]  INFO -- : 2013-11-11T10:18:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=109) RUNNING
+I, [2013-11-11T10:18:06.946156 #14034]  INFO -- : 2013-11-11T10:18:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=109) COMPLETED after 0.0030
+I, [2013-11-11T10:18:06.947052 #14034]  INFO -- : 2013-11-11T10:18:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 119.2250 j/s, 0 failed
+I, [2013-11-11T10:18:16.958569 #14034]  INFO -- : 2013-11-11T10:18:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=110) RUNNING
+I, [2013-11-11T10:18:16.962846 #14034]  INFO -- : 2013-11-11T10:18:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=110) COMPLETED after 0.0041
+I, [2013-11-11T10:18:16.964314 #14034]  INFO -- : 2013-11-11T10:18:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 81.0767 j/s, 0 failed
+I, [2013-11-11T10:18:26.974310 #14034]  INFO -- : 2013-11-11T10:18:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=111) RUNNING
+I, [2013-11-11T10:18:26.977264 #14034]  INFO -- : 2013-11-11T10:18:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=111) COMPLETED after 0.0028
+I, [2013-11-11T10:18:26.978344 #14034]  INFO -- : 2013-11-11T10:18:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 112.8286 j/s, 0 failed
+I, [2013-11-11T10:18:36.985154 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=112) RUNNING
+I, [2013-11-11T10:18:36.987680 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=112) COMPLETED after 0.0024
+I, [2013-11-11T10:18:36.989857 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=113) RUNNING
+I, [2013-11-11T10:18:36.992060 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=113) COMPLETED after 0.0021
+I, [2013-11-11T10:18:36.994133 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=114) RUNNING
+I, [2013-11-11T10:18:36.996386 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=114) COMPLETED after 0.0022
+I, [2013-11-11T10:18:36.999016 #14034]  INFO -- : 2013-11-11T10:18:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=115) RUNNING
+I, [2013-11-11T10:18:37.001931 #14034]  INFO -- : 2013-11-11T10:18:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=115) COMPLETED after 0.0028
+I, [2013-11-11T10:18:37.003388 #14034]  INFO -- : 2013-11-11T10:18:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 4 jobs processed at 179.5413 j/s, 0 failed
+I, [2013-11-11T10:18:47.010728 #14034]  INFO -- : 2013-11-11T10:18:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=116) RUNNING
+I, [2013-11-11T10:18:47.013324 #14034]  INFO -- : 2013-11-11T10:18:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=116) COMPLETED after 0.0025
+I, [2013-11-11T10:18:47.014402 #14034]  INFO -- : 2013-11-11T10:18:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 130.9758 j/s, 0 failed
+I, [2013-11-11T10:18:57.021910 #14034]  INFO -- : 2013-11-11T10:18:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=117) RUNNING
+I, [2013-11-11T10:18:59.902922 #14034]  INFO -- : 2013-11-11T10:18:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=117) COMPLETED after 2.8809
+I, [2013-11-11T10:18:59.904168 #14034]  INFO -- : 2013-11-11T10:18:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3463 j/s, 0 failed
+I, [2013-11-11T10:19:04.913191 #14034]  INFO -- : 2013-11-11T10:19:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=118) RUNNING
+I, [2013-11-11T10:19:04.917890 #14034]  INFO -- : 2013-11-11T10:19:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=118) COMPLETED after 0.0045
+I, [2013-11-11T10:19:04.919465 #14034]  INFO -- : 2013-11-11T10:19:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 75.0920 j/s, 0 failed
+I, [2013-11-11T10:19:09.926097 #14034]  INFO -- : 2013-11-11T10:19:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=119) RUNNING
+I, [2013-11-11T10:19:09.928824 #14034]  INFO -- : 2013-11-11T10:19:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=119) COMPLETED after 0.0026
+I, [2013-11-11T10:19:09.929790 #14034]  INFO -- : 2013-11-11T10:19:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 125.7229 j/s, 0 failed
+I, [2013-11-11T10:19:14.933767 #14034]  INFO -- : 2013-11-11T10:19:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=120) RUNNING
+I, [2013-11-11T10:19:14.936315 #14034]  INFO -- : 2013-11-11T10:19:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=120) COMPLETED after 0.0024
+I, [2013-11-11T10:19:14.937284 #14034]  INFO -- : 2013-11-11T10:19:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 154.4163 j/s, 0 failed
+I, [2013-11-11T10:19:24.948133 #14034]  INFO -- : 2013-11-11T10:19:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=121) RUNNING
+I, [2013-11-11T10:19:24.951990 #14034]  INFO -- : 2013-11-11T10:19:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=121) COMPLETED after 0.0037
+I, [2013-11-11T10:19:24.953437 #14034]  INFO -- : 2013-11-11T10:19:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 88.2690 j/s, 0 failed
+I, [2013-11-11T10:19:34.963740 #14034]  INFO -- : 2013-11-11T10:19:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=122) RUNNING
+I, [2013-11-11T10:19:34.967781 #14034]  INFO -- : 2013-11-11T10:19:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=122) COMPLETED after 0.0039
+I, [2013-11-11T10:19:34.968749 #14034]  INFO -- : 2013-11-11T10:19:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 105.8201 j/s, 0 failed
+I, [2013-11-11T10:19:39.977539 #14034]  INFO -- : 2013-11-11T10:19:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=123) RUNNING
+I, [2013-11-11T10:19:39.982494 #14034]  INFO -- : 2013-11-11T10:19:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=123) COMPLETED after 0.0048
+I, [2013-11-11T10:19:39.986061 #14034]  INFO -- : 2013-11-11T10:19:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=124) RUNNING
+I, [2013-11-11T10:19:39.989527 #14034]  INFO -- : 2013-11-11T10:19:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=124) COMPLETED after 0.0033
+I, [2013-11-11T10:19:39.990888 #14034]  INFO -- : 2013-11-11T10:19:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 99.1179 j/s, 0 failed
+I, [2013-11-11T10:19:44.999415 #14034]  INFO -- : 2013-11-11T10:19:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=125) RUNNING
+I, [2013-11-11T10:19:45.004502 #14034]  INFO -- : 2013-11-11T10:19:45+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=125) COMPLETED after 0.0049
+I, [2013-11-11T10:19:45.005985 #14034]  INFO -- : 2013-11-11T10:19:45+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 78.6906 j/s, 0 failed
+I, [2013-11-11T10:19:55.016682 #14034]  INFO -- : 2013-11-11T10:19:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=126) RUNNING
+I, [2013-11-11T10:19:55.020473 #14034]  INFO -- : 2013-11-11T10:19:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=126) COMPLETED after 0.0036
+I, [2013-11-11T10:19:55.021997 #14034]  INFO -- : 2013-11-11T10:19:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 90.1226 j/s, 0 failed
+I, [2013-11-11T10:20:10.036622 #14034]  INFO -- : 2013-11-11T10:20:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=127) RUNNING
+I, [2013-11-11T10:20:10.041024 #14034]  INFO -- : 2013-11-11T10:20:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=127) COMPLETED after 0.0042
+I, [2013-11-11T10:20:10.044458 #14034]  INFO -- : 2013-11-11T10:20:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=128) RUNNING
+I, [2013-11-11T10:20:10.047533 #14034]  INFO -- : 2013-11-11T10:20:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=128) COMPLETED after 0.0030
+I, [2013-11-11T10:20:10.048414 #14034]  INFO -- : 2013-11-11T10:20:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 107.0950 j/s, 0 failed
+I, [2013-11-11T10:20:20.058500 #14034]  INFO -- : 2013-11-11T10:20:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=129) RUNNING
+I, [2013-11-11T10:20:20.062517 #14034]  INFO -- : 2013-11-11T10:20:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=129) COMPLETED after 0.0039
+I, [2013-11-11T10:20:20.118215 #14034]  INFO -- : 2013-11-11T10:20:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 15.0855 j/s, 0 failed
+I, [2013-11-11T10:20:30.130254 #14034]  INFO -- : 2013-11-11T10:20:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=130) RUNNING
+I, [2013-11-11T10:20:30.135170 #14034]  INFO -- : 2013-11-11T10:20:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=130) COMPLETED after 0.0047
+I, [2013-11-11T10:20:30.136646 #14034]  INFO -- : 2013-11-11T10:20:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 77.0951 j/s, 0 failed
+I, [2013-11-11T10:20:40.146068 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=131) RUNNING
+I, [2013-11-11T10:20:40.150072 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=131) COMPLETED after 0.0038
+I, [2013-11-11T10:20:40.153417 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=132) RUNNING
+I, [2013-11-11T10:20:40.156050 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=132) COMPLETED after 0.0025
+I, [2013-11-11T10:20:40.158579 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=133) RUNNING
+I, [2013-11-11T10:20:40.161359 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=133) COMPLETED after 0.0026
+I, [2013-11-11T10:20:40.164153 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=134) RUNNING
+I, [2013-11-11T10:20:40.166745 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=134) COMPLETED after 0.0025
+I, [2013-11-11T10:20:40.167852 #14034]  INFO -- : 2013-11-11T10:20:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 4 jobs processed at 143.1434 j/s, 0 failed
+I, [2013-11-11T10:20:50.174953 #14034]  INFO -- : 2013-11-11T10:20:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=135) RUNNING
+I, [2013-11-11T10:20:50.177628 #14034]  INFO -- : 2013-11-11T10:20:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=135) COMPLETED after 0.0026
+I, [2013-11-11T10:20:50.178628 #14034]  INFO -- : 2013-11-11T10:20:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 130.6336 j/s, 0 failed
+I, [2013-11-11T10:21:00.185216 #14034]  INFO -- : 2013-11-11T10:21:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=136) RUNNING
+I, [2013-11-11T10:21:03.104958 #14034]  INFO -- : 2013-11-11T10:21:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=136) COMPLETED after 2.9196
+I, [2013-11-11T10:21:03.106404 #14034]  INFO -- : 2013-11-11T10:21:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3420 j/s, 0 failed
+I, [2013-11-11T10:21:08.114941 #14034]  INFO -- : 2013-11-11T10:21:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=137) RUNNING
+I, [2013-11-11T10:21:08.119406 #14034]  INFO -- : 2013-11-11T10:21:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=137) COMPLETED after 0.0043
+I, [2013-11-11T10:21:08.123193 #14034]  INFO -- : 2013-11-11T10:21:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=138) RUNNING
+I, [2013-11-11T10:21:08.126879 #14034]  INFO -- : 2013-11-11T10:21:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=138) COMPLETED after 0.0036
+I, [2013-11-11T10:21:08.128102 #14034]  INFO -- : 2013-11-11T10:21:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 102.0460 j/s, 0 failed
+I, [2013-11-11T10:21:18.187418 #14034]  INFO -- : 2013-11-11T10:21:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=139) RUNNING
+I, [2013-11-11T10:21:18.192346 #14034]  INFO -- : 2013-11-11T10:21:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=139) COMPLETED after 0.0047
+I, [2013-11-11T10:21:18.193835 #14034]  INFO -- : 2013-11-11T10:21:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.6750 j/s, 0 failed
+I, [2013-11-11T10:21:28.202640 #14034]  INFO -- : 2013-11-11T10:21:28+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=140) RUNNING
+I, [2013-11-11T10:21:28.206271 #14034]  INFO -- : 2013-11-11T10:21:28+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=140) COMPLETED after 0.0035
+I, [2013-11-11T10:21:28.207626 #14034]  INFO -- : 2013-11-11T10:21:28+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 93.8086 j/s, 0 failed
+I, [2013-11-11T10:21:38.215054 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=141) RUNNING
+I, [2013-11-11T10:21:38.217628 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=141) COMPLETED after 0.0025
+I, [2013-11-11T10:21:38.219929 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=142) RUNNING
+I, [2013-11-11T10:21:38.222453 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=142) COMPLETED after 0.0024
+I, [2013-11-11T10:21:38.224698 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=143) RUNNING
+I, [2013-11-11T10:21:38.227409 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=143) COMPLETED after 0.0026
+I, [2013-11-11T10:21:38.228325 #14034]  INFO -- : 2013-11-11T10:21:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 174.8761 j/s, 0 failed
+I, [2013-11-11T10:21:48.236948 #14034]  INFO -- : 2013-11-11T10:21:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=144) RUNNING
+I, [2013-11-11T10:21:48.242010 #14034]  INFO -- : 2013-11-11T10:21:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=144) COMPLETED after 0.0049
+I, [2013-11-11T10:21:48.243542 #14034]  INFO -- : 2013-11-11T10:21:48+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.6610 j/s, 0 failed
+I, [2013-11-11T10:21:58.255431 #14034]  INFO -- : 2013-11-11T10:21:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=145) RUNNING
+I, [2013-11-11T10:21:58.259237 #14034]  INFO -- : 2013-11-11T10:21:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=145) COMPLETED after 0.0036
+I, [2013-11-11T10:21:58.260847 #14034]  INFO -- : 2013-11-11T10:21:58+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 82.7335 j/s, 0 failed
+I, [2013-11-11T10:22:08.269438 #14034]  INFO -- : 2013-11-11T10:22:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=146) RUNNING
+I, [2013-11-11T10:22:08.273484 #14034]  INFO -- : 2013-11-11T10:22:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=146) COMPLETED after 0.0039
+I, [2013-11-11T10:22:08.276477 #14034]  INFO -- : 2013-11-11T10:22:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=147) RUNNING
+I, [2013-11-11T10:22:08.278853 #14034]  INFO -- : 2013-11-11T10:22:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=147) COMPLETED after 0.0022
+I, [2013-11-11T10:22:08.279784 #14034]  INFO -- : 2013-11-11T10:22:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 124.2082 j/s, 0 failed
+I, [2013-11-11T10:22:18.286866 #14034]  INFO -- : 2013-11-11T10:22:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=148) RUNNING
+I, [2013-11-11T10:22:18.291427 #14034]  INFO -- : 2013-11-11T10:22:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=148) COMPLETED after 0.0044
+I, [2013-11-11T10:22:18.292376 #14034]  INFO -- : 2013-11-11T10:22:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 108.8969 j/s, 0 failed
+I, [2013-11-11T10:22:33.304741 #14034]  INFO -- : 2013-11-11T10:22:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=149) RUNNING
+I, [2013-11-11T10:22:33.308755 #14034]  INFO -- : 2013-11-11T10:22:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=149) COMPLETED after 0.0039
+I, [2013-11-11T10:22:33.310142 #14034]  INFO -- : 2013-11-11T10:22:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 94.1797 j/s, 0 failed
+I, [2013-11-11T10:22:38.318971 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=150) RUNNING
+I, [2013-11-11T10:22:38.323122 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=150) COMPLETED after 0.0040
+I, [2013-11-11T10:22:38.326571 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=151) RUNNING
+I, [2013-11-11T10:22:38.330019 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=151) COMPLETED after 0.0033
+I, [2013-11-11T10:22:38.333060 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=152) RUNNING
+I, [2013-11-11T10:22:38.335575 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=152) COMPLETED after 0.0024
+I, [2013-11-11T10:22:38.338072 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=153) RUNNING
+I, [2013-11-11T10:22:38.340321 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=153) COMPLETED after 0.0022
+I, [2013-11-11T10:22:38.342418 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=154) RUNNING
+I, [2013-11-11T10:22:38.344600 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=154) COMPLETED after 0.0021
+I, [2013-11-11T10:22:38.345456 #14034]  INFO -- : 2013-11-11T10:22:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 5 jobs processed at 151.4280 j/s, 0 failed
+I, [2013-11-11T10:22:43.349298 #14034]  INFO -- : 2013-11-11T10:22:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=155) RUNNING
+I, [2013-11-11T10:22:43.352242 #14034]  INFO -- : 2013-11-11T10:22:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=155) COMPLETED after 0.0028
+I, [2013-11-11T10:22:43.353261 #14034]  INFO -- : 2013-11-11T10:22:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 144.4460 j/s, 0 failed
+I, [2013-11-11T10:22:53.359051 #14034]  INFO -- : 2013-11-11T10:22:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=156) RUNNING
+I, [2013-11-11T10:22:53.362050 #14034]  INFO -- : 2013-11-11T10:22:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=156) COMPLETED after 0.0029
+I, [2013-11-11T10:22:53.363197 #14034]  INFO -- : 2013-11-11T10:22:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 146.5631 j/s, 0 failed
+I, [2013-11-11T10:23:03.371020 #14034]  INFO -- : 2013-11-11T10:23:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=157) RUNNING
+I, [2013-11-11T10:23:03.373575 #14034]  INFO -- : 2013-11-11T10:23:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=157) COMPLETED after 0.0024
+I, [2013-11-11T10:23:03.374502 #14034]  INFO -- : 2013-11-11T10:23:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 154.6551 j/s, 0 failed
+I, [2013-11-11T10:23:08.381658 #14034]  INFO -- : 2013-11-11T10:23:08+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=158) RUNNING
+I, [2013-11-11T10:23:11.077391 #14034]  INFO -- : 2013-11-11T10:23:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=158) COMPLETED after 2.6956
+I, [2013-11-11T10:23:11.080240 #14034]  INFO -- : 2013-11-11T10:23:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=159) RUNNING
+I, [2013-11-11T10:23:11.082721 #14034]  INFO -- : 2013-11-11T10:23:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=159) COMPLETED after 0.0024
+I, [2013-11-11T10:23:11.083661 #14034]  INFO -- : 2013-11-11T10:23:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 0.7387 j/s, 0 failed
+I, [2013-11-11T10:23:21.092757 #14034]  INFO -- : 2013-11-11T10:23:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=160) RUNNING
+I, [2013-11-11T10:23:21.095641 #14034]  INFO -- : 2013-11-11T10:23:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=160) COMPLETED after 0.0028
+I, [2013-11-11T10:23:21.097022 #14034]  INFO -- : 2013-11-11T10:23:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 122.3990 j/s, 0 failed
+I, [2013-11-11T10:23:31.105204 #14034]  INFO -- : 2013-11-11T10:23:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=161) RUNNING
+I, [2013-11-11T10:23:31.107945 #14034]  INFO -- : 2013-11-11T10:23:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=161) COMPLETED after 0.0026
+I, [2013-11-11T10:23:31.108899 #14034]  INFO -- : 2013-11-11T10:23:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 146.1347 j/s, 0 failed
+I, [2013-11-11T10:23:41.120183 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=162) RUNNING
+I, [2013-11-11T10:23:41.124537 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=162) COMPLETED after 0.0042
+I, [2013-11-11T10:23:41.127945 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=163) RUNNING
+I, [2013-11-11T10:23:41.131752 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=163) COMPLETED after 0.0036
+I, [2013-11-11T10:23:41.134756 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=164) RUNNING
+I, [2013-11-11T10:23:41.137090 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=164) COMPLETED after 0.0022
+I, [2013-11-11T10:23:41.137997 #14034]  INFO -- : 2013-11-11T10:23:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 119.9185 j/s, 0 failed
+I, [2013-11-11T10:23:51.148816 #14034]  INFO -- : 2013-11-11T10:23:51+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=165) RUNNING
+I, [2013-11-11T10:23:51.152114 #14034]  INFO -- : 2013-11-11T10:23:51+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=165) COMPLETED after 0.0031
+I, [2013-11-11T10:23:51.153470 #14034]  INFO -- : 2013-11-11T10:23:51+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 99.8203 j/s, 0 failed
+I, [2013-11-11T10:24:01.162580 #14034]  INFO -- : 2013-11-11T10:24:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=166) RUNNING
+I, [2013-11-11T10:24:01.165585 #14034]  INFO -- : 2013-11-11T10:24:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=166) COMPLETED after 0.0029
+I, [2013-11-11T10:24:01.166602 #14034]  INFO -- : 2013-11-11T10:24:01+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 131.4924 j/s, 0 failed
+I, [2013-11-11T10:24:11.173454 #14034]  INFO -- : 2013-11-11T10:24:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=167) RUNNING
+I, [2013-11-11T10:24:11.176159 #14034]  INFO -- : 2013-11-11T10:24:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=167) COMPLETED after 0.0026
+I, [2013-11-11T10:24:11.178534 #14034]  INFO -- : 2013-11-11T10:24:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=168) RUNNING
+I, [2013-11-11T10:24:11.181133 #14034]  INFO -- : 2013-11-11T10:24:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=168) COMPLETED after 0.0025
+I, [2013-11-11T10:24:11.182073 #14034]  INFO -- : 2013-11-11T10:24:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 164.6091 j/s, 0 failed
+I, [2013-11-11T10:24:21.191314 #14034]  INFO -- : 2013-11-11T10:24:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=169) RUNNING
+I, [2013-11-11T10:24:21.195006 #14034]  INFO -- : 2013-11-11T10:24:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=169) COMPLETED after 0.0035
+I, [2013-11-11T10:24:21.196507 #14034]  INFO -- : 2013-11-11T10:24:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 91.2992 j/s, 0 failed
+I, [2013-11-11T10:24:31.203520 #14034]  INFO -- : 2013-11-11T10:24:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=170) RUNNING
+I, [2013-11-11T10:24:31.207737 #14034]  INFO -- : 2013-11-11T10:24:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=170) COMPLETED after 0.0041
+I, [2013-11-11T10:24:31.209190 #14034]  INFO -- : 2013-11-11T10:24:31+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 99.7606 j/s, 0 failed
+I, [2013-11-11T10:24:36.217447 #14034]  INFO -- : 2013-11-11T10:24:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=171) RUNNING
+I, [2013-11-11T10:24:36.221912 #14034]  INFO -- : 2013-11-11T10:24:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=171) COMPLETED after 0.0043
+I, [2013-11-11T10:24:36.223300 #14034]  INFO -- : 2013-11-11T10:24:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 85.0919 j/s, 0 failed
+I, [2013-11-11T10:24:41.231287 #14034]  INFO -- : 2013-11-11T10:24:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=172) RUNNING
+I, [2013-11-11T10:24:41.235660 #14034]  INFO -- : 2013-11-11T10:24:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=172) COMPLETED after 0.0042
+I, [2013-11-11T10:24:41.239027 #14034]  INFO -- : 2013-11-11T10:24:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=173) RUNNING
+I, [2013-11-11T10:24:41.242360 #14034]  INFO -- : 2013-11-11T10:24:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=173) COMPLETED after 0.0032
+I, [2013-11-11T10:24:41.243536 #14034]  INFO -- : 2013-11-11T10:24:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 107.6716 j/s, 0 failed
+I, [2013-11-11T10:24:46.251739 #14034]  INFO -- : 2013-11-11T10:24:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=174) RUNNING
+I, [2013-11-11T10:24:46.255918 #14034]  INFO -- : 2013-11-11T10:24:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=174) COMPLETED after 0.0040
+I, [2013-11-11T10:24:46.257478 #14034]  INFO -- : 2013-11-11T10:24:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.6400 j/s, 0 failed
+I, [2013-11-11T10:24:56.263368 #14034]  INFO -- : 2013-11-11T10:24:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=175) RUNNING
+I, [2013-11-11T10:24:56.271602 #14034]  INFO -- : 2013-11-11T10:24:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=175) COMPLETED after 0.0081
+I, [2013-11-11T10:24:56.272978 #14034]  INFO -- : 2013-11-11T10:24:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 79.9297 j/s, 0 failed
+I, [2013-11-11T10:25:06.282420 #14034]  INFO -- : 2013-11-11T10:25:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=176) RUNNING
+I, [2013-11-11T10:25:06.287175 #14034]  INFO -- : 2013-11-11T10:25:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=176) COMPLETED after 0.0046
+I, [2013-11-11T10:25:06.288619 #14034]  INFO -- : 2013-11-11T10:25:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.4764 j/s, 0 failed
+I, [2013-11-11T10:25:11.297298 #14034]  INFO -- : 2013-11-11T10:25:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=177) RUNNING
+I, [2013-11-11T10:25:11.302249 #14034]  INFO -- : 2013-11-11T10:25:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=177) COMPLETED after 0.0048
+I, [2013-11-11T10:25:11.303846 #14034]  INFO -- : 2013-11-11T10:25:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 78.2840 j/s, 0 failed
+I, [2013-11-11T10:25:16.310438 #14034]  INFO -- : 2013-11-11T10:25:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=178) RUNNING
+I, [2013-11-11T10:25:18.979556 #14034]  INFO -- : 2013-11-11T10:25:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=178) COMPLETED after 2.6689
+I, [2013-11-11T10:25:18.981006 #14034]  INFO -- : 2013-11-11T10:25:18+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3738 j/s, 0 failed
+I, [2013-11-11T10:25:23.986166 #14034]  INFO -- : 2013-11-11T10:25:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=179) RUNNING
+I, [2013-11-11T10:25:23.988714 #14034]  INFO -- : 2013-11-11T10:25:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=179) COMPLETED after 0.0024
+I, [2013-11-11T10:25:23.989716 #14034]  INFO -- : 2013-11-11T10:25:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 147.3622 j/s, 0 failed
+I, [2013-11-11T10:25:33.997972 #14034]  INFO -- : 2013-11-11T10:25:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=180) RUNNING
+I, [2013-11-11T10:25:34.000588 #14034]  INFO -- : 2013-11-11T10:25:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=180) COMPLETED after 0.0025
+I, [2013-11-11T10:25:34.001550 #14034]  INFO -- : 2013-11-11T10:25:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 147.8415 j/s, 0 failed
+I, [2013-11-11T10:25:39.008878 #14034]  INFO -- : 2013-11-11T10:25:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=181) RUNNING
+I, [2013-11-11T10:25:39.013577 #14034]  INFO -- : 2013-11-11T10:25:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=181) COMPLETED after 0.0045
+I, [2013-11-11T10:25:39.017559 #14034]  INFO -- : 2013-11-11T10:25:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=182) RUNNING
+I, [2013-11-11T10:25:39.021249 #14034]  INFO -- : 2013-11-11T10:25:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=182) COMPLETED after 0.0035
+I, [2013-11-11T10:25:39.022676 #14034]  INFO -- : 2013-11-11T10:25:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 104.1233 j/s, 0 failed
+I, [2013-11-11T10:25:44.027184 #14034]  INFO -- : 2013-11-11T10:25:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=183) RUNNING
+I, [2013-11-11T10:25:44.030010 #14034]  INFO -- : 2013-11-11T10:25:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=183) COMPLETED after 0.0027
+I, [2013-11-11T10:25:44.031093 #14034]  INFO -- : 2013-11-11T10:25:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 140.2328 j/s, 0 failed
+I, [2013-11-11T10:25:54.038307 #14034]  INFO -- : 2013-11-11T10:25:54+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=184) RUNNING
+I, [2013-11-11T10:25:54.041780 #14034]  INFO -- : 2013-11-11T10:25:54+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=184) COMPLETED after 0.0034
+I, [2013-11-11T10:25:54.042762 #14034]  INFO -- : 2013-11-11T10:25:54+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 124.0387 j/s, 0 failed
+I, [2013-11-11T10:26:04.048713 #14034]  INFO -- : 2013-11-11T10:26:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=185) RUNNING
+I, [2013-11-11T10:26:04.051128 #14034]  INFO -- : 2013-11-11T10:26:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=185) COMPLETED after 0.0023
+I, [2013-11-11T10:26:04.052035 #14034]  INFO -- : 2013-11-11T10:26:04+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 161.6815 j/s, 0 failed
+I, [2013-11-11T10:26:09.058281 #14034]  INFO -- : 2013-11-11T10:26:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=186) RUNNING
+I, [2013-11-11T10:26:09.061892 #14034]  INFO -- : 2013-11-11T10:26:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=186) COMPLETED after 0.0034
+I, [2013-11-11T10:26:09.063486 #14034]  INFO -- : 2013-11-11T10:26:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 101.5744 j/s, 0 failed
+I, [2013-11-11T10:26:14.069456 #14034]  INFO -- : 2013-11-11T10:26:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=187) RUNNING
+I, [2013-11-11T10:26:14.072546 #14034]  INFO -- : 2013-11-11T10:26:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=187) COMPLETED after 0.0029
+I, [2013-11-11T10:26:14.073661 #14034]  INFO -- : 2013-11-11T10:26:14+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 129.7859 j/s, 0 failed
+I, [2013-11-11T10:26:24.081883 #14034]  INFO -- : 2013-11-11T10:26:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=188) RUNNING
+I, [2013-11-11T10:26:24.085986 #14034]  INFO -- : 2013-11-11T10:26:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=188) COMPLETED after 0.0039
+I, [2013-11-11T10:26:24.087442 #14034]  INFO -- : 2013-11-11T10:26:24+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 97.5705 j/s, 0 failed
+I, [2013-11-11T10:26:34.095072 #14034]  INFO -- : 2013-11-11T10:26:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=189) RUNNING
+I, [2013-11-11T10:26:34.099312 #14034]  INFO -- : 2013-11-11T10:26:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=189) COMPLETED after 0.0041
+I, [2013-11-11T10:26:34.100694 #14034]  INFO -- : 2013-11-11T10:26:34+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 100.7963 j/s, 0 failed
+I, [2013-11-11T10:26:39.105968 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=190) RUNNING
+I, [2013-11-11T10:26:39.108437 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=190) COMPLETED after 0.0024
+I, [2013-11-11T10:26:39.110560 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=191) RUNNING
+I, [2013-11-11T10:26:39.112806 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=191) COMPLETED after 0.0021
+I, [2013-11-11T10:26:39.115188 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=192) RUNNING
+I, [2013-11-11T10:26:39.117478 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=192) COMPLETED after 0.0022
+I, [2013-11-11T10:26:39.118446 #14034]  INFO -- : 2013-11-11T10:26:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 194.0115 j/s, 0 failed
+I, [2013-11-11T10:26:44.124921 #14034]  INFO -- : 2013-11-11T10:26:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=193) RUNNING
+I, [2013-11-11T10:26:44.129504 #14034]  INFO -- : 2013-11-11T10:26:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=193) COMPLETED after 0.0044
+I, [2013-11-11T10:26:44.131330 #14034]  INFO -- : 2013-11-11T10:26:44+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 86.0363 j/s, 0 failed
+I, [2013-11-11T10:26:59.202351 #14034]  INFO -- : 2013-11-11T10:26:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=194) RUNNING
+I, [2013-11-11T10:26:59.206262 #14034]  INFO -- : 2013-11-11T10:26:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=194) COMPLETED after 0.0037
+I, [2013-11-11T10:26:59.207460 #14034]  INFO -- : 2013-11-11T10:26:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 14.4645 j/s, 0 failed
+I, [2013-11-11T10:27:09.217536 #14034]  INFO -- : 2013-11-11T10:27:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=195) RUNNING
+I, [2013-11-11T10:27:09.222132 #14034]  INFO -- : 2013-11-11T10:27:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=195) COMPLETED after 0.0044
+I, [2013-11-11T10:27:09.225664 #14034]  INFO -- : 2013-11-11T10:27:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=196) RUNNING
+I, [2013-11-11T10:27:09.228949 #14034]  INFO -- : 2013-11-11T10:27:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=196) COMPLETED after 0.0031
+I, [2013-11-11T10:27:09.230226 #14034]  INFO -- : 2013-11-11T10:27:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 114.6066 j/s, 0 failed
+I, [2013-11-11T10:27:19.236631 #14034]  INFO -- : 2013-11-11T10:27:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=197) RUNNING
+I, [2013-11-11T10:27:21.978038 #14034]  INFO -- : 2013-11-11T10:27:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=197) COMPLETED after 2.7412
+I, [2013-11-11T10:27:21.980280 #14034]  INFO -- : 2013-11-11T10:27:21+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3640 j/s, 0 failed
+I, [2013-11-11T10:27:26.994610 #14034]  INFO -- : 2013-11-11T10:27:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=198) RUNNING
+I, [2013-11-11T10:27:26.998814 #14034]  INFO -- : 2013-11-11T10:27:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=198) COMPLETED after 0.0040
+I, [2013-11-11T10:27:27.000331 #14034]  INFO -- : 2013-11-11T10:27:27+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 57.8168 j/s, 0 failed
+I, [2013-11-11T10:27:37.011272 #14034]  INFO -- : 2013-11-11T10:27:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=199) RUNNING
+I, [2013-11-11T10:27:37.015897 #14034]  INFO -- : 2013-11-11T10:27:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=199) COMPLETED after 0.0044
+I, [2013-11-11T10:27:37.020001 #14034]  INFO -- : 2013-11-11T10:27:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=200) RUNNING
+I, [2013-11-11T10:27:37.023707 #14034]  INFO -- : 2013-11-11T10:27:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=200) COMPLETED after 0.0035
+I, [2013-11-11T10:27:37.025148 #14034]  INFO -- : 2013-11-11T10:27:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 99.9151 j/s, 0 failed
+I, [2013-11-11T10:27:42.031515 #14034]  INFO -- : 2013-11-11T10:27:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=201) RUNNING
+I, [2013-11-11T10:27:42.034002 #14034]  INFO -- : 2013-11-11T10:27:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=201) COMPLETED after 0.0024
+I, [2013-11-11T10:27:42.036185 #14034]  INFO -- : 2013-11-11T10:27:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=202) RUNNING
+I, [2013-11-11T10:27:42.038460 #14034]  INFO -- : 2013-11-11T10:27:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=202) COMPLETED after 0.0022
+I, [2013-11-11T10:27:42.039501 #14034]  INFO -- : 2013-11-11T10:27:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 166.8057 j/s, 0 failed
+I, [2013-11-11T10:27:47.096429 #14034]  INFO -- : 2013-11-11T10:27:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=203) RUNNING
+I, [2013-11-11T10:27:47.099581 #14034]  INFO -- : 2013-11-11T10:27:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=203) COMPLETED after 0.0030
+I, [2013-11-11T10:27:47.100642 #14034]  INFO -- : 2013-11-11T10:27:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 16.7816 j/s, 0 failed
+I, [2013-11-11T10:27:57.112188 #14034]  INFO -- : 2013-11-11T10:27:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=204) RUNNING
+I, [2013-11-11T10:27:57.116409 #14034]  INFO -- : 2013-11-11T10:27:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=204) COMPLETED after 0.0040
+I, [2013-11-11T10:27:57.117985 #14034]  INFO -- : 2013-11-11T10:27:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 77.1367 j/s, 0 failed
+I, [2013-11-11T10:28:07.129234 #14034]  INFO -- : 2013-11-11T10:28:07+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=205) RUNNING
+I, [2013-11-11T10:28:07.134035 #14034]  INFO -- : 2013-11-11T10:28:07+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=205) COMPLETED after 0.0046
+I, [2013-11-11T10:28:07.135562 #14034]  INFO -- : 2013-11-11T10:28:07+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 81.1820 j/s, 0 failed
+I, [2013-11-11T10:28:12.143097 #14034]  INFO -- : 2013-11-11T10:28:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=206) RUNNING
+I, [2013-11-11T10:28:12.146739 #14034]  INFO -- : 2013-11-11T10:28:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=206) COMPLETED after 0.0035
+I, [2013-11-11T10:28:12.148177 #14034]  INFO -- : 2013-11-11T10:28:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 97.4279 j/s, 0 failed
+I, [2013-11-11T10:28:17.153394 #14034]  INFO -- : 2013-11-11T10:28:17+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=207) RUNNING
+I, [2013-11-11T10:28:17.156232 #14034]  INFO -- : 2013-11-11T10:28:17+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=207) COMPLETED after 0.0027
+I, [2013-11-11T10:28:17.157214 #14034]  INFO -- : 2013-11-11T10:28:17+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 128.7001 j/s, 0 failed
+I, [2013-11-11T10:28:27.168218 #14034]  INFO -- : 2013-11-11T10:28:27+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=208) RUNNING
+I, [2013-11-11T10:28:27.172526 #14034]  INFO -- : 2013-11-11T10:28:27+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=208) COMPLETED after 0.0041
+I, [2013-11-11T10:28:27.174015 #14034]  INFO -- : 2013-11-11T10:28:27+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 88.5269 j/s, 0 failed
+I, [2013-11-11T10:28:37.185102 #14034]  INFO -- : 2013-11-11T10:28:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=209) RUNNING
+I, [2013-11-11T10:28:37.189432 #14034]  INFO -- : 2013-11-11T10:28:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=209) COMPLETED after 0.0042
+I, [2013-11-11T10:28:37.192834 #14034]  INFO -- : 2013-11-11T10:28:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=210) RUNNING
+I, [2013-11-11T10:28:37.196149 #14034]  INFO -- : 2013-11-11T10:28:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=210) COMPLETED after 0.0032
+I, [2013-11-11T10:28:37.197505 #14034]  INFO -- : 2013-11-11T10:28:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 104.9318 j/s, 0 failed
+I, [2013-11-11T10:28:42.207497 #14034]  INFO -- : 2013-11-11T10:28:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=211) RUNNING
+I, [2013-11-11T10:28:42.211605 #14034]  INFO -- : 2013-11-11T10:28:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=211) COMPLETED after 0.0039
+I, [2013-11-11T10:28:42.215075 #14034]  INFO -- : 2013-11-11T10:28:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=212) RUNNING
+I, [2013-11-11T10:28:42.218462 #14034]  INFO -- : 2013-11-11T10:28:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=212) COMPLETED after 0.0033
+I, [2013-11-11T10:28:42.219671 #14034]  INFO -- : 2013-11-11T10:28:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 99.9300 j/s, 0 failed
+I, [2013-11-11T10:28:47.227391 #14034]  INFO -- : 2013-11-11T10:28:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=213) RUNNING
+I, [2013-11-11T10:28:47.231131 #14034]  INFO -- : 2013-11-11T10:28:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=213) COMPLETED after 0.0036
+I, [2013-11-11T10:28:47.232691 #14034]  INFO -- : 2013-11-11T10:28:47+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 86.9792 j/s, 0 failed
+I, [2013-11-11T10:28:57.242981 #14034]  INFO -- : 2013-11-11T10:28:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=214) RUNNING
+I, [2013-11-11T10:28:57.247055 #14034]  INFO -- : 2013-11-11T10:28:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=214) COMPLETED after 0.0039
+I, [2013-11-11T10:28:57.248353 #14034]  INFO -- : 2013-11-11T10:28:57+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 101.9368 j/s, 0 failed
+I, [2013-11-11T10:29:12.262729 #14034]  INFO -- : 2013-11-11T10:29:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=215) RUNNING
+I, [2013-11-11T10:29:12.267072 #14034]  INFO -- : 2013-11-11T10:29:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=215) COMPLETED after 0.0042
+I, [2013-11-11T10:29:12.270461 #14034]  INFO -- : 2013-11-11T10:29:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=216) RUNNING
+I, [2013-11-11T10:29:12.274275 #14034]  INFO -- : 2013-11-11T10:29:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=216) COMPLETED after 0.0037
+I, [2013-11-11T10:29:12.275247 #14034]  INFO -- : 2013-11-11T10:29:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 107.7122 j/s, 0 failed
+I, [2013-11-11T10:29:22.282452 #14034]  INFO -- : 2013-11-11T10:29:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=217) RUNNING
+I, [2013-11-11T10:29:25.196227 #14034]  INFO -- : 2013-11-11T10:29:25+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=217) COMPLETED after 2.9136
+I, [2013-11-11T10:29:25.197833 #14034]  INFO -- : 2013-11-11T10:29:25+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3426 j/s, 0 failed
+I, [2013-11-11T10:29:30.206494 #14034]  INFO -- : 2013-11-11T10:29:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=218) RUNNING
+I, [2013-11-11T10:29:30.210311 #14034]  INFO -- : 2013-11-11T10:29:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=218) COMPLETED after 0.0037
+I, [2013-11-11T10:29:30.211723 #14034]  INFO -- : 2013-11-11T10:29:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 87.6501 j/s, 0 failed
+I, [2013-11-11T10:29:40.222354 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=219) RUNNING
+I, [2013-11-11T10:29:40.225161 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=219) COMPLETED after 0.0027
+I, [2013-11-11T10:29:40.227847 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=220) RUNNING
+I, [2013-11-11T10:29:40.230288 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=220) COMPLETED after 0.0023
+I, [2013-11-11T10:29:40.232425 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=221) RUNNING
+I, [2013-11-11T10:29:40.234642 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=221) COMPLETED after 0.0021
+I, [2013-11-11T10:29:40.235505 #14034]  INFO -- : 2013-11-11T10:29:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 167.3080 j/s, 0 failed
+I, [2013-11-11T10:29:50.241327 #14034]  INFO -- : 2013-11-11T10:29:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=222) RUNNING
+I, [2013-11-11T10:29:50.243921 #14034]  INFO -- : 2013-11-11T10:29:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=222) COMPLETED after 0.0025
+I, [2013-11-11T10:29:50.244883 #14034]  INFO -- : 2013-11-11T10:29:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 157.8781 j/s, 0 failed
+I, [2013-11-11T10:30:00.253385 #14034]  INFO -- : 2013-11-11T10:30:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=223) RUNNING
+I, [2013-11-11T10:30:00.256771 #14034]  INFO -- : 2013-11-11T10:30:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=223) COMPLETED after 0.0032
+I, [2013-11-11T10:30:00.257854 #14034]  INFO -- : 2013-11-11T10:30:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 119.0760 j/s, 0 failed
+I, [2013-11-11T10:30:10.264493 #14034]  INFO -- : 2013-11-11T10:30:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=224) RUNNING
+I, [2013-11-11T10:30:10.267431 #14034]  INFO -- : 2013-11-11T10:30:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=224) COMPLETED after 0.0028
+I, [2013-11-11T10:30:10.270428 #14034]  INFO -- : 2013-11-11T10:30:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=225) RUNNING
+I, [2013-11-11T10:30:10.272900 #14034]  INFO -- : 2013-11-11T10:30:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=225) COMPLETED after 0.0024
+I, [2013-11-11T10:30:10.273890 #14034]  INFO -- : 2013-11-11T10:30:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 150.8068 j/s, 0 failed
+I, [2013-11-11T10:30:20.282787 #14034]  INFO -- : 2013-11-11T10:30:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=226) RUNNING
+I, [2013-11-11T10:30:20.286972 #14034]  INFO -- : 2013-11-11T10:30:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=226) COMPLETED after 0.0040
+I, [2013-11-11T10:30:20.288337 #14034]  INFO -- : 2013-11-11T10:30:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 89.3655 j/s, 0 failed
+I, [2013-11-11T10:30:30.295797 #14034]  INFO -- : 2013-11-11T10:30:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=227) RUNNING
+I, [2013-11-11T10:30:30.299479 #14034]  INFO -- : 2013-11-11T10:30:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=227) COMPLETED after 0.0035
+I, [2013-11-11T10:30:30.300747 #14034]  INFO -- : 2013-11-11T10:30:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 109.8177 j/s, 0 failed
+I, [2013-11-11T10:30:40.308945 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=228) RUNNING
+I, [2013-11-11T10:30:40.311826 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=228) COMPLETED after 0.0028
+I, [2013-11-11T10:30:40.314536 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=229) RUNNING
+I, [2013-11-11T10:30:40.317402 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=229) COMPLETED after 0.0027
+I, [2013-11-11T10:30:40.320052 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=230) RUNNING
+I, [2013-11-11T10:30:40.323119 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=230) COMPLETED after 0.0029
+I, [2013-11-11T10:30:40.325687 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=231) RUNNING
+I, [2013-11-11T10:30:40.328300 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=231) COMPLETED after 0.0025
+I, [2013-11-11T10:30:40.329265 #14034]  INFO -- : 2013-11-11T10:30:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 4 jobs processed at 162.8930 j/s, 0 failed
+I, [2013-11-11T10:30:50.337922 #14034]  INFO -- : 2013-11-11T10:30:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=232) RUNNING
+I, [2013-11-11T10:30:50.341725 #14034]  INFO -- : 2013-11-11T10:30:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=232) COMPLETED after 0.0036
+I, [2013-11-11T10:30:50.343257 #14034]  INFO -- : 2013-11-11T10:30:50+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 102.9972 j/s, 0 failed
+I, [2013-11-11T10:31:00.352269 #14034]  INFO -- : 2013-11-11T10:31:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=233) RUNNING
+I, [2013-11-11T10:31:00.354822 #14034]  INFO -- : 2013-11-11T10:31:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=233) COMPLETED after 0.0024
+I, [2013-11-11T10:31:00.355776 #14034]  INFO -- : 2013-11-11T10:31:00+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 142.4096 j/s, 0 failed
+I, [2013-11-11T10:31:10.364596 #14034]  INFO -- : 2013-11-11T10:31:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=234) RUNNING
+I, [2013-11-11T10:31:10.367735 #14034]  INFO -- : 2013-11-11T10:31:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=234) COMPLETED after 0.0030
+I, [2013-11-11T10:31:10.370709 #14034]  INFO -- : 2013-11-11T10:31:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=235) RUNNING
+I, [2013-11-11T10:31:10.373072 #14034]  INFO -- : 2013-11-11T10:31:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=235) COMPLETED after 0.0023
+I, [2013-11-11T10:31:10.374079 #14034]  INFO -- : 2013-11-11T10:31:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 148.0275 j/s, 0 failed
+I, [2013-11-11T10:31:20.385071 #14034]  INFO -- : 2013-11-11T10:31:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=236) RUNNING
+I, [2013-11-11T10:31:20.389193 #14034]  INFO -- : 2013-11-11T10:31:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=236) COMPLETED after 0.0040
+I, [2013-11-11T10:31:20.390585 #14034]  INFO -- : 2013-11-11T10:31:20+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 89.3176 j/s, 0 failed
+I, [2013-11-11T10:31:35.400291 #14034]  INFO -- : 2013-11-11T10:31:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=237) RUNNING
+I, [2013-11-11T10:31:38.251272 #14034]  INFO -- : 2013-11-11T10:31:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=237) COMPLETED after 2.8508
+I, [2013-11-11T10:31:38.252494 #14034]  INFO -- : 2013-11-11T10:31:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3501 j/s, 0 failed
+I, [2013-11-11T10:31:43.259060 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=238) RUNNING
+I, [2013-11-11T10:31:43.262448 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=238) COMPLETED after 0.0032
+I, [2013-11-11T10:31:43.265403 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=239) RUNNING
+I, [2013-11-11T10:31:43.267568 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=239) COMPLETED after 0.0021
+I, [2013-11-11T10:31:43.269779 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=240) RUNNING
+I, [2013-11-11T10:31:43.272049 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=240) COMPLETED after 0.0022
+I, [2013-11-11T10:31:43.272985 #14034]  INFO -- : 2013-11-11T10:31:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 153.6570 j/s, 0 failed
+I, [2013-11-11T10:31:53.283626 #14034]  INFO -- : 2013-11-11T10:31:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=241) RUNNING
+I, [2013-11-11T10:31:53.288925 #14034]  INFO -- : 2013-11-11T10:31:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=241) COMPLETED after 0.0051
+I, [2013-11-11T10:31:53.290427 #14034]  INFO -- : 2013-11-11T10:31:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 74.6882 j/s, 0 failed
+I, [2013-11-11T10:32:03.298335 #14034]  INFO -- : 2013-11-11T10:32:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=242) RUNNING
+I, [2013-11-11T10:32:03.303486 #14034]  INFO -- : 2013-11-11T10:32:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=242) COMPLETED after 0.0049
+I, [2013-11-11T10:32:03.305211 #14034]  INFO -- : 2013-11-11T10:32:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 88.6839 j/s, 0 failed
+I, [2013-11-11T10:32:13.316659 #14034]  INFO -- : 2013-11-11T10:32:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=243) RUNNING
+I, [2013-11-11T10:32:13.321076 #14034]  INFO -- : 2013-11-11T10:32:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=243) COMPLETED after 0.0042
+I, [2013-11-11T10:32:13.324690 #14034]  INFO -- : 2013-11-11T10:32:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=244) RUNNING
+I, [2013-11-11T10:32:13.328038 #14034]  INFO -- : 2013-11-11T10:32:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=244) COMPLETED after 0.0032
+I, [2013-11-11T10:32:13.329237 #14034]  INFO -- : 2013-11-11T10:32:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 107.1639 j/s, 0 failed
+I, [2013-11-11T10:32:23.339459 #14034]  INFO -- : 2013-11-11T10:32:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=245) RUNNING
+I, [2013-11-11T10:32:23.344128 #14034]  INFO -- : 2013-11-11T10:32:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=245) COMPLETED after 0.0045
+I, [2013-11-11T10:32:23.345646 #14034]  INFO -- : 2013-11-11T10:32:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 78.6658 j/s, 0 failed
+I, [2013-11-11T10:32:33.410551 #14034]  INFO -- : 2013-11-11T10:32:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=246) RUNNING
+I, [2013-11-11T10:32:33.414111 #14034]  INFO -- : 2013-11-11T10:32:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=246) COMPLETED after 0.0034
+I, [2013-11-11T10:32:33.415359 #14034]  INFO -- : 2013-11-11T10:32:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 14.9379 j/s, 0 failed
+I, [2013-11-11T10:32:38.423404 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=247) RUNNING
+I, [2013-11-11T10:32:38.427188 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=247) COMPLETED after 0.0036
+I, [2013-11-11T10:32:38.431036 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=248) RUNNING
+I, [2013-11-11T10:32:38.434522 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=248) COMPLETED after 0.0033
+I, [2013-11-11T10:32:38.437540 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=249) RUNNING
+I, [2013-11-11T10:32:38.440154 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=249) COMPLETED after 0.0025
+I, [2013-11-11T10:32:38.441146 #14034]  INFO -- : 2013-11-11T10:32:38+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 125.8970 j/s, 0 failed
+I, [2013-11-11T10:32:43.449528 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=250) RUNNING
+I, [2013-11-11T10:32:43.454097 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=250) COMPLETED after 0.0044
+I, [2013-11-11T10:32:43.458057 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=251) RUNNING
+I, [2013-11-11T10:32:43.461620 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=251) COMPLETED after 0.0034
+I, [2013-11-11T10:32:43.464988 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=252) RUNNING
+I, [2013-11-11T10:32:43.467986 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=252) COMPLETED after 0.0029
+I, [2013-11-11T10:32:43.468982 #14034]  INFO -- : 2013-11-11T10:32:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 115.7095 j/s, 0 failed
+I, [2013-11-11T10:32:53.480556 #14034]  INFO -- : 2013-11-11T10:32:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=253) RUNNING
+I, [2013-11-11T10:32:53.485000 #14034]  INFO -- : 2013-11-11T10:32:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=253) COMPLETED after 0.0043
+I, [2013-11-11T10:32:53.486430 #14034]  INFO -- : 2013-11-11T10:32:53+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 86.2738 j/s, 0 failed
+I, [2013-11-11T10:33:03.494467 #14034]  INFO -- : 2013-11-11T10:33:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=254) RUNNING
+I, [2013-11-11T10:33:03.497608 #14034]  INFO -- : 2013-11-11T10:33:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=254) COMPLETED after 0.0030
+I, [2013-11-11T10:33:03.498807 #14034]  INFO -- : 2013-11-11T10:33:03+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 122.4590 j/s, 0 failed
+I, [2013-11-11T10:33:13.508424 #14034]  INFO -- : 2013-11-11T10:33:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=255) RUNNING
+I, [2013-11-11T10:33:13.511165 #14034]  INFO -- : 2013-11-11T10:33:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=255) COMPLETED after 0.0026
+I, [2013-11-11T10:33:13.514194 #14034]  INFO -- : 2013-11-11T10:33:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=256) RUNNING
+I, [2013-11-11T10:33:13.516508 #14034]  INFO -- : 2013-11-11T10:33:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=256) COMPLETED after 0.0022
+I, [2013-11-11T10:33:13.517484 #14034]  INFO -- : 2013-11-11T10:33:13+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 139.6551 j/s, 0 failed
+I, [2013-11-11T10:33:23.526645 #14034]  INFO -- : 2013-11-11T10:33:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=257) RUNNING
+I, [2013-11-11T10:33:23.529152 #14034]  INFO -- : 2013-11-11T10:33:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=257) COMPLETED after 0.0024
+I, [2013-11-11T10:33:23.530258 #14034]  INFO -- : 2013-11-11T10:33:23+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 122.5190 j/s, 0 failed
+I, [2013-11-11T10:33:33.538990 #14034]  INFO -- : 2013-11-11T10:33:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=258) RUNNING
+I, [2013-11-11T10:33:33.542714 #14034]  INFO -- : 2013-11-11T10:33:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=258) COMPLETED after 0.0036
+I, [2013-11-11T10:33:33.544159 #14034]  INFO -- : 2013-11-11T10:33:33+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 102.4590 j/s, 0 failed
+I, [2013-11-11T10:33:43.554080 #14034]  INFO -- : 2013-11-11T10:33:43+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=259) RUNNING
+I, [2013-11-11T10:33:46.454577 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=259) COMPLETED after 2.9003
+I, [2013-11-11T10:33:46.458343 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=260) RUNNING
+I, [2013-11-11T10:33:46.461020 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=260) COMPLETED after 0.0025
+I, [2013-11-11T10:33:46.463252 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=261) RUNNING
+I, [2013-11-11T10:33:46.465430 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=261) COMPLETED after 0.0021
+I, [2013-11-11T10:33:46.466316 #14034]  INFO -- : 2013-11-11T10:33:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 1.0284 j/s, 0 failed
+I, [2013-11-11T10:33:56.474888 #14034]  INFO -- : 2013-11-11T10:33:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=262) RUNNING
+I, [2013-11-11T10:33:56.478107 #14034]  INFO -- : 2013-11-11T10:33:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=262) COMPLETED after 0.0031
+I, [2013-11-11T10:33:56.479292 #14034]  INFO -- : 2013-11-11T10:33:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 106.6553 j/s, 0 failed
+I, [2013-11-11T10:34:06.489213 #14034]  INFO -- : 2013-11-11T10:34:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=263) RUNNING
+I, [2013-11-11T10:34:06.493414 #14034]  INFO -- : 2013-11-11T10:34:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=263) COMPLETED after 0.0040
+I, [2013-11-11T10:34:06.494875 #14034]  INFO -- : 2013-11-11T10:34:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 99.4036 j/s, 0 failed
+I, [2013-11-11T10:34:11.501382 #14034]  INFO -- : 2013-11-11T10:34:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=264) RUNNING
+I, [2013-11-11T10:34:11.504532 #14034]  INFO -- : 2013-11-11T10:34:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=264) COMPLETED after 0.0030
+I, [2013-11-11T10:34:11.505957 #14034]  INFO -- : 2013-11-11T10:34:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 104.1341 j/s, 0 failed
+I, [2013-11-11T10:34:16.514532 #14034]  INFO -- : 2013-11-11T10:34:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=265) RUNNING
+I, [2013-11-11T10:34:16.518466 #14034]  INFO -- : 2013-11-11T10:34:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=265) COMPLETED after 0.0038
+I, [2013-11-11T10:34:16.519969 #14034]  INFO -- : 2013-11-11T10:34:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.9717 j/s, 0 failed
+I, [2013-11-11T10:34:26.528997 #14034]  INFO -- : 2013-11-11T10:34:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=266) RUNNING
+I, [2013-11-11T10:34:26.531644 #14034]  INFO -- : 2013-11-11T10:34:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=266) COMPLETED after 0.0025
+I, [2013-11-11T10:34:26.532782 #14034]  INFO -- : 2013-11-11T10:34:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 117.6332 j/s, 0 failed
+I, [2013-11-11T10:34:36.538031 #14034]  INFO -- : 2013-11-11T10:34:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=267) RUNNING
+I, [2013-11-11T10:34:36.540512 #14034]  INFO -- : 2013-11-11T10:34:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=267) COMPLETED after 0.0024
+I, [2013-11-11T10:34:36.542641 #14034]  INFO -- : 2013-11-11T10:34:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=268) RUNNING
+I, [2013-11-11T10:34:36.544828 #14034]  INFO -- : 2013-11-11T10:34:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=268) COMPLETED after 0.0021
+I, [2013-11-11T10:34:36.545735 #14034]  INFO -- : 2013-11-11T10:34:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 191.1498 j/s, 0 failed
+I, [2013-11-11T10:34:41.551488 #14034]  INFO -- : 2013-11-11T10:34:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=269) RUNNING
+I, [2013-11-11T10:34:41.554101 #14034]  INFO -- : 2013-11-11T10:34:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=269) COMPLETED after 0.0025
+I, [2013-11-11T10:34:41.556311 #14034]  INFO -- : 2013-11-11T10:34:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=270) RUNNING
+I, [2013-11-11T10:34:41.558937 #14034]  INFO -- : 2013-11-11T10:34:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=270) COMPLETED after 0.0024
+I, [2013-11-11T10:34:41.560325 #14034]  INFO -- : 2013-11-11T10:34:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 155.0508 j/s, 0 failed
+I, [2013-11-11T10:34:46.568031 #14034]  INFO -- : 2013-11-11T10:34:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=271) RUNNING
+I, [2013-11-11T10:34:46.572289 #14034]  INFO -- : 2013-11-11T10:34:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=271) COMPLETED after 0.0041
+I, [2013-11-11T10:34:46.573787 #14034]  INFO -- : 2013-11-11T10:34:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 86.8508 j/s, 0 failed
+I, [2013-11-11T10:34:56.584793 #14034]  INFO -- : 2013-11-11T10:34:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=272) RUNNING
+I, [2013-11-11T10:34:56.588584 #14034]  INFO -- : 2013-11-11T10:34:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=272) COMPLETED after 0.0036
+I, [2013-11-11T10:34:56.590174 #14034]  INFO -- : 2013-11-11T10:34:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 89.6700 j/s, 0 failed
+I, [2013-11-11T10:35:06.599718 #14034]  INFO -- : 2013-11-11T10:35:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=273) RUNNING
+I, [2013-11-11T10:35:06.603575 #14034]  INFO -- : 2013-11-11T10:35:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=273) COMPLETED after 0.0037
+I, [2013-11-11T10:35:06.605010 #14034]  INFO -- : 2013-11-11T10:35:06+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 90.6865 j/s, 0 failed
+I, [2013-11-11T10:35:11.610626 #14034]  INFO -- : 2013-11-11T10:35:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=274) RUNNING
+I, [2013-11-11T10:35:11.613214 #14034]  INFO -- : 2013-11-11T10:35:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=274) COMPLETED after 0.0025
+I, [2013-11-11T10:35:11.614267 #14034]  INFO -- : 2013-11-11T10:35:11+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 141.0238 j/s, 0 failed
+I, [2013-11-11T10:35:16.620569 #14034]  INFO -- : 2013-11-11T10:35:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=275) RUNNING
+I, [2013-11-11T10:35:16.624243 #14034]  INFO -- : 2013-11-11T10:35:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=275) COMPLETED after 0.0035
+I, [2013-11-11T10:35:16.625781 #14034]  INFO -- : 2013-11-11T10:35:16+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 104.2101 j/s, 0 failed
+I, [2013-11-11T10:35:26.634585 #14034]  INFO -- : 2013-11-11T10:35:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=276) RUNNING
+I, [2013-11-11T10:35:26.639693 #14034]  INFO -- : 2013-11-11T10:35:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=276) COMPLETED after 0.0050
+I, [2013-11-11T10:35:26.640926 #14034]  INFO -- : 2013-11-11T10:35:26+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 84.0124 j/s, 0 failed
+I, [2013-11-11T10:35:36.652233 #14034]  INFO -- : 2013-11-11T10:35:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=277) RUNNING
+I, [2013-11-11T10:35:36.656766 #14034]  INFO -- : 2013-11-11T10:35:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=277) COMPLETED after 0.0044
+I, [2013-11-11T10:35:36.658272 #14034]  INFO -- : 2013-11-11T10:35:36+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 83.2293 j/s, 0 failed
+I, [2013-11-11T10:35:41.664912 #14034]  INFO -- : 2013-11-11T10:35:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=278) RUNNING
+I, [2013-11-11T10:35:41.669350 #14034]  INFO -- : 2013-11-11T10:35:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=278) COMPLETED after 0.0042
+I, [2013-11-11T10:35:41.672795 #14034]  INFO -- : 2013-11-11T10:35:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=279) RUNNING
+I, [2013-11-11T10:35:41.676785 #14034]  INFO -- : 2013-11-11T10:35:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=279) COMPLETED after 0.0039
+I, [2013-11-11T10:35:41.678064 #14034]  INFO -- : 2013-11-11T10:35:41+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 109.8056 j/s, 0 failed
+I, [2013-11-11T10:35:46.684359 #14034]  INFO -- : 2013-11-11T10:35:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=280) RUNNING
+I, [2013-11-11T10:35:46.688724 #14034]  INFO -- : 2013-11-11T10:35:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=280) COMPLETED after 0.0042
+I, [2013-11-11T10:35:46.690210 #14034]  INFO -- : 2013-11-11T10:35:46+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 96.0430 j/s, 0 failed
+I, [2013-11-11T10:35:56.701912 #14034]  INFO -- : 2013-11-11T10:35:56+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=281) RUNNING
+I, [2013-11-11T10:35:59.467609 #14034]  INFO -- : 2013-11-11T10:35:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=281) COMPLETED after 2.7654
+I, [2013-11-11T10:35:59.469772 #14034]  INFO -- : 2013-11-11T10:35:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.3604 j/s, 0 failed
+I, [2013-11-11T10:36:09.484110 #14034]  INFO -- : 2013-11-11T10:36:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=282) RUNNING
+I, [2013-11-11T10:36:09.492956 #14034]  INFO -- : 2013-11-11T10:36:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=282) COMPLETED after 0.0087
+I, [2013-11-11T10:36:09.501066 #14034]  INFO -- : 2013-11-11T10:36:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=283) RUNNING
+I, [2013-11-11T10:36:09.503548 #14034]  INFO -- : 2013-11-11T10:36:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=283) COMPLETED after 0.0024
+I, [2013-11-11T10:36:09.504527 #14034]  INFO -- : 2013-11-11T10:36:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 68.8042 j/s, 0 failed
+I, [2013-11-11T10:36:19.511959 #14034]  INFO -- : 2013-11-11T10:36:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=284) RUNNING
+I, [2013-11-11T10:36:19.515602 #14034]  INFO -- : 2013-11-11T10:36:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=284) COMPLETED after 0.0035
+I, [2013-11-11T10:36:19.516935 #14034]  INFO -- : 2013-11-11T10:36:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 111.0494 j/s, 0 failed
+I, [2013-11-11T10:36:29.527070 #14034]  INFO -- : 2013-11-11T10:36:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=285) RUNNING
+I, [2013-11-11T10:36:29.530569 #14034]  INFO -- : 2013-11-11T10:36:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=285) COMPLETED after 0.0034
+I, [2013-11-11T10:36:29.531795 #14034]  INFO -- : 2013-11-11T10:36:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 104.0258 j/s, 0 failed
+I, [2013-11-11T10:36:39.541581 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=286) RUNNING
+I, [2013-11-11T10:36:39.544459 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=286) COMPLETED after 0.0027
+I, [2013-11-11T10:36:39.547503 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=287) RUNNING
+I, [2013-11-11T10:36:39.550044 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=287) COMPLETED after 0.0024
+I, [2013-11-11T10:36:39.552391 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=288) RUNNING
+I, [2013-11-11T10:36:39.554725 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=288) COMPLETED after 0.0022
+I, [2013-11-11T10:36:39.557369 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=289) RUNNING
+I, [2013-11-11T10:36:39.560265 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=289) COMPLETED after 0.0027
+I, [2013-11-11T10:36:39.561272 #14034]  INFO -- : 2013-11-11T10:36:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 4 jobs processed at 165.7962 j/s, 0 failed
+I, [2013-11-11T10:36:49.572615 #14034]  INFO -- : 2013-11-11T10:36:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=290) RUNNING
+I, [2013-11-11T10:36:49.578091 #14034]  INFO -- : 2013-11-11T10:36:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=290) COMPLETED after 0.0053
+I, [2013-11-11T10:36:49.579604 #14034]  INFO -- : 2013-11-11T10:36:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 74.4768 j/s, 0 failed
+I, [2013-11-11T10:36:59.588460 #14034]  INFO -- : 2013-11-11T10:36:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=291) RUNNING
+I, [2013-11-11T10:36:59.592673 #14034]  INFO -- : 2013-11-11T10:36:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=291) COMPLETED after 0.0040
+I, [2013-11-11T10:36:59.594146 #14034]  INFO -- : 2013-11-11T10:36:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 87.1764 j/s, 0 failed
+I, [2013-11-11T10:37:09.605376 #14034]  INFO -- : 2013-11-11T10:37:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=292) RUNNING
+I, [2013-11-11T10:37:09.609872 #14034]  INFO -- : 2013-11-11T10:37:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=292) COMPLETED after 0.0043
+I, [2013-11-11T10:37:09.613249 #14034]  INFO -- : 2013-11-11T10:37:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=293) RUNNING
+I, [2013-11-11T10:37:09.617140 #14034]  INFO -- : 2013-11-11T10:37:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=293) COMPLETED after 0.0038
+I, [2013-11-11T10:37:09.618375 #14034]  INFO -- : 2013-11-11T10:37:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 100.9082 j/s, 0 failed
+I, [2013-11-11T10:37:19.629823 #14034]  INFO -- : 2013-11-11T10:37:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=294) RUNNING
+I, [2013-11-11T10:37:19.633743 #14034]  INFO -- : 2013-11-11T10:37:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=294) COMPLETED after 0.0038
+I, [2013-11-11T10:37:19.635197 #14034]  INFO -- : 2013-11-11T10:37:19+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 84.4238 j/s, 0 failed
+I, [2013-11-11T10:37:29.644568 #14034]  INFO -- : 2013-11-11T10:37:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=295) RUNNING
+I, [2013-11-11T10:37:29.647405 #14034]  INFO -- : 2013-11-11T10:37:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=295) COMPLETED after 0.0027
+I, [2013-11-11T10:37:29.648554 #14034]  INFO -- : 2013-11-11T10:37:29+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 118.8213 j/s, 0 failed
+I, [2013-11-11T10:37:39.658271 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=296) RUNNING
+I, [2013-11-11T10:37:39.660802 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=296) COMPLETED after 0.0024
+I, [2013-11-11T10:37:39.663082 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=297) RUNNING
+I, [2013-11-11T10:37:39.665620 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=297) COMPLETED after 0.0024
+I, [2013-11-11T10:37:39.668206 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=298) RUNNING
+I, [2013-11-11T10:37:39.670884 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=298) COMPLETED after 0.0026
+I, [2013-11-11T10:37:39.673367 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=299) RUNNING
+I, [2013-11-11T10:37:39.675675 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=299) COMPLETED after 0.0022
+I, [2013-11-11T10:37:39.676542 #14034]  INFO -- : 2013-11-11T10:37:39+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 4 jobs processed at 180.6848 j/s, 0 failed
+I, [2013-11-11T10:37:49.685772 #14034]  INFO -- : 2013-11-11T10:37:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=300) RUNNING
+I, [2013-11-11T10:37:49.689872 #14034]  INFO -- : 2013-11-11T10:37:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=300) COMPLETED after 0.0039
+I, [2013-11-11T10:37:49.691347 #14034]  INFO -- : 2013-11-11T10:37:49+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 85.9771 j/s, 0 failed
+I, [2013-11-11T10:37:59.700337 #14034]  INFO -- : 2013-11-11T10:37:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=301) RUNNING
+I, [2013-11-11T10:37:59.703488 #14034]  INFO -- : 2013-11-11T10:37:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=301) COMPLETED after 0.0030
+I, [2013-11-11T10:37:59.704498 #14034]  INFO -- : 2013-11-11T10:37:59+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 109.5290 j/s, 0 failed
+I, [2013-11-11T10:38:09.715453 #14034]  INFO -- : 2013-11-11T10:38:09+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=302) RUNNING
+I, [2013-11-11T10:38:12.544681 #14034]  INFO -- : 2013-11-11T10:38:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=302) COMPLETED after 2.8290
+I, [2013-11-11T10:38:12.549439 #14034]  INFO -- : 2013-11-11T10:38:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=303) RUNNING
+I, [2013-11-11T10:38:12.553049 #14034]  INFO -- : 2013-11-11T10:38:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=303) COMPLETED after 0.0035
+I, [2013-11-11T10:38:12.553962 #14034]  INFO -- : 2013-11-11T10:38:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 0.7029 j/s, 0 failed
+I, [2013-11-11T10:38:22.564036 #14034]  INFO -- : 2013-11-11T10:38:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=304) RUNNING
+I, [2013-11-11T10:38:22.568593 #14034]  INFO -- : 2013-11-11T10:38:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=304) COMPLETED after 0.0044
+I, [2013-11-11T10:38:22.570137 #14034]  INFO -- : 2013-11-11T10:38:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 89.3495 j/s, 0 failed
+I, [2013-11-11T10:38:32.582335 #14034]  INFO -- : 2013-11-11T10:38:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=305) RUNNING
+I, [2013-11-11T10:38:32.587541 #14034]  INFO -- : 2013-11-11T10:38:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=305) COMPLETED after 0.0050
+I, [2013-11-11T10:38:32.589095 #14034]  INFO -- : 2013-11-11T10:38:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 73.7463 j/s, 0 failed
+I, [2013-11-11T10:38:37.596814 #14034]  INFO -- : 2013-11-11T10:38:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=306) RUNNING
+I, [2013-11-11T10:38:37.600062 #14034]  INFO -- : 2013-11-11T10:38:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=306) COMPLETED after 0.0031
+I, [2013-11-11T10:38:37.601143 #14034]  INFO -- : 2013-11-11T10:38:37+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 107.7122 j/s, 0 failed
+I, [2013-11-11T10:38:42.609298 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=307) RUNNING
+I, [2013-11-11T10:38:42.613771 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=307) COMPLETED after 0.0043
+I, [2013-11-11T10:38:42.616977 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=308) RUNNING
+I, [2013-11-11T10:38:42.620374 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=308) COMPLETED after 0.0033
+I, [2013-11-11T10:38:42.623078 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=309) RUNNING
+I, [2013-11-11T10:38:42.625384 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=309) COMPLETED after 0.0022
+I, [2013-11-11T10:38:42.626276 #14034]  INFO -- : 2013-11-11T10:38:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 126.0875 j/s, 0 failed
+I, [2013-11-11T10:38:52.637046 #14034]  INFO -- : 2013-11-11T10:38:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=310) RUNNING
+I, [2013-11-11T10:38:52.641728 #14034]  INFO -- : 2013-11-11T10:38:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=310) COMPLETED after 0.0045
+I, [2013-11-11T10:38:52.643397 #14034]  INFO -- : 2013-11-11T10:38:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 85.9328 j/s, 0 failed
+I, [2013-11-11T10:39:02.655345 #14034]  INFO -- : 2013-11-11T10:39:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=311) RUNNING
+I, [2013-11-11T10:39:02.660243 #14034]  INFO -- : 2013-11-11T10:39:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=311) COMPLETED after 0.0047
+I, [2013-11-11T10:39:02.661795 #14034]  INFO -- : 2013-11-11T10:39:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 79.6495 j/s, 0 failed
+I, [2013-11-11T10:39:12.674167 #14034]  INFO -- : 2013-11-11T10:39:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=312) RUNNING
+I, [2013-11-11T10:39:12.678905 #14034]  INFO -- : 2013-11-11T10:39:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=312) COMPLETED after 0.0045
+I, [2013-11-11T10:39:12.736784 #14034]  INFO -- : 2013-11-11T10:39:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=313) RUNNING
+I, [2013-11-11T10:39:12.740497 #14034]  INFO -- : 2013-11-11T10:39:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=313) COMPLETED after 0.0036
+I, [2013-11-11T10:39:12.741759 #14034]  INFO -- : 2013-11-11T10:39:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 26.8626 j/s, 0 failed
+I, [2013-11-11T10:39:22.752099 #14034]  INFO -- : 2013-11-11T10:39:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=314) RUNNING
+I, [2013-11-11T10:39:22.756158 #14034]  INFO -- : 2013-11-11T10:39:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=314) COMPLETED after 0.0039
+I, [2013-11-11T10:39:22.757680 #14034]  INFO -- : 2013-11-11T10:39:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 96.6557 j/s, 0 failed
+I, [2013-11-11T10:39:32.768593 #14034]  INFO -- : 2013-11-11T10:39:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=315) RUNNING
+I, [2013-11-11T10:39:32.772636 #14034]  INFO -- : 2013-11-11T10:39:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=315) COMPLETED after 0.0039
+I, [2013-11-11T10:39:32.773854 #14034]  INFO -- : 2013-11-11T10:39:32+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 94.5448 j/s, 0 failed
+I, [2013-11-11T10:39:42.784535 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=316) RUNNING
+I, [2013-11-11T10:39:42.789294 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=316) COMPLETED after 0.0046
+I, [2013-11-11T10:39:42.792836 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=317) RUNNING
+I, [2013-11-11T10:39:42.796133 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=317) COMPLETED after 0.0031
+I, [2013-11-11T10:39:42.799054 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=318) RUNNING
+I, [2013-11-11T10:39:42.801412 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=318) COMPLETED after 0.0023
+I, [2013-11-11T10:39:42.802296 #14034]  INFO -- : 2013-11-11T10:39:42+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 123.2539 j/s, 0 failed
+I, [2013-11-11T10:39:52.810091 #14034]  INFO -- : 2013-11-11T10:39:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=319) RUNNING
+I, [2013-11-11T10:39:52.813844 #14034]  INFO -- : 2013-11-11T10:39:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=319) COMPLETED after 0.0036
+I, [2013-11-11T10:39:52.815394 #14034]  INFO -- : 2013-11-11T10:39:52+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 105.2521 j/s, 0 failed
+I, [2013-11-11T10:40:02.827167 #14034]  INFO -- : 2013-11-11T10:40:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=320) RUNNING
+I, [2013-11-11T10:40:02.830981 #14034]  INFO -- : 2013-11-11T10:40:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=320) COMPLETED after 0.0037
+I, [2013-11-11T10:40:02.832513 #14034]  INFO -- : 2013-11-11T10:40:02+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 88.7075 j/s, 0 failed
+I, [2013-11-11T10:40:12.843933 #14034]  INFO -- : 2013-11-11T10:40:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=321) RUNNING
+I, [2013-11-11T10:40:12.847757 #14034]  INFO -- : 2013-11-11T10:40:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=321) COMPLETED after 0.0037
+I, [2013-11-11T10:40:12.851085 #14034]  INFO -- : 2013-11-11T10:40:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=322) RUNNING
+I, [2013-11-11T10:40:12.854046 #14034]  INFO -- : 2013-11-11T10:40:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=322) COMPLETED after 0.0028
+I, [2013-11-11T10:40:12.855261 #14034]  INFO -- : 2013-11-11T10:40:12+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 114.9029 j/s, 0 failed
+I, [2013-11-11T10:40:22.863519 #14034]  INFO -- : 2013-11-11T10:40:22+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=323) RUNNING
+I, [2013-11-11T10:40:30.278430 #14034]  INFO -- : 2013-11-11T10:40:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=323) COMPLETED after 7.4148
+I, [2013-11-11T10:40:30.279649 #14034]  INFO -- : 2013-11-11T10:40:30+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 0.1348 j/s, 0 failed
+I, [2013-11-11T10:40:35.284787 #14034]  INFO -- : 2013-11-11T10:40:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=324) RUNNING
+I, [2013-11-11T10:40:35.287420 #14034]  INFO -- : 2013-11-11T10:40:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=324) COMPLETED after 0.0025
+I, [2013-11-11T10:40:35.288401 #14034]  INFO -- : 2013-11-11T10:40:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 130.0221 j/s, 0 failed
+I, [2013-11-11T10:40:40.292558 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=325) RUNNING
+I, [2013-11-11T10:40:40.295001 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=325) COMPLETED after 0.0023
+I, [2013-11-11T10:40:40.297138 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=326) RUNNING
+I, [2013-11-11T10:40:40.299483 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=326) COMPLETED after 0.0022
+I, [2013-11-11T10:40:40.301819 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=327) RUNNING
+I, [2013-11-11T10:40:40.304158 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=327) COMPLETED after 0.0022
+I, [2013-11-11T10:40:40.305064 #14034]  INFO -- : 2013-11-11T10:40:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 3 jobs processed at 196.0784 j/s, 0 failed
+I, [2013-11-11T10:40:45.312209 #14034]  INFO -- : 2013-11-11T10:40:45+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=328) RUNNING
+I, [2013-11-11T10:40:45.316581 #14034]  INFO -- : 2013-11-11T10:40:45+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=328) COMPLETED after 0.0041
+I, [2013-11-11T10:40:45.318388 #14034]  INFO -- : 2013-11-11T10:40:45+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 80.7298 j/s, 0 failed
+I, [2013-11-11T10:40:55.329702 #14034]  INFO -- : 2013-11-11T10:40:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=329) RUNNING
+I, [2013-11-11T10:40:55.334231 #14034]  INFO -- : 2013-11-11T10:40:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=329) COMPLETED after 0.0044
+I, [2013-11-11T10:40:55.335836 #14034]  INFO -- : 2013-11-11T10:40:55+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 78.1250 j/s, 0 failed
+I, [2013-11-11T10:41:05.345997 #14034]  INFO -- : 2013-11-11T10:41:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=330) RUNNING
+I, [2013-11-11T10:41:05.349843 #14034]  INFO -- : 2013-11-11T10:41:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=330) COMPLETED after 0.0037
+I, [2013-11-11T10:41:05.351341 #14034]  INFO -- : 2013-11-11T10:41:05+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 102.7855 j/s, 0 failed
+I, [2013-11-11T10:41:10.359268 #14034]  INFO -- : 2013-11-11T10:41:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=331) RUNNING
+I, [2013-11-11T10:41:10.363517 #14034]  INFO -- : 2013-11-11T10:41:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=331) COMPLETED after 0.0041
+I, [2013-11-11T10:41:10.364982 #14034]  INFO -- : 2013-11-11T10:41:10+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 81.9471 j/s, 0 failed
+I, [2013-11-11T10:41:15.371810 #14034]  INFO -- : 2013-11-11T10:41:15+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=332) RUNNING
+I, [2013-11-11T10:41:15.374822 #14034]  INFO -- : 2013-11-11T10:41:15+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=332) COMPLETED after 0.0029
+I, [2013-11-11T10:41:15.375861 #14034]  INFO -- : 2013-11-11T10:41:15+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 111.6944 j/s, 0 failed
+I, [2013-11-11T10:41:25.386771 #14034]  INFO -- : 2013-11-11T10:41:25+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=333) RUNNING
+I, [2013-11-11T10:41:25.391257 #14034]  INFO -- : 2013-11-11T10:41:25+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=333) COMPLETED after 0.0043
+I, [2013-11-11T10:41:25.392734 #14034]  INFO -- : 2013-11-11T10:41:25+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 78.1433 j/s, 0 failed
+I, [2013-11-11T10:41:35.401192 #14034]  INFO -- : 2013-11-11T10:41:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=334) RUNNING
+I, [2013-11-11T10:41:35.403826 #14034]  INFO -- : 2013-11-11T10:41:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=334) COMPLETED after 0.0025
+I, [2013-11-11T10:41:35.404748 #14034]  INFO -- : 2013-11-11T10:41:35+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 1 jobs processed at 145.3911 j/s, 0 failed
+I, [2013-11-11T10:41:40.410051 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=335) RUNNING
+I, [2013-11-11T10:41:40.412567 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=335) COMPLETED after 0.0024
+I, [2013-11-11T10:41:40.414984 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=336) RUNNING
+I, [2013-11-11T10:41:40.417412 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=336) COMPLETED after 0.0023
+I, [2013-11-11T10:41:40.418364 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 157.7909 j/s, 0 failed

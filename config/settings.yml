@@ -6,6 +6,7 @@ app:
  version: 0.1a
  title: i2x
  host: http://localhost:3000/
+ debug: true
 
 ##
 # Cache settings

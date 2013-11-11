@@ -26,7 +26,7 @@ I2X::Application.routes.draw do
   devise_for :users
   root  'home#index'
 
-  
+
   get "usecases/variome"
   get "usecases/management"
   get "usecases/medical"
@@ -54,11 +54,11 @@ I2X::Application.routes.draw do
   get "research/others"
   get "research/swot"
   get "research/comparison"
-  
+
   # general index redirects
   get 'home'      => 'home/index'
   get 'reference' => 'reference/index'
-  get 'usecases'  => 'useasecases/index' 
+  get 'usecases'  => 'useasecases/index'
 
   get "home/index"
 
@@ -114,7 +114,7 @@ I2X::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

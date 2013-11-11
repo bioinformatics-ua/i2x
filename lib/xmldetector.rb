@@ -3,6 +3,7 @@ require 'cashier'
 require 'open-uri'
 require 'raven'
 require 'rails_config'
+require 'slog'
 
 module Services
 
@@ -18,25 +19,13 @@ module Services
       @help = Services::Helper.new
       begin
         @doc = Nokogiri::XML(open(@agent[:payload][:uri]))
-        if Settings.log.sentry then
-        				Raven.capture_message("[i2x][XMLDetector] Starting agent checkup #{@agent[:identifier]}", { 
-        					:level => 'info', 
-        					:tags => {
-         							'environment' => Rails.env,
-         							'version' => Settings.app.version,
-         							'module' => 'XMLDetector',
-         							'task' => 'xml'
-        						},
-        						:server_name => Settings.app.host,
-        					:extra => {
-        						'agent' => @agent[:identifier]
-        					}
-        				})
-        			end
+        Services::Slog.debug({:message => "Starting agent checkup #{@agent[:identifier]}", :module => "XMLDetector", :task => "checkup", :extra => {:agent => @agent[:identifier], :uri => @agent[:payload][:uri]}})
+        
+        @agent.update_check_at @help.datetime
+        
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][XMLDetector] failed to load XML doc, #{e}"}
-        puts "[i2x][XMLDetector] failed to load XML doc, #{e}"
-        Raven.capture_exception(e)
+        Services::Slog.exception e
       end
 
       begin
@@ -51,38 +40,29 @@ module Services
           # If not on cache, add to payload for processing
           #
           if @cache[:status] == 100 then
-
+           
             # add row data to payload from selectors (key => key, value => column name)
             payload = Hash.new
             JSON.parse(@agent[:payload][:selectors]).each do |selector|
 
               selector.each do |k,v|
-                element.xpath(v).each do |e|
-                  payload[k] = e.content
+                element.xpath(v).each do |el|
+                  payload[k] = el.content
                 end
               end
             end
             # add payload object to payloads list
-            @payloads.push payload
-            # increase detected events count
-            @agent.increment!(:events_count)
+            @payloads.push payload           
+            
           end
         end
+        # increase detected events count
+        @agent.update_events_count @payloads.size
         @response = { :payload => @payloads, :status => @cache[:status]}
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][XMLDetector] failed to process XPath, #{e}"}
-        #puts "[i2x][XMLDetector] failed to process XPath, #{e}"
-        Raven.capture_exception(e)
+        Services::Slog.exception e
       end
-      
-      begin
-	      @agent[:last_check_at] = @help.datetime
-	      @agent.save
-			rescue Exception => e
-				Raven.capture_exception
-			end
-      
-
       @response
     end
   end

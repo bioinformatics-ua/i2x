@@ -62,13 +62,13 @@ class IntegrationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_integration
-      @integration = Integration.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_integration
+    @integration = Integration.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def integration_params
-      params.require(:integration).permit(:identifier, :title, :help, :payload, :memory)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def integration_params
+    params.require(:integration).permit(:identifier, :title, :help, :payload, :memory)
+  end
 end

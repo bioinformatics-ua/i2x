@@ -83,17 +83,17 @@ class AgentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_agent
-      @agent = Agent.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def agent_params
-      params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
-    end
-
-    def seed_params
-      params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_agent
+    @agent = Agent.find(params[:id])
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def agent_params
+    params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+  end
+
+  def seed_params
+    params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+  end
+end

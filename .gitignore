@@ -1,4 +1,11 @@
-
+# Settings
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
+
+# Can ignore specific files
+.DS_Store
+
+# logs and stuff
+log/*
+
