@@ -1,16 +1,13 @@
 $(function(){ 
 	$('#agent_publisher').on('change', agent_update_publisher_view )
 
-	$('#seed').on('change', agent_update_seed_view )	
-
-		// Manage payload selectors list
-		$('.payload_selector_add').on('click', add_payload_selector_from_click)
-		$('.payload_selector_value').on('keypress', add_payload_selector_from_keypress)
+	$('#seed').on('change', agent_update_seed_view )	;
+	update_payload_selector_add();
 	});
 
-/**
+/*
 *	Toggle form according to Agent publisher
-**/
+*/
 function agent_update_publisher_view(event) {
 	publisher = $(this).find(':selected').val();
 
@@ -23,6 +20,7 @@ function agent_update_publisher_view(event) {
 	} else if(publisher === 'sql') {
 		$('#publisher_content').html("<%= j render(:partial => 'publisher_sql') %>");
 	} 
+	update_payload_selector_add();
 }
 
 /**
@@ -129,6 +127,15 @@ function remove_payload_selector(event) {
 **/
 function update_payload_selector_remove() {
 	$('.payload_selector_remove').on('click', remove_payload_selector);
+}
+
+/**
+*	Reassign Selectors "Add" button attributes
+**/
+function update_payload_selector_add() {
+	// Manage payload selectors list
+	$('.payload_selector_add').on('click', add_payload_selector_from_click)
+	$('.payload_selector_value').on('keypress', add_payload_selector_from_keypress)
 }
 
 function remove_obj_from_array(list, val) {

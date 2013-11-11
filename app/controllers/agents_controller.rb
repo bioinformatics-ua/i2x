@@ -16,7 +16,6 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
-    #@seed = Seed.new
 
     respond_to do |format|
       format.html {render action: "new"}
@@ -32,7 +31,7 @@ class AgentsController < ApplicationController
   # POST /agents.json
   def create
     @agent = Agent.new(agent_params)
-    @seed = @agent.seed.build(seed_params)
+    #@seed = @agent.seed.build(seed_params)
     respond_to do |format|
       if @agent.save
         format.html { redirect_to @agent, notice: 'Agent was successfully created.' }

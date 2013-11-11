@@ -11,7 +11,7 @@ development:
   password: telematica
   host: 127.0.0.1
   port: 3306
-  pool: 5
+  pool: 500
   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
@@ -36,5 +36,5 @@ production:
   password: telematica
   host: 127.0.0.1
   port: 3306
-  pool: 5
+  pool: 500
   timeout: 5000

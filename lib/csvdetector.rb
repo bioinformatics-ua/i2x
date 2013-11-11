@@ -2,6 +2,7 @@ require 'helper'
 require 'cashier'
 require 'csv'
 require 'open-uri'
+require 'raven'
 
 module Services
 
@@ -44,11 +45,21 @@ module Services
 						end
 					end
 					
+					
+			
 					@response = { :payload => @payloads, :status => 100}
 			rescue Exception => e
 				@response = {:status => 404, :message => "[i2x][CSVDetector] failed to load CSV doc, #{e}"}
 				puts "[i2x][CSVDetector] failed to load CSV doc, #{e}"
+				Raven.capture_exception
 			end
+			
+			begin
+						@agent[:last_check_at] = @help.datetime
+						@agent.save
+					rescue Exception => e
+						Raven.capture_exception
+					end
 
 			@response
 		end

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-I2x::Application.load_tasks
+I2X::Application.load_tasks

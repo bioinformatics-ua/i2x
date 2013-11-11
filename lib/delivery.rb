@@ -1,4 +1,6 @@
 require 'helper'
+require 'raven'
+require 'rails_config'
 
 module Services
 	
@@ -37,7 +39,7 @@ module Services
 	  				end
 	  			end	  			
 	  		rescue Exception => e
-	  			puts e
+	  			Raven.capture_exception(e)
 	  		end
 	  	end
 
@@ -51,6 +53,7 @@ module Services
 	  			end
 	  		rescue => e
 	  			puts e
+	  			Raven.capture_exception(e)
 	  		end
 	  	end
 

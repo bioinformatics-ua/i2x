@@ -13,7 +13,7 @@
  <!-- Set the viewport width to device width for mobile -->
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <%= favicon_link_tag 'favicon.ico' %>
- <title><%= content_for?(:title) ? yield(:title) : "i2x" %></title>
+ <title><%= content_for?(:title) ? yield(:title) : Settings.app.title %></title>
 
  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600' rel='stylesheet' type='text/css'>
  <%= stylesheet_link_tag    "application" %>
@@ -28,7 +28,7 @@
       <!-- Title Area -->
 
       <li class="name">
-        <h1><a href="/i2x">i2x</a></h1>
+        <h1><a href="/i2x"><%= Settings.app.title %></a></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
     </ul>

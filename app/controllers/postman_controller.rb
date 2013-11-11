@@ -3,9 +3,27 @@ require 'delivery'
 require 'sqltemplate'
 require 'filetemplate'
 require 'urltemplate'
+require 'raven'
 
 class PostmanController < ApplicationController
 	def deliver
+		
+		if Settings.log.sentry then
+							Raven.capture_message("[i2x][Postman] Starting delivery for #{params[:identifier]}", { 
+								:level => 'info', 
+								:tags => {
+			 							'environment' => Rails.env,
+			 							'version' => Settings.app.version,
+			 							'module' => 'Postman',
+			 							'task' => 'deliver'
+									},
+									:server_name => Settings.app.host,
+								:extra => {
+									'template' => params[:identifier]
+								}
+							})
+						end
+
 		@delivery
 		begin
 			@template = Template.find_by! identifier: params[:identifier]
@@ -21,6 +39,7 @@ class PostmanController < ApplicationController
 		rescue Exception => e
 			puts e
 			@response = { :status => "401", :message => "[i2x] Unable to load selected Delivery Template", :identifier => params[:identifier], :error => e }
+			Raven.capture_exception(e)
 		end
 
 		begin
@@ -28,12 +47,14 @@ class PostmanController < ApplicationController
 		rescue Exception => e
 			puts e
 			@response = { :status => "402", :message => "[i2x] Unable to process input parameters", :identifier => params[:identifier], :error => e, :template => @template }
+			Raven.capture_exception(e)
 		end
 
 		begin
 			@response = @delivery.execute
 		rescue Exception => e
 			@response = { :status => "403", :message => "[i2x] Unable to perform final delivery, #{e}", :identifier => params[:identifier], :error => e, :template => @template }
+			Raven.capture_exception(e)
 		end
 
 		respond_to do |format|	
@@ -65,18 +86,21 @@ class PostmanController < ApplicationController
 			end
 		rescue Exception => e
 			@response = { :status => "401", :message => "[i2x] Unable to load selected Delivery Template", :identifier => params[:identifier], :publisher => params[:publisher], :error => e }
+			Raven.capture_exception(e)
 		end
 
 		begin
 			@delivery.process params
 		rescue Exception => e
 			@response = { :status => "402", :message => "[i2x] Unable to process input parameters", :identifier => params[:identifier], :publisher => params[:publisher], :error => e, :template => @template }
+			Raven.capture_exception(e)
 		end
 
 		begin
 			@response = @delivery.execute
 		rescue Exception => e
 			@response = { :status => "403", :message => "[i2x] Unable to perform final delivery, #{e}", :identifier => params[:identifier], :publisher => params[:publisher], :error => e, :template => @template }
+			Raven.capture_exception(e)
 		end
 		
 		respond_to do |format|	
@@ -104,6 +128,7 @@ class PostmanController < ApplicationController
 			end			
 		rescue
 			response = { :status => "401", :message => "Error: template not found for #{params[:publisher]} with name #{params[:key]}.", :error =>  $!}
+			Raven.capture_exception(e)
 		end
 
 		respond_to do |format|			

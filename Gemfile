@@ -27,7 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'compass-rails' 
+gem 'compass-rails', '~> 2.0.alpha.0'
 
 # Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
 gem 'zurb-foundation'
@@ -58,12 +58,15 @@ gem 'rest-client'
 # XML, HTML, Reader parser.
 gem 'nokogiri'
 
-# Redis cache access
+# Redis cache access. Read more: https://github.com/redis/redis-rb
 gem 'hiredis'
 gem 'redis'
 
 # Sentry logger access. Read more: https://github.com/getsentry/raven-ruby
 gem "sentry-raven"
+
+# Simpler configuration properties. Read more: https://github.com/railsjedi/rails_config
+gem "rails_config"
 
 group :development, :test do
 # Generates UML from Model.

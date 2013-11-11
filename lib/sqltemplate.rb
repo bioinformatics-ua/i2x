@@ -1,4 +1,5 @@
 require 'delivery'
+require 'raven'
 
 module Services
 	class SQLTemplate < Delivery
@@ -9,17 +10,22 @@ module Services
 		# => Performs the actual delivery, in this case, execure SQL query.
 		#
 		def execute
-			case @template[:payload][:server]
-			when 'mysql'
-				client = Mysql2::Client.new(:host => @template[:payload][:host], :username => @template[:payload][:username] , :password => @template[:payload][:password], :database => @template[:payload][:database] )
-				result = client.query @template[:payload][:query]
-				if client.last_id > 0 then
-					response = { :status => "200", :message => "SQL Query successfully executed", :id => client.last_id}
-				end
-				client.close
-			when 'sqlserver'
-				response = { :status => "400", :message => "SQL Server is unsupported" }
+			begin
+				case @template[:payload][:server]
+					when 'mysql'
+						client = Mysql2::Client.new(:host => @template[:payload][:host], :username => @template[:payload][:username] , :password => @template[:payload][:password], :database => @template[:payload][:database] )
+						result = client.query @template[:payload][:query]
+						if client.last_id > 0 then
+							response = { :status => "200", :message => "SQL Query successfully executed", :id => client.last_id}
+						end
+						client.close
+					when 'sqlserver'
+						response = { :status => "400", :message => "SQL Server is unsupported" }
+					end
+			rescue Exception => e
+				Raven.capture_exception(e)
 			end
+			
 			response
 		end
   		#handle_asynchronously :execute

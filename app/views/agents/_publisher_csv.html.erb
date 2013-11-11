@@ -1,4 +1,4 @@
-<div class="row">
+
 	<fieldset>
 		<legend>CSV Publisher Properties</legend>	
 		<div class="row">
@@ -33,5 +33,24 @@
 				<input id="agent_payload_cache" name="agent[cache]" type="number">
 			</div>
 		</div>
-	</fieldset>
+<div class="row">
+	<input type="hidden" id="payload_selector_hidden" name="agent[selectors]" value='[]'>
+	<div id="payload_selector_include">
+
+	</div>
+	<div>
+		<div class="small-3 columns">
+			<span class="right inline">New Selector</span>
+		</div>
+		<div class="small-3 columns">
+			<input type="text" class="payload_selector_key " tabindex="17" data-id="1" placeholder="Key" id="payload_selector_key_1">
+		</div>
+		<div class="small-3 columns">
+			<input type="text" class="payload_selector_value " tabindex="18" data-id="1" placeholder="Value" id="payload_selector_value_1">
+		</div>
+		<div class="small-3 columns">
+			<a href="#" data-id="1" class="button prefix payload_selector_add" tabindex="19" id="payload_selector_button_1">Add</a>
+		</div>
+	</div>
 </div>
+	</fieldset>

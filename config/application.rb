@@ -21,12 +21,7 @@ module I2X
     # config.i18n.default_locale = :de
     config.autoload_paths += %W(#{config.root}/app/workers)
     config.autoload_paths += %W(#{config.root}/app/helpers)
-    config.autoload_paths += %W(#{config.root}/lib)
-
-    Raven.configure do |config|
-        config.dsn = 'http://f7613acf782045ed8d08a8e2262891d0:10bfbe80ae07446e8f07f100f7849f84@0.0.0.0:9000/1'
-         config.environments = %w[ production development test ]
-    end    
+    config.autoload_paths += %W(#{config.root}/lib) 
   end
 
 
