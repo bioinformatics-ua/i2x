@@ -45,6 +45,14 @@ class Agent < ActiveRecord::Base
   # => Initiate agent processing to perform delivery
   #
   def process checkup
+    ##
+    # => Load seed.
+    #
+    begin
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+    
     ## this should be simpler!!!
     begin
       puts identifier

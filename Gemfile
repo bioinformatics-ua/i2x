@@ -35,7 +35,9 @@ gem 'zurb-foundation'
 # Advanced markdown to HTML converter. Read more: http://kramdown.rubyforge.org
 gem 'kramdown'
 
+# Databases
 gem  'mysql2'
+gem 'pg'
 
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
@@ -67,6 +69,9 @@ gem "sentry-raven"
 
 # Simpler configuration properties. Read more: https://github.com/railsjedi/rails_config
 gem "rails_config"
+
+# JSON Path detection support. Read more: http://rubydoc.info/gems/jsonpath/0.5.5/frames
+gem 'jsonpath'
 
 group :development, :test do
 # Generates UML from Model.

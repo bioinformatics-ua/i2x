@@ -15,6 +15,10 @@ module Services
     public
 
     def checkup
+      # update checkup time
+      @agent.update_check_at @help.datetime
+      
+      
       @response = Hash.new
       @help = Services::Helper.new
       begin
@@ -51,28 +55,12 @@ module Services
             end
             # add payload object to payloads list
             @payloads.push payload
-            # increase detected events count
-            @agent.increment!(:events_count)
-
           end
         end
-
+        @agent.increment!(:events_count, @payloads.size)
         @response = { :payload => @payloads, :status => 100}
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][SQLDetector] failed to load data from database, #{e}", :agent => @agent }
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
-      end
-
-
-      # Update agent checkup timestamp
-      #
-      begin
-        @agent[:last_check_at] = @help.datetime
-        @agent.save
-      rescue Exception => e
-        @response = {:status => 405, :message => "[i2x][SQLDetector] failed to update Agent metadata, #{e}"}
         if Settings.log.sentry then
           Raven.capture_exception(e)
         end

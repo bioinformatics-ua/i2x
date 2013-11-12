@@ -1,6 +1,6 @@
 require 'helper'
-require 'raven'
-require 'rails_config'
+require 'slog'
+require 'json'
 
 module Services
 
@@ -22,9 +22,7 @@ module Services
         
         self.process_helpers
       rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
 
     end
@@ -42,13 +40,17 @@ module Services
         @template[:payload].each_pair do |key,value|
           variables = @help.identify_variables @template[:payload][key]
           variables.each do |v|
-            @template[:payload][key].gsub!("%{#{v}}", params[v])
+            unless params[v].nil? then
+              if params[v].kind_of? Array then
+                @template[:payload][key].gsub!("%{#{v}}", params[v].to_json)
+              else
+                @template[:payload][key].gsub!("%{#{v}}", params[v])
+              end
+            end
           end
         end
       rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
     end
 
@@ -61,9 +63,7 @@ module Services
           @help.replacements.each {|replacement| @template[:payload][key].gsub!(replacement[0], replacement[1])}
         end
       rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
     end
 

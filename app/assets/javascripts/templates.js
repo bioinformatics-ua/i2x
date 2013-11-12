@@ -8,10 +8,6 @@ $(function(){
 	$('#publisher').on('change', update_publisher_view )
 	$('#publisher_url_method').on('change', update_publisher_url_params_view )
 
-	// Manage variable list
-	$('.template_variables_add').on('click', add_template_variable_from_click)
-	$('.template_variable_text').on('keypress', add_template_variable_from_keypress)
-
 	// Manage POST params list
 	$('.publisher_url_post_params_add').on('click', add_url_post_params_from_click)
 	$('.publisher_url_post_params_value').on('keypress', add_url_post_params_from_keypress)
@@ -56,13 +52,6 @@ function update_publisher_url_params_view(event) {
 }
 
 /**
-*	Reload jQuery model to listen to new events for variable "Remove" button
-**/
-function update_template_variables_remove() {
-	$('.template_variables_remove').on('click', remove_template_variable);
-}
-
-/**
 *	Reload jQuery model to listen to new events for POST params "Remove" button
 **/
 function update_url_post_params_remove() {
@@ -95,7 +84,7 @@ function add_url_post_params(id) {
 		origin_value_text.parent().addClass('error');
 	} else {
 		// process
-		destination.append('<div class="row publisher_url_post_params_new_' + id + '"><div class="small-3 columns publisher_url_post_params_key_' + id + '"><input data-id="' + id  + '" type="text" placeholder="E.g.: id" disabled class="disabled publisher_url_post_params_key" value="' + origin_key_text.val() + '"></div><div class="small-7 columns publisher_url_post_params_value_' + id + '"><input id="publisher_url_post_params_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-2 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id +'" class="button prefix alert publisher_url_params_remove">Remove</a></div></div>');
+		destination.append('<div class="row publisher_url_post_params_new_' + id + '"><div class="small-3 columns publisher_url_post_params_key_' + id + '"><input data-id="' + id  + '" type="text" placeholder="E.g.: id" disabled class="disabled publisher_url_post_params_key" value="' + origin_key_text.val() + '"></div><div class="small-7 columns publisher_url_post_params_value_' + id + '"><input id="publisher_url_post_params_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled " value="' + origin_value_text.val() + '"></div><div class="small-2 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id +'" class="button prefix alert publisher_url_params_remove">Remove</a></div></div>');
 		origin_key_text.removeAttr('id');
 		origin_value_text.removeAttr('id');
 		origin_button.removeAttr('id')
@@ -110,7 +99,6 @@ function add_url_post_params(id) {
 		origin_key_text.focus();
 		update_url_post_params_remove();
 	}
-	//$('.template_variables_base').parent().removeClass('error');
 }
 
 /**
@@ -139,57 +127,6 @@ function remove_url_post_params(event) {
 	$('.publisher_url_post_params_new_' + $(this).data('id')).remove();
 }
 
-/**
-*	Add Template variable
-**/
-function add_template_variable(id) {
-	
-	var destination = $('#template_variables_include');
-	var next_id = id +1;	
-	var origin_text = $('#template_variables_text_' + id);
-	var origin_button = $('#template_variables_button_' + id); 
-	
-	if(!destination.is(':visible')) {
-		destination.show();	
-	}	
-
-	destination.append('<div class="small-10 columns template_variables_new_' + id + '"><input type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_text.val() + '"></div><div class="small-2 columns template_variables_new_' + id + '"><a href="#" data-id="' + id +'" class="button prefix alert template_variables_remove">Remove</a></div>');
-	origin_text.removeAttr('id')
-	origin_button.removeAttr('id')
-	origin_text.attr('id', 'template_variables_text_' + next_id);
-	origin_button.attr('id', 'template_variables_button_' + next_id);
-	origin_text.val('');
-	origin_text.data('id', next_id);
-	origin_button.data('id', next_id);
-	update_template_variables_remove();
-	$('.template_variables_base').parent().removeClass('error');
-}
-
-/**
-*	Add Template variable handler for button click
-**/
-function add_template_variable_from_click(event) {
-	event.preventDefault();
-	add_template_variable($(this).data('id'));
-
-}
-
-/**
-*	Add Template variable handler for "enter" keypress
-**/
-function add_template_variable_from_keypress(event) {
-	if(event.which == 13) {
-		add_template_variable($(this).data('id'));
-	}	
-}
-
-/**
-*	Removes existing Template variable
-**/
-function remove_template_variable(event) {
-	event.preventDefault();
-	$('.template_variables_new_' + $(this).data('id')).remove();
-}
 
 /**
 *	Click handler to save form content.
@@ -219,21 +156,6 @@ function save_template() {
 	var help = $('#template_help').val();
 	var publisher = $('#publisher :selected').val();
 	
-	// generate variables content
-	var variables = '[';
-
-	if (!validate_template()) {
-		//alert('Something\'s not right...');
-	} else {
-		$('#template_variables_include').find('.template_variable_text').each(function() {		
-			var value = $(this).val();
-
-			if (value != '') {
-				variables += '"' + value + '", ';
-			}		
-		})
-		variables = variables.substring(0, variables.length - 2);
-		variables += ']';
 
 	// generate payload content
 	var payload = '{';
@@ -267,7 +189,7 @@ function save_template() {
 
 	// generate final template object
 
-	var template = '{"identifier":"' + identifier + '","title":"' + title + '","help":"' + help + '","publisher":"' + publisher + '","variables":' + variables + ',"payload":' + payload + '}';
+	var template = '{"identifier":"' + identifier + '","title":"' + title + '","help":"' + help + '","publisher":"' + publisher + '","payload":' + payload + '}';
 	
 	$.ajax({
 		url: "../templates/new",
@@ -277,7 +199,7 @@ function save_template() {
 		success: handle_save
 	})
 }
-}
+
 
 /**
 *	Handle save response
@@ -313,20 +235,15 @@ function validate_template() {
 		success = false;
 	}
 
-	// check if there are variables
-	if ($('#template_variables_include').find('.template_variable_text').length == 0) {
-		$('.template_variables_base').parent().addClass('error');
-		success = false;
-	}
 
 	// check publishers content
 	var publisher = $('#publisher :selected').val();
 	if (publisher === 'sql') {
 	} else if (publisher === 'file') {
-		if(!$('#publisher_file_uri').val().startsWith('file://')) {
+	/*	if(!$('#publisher_file_uri').val().startsWith('file://')) {
 			$('#publisher_file_uri').parent().addClass('error');
 			success = false;
-		}
+		}*/
 	} else if (publisher === 'url') {
 		if(!$('#publisher_url_uri').val().startsWith('http://')) {
 			$('#publisher_url_uri').parent().addClass('error');

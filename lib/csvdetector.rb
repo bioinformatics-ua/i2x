@@ -2,7 +2,6 @@ require 'helper'
 require 'cashier'
 require 'csv'
 require 'open-uri'
-require 'raven'
 
 module Services
 
@@ -15,11 +14,12 @@ module Services
     public
 
     def checkup
+      # update checkup time
+      @agent.update_check_at @help.datetime
+      
       @payloads = []
       @help = Services::Helper.new
       begin
-        #@content
-        #open(@agent[:payload][:uri]) {|f| @content = f.read()}
         CSV.new(open(@agent[:payload][:uri]), :headers => :first_row).each do |row|
           unless @agent[:payload][:cache].nil? then
             @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row
@@ -39,29 +39,15 @@ module Services
             end
             # add payload object to payloads list
             @payloads.push payload
-            # increase detected events count
-            @agent.increment!(:events_count)
-
           end
         end
 
-
-
+        # increase detected events count
+        @agent.increment!(:events_count, @payloads.size)
         @response = { :payload => @payloads, :status => 100}
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][CSVDetector] failed to load CSV doc, #{e}"}
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
-      end
-
-      begin
-        @agent[:last_check_at] = @help.datetime
-        @agent.save
-      rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
 
       @response

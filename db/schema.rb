@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131106174708) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
     t.integer  "agent_id"

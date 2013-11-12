@@ -79,6 +79,8 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    jsonpath (0.5.3)
+      multi_json
     kramdown (1.2.0)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -92,6 +94,7 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
+    pg (0.17.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-protection (1.5.1)
@@ -180,9 +183,11 @@ DEPENDENCIES
   hiredis
   jbuilder (~> 1.2)
   jquery-rails
+  jsonpath
   kramdown
   mysql2
   nokogiri
+  pg
   railroady
   rails (= 4.0.0)
   rails_config

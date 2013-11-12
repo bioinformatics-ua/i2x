@@ -22,5 +22,5 @@ cache:
 # Log settings if Sentry is used
 log:
  sentry: true
- dsn: http://12ab54380f9c45628816402439f08bb2:24783b9619974ed48bb46d1d44f0302f@127.0.0.1:9000/1
+ dsn: http://044835293c194b03a832913346edaf6f:a8080b4c1d864907b2299d98020d10e5@127.0.0.1:9000/1
  level: low

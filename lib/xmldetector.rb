@@ -16,12 +16,14 @@ module Services
     public
 
     def checkup
+      # update checkup time
+      @agent.update_check_at @help.datetime
+      
       @help = Services::Helper.new
       begin
         @doc = Nokogiri::XML(open(@agent[:payload][:uri]))
         Services::Slog.debug({:message => "Starting agent checkup #{@agent[:identifier]}", :module => "XMLDetector", :task => "checkup", :extra => {:agent => @agent[:identifier], :uri => @agent[:payload][:uri]}})
-        
-        @agent.update_check_at @help.datetime
+
         
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][XMLDetector] failed to load XML doc, #{e}"}
@@ -57,7 +59,7 @@ module Services
           end
         end
         # increase detected events count
-        @agent.update_events_count @payloads.size
+        @agent.increment!(:events_count, @payloads.size)
         @response = { :payload => @payloads, :status => @cache[:status]}
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][XMLDetector] failed to process XPath, #{e}"}

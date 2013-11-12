@@ -1,6 +1,5 @@
 require 'delivery'
-require 'raven'
-require 'rails_config'
+require 'slog'
 
 module Services
   class FileTemplate < Delivery
@@ -23,23 +22,19 @@ module Services
             File.open(@template[:payload][:uri], "w") { |file| file.write(@template[:payload][:content]) }
           end
         rescue Exception => e
-          if Settings.log.sentry then
-            Raven.capture_exception(e)
-          end
+          Services::Slog.exception e
           response = { :status => "400", :message => "Method not is unsupported, #{e}"  }
         end
       when 'append'
         begin
-          @template[:payload][:uri]["file://"] = ''
+          
           unless @template[:payload][:content].nil?
             File.open(@template[:payload][:uri], "a") { |file| file.write(@template[:payload][:content]) }
           end
           response = { :status => "200", :message => "Content appended to file", :id =>  @template[:payload][:uri]}
         rescue Exception => e
           response = { :status => "403", :message => "Error processing file, #{e}" }
-          if Settings.log.sentry then
-            Raven.capture_exception(e)
-          end
+          Services::Slog.exception e
         end
 
       end
