@@ -22,9 +22,9 @@ module Services
       begin
         CSV.new(open(@agent[:payload][:uri]), :headers => :first_row).each do |row|
           unless @agent[:payload][:cache].nil? then
-            @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row
+            @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row, 'seed'
           else
-            @cache = Cashier.verify row[0], @agent, row
+            @cache = Cashier.verify row[0], @agent, row, 'seed'
           end
           # The actual processing
           #

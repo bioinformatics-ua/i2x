@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,6 +43,9 @@ gem 'pg'
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
 
+# NOT WORKING! Additional User information. Read more: https://github.com/n8/devise_marketable
+gem 'devise_marketable', "~> 0.0.4"
+
 # Daemons for delayed job execution. Read more: https://github.com/collectiveidea/delayed_job
 gem 'daemons'
 
@@ -82,6 +86,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

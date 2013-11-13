@@ -1,7 +1,7 @@
 require 'helper'
 require 'cashier'
 require 'mysql2'
-require 'raven'
+require 'slog'
 
 module Services
 
@@ -25,9 +25,7 @@ module Services
         @client = Mysql2::Client.new(:host => @agent[:payload][:host], :username => @agent[:payload][:username] , :password => @agent[:payload][:password] , :database => @agent[:payload][:database])
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][SQLDetector] failed to load database connection, #{e.inspect}", :agent => @agent}
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
 
       # Execute Agent query on SQL database, check if content has been seen before
@@ -36,9 +34,9 @@ module Services
         @payloads = []
         @client.query(@agent[:payload][:query]).each(:symbolize_keys => false) do |row|
           unless @agent[:payload][:cache].nil? then
-            @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row
+            @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row, 'seed'
           else
-            @cache = Cashier.verify row["id"], @agent, row
+            @cache = Cashier.verify row["id"], @agent, row, 'seed'
           end
 
           # The actual processing
@@ -48,7 +46,6 @@ module Services
             # add row data to payload from selectors (key => key, value => column name)
             payload = Hash.new
             JSON.parse(@agent[:payload][:selectors]).each do |selector|
-
               selector.each do |k,v|
                 payload[k] = row[v]
               end
@@ -61,9 +58,7 @@ module Services
         @response = { :payload => @payloads, :status => 100}
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][SQLDetector] failed to load data from database, #{e}", :agent => @agent }
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
 
       @response

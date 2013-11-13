@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106174708) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20131112222713) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -128,6 +125,8 @@ ActiveRecord::Schema.define(version: 20131106174708) do
     t.string   "name"
     t.string   "username"
     t.string   "apikey"
+    t.text     "referring_url"
+    t.text     "landing_url"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

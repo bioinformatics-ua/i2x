@@ -53,5 +53,9 @@
 </p>
 
 
+<% @agent.seed.each do |seed| %>
+<%= render partial: "seeds/show", locals: {:seed => seed} %>  
+<% end %>
+
 <%= link_to 'Edit', edit_agent_path(@agent) %> |
 <%= link_to 'Back', agents_path %>

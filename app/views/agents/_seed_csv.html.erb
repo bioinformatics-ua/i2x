@@ -35,6 +35,14 @@
 		</div>
 		<div class="row">
 			<div class="small-3 columns">
+				<label class="right inline">Cache</label>
+			</div>
+			<div class="small-9 columns">
+				<input id="agent_seed_cache" name="seed[cache]" type="number">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-3 columns">
 				<label class="right inline">Delimiter</label>
 			</div>
 			<div class="small-9 columns">
@@ -42,11 +50,23 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="small-3 columns">
-				<label class="right inline">Cache</label>
+			<input type="hidden" id="seed_selector_hidden" name="seed[selectors]" value='[]'>
+			<div id="seed_selector_include">
+		
 			</div>
-			<div class="small-9 columns">
-				<input id="agent_seed_cache" name="seed[cache]" type="number">
+			<div>
+				<div class="small-3 columns">
+					<span class="right inline">New Selector</span>
+				</div>
+				<div class="small-3 columns">
+					<input type="text" class="seed_selector_key " tabindex="17" data-id="1" placeholder="Key" id="seed_selector_key_1">
+				</div>
+				<div class="small-3 columns">
+					<input type="text" class="seed_selector_value " tabindex="18" data-id="1" placeholder="Value" id="seed_selector_value_1">
+				</div>
+				<div class="small-3 columns">
+					<a href="#" data-id="1" class="button prefix seed_selector_add" tabindex="19" id="seed_selector_button_1">Add</a>
+				</div>
 			</div>
 		</div>
 	</fieldset>

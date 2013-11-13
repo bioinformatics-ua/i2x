@@ -1,5 +1,5 @@
-require 'raven'
 require 'rails_config'
+require 'slog'
 
 module Services
 
@@ -38,16 +38,14 @@ module Services
     #
     def identify_variables text
       begin
-        results = Array.new        
+        results = Array.new
         text.scan(/%{(.*?)}/).each do |m|
           results.push m[0]
         end
       rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
-     
+
       results
     end
 
@@ -61,46 +59,44 @@ module Services
     def self.validate_payload publisher, payload
       @database_servers = ["mysql","sqlite","postgresql"]
       valid = true
-      
+
       begin
         case publisher
-          when 'csv', 'xml', 'json', 'file', 'js'
-            # file content URI is mandatory
-            if payload[:uri].nil? then
-              valid = false
-            end
-          when 'sql'
-        
-            # check if database server is available
-            unless database_servers.include? payload[:server] then
-              valid = false
-            end
-        
-            # database username is mandatory
-            if payload[:username].nil? then
-              valid = false
-            end
-        
-            # database user password is mandatory
-            if payload[:password].nil? then
-              valid = false
-            end
-        
-            # database name is mandatory
-            if payload[:database].nil? then
-              valid = false
-            end
-        
-            # database query is mandatory
-            if payload[:query].nil? then
-              valid = false
-            end
+        when 'csv', 'xml', 'json', 'file', 'js'
+          # file content URI is mandatory
+          if payload[:uri].nil? then
+            valid = false
           end
-      rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
+        when 'sql'
+
+          # check if database server is available
+          unless database_servers.include? payload[:server] then
+            valid = false
+          end
+
+          # database username is mandatory
+          if payload[:username].nil? then
+            valid = false
+          end
+
+          # database user password is mandatory
+          if payload[:password].nil? then
+            valid = false
+          end
+
+          # database name is mandatory
+          if payload[:database].nil? then
+            valid = false
+          end
+
+          # database query is mandatory
+          if payload[:query].nil? then
+            valid = false
+          end
         end
-      end     
+      rescue Exception => e
+        Services::Slog.exception e
+      end
       valid
     end
 
@@ -122,13 +118,10 @@ module Services
         else
           valid = false
         end
-        rescue Exception => e
-          if Settings.log.sentry then
-            Raven.capture_exception(e)
-          end
-
+      rescue Exception => e
+        Services::Slog.exception e
       end
-      
+
       valid
     end
 
@@ -142,13 +135,20 @@ module Services
       begin
         valid = self.validate_seed(agent[:publisher], agent[:payload]) && self.validate_payload(agent[:publisher], agent[:payload])
       rescue Exception => e
-        if Settings.log.sentry then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
-      
+
       valid
     end
-    
+
+    ##
+    # == Copy Object/Hash/Array...
+    # => Copies any object into new object (overcome references).
+    #
+    # + *o* - the object being copied
+    #
+    def deep_copy object
+      Marshal.load(Marshal.dump(object))
+    end
   end
 end

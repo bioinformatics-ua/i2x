@@ -35,7 +35,7 @@ module Services
         @doc.remove_namespaces!
         @doc.xpath(@agent[:payload][:query]).each do |element|
           element.xpath(@agent[:payload][:cache]).each do |c|
-            @cache = Cashier.verify c.content, @agent, c.content
+            @cache = Cashier.verify c.content, @agent, c.content, 'seed'
           end
 
           ##

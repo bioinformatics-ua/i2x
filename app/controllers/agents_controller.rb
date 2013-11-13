@@ -30,8 +30,10 @@ class AgentsController < ApplicationController
   # POST /agents
   # POST /agents.json
   def create
-    @agent = Agent.new(agent_params)
-    #@seed = @agent.seed.build(seed_params)
+    @help = Services::Helper.new
+    @agent = Agent.new agent_params
+    @agent.last_check_at @help.datetime
+    @seed = @agent.seed.build(seed_params)
     respond_to do |format|
       if @agent.save
         format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
@@ -90,10 +92,15 @@ class AgentsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def agent_params
-    params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    a = params[:agent].clone
+    a[:agent] = params[:agent]
+    a.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    
   end
 
   def seed_params
-    params.require(:agent).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    s = params[:seed].clone
+    s[:seed] = params[:seed]
+    s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
   end
 end

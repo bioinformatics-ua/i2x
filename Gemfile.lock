@@ -61,6 +61,8 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise_marketable (0.0.4)
+      devise
     erubis (2.7.0)
     execjs (2.0.2)
     faraday (0.8.8)
@@ -79,7 +81,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    jsonpath (0.5.3)
+    jsonpath (0.5.5)
       multi_json
     kramdown (1.2.0)
     mail (2.5.4)
@@ -93,7 +95,7 @@ GEM
     mysql2 (0.3.14)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    orm_adapter (0.4.0)
+    orm_adapter (0.5.0)
     pg (0.17.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -180,6 +182,7 @@ DEPENDENCIES
   delayed_job_active_record
   delayed_job_web
   devise
+  devise_marketable (~> 0.0.4)
   hiredis
   jbuilder (~> 1.2)
   jquery-rails
