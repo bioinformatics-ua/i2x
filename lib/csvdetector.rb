@@ -2,6 +2,11 @@ require 'helper'
 require 'cashier'
 require 'csv'
 require 'open-uri'
+require 'seedreader'
+require 'csvseedreader'
+require 'sqlseedreader'
+require 'xmlseedreader'
+require 'jsonseedreader'
 
 module Services
 
@@ -12,19 +17,17 @@ module Services
   class CSVDetector < Detector
 
     public
-
-    def checkup
-      # update checkup time
-      @agent.update_check_at @help.datetime
-      
-      @payloads = []
-      @help = Services::Helper.new
+    ##
+    # == Detect the changes
+    #
+    def detect object
+      puts "\n\tDetecting #{object[:identifier]}"
       begin
-        CSV.new(open(@agent[:payload][:uri]), :headers => :first_row).each do |row|
-          unless @agent[:payload][:cache].nil? then
-            @cache = Cashier.verify row[@agent[:payload][:cache]], @agent, row, 'seed'
+        CSV.new(open(object[:uri]), :headers => :first_row).each do |row|
+          unless object[:cache].nil? then
+            @cache = Cashier.verify row[object[:cache].to_i], object, row, object[:seed]
           else
-            @cache = Cashier.verify row[0], @agent, row, 'seed'
+            @cache = Cashier.verify row[0], object, row, object[:seed]
           end
           # The actual processing
           #
@@ -32,25 +35,20 @@ module Services
 
             # add row data to payload from selectors (key => key, value => column name)
             payload = Hash.new
-            JSON.parse(@agent[:payload][:selectors]).each do |selector|
+            JSON.parse(object[:selectors]).each do |selector|
               selector.each do |k,v|
-                payload[k] = row[v]
+                payload[k] = row[v.to_i]
               end
             end
             # add payload object to payloads list
             @payloads.push payload
           end
         end
-
-        # increase detected events count
-        @agent.increment!(:events_count, @payloads.size)
-        @response = { :payload => @payloads, :status => 100}
       rescue Exception => e
-        @response = {:status => 404, :message => "[i2x][CSVDetector] failed to load CSV doc, #{e}"}
         Services::Slog.exception e
       end
-
-      @response
     end
+
+    
   end
 end

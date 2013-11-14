@@ -21,12 +21,12 @@ module Services
             object.each_pair do |key,value|
               variables = @help.identify_variables(object[key])
               variables.each do |v|
-                object[key].gsub!("%{#{v}}", row[@seed[:payload][:selectors][v]])
+                object[key].gsub!("%{#{v}}", row[@seed[:payload][:selectors][v].to_i])
               end
             end
-
+            
             unless @seed[:payload][:cache].nil? then
-            	object[:seed] = row[@seed[:payload][:cache]]
+            	object[:seed] = row[@seed[:payload][:cache].to_i]
             else
             	object[:seed] = row[0]
             end

@@ -23,13 +23,19 @@ module Services
               variables = @help.identify_variables(object[key])
               variables.each do |v|
                 element.xpath(@seed[:payload][:selectors][v]).each do |el|
-                  object[key].gsub!("%{#{v}}", el)
+                  object[key].gsub!("%{#{v}}", el.content)
                 end
               end
             end
 
-            element.xpath(@seed[:payload][:cache]).each do |el|
-              object[:seed] = el
+            unless @seed[:payload][:cache].nil? then
+              element.xpath(@seed[:payload][:cache]).each do |el|
+                object[:seed] = el.content
+              end
+            else
+              element.xpath('id').each do |el|
+                object[:seed] = el.content
+              end
             end
 
             object[:identifier] = @agent.identifier

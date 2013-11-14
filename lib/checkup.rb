@@ -1,3 +1,4 @@
+
 require 'delayed_job'
 require 'csv'
 require 'detector'
@@ -22,7 +23,6 @@ module Services
         when 'sql'
           begin
             @d = Services::SQLDetector.new(agent.identifier)
-            @checkup = @d.checkup
           rescue Exception => e
             Services::Slog.exception e
             @response = {:status => 400, :error => e}
@@ -30,7 +30,6 @@ module Services
         when 'csv'
           begin
             @d = Services::CSVDetector.new(agent.identifier)
-            @checkup = @d.checkup
           rescue Exception => e
             Services::Slog.exception e
             @response = {:status => 400, :error => e}
@@ -38,7 +37,6 @@ module Services
         when 'xml'
           begin
             @d = Services::XMLDetector.new(agent.identifier)
-            @checkup = @d.checkup
           rescue Exception => e
             Services::Slog.exception e
             @response = {:status => 400, :error => e}
@@ -46,12 +44,27 @@ module Services
         when 'json'
           begin
             @d = Services::JSONDetector.new(agent.identifier)
-            @checkup = @d.checkup
           rescue Exception => e
             Services::Slog.exception e
             @response = {:status => 400, :error => e}
           end
-
+        end
+       
+        # Start checkup
+        begin
+          @checkup = @d.checkup  
+        rescue Exception => e
+          Services::Slog.exception e
+        end
+               
+       # Start detection
+        begin
+          @d.objects.each do |object|
+            puts "Initiating #{object[:identifier]} detection"
+            @d.detect object
+          end
+        rescue Exception => e
+          Services::Slog.exception e
         end
 
         begin

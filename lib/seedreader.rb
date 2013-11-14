@@ -16,7 +16,7 @@ module Services
   	 	@help = Services::Helper.new
   	 	@seed = seed
   	 	@objects = Array.new
-  	 	puts "\t\tSeed: #{@seed[:uri]}"
+  	 	puts "\t\tSeed: #{@seed[:identifier]}"
   	 end
   end
 end

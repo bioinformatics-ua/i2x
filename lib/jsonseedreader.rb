@@ -18,19 +18,23 @@ module Services
         url = RestClient.get @seed[:payload][:uri]
         @doc = url.to_str
         JsonPath.on(@doc,@seed[:payload][:query]).each do |element|
+
           begin
             object = @help.deep_copy @agent[:payload]
             object.each_pair do |key,value|
               variables = @help.identify_variables(object[key])
               variables.each do |v|
+
                 JsonPath.on(element, @seed[:payload][:selectors][v]).each do |el|
-                  object[key].gsub!("%{#{v}}", el)
+                
+                  object[key].gsub!("%{#{v}}", el.to_s)
                 end
               end
             end
 
             JsonPath.on(element,@seed[:payload][:cache]).each do |el|
-            	object[:seed] = el
+              object[:seed] = el
+
             end
 
             object[:identifier] = @agent.identifier

@@ -32,7 +32,7 @@ class AgentsController < ApplicationController
   def create
     @help = Services::Helper.new
     @agent = Agent.new agent_params
-    @agent.last_check_at @help.datetime
+    @agent.last_check_at = @help.datetime
     @seed = @agent.seed.build(seed_params)
     respond_to do |format|
       if @agent.save
