@@ -1,32 +1,59 @@
 I2X::Application.routes.draw do
 
-  resources :integrations
+  # Home
+  root  'home#index'
+  get 'home' => 'home/index'
+  get "home/index"
 
-  resources :seeds
 
-  get "tester/regex", to: 'tester#regex'
+  # Agents control  
+  resources :agents
+  get "agents/partials/:identifier", to: 'agents#partials'  # what is this?
+  get "agents/import/:identifier", to: "agents#import"      # import from JSON file
 
+  # Caches (internal) control
   resources :caches
 
-  get "tester/agent/:identifier", to: 'tester#agent'
-  get "agents/partials/:identifier", to: 'agents#partials'
-  get "agents/import/:identifier", to: "agents#import"
-  resources :agents
-
-
-  post "templates/new"
-  get "templates/start"
-  resources :templates
-
-  resources :variants
-
+  # Delivery control
   get "delivery/get"
   post "delivery/post"
   get "delivery/go"
+
+  # FluxCapacitor control
+
+  # Integrations control
+  resources :integrations
+
+  # Postman control
+  get "postman/load/:publisher/:identifier", to: "postman#load"
+  get "postman/go/:identifier", to: 'postman#go'
+  post "postman/deliver/:identifier", to: "postman#deliver"
+  post "postman/:key", to: "postman#action"
+
+  # Push control
+  post "push/:identifier", to: "push#checkup"
+
+  # Seeds control
+  resources :seeds
+
+  # Templates controls
+  resources :templates
+  post "templates/new"
+  get "templates/start"
+  
+
+  # Tester controller
+  get "tester/regex", to: 'tester#regex'
+  get "tester/agent/:identifier", to: 'tester#agent'
+
+
+  # Authentication
   devise_for :users
-  root  'home#index'
 
+  # Delayed job web interface
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
+  # Documentation control
   get "usecases/variome"
   get "usecases/management"
   get "usecases/medical"
@@ -56,20 +83,8 @@ I2X::Application.routes.draw do
   get "research/comparison"
 
   # general index redirects
-  get 'home'      => 'home/index'
   get 'reference' => 'reference/index'
   get 'usecases'  => 'useasecases/index'
-
-  get "home/index"
-
-  # testing Postman routes
-  get "postman/load/:publisher/:identifier", to: "postman#load"
-  get "postman/go/:identifier", to: 'postman#go'
-  post "postman/deliver/:identifier", to: "postman#deliver"
-  post "postman/:key", to: "postman#action"
-
-  # delayed job web interface
-  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
   # i2x image hack
   get '/i2x/images/*all', to: redirect('/images/%{all}.png')

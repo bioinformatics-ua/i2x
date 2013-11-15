@@ -44,7 +44,7 @@
 				<%= f.label :schedule, :class => 'right inline' %>
 			</div>
 			<div class="small-9 columns">
-				<%= f.select(:schedule, options_for_select([['2 min', '2m'], ['5 min', '5m'], ['10 min','10m'], ['30 min','30m'], ['1 hour','1h'], ['2 hours','2h'], ['1 day','1d'], ['1 week','1w']], {:selected => '2m'}), :tabindex => 4) %>
+				<%= f.select(:schedule, options_for_select([['None','none'],['2 min', '2m'], ['5 min', '5m'], ['10 min','10m'], ['30 min','30m'], ['1 hour','1h'], ['2 hours','2h'], ['1 day','1d'], ['1 week','1w']], {:selected => '2m'}), :tabindex => 4) %>
 			</div>
 		</div>
 		<div class="row">
@@ -53,7 +53,7 @@
 			</div>
 			<div class="small-9 columns">
 				<select id="seed" tabindex="8" name="seed[publisher]">
-					<option selected="selected">None</option>
+					<option selected="selected" value="none">None</option>
 					<option value="sql">SQL</option>
 					<option value="csv">CSV</option>
 					<option value="xml">XML</option>

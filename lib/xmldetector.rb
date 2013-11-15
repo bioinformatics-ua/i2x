@@ -19,7 +19,11 @@ module Services
     #
     def detect object
       begin
-        @doc = Nokogiri::XML(open(object[:uri]))
+        if object[:uri] == '' then
+          @doc = Nokogiri::XML(object[:content])
+        else
+          @doc = Nokogiri::XML(open(object[:uri]))
+        end
         @doc.remove_namespaces!
         @doc.xpath(object[:query]).each do |element|
           element.xpath(object[:cache]).each do |c|

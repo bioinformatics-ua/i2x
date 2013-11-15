@@ -10,6 +10,7 @@ module Services
     # => Performs the actual delivery, in this case, execure SQL query.
     #
     def execute
+      Services::Slog.debug({:message => "File write for #{@template[:identifier]}", :module => "FileTemplate", :task => "execute", :extra => {:template => @template[:identifier], :payload => @template[:payload]}})
       case @template[:payload][:method]
       when 'create'
         begin
@@ -18,7 +19,7 @@ module Services
           File.open(@template[:payload][:uri], "w") { |file| file.write("\n") }
           response = { :status => "200", :message => "File created.", :id =>  @template[:payload][:uri]}
 
-          unless @template[:payload][:content].nil?
+          unless @template[:payload][:content].nil? then
             File.open(@template[:payload][:uri], "w") { |file| file.write(@template[:payload][:content]) }
           end
         rescue Exception => e
@@ -28,7 +29,7 @@ module Services
       when 'append'
         begin
           
-          unless @template[:payload][:content].nil?
+          unless @template[:payload][:content].nil? then
             File.open(@template[:payload][:uri], "a") { |file| file.write(@template[:payload][:content]) }
           end
           response = { :status => "200", :message => "Content appended to file", :id =>  @template[:payload][:uri]}

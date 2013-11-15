@@ -24,8 +24,7 @@ module Services
       begin
         
         # if Redis is enabled...
-        if Settings.cache.redis then
-          
+        if Settings.cache.redis then          
           # give me some cache!
           @redis = Redis.new :host => Settings.cache.host, :port => Settings.cache.port
         end

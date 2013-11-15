@@ -10,7 +10,7 @@ class AgentsController < ApplicationController
   # GET /agents/1
   # GET /agents/1.json
   def show
-    @seed = @agent.seed.first
+    #@seed = @agent.seed.first
   end
 
   # GET /agents/new
@@ -33,7 +33,11 @@ class AgentsController < ApplicationController
     @help = Services::Helper.new
     @agent = Agent.new agent_params
     @agent.last_check_at = @help.datetime
-    @seed = @agent.seed.build(seed_params)
+
+    # include seed in agent?
+    if params[:seed][:publisher] != 'none' then
+      @seed = @agent.seed.build(seed_params)
+    end
     respond_to do |format|
       if @agent.save
         format.html { redirect_to @agent, notice: 'Agent was successfully created.' }

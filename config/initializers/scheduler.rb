@@ -13,8 +13,8 @@ scheduler = Rufus::Scheduler.new
 
 
 
-%w[10s 30s 1m 2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
-#%w[ 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
+#%w[10s 30s 1m 2m 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
+%w[ 10m 30m 1h 2h 5h 12h 1d 2d 7d].each do |schedule|
   scheduler.every schedule do
 
     begin

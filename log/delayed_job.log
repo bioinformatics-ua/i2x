@@ -882,3 +882,43 @@ I, [2013-11-11T10:41:40.412567 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Wor
 I, [2013-11-11T10:41:40.414984 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=336) RUNNING
 I, [2013-11-11T10:41:40.417412 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] Job Services::Checkup#check_without_delay (id=336) COMPLETED after 0.0023
 I, [2013-11-11T10:41:40.418364 #14034]  INFO -- : 2013-11-11T10:41:40+0000: [Worker(host:expression.clients.ua.pt pid:14034)] 2 jobs processed at 157.7909 j/s, 0 failed
+I, [2013-11-15T17:06:20.169227 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Starting job worker
+I, [2013-11-15T17:06:20.223313 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#check_without_delay (id=337) RUNNING
+I, [2013-11-15T17:06:20.278588 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#check_without_delay (id=337) COMPLETED after 0.0551
+I, [2013-11-15T17:06:20.310762 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=338) RUNNING
+I, [2013-11-15T17:06:20.340998 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=338) COMPLETED after 0.0301
+I, [2013-11-15T17:06:20.345620 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=339) RUNNING
+I, [2013-11-15T17:06:20.388564 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=339) COMPLETED after 0.0428
+I, [2013-11-15T17:06:20.389818 #85643]  INFO -- : 2013-11-15T17:06:20+0000: [Worker(host:expression.clients.ua.pt pid:85643)] 3 jobs processed at 13.6096 j/s, 0 failed
+I, [2013-11-15T17:06:35.407224 #85643]  INFO -- : 2013-11-15T17:06:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=340) RUNNING
+I, [2013-11-15T17:06:35.459712 #85643]  INFO -- : 2013-11-15T17:06:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=340) COMPLETED after 0.0523
+I, [2013-11-15T17:06:35.464296 #85643]  INFO -- : 2013-11-15T17:06:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=341) RUNNING
+I, [2013-11-15T17:06:35.473087 #85643]  INFO -- : 2013-11-15T17:06:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=341) COMPLETED after 0.0087
+I, [2013-11-15T17:06:35.474179 #85643]  INFO -- : 2013-11-15T17:06:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] 2 jobs processed at 26.0068 j/s, 0 failed
+I, [2013-11-15T17:07:35.511115 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=342) RUNNING
+I, [2013-11-15T17:07:35.518761 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=342) COMPLETED after 0.0075
+I, [2013-11-15T17:07:35.523711 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=343) RUNNING
+I, [2013-11-15T17:07:35.533597 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=343) COMPLETED after 0.0097
+I, [2013-11-15T17:07:35.538460 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=344) RUNNING
+I, [2013-11-15T17:07:35.546539 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=344) COMPLETED after 0.0079
+I, [2013-11-15T17:07:35.551387 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=345) RUNNING
+I, [2013-11-15T17:07:35.560602 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=345) COMPLETED after 0.0091
+I, [2013-11-15T17:07:35.561855 #85643]  INFO -- : 2013-11-15T17:07:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] 4 jobs processed at 70.4225 j/s, 0 failed
+I, [2013-11-15T17:07:40.571390 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=346) RUNNING
+I, [2013-11-15T17:07:40.578567 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=346) COMPLETED after 0.0071
+I, [2013-11-15T17:07:40.582726 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=347) RUNNING
+I, [2013-11-15T17:07:40.589322 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=347) COMPLETED after 0.0065
+I, [2013-11-15T17:07:40.593716 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=348) RUNNING
+I, [2013-11-15T17:07:40.602740 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=348) COMPLETED after 0.0087
+I, [2013-11-15T17:07:40.607399 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=349) RUNNING
+I, [2013-11-15T17:07:40.615786 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=349) COMPLETED after 0.0082
+I, [2013-11-15T17:07:40.620210 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=350) RUNNING
+I, [2013-11-15T17:07:40.627723 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=350) COMPLETED after 0.0074
+I, [2013-11-15T17:07:40.631822 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=351) RUNNING
+I, [2013-11-15T17:07:40.640109 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=351) COMPLETED after 0.0082
+I, [2013-11-15T17:07:40.641084 #85643]  INFO -- : 2013-11-15T17:07:40+0000: [Worker(host:expression.clients.ua.pt pid:85643)] 6 jobs processed at 77.7011 j/s, 0 failed
+I, [2013-11-15T17:08:35.674198 #85643]  INFO -- : 2013-11-15T17:08:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=352) RUNNING
+I, [2013-11-15T17:08:35.682462 #85643]  INFO -- : 2013-11-15T17:08:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::Checkup#execute_without_delay (id=352) COMPLETED after 0.0081
+I, [2013-11-15T17:08:35.686388 #85643]  INFO -- : 2013-11-15T17:08:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=353) RUNNING
+I, [2013-11-15T17:08:35.694292 #85643]  INFO -- : 2013-11-15T17:08:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] Job Services::JSONDetector#checkup_without_delay (id=353) COMPLETED after 0.0078
+I, [2013-11-15T17:08:35.695248 #85643]  INFO -- : 2013-11-15T17:08:35+0000: [Worker(host:expression.clients.ua.pt pid:85643)] 2 jobs processed at 68.4885 j/s, 0 failed

@@ -5,6 +5,7 @@ class Agent < ActiveRecord::Base
   #
   store 	:payload, accessors: [:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors]
   store	:memory
+  attr_accessor :content
 
   ##
   # => Use SeedMappings to connect Seeds

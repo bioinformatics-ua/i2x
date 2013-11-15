@@ -5,6 +5,7 @@ require 'sqlseedreader'
 require 'xmlseedreader'
 require 'jsonseedreader'
 
+
 module Services
 
   ##
@@ -13,7 +14,7 @@ module Services
   # Main change detection class, to be inherited by SQL, CSV, JSON and XML detectors (and others to come).
   #
   class Detector
-    attr_accessor :identifier, :agent, :objects, :payloads
+    attr_accessor :identifier, :agent, :objects, :payloads, :content
 
     def initialize identifier
       begin
@@ -39,9 +40,8 @@ module Services
         ##
         # => Process seed data, if available.
         #
-        if @agent.seed then
+        if @agent.seed.size != 0 then
           @agent.seed.each do |seed|
-            puts "\n\tGoing for seed #{seed[:identifier]}\n"
             case seed[:publisher]
             when 'csv'
               begin
@@ -78,17 +78,16 @@ module Services
             end
           end
 
-          # begin
-          #   @objects.each do |object|
-          #     detect object
-          #   end
-          # rescue Exception => e
-          #   Services::Slog.exception e
-          # end
-
         else
-
-
+          ##
+          # no seeds, simply copy agent data
+          object = @help.deep_copy @agent[:payload]
+          object[:identifier] = @agent[:identifier]
+          object[:seed] = object[:identifier]
+          unless self.content.nil? then
+            object[:content] = self.content
+          end
+          @objects.push object
         end
       rescue Exception => e
         @response = {:status => 404, :message => "[i2x][JSONDetector] failed to load JSON doc, #{e}"}
@@ -105,5 +104,7 @@ module Services
       end
       @response
     end
+    
+
   end
 end

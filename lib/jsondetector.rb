@@ -29,8 +29,12 @@ module Services
     #
     def detect object
       begin
-        url = RestClient.get object[:uri]
-        @doc = url.to_str
+          if object[:uri] == '' then
+            @doc = object[:content]
+          else
+            url = RestClient.get object[:uri]
+            @doc = url.to_str
+          end
         JsonPath.on(@doc,object[:query]).each do |element|
           JsonPath.on(element, object[:cache]).each do |c|
             @cache = Cashier.verify c, object, c, object[:seed]
@@ -53,10 +57,12 @@ module Services
             # add payload object to payloads list
             @payloads.push payload
           end
+
         end
       rescue Exception => e
         Services::Slog.exception e
       end
+
     end
   end
 end

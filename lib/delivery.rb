@@ -44,7 +44,7 @@ module Services
               if params[v].kind_of? Array then
                 @template[:payload][key].gsub!("%{#{v}}", params[v].to_json)
               else
-                @template[:payload][key].gsub!("%{#{v}}", params[v])
+                @template[:payload][key].gsub!("%{#{v}}", params[v].to_s)
               end
             end
           end
