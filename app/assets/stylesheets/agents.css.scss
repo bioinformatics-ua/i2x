@@ -1,3 +1,26 @@
 // Place all the styles related to the Agents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'foundation_and_overrides';
+
+.clear-borders {
+	border: none	;
+}
+
+.info-row {
+  border-left: 3px solid #ccc;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 8px;
+  margin: 1px;
+  background-color: #EFEFEF;
+
+}
+
+.info-enabled {
+	@extend .clear-borders;
+	@extend .info-row;
+	border-left-color: lighten($success-color,10%);
+}
+.info-enabled:hover {
+	border-left-color: $success-color;
+}

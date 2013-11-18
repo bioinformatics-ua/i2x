@@ -1,10 +1,20 @@
-<h1><%= @agent.title %></h1>
+<ul class="breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><%= link_to 'Agents', agents_path %></li>
+  <li class="current"><%= @agent.title %></li>
+</ul>
+
+
+<h1><i class="icon-cycle"></i><%= @agent.title %></h1>
+Updated <%= time_ago_in_words(@agent.updated_at) %> ago
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Publisher:</strong>
-  <%= @agent.publisher %>
-</p>
+
+  <% if @agent.publisher == 'sql' then %>
+    <%= render partial: "agents/show_sql" %>
+  <% end %>
 
 <p>
   <strong>Payload:</strong>
@@ -51,11 +61,13 @@
   <strong>Updated at:</strong>
   <%= @agent.updated_at %>
 </p>
-
+<div class="right">
+<%= link_to '<i class="icon-cog"></i> Edit'.html_safe, edit_agent_path(@agent) %>
+</div>
 
 <% @agent.seed.each do |seed| %>
 <%= render partial: "seeds/show", locals: {:seed => seed} %>  
 <% end %>
 
-<%= link_to 'Edit', edit_agent_path(@agent) %> |
-<%= link_to 'Back', agents_path %>
+
+

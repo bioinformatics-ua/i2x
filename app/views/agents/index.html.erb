@@ -1,48 +1,36 @@
-<h1>Listing agents</h1>
+<ul class="breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li class="current">Agents</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Publisher</th>
-      <th>Payload</th>
-      <th>Memory</th>
-      <th>Identifier</th>
-      <th>Title</th>
-      <th>Help</th>
-      <th>Schedule</th>
-      <th>Events count</th>
-      <th>Last check at</th>
-      <th>Last event</th>
-      <th>Seed</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th>Action</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<h1><i class="icon-cycle"></i> Agents</h1>
+
+<div class="row">
+  <div class="small-9 columns">
     <% @agents.each do |agent| %>
-      <tr>
-        <td><%= agent.publisher %></td>
-        <td><%= agent.payload %></td>
-        <td><%= agent.memory %></td>
-        <td><%= agent.identifier %></td>
-        <td><%= agent.title %></td>
-        <td><%= agent.help %></td>
-        <td><%= agent.schedule %></td>
-        <td><%= agent.events_count %></td>
-        <td><%= agent.updated_at %></td>
-        <td><%= link_to 'Show', agent %></td>
-        <td><%= link_to 'Edit', edit_agent_path(agent) %></td>
-        <td><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Agent', new_agent_path %>
+     <div class="row agent-info info-enabled">
+     
+     <div class="right">
+      <span class="round label success">ENABLED</span>
+     </div>
+     <h3><%= agent.title %></h3>
+     Last check <%= time_ago_in_words(agent.last_check_at) %> ago<br />
+     <i class="icon-level-up"></i><%= agent.publisher %> <i class="icon-back-in-time"></i><%= agent.schedule %> 
+    <div class="left">
+     <i class="icon-level-up"></i><%= agent.publisher %> <i class="icon-back-in-time"></i><%= agent.schedule %> Last check <%= time_ago_in_words(agent.last_check_at) %> ago
+     </div>
+     <div class="right">
+     <%= link_to '<i class="icon-cog"></i>'.html_safe, edit_agent_path(agent) %>
+    <%= link_to '<i class="icon-three-dots"></i>'.html_safe, agent %>
+    
+     </div>
+     </div>
+     <% end %>
+  </div>
+  <div class="small-3 columns">
+  <div class="right">
+<%= link_to '<a class="button small success">Create new agent</a>'.html_safe, new_agent_path %>
+</div>
+</div>
+</div>
