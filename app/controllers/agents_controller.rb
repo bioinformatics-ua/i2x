@@ -1,16 +1,24 @@
 class AgentsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
 
   # GET /agents
   # GET /agents.json
   def index
-    @agents = Agent.all
+    @agents = User.find(current_user.id).agent
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
-    #@seed = @agent.seed.first
+    begin
+      @agent = User.find(current_user.id).agent.find(params[:id])
+    rescue Exception => e
+      flash[:notice] = "You are not authorized to view that Agent"
+      Services::Slog.exception e
+      redirect_to :root
+    end
+
   end
 
   # GET /agents/new
@@ -99,7 +107,7 @@ class AgentsController < ApplicationController
     a = params[:agent].clone
     a[:agent] = params[:agent]
     a.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
-    
+
   end
 
   def seed_params

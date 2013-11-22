@@ -14,8 +14,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <%= favicon_link_tag 'favicon.ico' %>
  <title><%= content_for?(:title) ? yield(:title) : Settings.app.title %></title>
-
- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600' rel='stylesheet' type='text/css'>
  <%= stylesheet_link_tag    "application" %>
  <%= javascript_include_tag "vendor/custom.modernizr" %>
  <%= csrf_meta_tags %>
@@ -112,10 +110,10 @@
         </blockquote>
       </div>
       <div class="large-6 columns">
-        <ul class="inline-list right">
-          <li><a target="_blank" href="http://bioinformatics.ua.pt/">UA.PT Bioinformatics</a></li>                        
-          <li><a target="_blank" href="http://pedrolopes.net/">Pedrolopes.net</a></li>
-        </ul>
+        <dl class="sub-nav right">
+          <dd><a target="_blank" href="http://bioinformatics.ua.pt/">UA.PT Bioinformatics</a></dd>                        
+          <dd><a target="_blank" href="http://pedrolopes.net/">Pedrolopes.net</a></dd>
+        </dl>
       </div>
     </div>
   </div>

@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'compass-rails', '~> 2.0.alpha.0'
 
 # Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
-gem 'zurb-foundation'
+gem 'foundation-rails'
 
 # Entypo icons. Read more: https://github.com/lwe/entypo-rails
 gem 'entypo-rails'

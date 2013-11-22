@@ -55,6 +55,22 @@ module Services
 				exception e
 			end
 		end
+
+		##
+		# => Log warning messages to Sentry using Raven
+		#
+		def self.warn message
+			begin
+				if Settings.app.debug then
+					message[:l] = 'warn'
+					if Settings.log.sentry then
+						capture_message message
+					end
+				end
+			rescue Exception => e
+				exception e
+			end
+		end
 		
 		
 		private

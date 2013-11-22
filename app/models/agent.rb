@@ -14,10 +14,21 @@ class Agent < ActiveRecord::Base
   has_many	:seed, :through => :seed_mapping
 
   ##
-  # => Use  Agents Mappings to connect Agents
+  # => Use  User Agents  to connect Users
   #
-  has_many	:agent_mapping
-  has_many	:agent, :through => :agent_mapping
+  has_many  :user_agents
+  has_many  :user, :through => :user_agents
+  
+  ##
+  # => Use AgentMappings to connect Agents
+  #
+  has_many  :agent_mapping
+  has_many  :integration, :through => :agent_mapping
+
+  ##
+  # => Events mapping
+  #
+  has_many :event
   
   public
   
@@ -56,13 +67,20 @@ class Agent < ActiveRecord::Base
     
     ## this should be simpler!!!
     begin
-      puts identifier
+      
       AgentMapping.where(:agent_id => id).each do |mapping|
         Integration.where(:id => mapping.integration_id).each do |integration|
           integration.template.each do |t|
             Services::Slog.debug({:message => "Sending #{identifier} for delivery by #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier}})
             checkup[:payload].each do |payload|
-              RestClient.post "#{Settings.app.host}postman/deliver/#{t.identifier}.js", payload
+              response = RestClient.post "#{Settings.app.host}postman/deliver/#{t.identifier}.js", payload
+              case response.code
+              when 200
+                @event = Event.new({:payload => payload, :status => 100, :agent => self})
+                @event.save
+              else
+                Services::Slog.warn({:message => "Delivery failed for #{identifier} in #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier}})
+              end              
             end
           end
         end

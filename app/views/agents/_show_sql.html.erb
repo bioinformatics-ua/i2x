@@ -1,1 +1,107 @@
-SQL
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Publisher</strong>
+      <i class="icon-level-up"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <%= @agent.publisher %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Selectors</strong>
+      <i class="icon-flow-branch"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <% JSON.parse(@agent[:payload][:selectors]).each do |k| %>
+    	<% k.each do |key, value| %>
+      <div class="row">
+        <div class="small-3 columns">
+          <strong class="right inline"><%= key %></strong>
+        </div>
+        <div class="small-9 columns">
+          <%= value %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Connection Details</strong>
+      <i class="icon-shareable"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Server</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:server] %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Host</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:host] %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Port</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:port] %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Database</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:database] %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Username</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:username] %>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Password</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:password] %>
+      </div>
+    </div>
+     <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Query</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:query] %>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Cache</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:cache] %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,36 +1,78 @@
+<% content_for :title, "Agents - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-  <li><a href="#">Home</a></li>
+  <li><a href="/">Home</a></li>
   <li class="current">Agents</li>
 </ul>
-
-
-<h1><i class="icon-cycle"></i> Agents</h1>
-
-<div class="row">
-  <div class="small-9 columns">
-    <% @agents.each do |agent| %>
-     <div class="row agent-info info-enabled">
-     
-     <div class="right">
-      <span class="round label success">ENABLED</span>
-     </div>
-     <h3><%= agent.title %></h3>
-     Last check <%= time_ago_in_words(agent.last_check_at) %> ago<br />
-     <i class="icon-level-up"></i><%= agent.publisher %> <i class="icon-back-in-time"></i><%= agent.schedule %> 
-    <div class="left">
-     <i class="icon-level-up"></i><%= agent.publisher %> <i class="icon-back-in-time"></i><%= agent.schedule %> Last check <%= time_ago_in_words(agent.last_check_at) %> ago
-     </div>
-     <div class="right">
-     <%= link_to '<i class="icon-cog"></i>'.html_safe, edit_agent_path(agent) %>
-    <%= link_to '<i class="icon-three-dots"></i>'.html_safe, agent %>
+<h1>Agents</h1>
+<div class="small-9 columns">
+  <% @agents.each do |agent| %>
+    <div class="row agent-info <%= (agent.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
+      <div class="small-11 columns left">
+        <div class="left">
+          <div class="circle_48 <%= (agent.status != 0) ? 'on' : 'off'  %>">
+            <%= agent.event.size %>
+          </div>
+        </div>
+        <div class="info-details">
+          <h6 class="subheader"><%= agent.title %></h6>
+          <span class="label secondary"><%= time_ago_in_words(agent.last_check_at) %>
+            ago</span>
+          <span class="label secondary"><i class="icon-level-up"></i><%= agent.publisher %></span>
+          <span class="label secondary"><i class="icon-back-in-time"></i><%= agent.schedule %></span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '<i class="icon-cog"></i>'.html_safe, edit_agent_path(agent), :class => 'action right' %>
+          <%= link_to '<i class="icon-three-dots"></i>'.html_safe, agent, :class => 'action right' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <hr>
+  <h5 class="subheader">Add Sample Agents</h5>
+  <div class="row agent-info info-enabled">
     
-     </div>
-     </div>
-     <% end %>
+
+    <div class="small-11 columns">
+     <div class="info-details">
+      <h6 class="subheader">Twitter Monitor</h6>
+      
+        <span class="label secondary"><i class="icon-level-up"></i>json</span>
+        <span class="label secondary"><i class="icon-back-in-time"></i>5m</span>
+      </div>
+    </div>
+    <div class="small-1 columns right">
+      <div class="right">
+        <%= link_to '<i class="icon-plus"></i>'.html_safe, new_agent_path, :class => 'action right' %>
+      </div>
+    </div>
   </div>
-  <div class="small-3 columns">
-  <div class="right">
-<%= link_to '<a class="button small success">Create new agent</a>'.html_safe, new_agent_path %>
+  <div class="row agent-info info-enabled">
+
+    <div class="small-11 columns">
+     <div class="info-details">
+      <h6 class="subheader">UniProt Monitor</h6>
+      
+        <span class="label secondary"><i class="icon-level-up"></i>xml</span>
+        <span class="label secondary"><i class="icon-back-in-time"></i>1d</span>
+      </div>
+    </div>
+    <div class="small-1 columns right">
+      <div class="right">
+        <%= link_to '<i class="icon-plus"></i>'.html_safe, new_agent_path, :class => 'action right' %>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+<div class="small-3 columns">
+  <%= link_to 'Create agent <i class="icon-cycle"></i>'.html_safe, new_agent_path, :class => 'button small radius' %>
+  <h4 class="subheader">Event History</h4>
+  <ul class="side-nav">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+    <li><a href="#">Link 4</a></li>
+    <li class="divider"></li>
+  </ul>
 </div>

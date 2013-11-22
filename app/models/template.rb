@@ -9,6 +9,12 @@ class Template < ActiveRecord::Base
   has_many	:integration_mapping
   has_many	:integration, :through => :integration_mapping
 
+  ##
+  # => Use  User Templates  to connect Users
+  #
+  has_many  :user_template
+  has_many  :user, :through => :user_templates
+
   #	after_initialize	:symbolize
   #	before_save	:normalize
 

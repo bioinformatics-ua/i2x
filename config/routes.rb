@@ -1,5 +1,7 @@
 I2X::Application.routes.draw do
 
+  
+
   # Home
   root  'home#index'
   get 'home' => 'home/index'
@@ -18,6 +20,9 @@ I2X::Application.routes.draw do
   get "delivery/get"
   post "delivery/post"
   get "delivery/go"
+
+  # Events control
+  resources :events
 
   # FluxCapacitor control
 

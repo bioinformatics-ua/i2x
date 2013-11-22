@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131112222713) do
+ActiveRecord::Schema.define(version: 20131121114151) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20131112222713) do
     t.datetime "last_event"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status"
   end
 
   create_table "caches", force: true do |t|
@@ -60,6 +61,15 @@ ActiveRecord::Schema.define(version: 20131112222713) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
+  create_table "events", force: true do |t|
+    t.text     "payload"
+    t.text     "memory"
+    t.integer  "agent_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "integration_mappings", force: true do |t|
     t.integer  "integration_id"
     t.integer  "template_id"
@@ -75,6 +85,7 @@ ActiveRecord::Schema.define(version: 20131112222713) do
     t.text     "memory"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status"
   end
 
   create_table "seed_mappings", force: true do |t|
@@ -93,6 +104,7 @@ ActiveRecord::Schema.define(version: 20131112222713) do
     t.text     "memory"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status"
   end
 
   create_table "templates", force: true do |t|
@@ -105,6 +117,31 @@ ActiveRecord::Schema.define(version: 20131112222713) do
     t.text     "memory"
     t.integer  "count"
     t.datetime "last_execute_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "status"
+  end
+
+  create_table "user_agents", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "agent_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_integrations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "integration_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_templates", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "template_id"
+    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -127,18 +164,10 @@ ActiveRecord::Schema.define(version: 20131112222713) do
     t.string   "apikey"
     t.text     "referring_url"
     t.text     "landing_url"
+    t.integer  "status"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "variants", force: true do |t|
-    t.string   "refseq"
-    t.string   "gene"
-    t.string   "variant"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

@@ -13,13 +13,19 @@
  *= require entypo
  *= require_tree .
  */
- body {
-     top: 24px;
- }
- 
- .content {
 
- }
+
+
+/** STATIC CSS **/	
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+ .content {
+	padding-top: 48px;
+}
+
 pre , code, kbd, samp { 
   font-family: monospace; 
   border-radius:3px;

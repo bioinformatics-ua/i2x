@@ -13,4 +13,10 @@ class Integration < ActiveRecord::Base
   #
   has_many	:agent_mapping
   has_many	:agent, :through => :agent_mapping
+
+  ##
+  # => Use  User Integrations  to connect Users
+  #
+  has_many  :user_integrations
+  has_many  :user, :through => :user_integrations
 end

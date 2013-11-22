@@ -4,4 +4,5 @@ class Seed < ActiveRecord::Base
 
   has_many	:seed_mapping
   has_many	:agent, :through => :seed_mapping
+
 end

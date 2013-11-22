@@ -1,73 +1,87 @@
+<% content_for :title, "#{@agent.title} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-  <li><a href="#">Home</a></li>
+  <li><a href="/">Home</a></li>
   <li><%= link_to 'Agents', agents_path %></li>
   <li class="current"><%= @agent.title %></li>
 </ul>
-
-
-<h1><i class="icon-cycle"></i><%= @agent.title %></h1>
-Updated <%= time_ago_in_words(@agent.updated_at) %> ago
-
-
-<p id="notice"><%= notice %></p>
-
-
-  <% if @agent.publisher == 'sql' then %>
-    <%= render partial: "agents/show_sql" %>
-  <% end %>
-
-<p>
-  <strong>Payload:</strong>
-  <%= @agent.payload %>
-</p>
-
-<p>
-  <strong>Identifier:</strong>
-  <%= @agent.identifier %>
-</p>
-
-
-<p>
-  <strong>Help:</strong>
-  <%= @agent.help %>
-</p>
-
-<p>
-  <strong>Schedule:</strong>
-  <%= @agent.schedule %>
-</p>
-
-<p>
-  <strong>Events count:</strong>
-  <%= @agent.events_count %>
-</p>
-
-<p>
-  <strong>Last check at:</strong>
-  <%= @agent.last_check_at %>
-</p>
-
-<p>
-  <strong>Last event:</strong>
-  <%= @agent.last_event %>
-</p>
-
-<p>
-  <strong>Created at:</strong>
-  <%= @agent.created_at %>
-</p>
-
-<p>
-  <strong>Updated at:</strong>
-  <%= @agent.updated_at %>
-</p>
-<div class="right">
-<%= link_to '<i class="icon-cog"></i> Edit'.html_safe, edit_agent_path(@agent) %>
+<h1><%= @agent.title %></h1>
+<span>Updated
+  <%= time_ago_in_words(@agent.updated_at) %>
+  ago</span>
+<div class="alert" id="notice"><%= notice %></div>
+<div class="row">
+  <div class="panel callout radius small-1 columns">
+    <div class="big">
+      <%= @agent.schedule %>
+    </div>
+    <h5 class="center"><i class="icon-back-in-time"></i></h5>
+  </div>
+   <div class="panel callout radius small-1 columns">
+    <div class="big">
+      <%= @agent.events_count %>
+    </div>
+    <h5 class="center"><i class="icon-list"></i></h5>
+  </div>
+   <div class="panel callout radius small-1 columns">
+    <div class="big">
+      <%= @agent.publisher %>
+    </div>
+    <h5 class="center"><i class="icon-level-up"></i></h5>
+  </div>
 </div>
-
-<% @agent.seed.each do |seed| %>
-<%= render partial: "seeds/show", locals: {:seed => seed} %>  
+<div class="row">
+  <div class="small-2 columns">
+    <div class="right inline">
+      <strong>Help</strong>
+      <i class="icon-circled-info"></i>
+    </div>
+  </div>
+  <div class="small-10 columns">
+    <%= @agent.help %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns">
+    <div class="right inline">
+      <strong>Schedule</strong>
+      <i class="icon-back-in-time"></i>
+    </div>
+  </div>
+  <div class="small-10 columns">
+    <%= @agent.schedule %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns">
+    <div class="right inline">
+      <strong>Events</strong>
+      <i class="icon-list"></i>
+    </div>
+  </div>
+  <div class="small-10 columns">
+    <%= @agent.events_count %><br />
+    Last check
+    <%= time_ago_in_words(@agent.last_check_at) %>
+    ago
+  </div>
+</div>
+<h3 class="subheader">Publisher Details</h3>
+<% if @agent.publisher == 'sql' then %>
+  <%= render partial: "agents/show_sql"%>
 <% end %>
-
-
-
+<% if @agent.publisher == 'xml' then %>
+  <%= render partial: "agents/show_xml"%>
+<% end %>
+<% if @agent.publisher == 'json' then %>
+  <%= render partial: "agents/show_json"%>
+<% end %>
+<% if @agent.publisher == 'csv' then %>
+  <%= render partial: "agents/show_csv"%>
+<% end %>
+<div class="right">
+  <%= link_to '<i class="icon-cog"></i> Edit'.html_safe, edit_agent_path(@agent) %>
+</div>
+<h3 class="subheader">Seeds Details</h3>
+<% @agent.seed.each do |s| %>
+  <%= render partial: "seeds/show", locals: {:seed => s}   %>
+<% end %>

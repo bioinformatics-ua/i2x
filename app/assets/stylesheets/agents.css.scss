@@ -4,13 +4,13 @@
 @import 'foundation_and_overrides';
 
 .clear-borders {
-	border: none	;
+	border: none;
 }
 
 .info-row {
   border-left: 3px solid #ccc;
   border-bottom: 1px solid #FFFFFF;
-  padding: 8px;
+  padding: 4px;
   margin: 1px;
   background-color: #EFEFEF;
 
@@ -22,5 +22,61 @@
 	border-left-color: lighten($success-color,10%);
 }
 .info-enabled:hover {
-	border-left-color: $success-color;
+	border-left-color: darken($success-color, 10%);
+}
+
+.info-disabled{
+	@extend .clear-borders;
+	@extend .info-row;
+	border-left-color: lighten($alert-color,10%);
+}
+.info-disabled:hover {
+	border-left-color: darken($alert-color, 10%);
+}
+
+.circle_48 {
+	height: 48px;
+  	width: 48px;
+  	display: table-cell;
+  	text-align: center;
+  	vertical-align: middle;
+  	border-radius: 50%; 
+}
+
+.on {
+	background-color: $success-color;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+.off {
+	background-color: $alert-color;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+
+.action {
+	float:right;
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 0 auto;
+	margin-top: 4px;
+	clear: both;
+	font-size: 20px;
+	vertical-align: bottom;
+}
+
+.info-details {
+	margin-left: 60px;
+}
+
+.big {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
 }

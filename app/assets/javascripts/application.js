@@ -16,11 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ 
-	$(document).foundation(); 
-});
-
-
 if (typeof String.prototype.startsWith != 'function') {
   String.prototype.startsWith = function (str){
     return this.slice(0, str.length) == str;
@@ -32,3 +27,4 @@ if (typeof String.prototype.endsWith != 'function') {
     return this.slice(-str.length) == str;
   };
 }
+$(function(){ $(document).foundation(); });

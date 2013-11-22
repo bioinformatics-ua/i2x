@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Publisher</strong>
+      <i class="icon-level-up"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <%= @agent.publisher %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Selectors</strong>
+      <i class="icon-flow-branch"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <% JSON.parse(@agent[:payload][:selectors]).each do |k| %>
+      <% k.each do |key, value| %>
+        <div class="row">
+          <div class="small-3 columns">
+            <strong class="right inline"><%= key %></strong>
+          </div>
+          <div class="small-9 columns">
+            <%= value %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <div class="right inline">
+      <strong>Connection Details</strong>
+      <i class="icon-shareable"></i>
+    </div>
+  </div>
+  <div class="small-9 columns">
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">URI</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:uri] %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Cache</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= @agent[:payload][:cache] %>
+      </div>
+    </div>
+  </div>
+</div>
