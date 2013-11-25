@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'foundation_and_overrides';
 
+
+$panel-padding: rem-calc(5);
+
 .clear-borders {
 	border: none;
 }
@@ -76,7 +79,13 @@
 	font-weight: 600;
 }
 
+.agent-hl {
+	@include panel($padding:2px,$adjust:true);
+	@include radius();
+	margin: 2px;
+}
 .center {
 	text-align: center;
 	margin: 0 auto;
+	padding: 0px;
 }

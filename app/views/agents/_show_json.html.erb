@@ -1,59 +1,43 @@
 <div class="row">
-  <div class="small-3 columns">
-    <div class="right inline">
-      <strong>Publisher</strong>
-      <i class="icon-level-up"></i>
-    </div>
+  <div class="small-1 columns">
+    <div class="right inline"><i class="icon-shareable" data-tooltip class="has-tip tip-top" title="Connection Details"></i></div>
   </div>
-  <div class="small-9 columns">
-    <%= @agent.publisher %>
+  <div class="small-11 columns">
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">URI</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= @agent[:payload][:uri] %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">Cache</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= @agent[:payload][:cache] %>
+      </div>
+    </div>
   </div>
 </div>
+<br />
 <div class="row">
-  <div class="small-3 columns">
-    <div class="right inline">
-      <strong>Selectors</strong>
-      <i class="icon-flow-branch"></i>
-    </div>
+  <div class="small-1 columns">
+    <div class="right inline"><i class="icon-flow-branch" data-tooltip class="has-tip tip-top" title="Selectors"></i></div>
   </div>
-  <div class="small-9 columns">
+  <div class="small-11 columns">
     <% JSON.parse(@agent[:payload][:selectors]).each do |k| %>
       <% k.each do |key, value| %>
         <div class="row">
-          <div class="small-3 columns">
+          <div class="small-2 columns">
             <strong class="right inline"><%= key %></strong>
           </div>
-          <div class="small-9 columns">
+          <div class="small-10 columns">
             <%= value %>
           </div>
         </div>
       <% end %>
     <% end %>
-  </div>
-</div>
-<div class="row">
-  <div class="small-3 columns">
-    <div class="right inline">
-      <strong>Connection Details</strong>
-      <i class="icon-shareable"></i>
-    </div>
-  </div>
-  <div class="small-9 columns">
-    <div class="row">
-      <div class="small-3 columns">
-        <strong class="right inline">URI</strong>
-      </div>
-      <div class="small-9 columns">
-        <%= @agent[:payload][:uri] %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-3 columns">
-        <strong class="right inline">Cache</strong>
-      </div>
-      <div class="small-9 columns">
-        <%= @agent[:payload][:cache] %>
-      </div>
-    </div>
   </div>
 </div>

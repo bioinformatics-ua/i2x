@@ -4,84 +4,75 @@
   <li><%= link_to 'Agents', agents_path %></li>
   <li class="current"><%= @agent.title %></li>
 </ul>
-<h1><%= @agent.title %></h1>
-<span>Updated
-  <%= time_ago_in_words(@agent.updated_at) %>
-  ago</span>
+<div class="row">
+  <div class="small-12 columns">
+    <h1><%= @agent.title %></h1>
+  </div>
+</div>
+<div class="row"><div class="small-11 columns left">
+    <span class="label secondary radius"><small>Updated
+        <%= time_ago_in_words(@agent.updated_at) %>
+        ago</small></span>
+    <span class="label secondary radius">
+      Last check
+      <%= time_ago_in_words(@agent.last_check_at) %>
+      ago</span>
+  </div>
+  <div class="small-1 columns right text-right">
+    <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit #{@agent.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_agent_path(@agent) %>
+  </div></div>
 <div class="alert" id="notice"><%= notice %></div>
 <div class="row">
-  <div class="panel callout radius small-1 columns">
-    <div class="big">
-      <%= @agent.schedule %>
-    </div>
-    <h5 class="center"><i class="icon-back-in-time"></i></h5>
-  </div>
-   <div class="panel callout radius small-1 columns">
-    <div class="big">
-      <%= @agent.events_count %>
-    </div>
-    <h5 class="center"><i class="icon-list"></i></h5>
-  </div>
-   <div class="panel callout radius small-1 columns">
-    <div class="big">
-      <%= @agent.publisher %>
-    </div>
-    <h5 class="center"><i class="icon-level-up"></i></h5>
-  </div>
-</div>
-<div class="row">
   <div class="small-2 columns">
-    <div class="right inline">
-      <strong>Help</strong>
-      <i class="icon-circled-info"></i>
+    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x detected <%= @agent.event.size %> for this agent" data-options="disable_for_touch:true">
+      <div class="big center">
+        <%= @agent.event.size %>
+      </div>
+      <h5 class="center"><i class="icon-list"></i></h5>
+    </div>
+    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Schedule: i2x polls this agent every <%= @agent.schedule %>" data-options="disable_for_touch:true">
+      <div class="big center">
+        <%= @agent.schedule %>
+      </div>
+      <h5 class="center"><i class="icon-back-in-time"></i></h5>
+    </div>
+    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: this agent processes '<%= @agent.publisher %>'' input" data-options="disable_for_touch:true">
+      <div class="big center">
+        <%= @agent.publisher %>
+      </div>
+      <h5 class="center"><i class="icon-level-up"></i></h5>
     </div>
   </div>
   <div class="small-10 columns">
-    <%= @agent.help %>
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <div class="right inline">
-      <strong>Schedule</strong>
-      <i class="icon-back-in-time"></i>
+    <div class="row">
+      <h4 class="subheader">Help</h4>
+      <%= @agent.help %>
+    </div>
+    <hr>
+      <div class="row">
+        <h4 class="subheader">Publisher</h4>
+        <% if @agent.publisher == 'sql' then %>
+          <%= render partial: "agents/show_sql"%>
+        <% end %>
+        <% if @agent.publisher == 'xml' then %>
+          <%= render partial: "agents/show_xml"%>
+        <% end %>
+        <% if @agent.publisher == 'json' then %>
+          <%= render partial: "agents/show_json"%>
+        <% end %>
+        <% if @agent.publisher == 'csv' then %>
+          <%= render partial: "agents/show_csv"%>
+        <% end %>
+      </div>
+      <% if @agent.seed.size != 0 then %>
+        <hr>
+          <div class="row">
+            <h4 class="subheader">Seeds</h4>
+            <% @agent.seed.each do |s| %>
+              <%= render partial: "seeds/show", locals: {:seed => s}   %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="small-10 columns">
-    <%= @agent.schedule %>
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <div class="right inline">
-      <strong>Events</strong>
-      <i class="icon-list"></i>
-    </div>
-  </div>
-  <div class="small-10 columns">
-    <%= @agent.events_count %><br />
-    Last check
-    <%= time_ago_in_words(@agent.last_check_at) %>
-    ago
-  </div>
-</div>
-<h3 class="subheader">Publisher Details</h3>
-<% if @agent.publisher == 'sql' then %>
-  <%= render partial: "agents/show_sql"%>
-<% end %>
-<% if @agent.publisher == 'xml' then %>
-  <%= render partial: "agents/show_xml"%>
-<% end %>
-<% if @agent.publisher == 'json' then %>
-  <%= render partial: "agents/show_json"%>
-<% end %>
-<% if @agent.publisher == 'csv' then %>
-  <%= render partial: "agents/show_csv"%>
-<% end %>
-<div class="right">
-  <%= link_to '<i class="icon-cog"></i> Edit'.html_safe, edit_agent_path(@agent) %>
-</div>
-<h3 class="subheader">Seeds Details</h3>
-<% @agent.seed.each do |s| %>
-  <%= render partial: "seeds/show", locals: {:seed => s}   %>
-<% end %>

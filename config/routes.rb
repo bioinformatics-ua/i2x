@@ -54,6 +54,7 @@ I2X::Application.routes.draw do
 
   # Authentication
   devise_for :users
+  get "sign_up", :to => "devise/registrations#new"
 
   # Delayed job web interface
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]

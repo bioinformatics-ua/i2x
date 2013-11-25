@@ -1,4 +1,6 @@
 class ArchitectureController < ApplicationController
+  layout "documentation"
+
   def models
 
   end

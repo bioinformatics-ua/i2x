@@ -1,18 +1,45 @@
+<% content_for :title, "New user sign up - #{Settings.app.title}" %>
 <h1>Sign up</h1>
-
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:"data-abide" => ''}) do |f| %>
   <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit("Sign up", :class => 'button success') %></div>
-<% end %>
-<hr>
-<%= render "devise/shared/links" %>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :name, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_field :name, :required => '', :pattern => '[A-Za-z0_9_]{4,}' %>
+      <small class="error">Your name must have at least 4 characters.</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :email, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.email_field :email, :required => '' %>
+      <small class="error">A valid email address is required.</small>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :password, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.password_field :password, :required => '' %>
+      <small class="error">There's something wrong with your password (must have at least 8 chars, upper and lower case).</small>
+    </div>
+  </div>
+    <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :password_confirmation, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.password_field :password_confirmation, :required => ''%>
+      <small class="error">There's something wrong with your password confirmation. Is it the same?</small>
+    </div>
+  </div>
+  <div class="actions">
+	<%= f.submit 'Sign up'.html_safe, :class => 'button tiny radius right success', :tabindex => 40 %>
+</div>
+</div>
+<%end %>
