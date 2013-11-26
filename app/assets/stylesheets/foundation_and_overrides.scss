@@ -50,9 +50,9 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
+$alert-color: #f04124;
 // $success-color: #43AC6A;
 
 // We use these to make sure border radius matches unless we want it different.
@@ -170,7 +170,7 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: lighten($secondary-color, 5%);
+$crumb-bg: #FFF;
 
 // We use these to set the padding around the breadcrumbs.
 // $crumb-padding: rem-calc(9 14 9);
@@ -178,7 +178,7 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // We use these to control border styles.
 // $crumb-function-factor: 10%;
-// $crumb-border-size: 1px;
+$crumb-border-size: 0px;
 // $crumb-border-style: solid;
 // $crumb-border-color: darken($crumb-bg, $crumb-function-factor);
 // $crumb-radius: $global-radius;
@@ -193,7 +193,7 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // We use these to control the slash between breadcrumbs
 // $crumb-slash-color: #aaa;
-// $crumb-slash: "/";
+$crumb-slash: ">";
 
 // Button Groups
 
@@ -495,20 +495,20 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-// $off-canvas-width: 250px;
-// $off-canvas-bg: #333;
+$off-canvas-width: 200px;//250px;
+$off-canvas-bg: #efefef;
 
 // Off Canvas Menu List Variables
-// $off-canvas-label-padding: 0.3rem rem-calc(15);
-// $off-canvas-label-color: #999;
+$off-canvas-label-padding: 0.3rem rem-calc(15);
+$off-canvas-label-color: #222;
 // $off-canvas-label-text-transform: uppercase;
-// $off-canvas-label-font-weight: bold;
-// $off-canvas-label-bg: #444;
-// $off-canvas-label-border-top: 1px solid lighten(#444, 10%);
+$off-canvas-label-font-weight: 600;
+$off-canvas-label-bg: #efefef;
+$off-canvas-label-border-top: none ; //1px solid lighten(#444, 10%);
 // $off-canvas-label-border-bottom: none;
-// $off-canvas-label-margin:0;
+$off-canvas-label-margin:4px;
 // $off-canvas-link-padding: rem-calc(10, 15);
-// $off-canvas-link-color: rgba(#FFF, 0.7);
+$off-canvas-link-color: darken($primary-color, 20%); //rgba(#333, 0.7);
 // $off-canvas-link-border-bottom: 1px solid darken($off-canvas-bg, 5%);
 
 // Off Canvas Menu Icon Variables
@@ -900,19 +900,19 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // $include-html-tooltip-classes: $include-html-classes;
 
-// $has-tip-border-bottom: dotted 1px #ccc;
-// $has-tip-font-weight: bold;
+$has-tip-border-bottom: none;
+$has-tip-font-weight: 300;
 // $has-tip-font-color: #333;
-// $has-tip-border-bottom-hover: dotted 1px darken($primary-color, 20%);
+$has-tip-border-bottom-hover: none;
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
-// $tooltip-padding: rem-calc(12);
+$tooltip-padding: 4px;
 // $tooltip-bg: #333;
-// $tooltip-font-size: rem-calc(14);
+$tooltip-font-size: 12px;
 // $tooltip-font-weight: normal;
 // $tooltip-font-color: #fff;
-// $tooltip-line-height: 1.3;
+$tooltip-line-height: 1.1;
 // $tooltip-close-font-size: rem-calc(10);
 // $tooltip-close-font-weight: normal;
 // $tooltip-close-font-color: #777;
@@ -927,7 +927,7 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: #FFF;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -942,31 +942,31 @@ $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial,
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: #333;
+$topbar-dropdown-link-color: $primary-color;
+$topbar-dropdown-link-bg: #FFF;
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: #333;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
+$topbar-link-color: $primary-color;
+$topbar-link-color-hover: darken($primary-color, 15%);
+$topbar-link-color-active: darken($primary-color, 15%);
 // $topbar-link-weight: normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-// $topbar-link-bg-hover: #272727  ;
+$topbar-link-bg-hover: #FFF  ;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: darken($primary-color, 5%);
 // $topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;
 
-// $topbar-dropdown-label-color: #777;
+$topbar-dropdown-label-color: #444;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+$topbar-dropdown-label-bg: #FFF;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;

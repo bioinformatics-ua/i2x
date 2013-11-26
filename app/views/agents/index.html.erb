@@ -4,6 +4,12 @@
   <li class="current">Agents</li>
 </ul>
 <h1>Agents</h1>
+<% unless flash[:notice].nil? then %>
+  <div data-alert class="alert-box warning radius">
+    <%= flash[:notice].html_safe %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
 <div class="small-9 columns">
   <% @agents.each do |agent| %>
     <div class="row agent-info <%= (agent.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
@@ -19,7 +25,7 @@
             ago</span>
           <span class="label secondary radius"><i class="icon-level-up"></i><%= agent.publisher %></span>
           <span class="label secondary radius"><i class="icon-back-in-time"></i><%= agent.schedule %></span>
-          <%= (agent.seed.size != 0) ? ((agent.seed.size == 1) ? "<span class=\"label radius\">#{agent.seed.size} seed</span>".html_safe : "<span class=\"label radius\">#{agent.seed.size} seeds</span>".html_safe) : '' %>
+          <span class="label radius"><%= pluralize(agent.seed.size, 'seed', 'seeds') %></span>
         </div>
       </div>
       <div class="small-1 columns right">
@@ -34,6 +40,11 @@
     <h5 class="subheader">Add Sample Agents</h5>
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
+        <div class="left">
+          <div class="circle_48 on">
+            &infin;
+          </div>
+        </div>
         <div class="info-details">
           <h6 class="subheader">Twitter Monitor</h6>
           <span class="label secondary"><i class="icon-level-up"></i>json</span>
@@ -48,6 +59,11 @@
     </div>
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
+              <div class="left">
+          <div class="circle_48 on">
+            &infin;
+          </div>
+        </div>
         <div class="info-details">
           <h6 class="subheader">UniProt Monitor</h6>
           <span class="label secondary"><i class="icon-level-up"></i>xml</span>

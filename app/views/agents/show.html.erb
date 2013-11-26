@@ -9,7 +9,8 @@
     <h1><%= @agent.title %></h1>
   </div>
 </div>
-<div class="row"><div class="small-11 columns left">
+<div class="row">
+  <div class="small-11 columns left">
     <span class="label secondary radius"><small>Updated
         <%= time_ago_in_words(@agent.updated_at) %>
         ago</small></span>
@@ -20,7 +21,8 @@
   </div>
   <div class="small-1 columns right text-right">
     <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit #{@agent.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_agent_path(@agent) %>
-  </div></div>
+  </div>
+</div>
 <div class="alert" id="notice"><%= notice %></div>
 <div class="row">
   <div class="small-2 columns">

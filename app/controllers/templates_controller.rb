@@ -1,10 +1,11 @@
 class TemplatesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_template, only: [:show, :edit, :update, :destroy]
 
   # GET /templates
   # GET /templates.json
   def index
-    @templates = Template.all
+    @templates =  User.find(current_user.id).template
   end
 
   # GET /templates/1
@@ -38,8 +39,13 @@ class TemplatesController < ApplicationController
   # POST /templates.json
   def create
     @template = Template.new(template_params)
+    @template.last_execute_at = Time.now
+    @template.status = 100
+    @template.count = 0
     respond_to do |format|
       if @template.save
+        current_user.template.push(@template)
+        current_user.save
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
         format.json { render action: 'show', status: :created, location: @template }
       else
@@ -91,7 +97,13 @@ class TemplatesController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_template
-    @template = Template.find(params[:id])
+    begin
+      @template = Template.find(params[:id])
+    rescue Exception => e
+      Services::Slog.exception e
+      flash[:notice] = "Sorry, <i class=\"icon-shuffle\"></i> couldn't find the template identified by <em>#{params[:id]}</em>."
+      redirect_to :controller => "templates", :action => "index"
+    end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

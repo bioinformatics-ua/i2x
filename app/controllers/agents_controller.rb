@@ -48,6 +48,8 @@ class AgentsController < ApplicationController
     end
     respond_to do |format|
       if @agent.save
+        current_user.agent.push(@gent)
+        current_user.save
         format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
         format.json { render action: 'show', status: :created, location: @agent }
       else
@@ -99,7 +101,13 @@ class AgentsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_agent
-    @agent = Agent.find(params[:id])
+    begin
+      @agent = Agent.find(params[:id])
+    rescue Exception => e
+      Services::Slog.exception e
+      flash[:notice] = "Sorry, <i class=\"icon-shuffle\"></i> couldn't find the agent identified by <em>#{params[:id]}</em>."
+      redirect_to :controller => "agents", :action => "index"
+    end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

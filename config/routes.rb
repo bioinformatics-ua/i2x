@@ -2,6 +2,9 @@ I2X::Application.routes.draw do
 
   
 
+  get "about/index"
+  get "helper/index"
+  get "documentation/index"
   # Home
   root  'home#index'
   get 'home' => 'home/index'

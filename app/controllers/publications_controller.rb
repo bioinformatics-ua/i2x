@@ -1,4 +1,6 @@
 class PublicationsController < ApplicationController
+  layout "documentation"
+
   def automating
   end
 

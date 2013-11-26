@@ -1,47 +1,75 @@
-<h1>Listing templates</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Identifier</th>
-      <th>Title</th>
-      <th>Help</th>
-      <th>Publisher</th>
-      <th>Variables</th>
-      <th>Payload</th>
-      <th>Memory</th>
-      <th>Count</th>
-      <th>Last execute at</th>
-      <th>Created at</th>
-      <th>Updated at</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @templates.each do |template| %>
-      <tr>
-        <td><%= template.identifier %></td>
-        <td><%= template.title %></td>
-        <td><%= template.help %></td>
-        <td><%= template.publisher %></td>
-        <td><%= template.variables %></td>
-        <td><%= template.payload %></td>
-        <td><%= template.memory %></td>
-        <td><%= template.count %></td>
-        <td><%= template.last_execute_at %></td>
-        <td><%= template.created_at %></td>
-        <td><%= template.updated_at %></td>
-        <td><%= link_to 'Show', template %></td>
-        <td><%= link_to 'Edit', edit_template_path(template) %></td>
-        <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Template', new_template_path %>
+<% content_for :title, "Templates - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li class="current">Templates</li>
+</ul>
+<h1>Templates</h1>
+<% unless flash[:notice].nil? then %>
+  <div data-alert class="alert-box warning radius">
+    <%= flash[:notice].html_safe %> <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+<div class="small-9 columns">
+  <% @templates.each do |template| %>
+    <div class="row agent-info <%= (template.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
+      <div class="small-11 columns left">
+        <div class="left">
+          <div class="circle_48 <%= (template.status != 0) ? 'on' : 'off'  %>">
+            <%= template.count %>
+          </div>
+        </div>
+        <div class="info-details">
+          <h6 class="subheader"><%= template.title %></h6>
+          <span class="label secondary radius"><%= time_ago_in_words(template.last_execute_at) %>
+            ago</span>
+          <span class="label secondary radius"><i class="icon-level-up"></i><%= template.publisher %></span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_template_path(template), :class => 'action right' %>
+          <%= link_to '<i class="icon-three-dots" data-tooltip class="has-tip" title="View"></i>'.html_safe, template, :class => 'action right' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <hr>
+    <h5 class="subheader">Add Sample Template</h5>
+    <div class="row agent-info info-enabled">
+      <div class="small-11 columns">
+        <div class="info-details">
+          <h6 class="subheader">Insert into database</h6>
+          <span class="label secondary"><i class="icon-level-up"></i>sql</span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '<i class="icon-plus" data-tooltip class="has-tip" title="Add insert into database template"></i>'.html_safe, new_template_path, :class => 'action right' %>
+        </div>
+      </div>
+    </div>
+    <div class="row agent-info info-enabled">
+      <div class="small-11 columns">
+        <div class="info-details">
+          <h6 class="subheader">POST HTTP</h6>
+          <span class="label secondary"><i class="icon-level-up"></i>http</span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '<i class="icon-plus" data-tooltip class="has-tip" title="Add POST HTTP template"></i>'.html_safe, new_template_path, :class => 'action right' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="small-3 columns right">
+    <%= link_to 'Create template <i class="icon-open-book"></i>'.html_safe, new_template_path, :class => 'button small radius' %>
+    <h4 class="subheader">Event History</h4>
+    <ul class="side-nav">
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+      <li><a href="#">Link 4</a></li>
+      <li class="divider"></li>
+    </ul>
+  </div>

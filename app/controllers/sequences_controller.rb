@@ -1,4 +1,6 @@
 class SequencesController < ApplicationController
+  layout "documentation"
+
   def diff
   end
 

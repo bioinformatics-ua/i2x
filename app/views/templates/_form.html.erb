@@ -28,34 +28,11 @@
     <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['File','file']])) %>    
   </div>
   <div class="field">
-    <%= f.label :variables %><br>
-    <%= f.text_area :variables %>
-  </div>
-  <div class="field">
   <%= f.label :payload %><br>
 <%= f.text_area :payload %>
   </div>
-  <div class="field">
-    <%= f.label :memory %><br>
-    <%= f.text_area :memory %>
-  </div>
-  <div class="field">
-    <%= f.label :count %><br>
-    <%= f.number_field :count %>
-  </div>
-  <div class="field">
-    <%= f.label :last_execute_at %><br>
-    <%= f.datetime_select :last_execute_at %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br>
-    <%= f.datetime_select :updated_at %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row action right">
+    <%= f.submit 'Save', :class => "button right small radius" %>
   </div>
 <% end %>

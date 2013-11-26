@@ -1,62 +1,64 @@
-<div class="row alert-box">
-  <strong>Warning</strong> Full view support for dynamic metadata is not yet implemented. Proceed at your own risk.
+<% content_for :title, "#{@template.title} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li><%= link_to 'Templates', templates_path %></li>
+  <li class="current"><%= @template.title %></li>
+</ul>
+<div class="row">
+  <div class="small-12 columns">
+    <h1><%= @template.title %></h1>
+  </div>
 </div>
-<div id="notice alert-box error"><%= notice %></div>
-
-<p>
-  <strong>Identifier:</strong>
-  <%= @template.identifier %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @template.title %>
-</p>
-
-<p>
-  <strong>Help:</strong>
-  <%= @template.help %>
-</p>
-
-<p>
-  <strong>Publisher:</strong>
-  <%= @template.publisher %>
-</p>
-
-<p>
-  <strong>Variables:</strong>
-  <%= @template.variables %>
-</p>
-
-<p>
-  <strong>Payload:</strong>
-  <%= @template.payload.to_json %>
-</p>
-
-<p>
-  <strong>Memory:</strong>
-  <%= @template.memory %>
-</p>
-
-<p>
-  <strong>Count:</strong>
-  <%= @template.count %>
-</p>
-
-<p>
-  <strong>Last execute at:</strong>
-  <%= @template.last_execute_at %>
-</p>
-
-<p>
-  <strong>Created at:</strong>
-  <%= @template.created_at %>
-</p>
-
-<p>
-  <strong>Updated at:</strong>
-  <%= @template.updated_at %>
-</p>
-
-<%= link_to 'Edit', edit_template_path(@template) %> |
-<%= link_to 'Back', templates_path %>
+<div class="row">
+  <div class="small-11 columns left">
+    <span class="label secondary radius"><small>Updated
+        <%= time_ago_in_words(@template.updated_at) %>
+        ago</small></span>
+    <span class="label secondary radius">
+      Last delivery
+      <%= time_ago_in_words(@template.last_execute_at) %>
+      ago</span>
+  </div>
+  <div class="small-1 columns right text-right">
+    <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit #{@template.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_template_path(@template) %>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="small-2 columns">
+    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x delivered this template <%= @template.count %> times" data-options="disable_for_touch:true">
+      <div class="big center">
+        <%= @template.count %>
+      </div>
+      <h5 class="center"><i class="icon-list"></i></h5>
+    </div>
+    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Delivery: this template delivers '<%= @template.publisher %>'' output" data-options="disable_for_touch:true">
+      <div class="big center">
+        <%= @template.publisher %>
+      </div>
+      <h5 class="center"><i class="icon-level-up"></i></h5>
+    </div>
+  </div>
+  <div class="small-10 columns">
+    <div class="row">
+      <h4 class="subheader">Help</h4>
+      <%= @template.help %>
+    </div>
+    <hr>
+      <div class="row">
+        <h4 class="subheader">Publisher</h4>
+        <% if @template.publisher == 'sql' then %>
+          <%= render partial: "templates/show_sql"%>
+        <% end %>
+        <% if @template.publisher == 'file' then %>
+          <%= render partial: "templates/show_file"%>
+        <% end %>
+        <% if @template.publisher == 'url' then %>
+          <%= render partial: "templates/show_url"%>
+        <% end %>
+        <% if @template.publisher == 'mail' then %>
+          <%= render partial: "templates/show_mail"%>
+        <% end %>
+      </div>
+    </div>
+  </div>

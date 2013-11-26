@@ -14,12 +14,15 @@
  *= require_tree .
  */
 
-
-
 /** STATIC CSS **/	
+html{
+  height: 100%;
+}
+
 body {
 	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-weight: 300;
+	  min-height: 100%;
 }
 
  .content {
@@ -61,4 +64,27 @@ i, em {
 
 .mg-right {
 	margin-right: 4px;
+}
+.selector {
+	font-weight: 600;
+	font-style: italic;
+	color: #f04124;
+}
+
+.right-off-canvas-menu, .off-canvas-list {
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.off-canvas-list a:hover {
+	color: #008CBA;
+}
+
+a.remove {
+	color: #f04124;
+	font-size: 0.8em;
+}
+
+a:hover.remove  {
+	color: darken(#f04124, 20%);
 }

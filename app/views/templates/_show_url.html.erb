@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="small-1 columns">
+    <div class="right inline"><i class="icon-shareable" data-tooltip class="has-tip tip-top" title="Connection Details"></i></div>
+  </div>
+  <div class="small-11 columns">
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">URI</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:uri]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Method</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:method]) %>
+      </div>
+    </div>
+    <% @template[:payload].each do |k,v| %>
+      <% if (k != 'uri') %>
+        <% if (k != 'method') %>
+          <div class="row">
+            <div class="small-3 columns">
+              <strong class="right inline"><%= k %></strong>
+            </div>
+            <div class="small-9 columns">
+              <%= highlight_variables(v) %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

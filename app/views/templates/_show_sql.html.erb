@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="small-1 columns">
+    <div class="right inline"><i class="icon-shareable" data-tooltip class="has-tip tip-top" title="Connection Details"></i></div>
+  </div>
+  <div class="small-11 columns">
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Server</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:server]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Host</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:host]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Port</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:port]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Database</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:database]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Username</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:username]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Password</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:password]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Query</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(@template[:payload][:query]) %>
+      </div>
+    </div>
+  </div>
+</div>

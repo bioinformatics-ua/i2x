@@ -1,4 +1,6 @@
 class UsecasesController < ApplicationController
+  layout "documentation"
+
   def variome
 
   end

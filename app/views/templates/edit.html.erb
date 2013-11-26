@@ -1,8 +1,14 @@
 <h1>Editing template</h1>
 <div class="row alert-box">
-	<strong>Warning</strong> Full edit support for dynamic metadata is not yet implemented. Proceed at your own risk.
+  <strong>Warning</strong>
+  Full edit support for dynamic metadata is not yet implemented. Proceed at your own risk.
 </div>
 <%= render 'form' %>
-
-<%= link_to 'Show', @template %> |
+<div class="row">
+  <div class="small-1 columns right">
+    <%= link_to 'Destroy', @template, :class => 'remove', method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
+<%= link_to 'Show', @template %>
+|
 <%= link_to 'Back', templates_path %>

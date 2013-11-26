@@ -1,5 +1,16 @@
 module ApplicationHelper
-  
+
+
+  ##
+  # => Highlight variables for UI
+  #
+  def highlight_variables(text)
+    # Based on ActionView::Helpers::TextHelper#highlight
+    highlighter = '<span class="selector">\1</span>'
+    matcher = /%{(.*?)}/
+    text.gsub(matcher, highlighter).html_safe
+  end
+
   ##
   # => Making Devise login/registration available everywhere
   #

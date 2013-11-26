@@ -1,0 +1,39 @@
+<% if user_signed_in? then %>
+  <ul class="off-canvas-list">
+    <li><label><%=  current_user.name %></label></li>
+    <li><%= link_to('<i class="icon-vcard"></i> Details'.html_safe, edit_user_registration_path) %></li>
+    <li><%= link_to('<i class="icon-erase"></i> Sign Out'.html_safe, destroy_user_session_path, :method => :delete) %></li>
+  </ul>
+  <br/>
+  <ul class="off-canvas-list">
+    <li><label>Go To</label></li>
+    <li><%= link_to '<i class="icon-switch"></i> Dashboard'.html_safe, :controller => '/integrations' %></li>
+    <li><%= link_to '<i class="icon-cycle"></i> Agents'.html_safe, :controller => '/agents'%></li>
+    <li><%= link_to '<i class="icon-open-book"></i> Templates'.html_safe, :controller => '/templates' %></li>
+    <li><%= link_to '<i class="icon-bar-graph"></i> Statistics'.html_safe, :controller => '/stats' %></li>
+  </ul>
+<% else %>
+  <ul class="off-canvas-list">
+    <li><label>Login</label></li>
+    <li>
+      <%= form_for("user", :url => user_session_path) do |f| %>
+        <div class="row">
+          <div class="small-12">
+            <%= f.text_field :email, :placeholder => 'Email' %>
+          </div>
+          <div class="small-12">
+            <%= f.password_field :password, :placeholder => 'Password' %>
+          </div>
+          <div class="small-12">
+            <span class="user-side-text left mg-right">Remember me?</span>
+            <%= f.check_box :remember_me, :checked => true, :class => 'left' %>
+            <%= f.submit 'Sign in', :class => 'button tiny radius right mg-right' %>
+          </div>
+          <div class="right">
+            <%= link_to "<small>Forgot your password?</small>".html_safe, new_password_path('user'), :class => 'right' %>
+          </div>
+        </div>
+      <% end %></li>
+    <li><label><%= link_to('<i class="icon-add-user"></i> Sign up'.html_safe, new_user_registration_path)  %></label></li>
+  </ul>
+<%end %>

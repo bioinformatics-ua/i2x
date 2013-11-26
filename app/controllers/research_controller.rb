@@ -1,4 +1,6 @@
 class ResearchController < ApplicationController
+  layout "documentation"
+
   def others
 
   end
