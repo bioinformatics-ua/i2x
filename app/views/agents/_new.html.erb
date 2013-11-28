@@ -1,0 +1,76 @@
+<%= form_for(@agent) do |f| %>
+  <% if @agent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agent.errors.count, "error") %>
+        prohibited this agent from being saved:</h2>
+      <ul>
+        <% @agent.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h4>Agent Properties</h4>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :identifier, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_field :identifier, :tabindex => 1, :autofocus => true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :title, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_field :title, :tabindex => 2 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :help, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.text_area :help, :tabindex => 3 %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :schedule, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.select(:schedule, options_for_select([['None','none'],['2 min', '2m'], ['5 min', '5m'], ['10 min','10m'], ['30 min','30m'], ['1 hour','1h'], ['2 hours','2h'], ['1 day','1d'], ['1 week','1w']], {:selected => '2m'}), :tabindex => 4) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <label class="right inline">Seed</label>
+    </div>
+    <div class="small-9 columns">
+      <select id="seed" tabindex="8" name="seed[publisher]">
+        <option selected="selected" value="none">None</option>
+        <option value="sql">SQL</option>
+        <option value="csv">CSV</option>
+        <option value="xml">XML</option>
+        <option value="json">JSON</option>
+      </select>
+    </div>
+  </div>
+  <div id="seed_content">
+  </div>
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.label :publisher, :class => 'right inline' %>
+    </div>
+    <div class="small-9 columns">
+      <%= f.select(:publisher, options_for_select([['SQL', 'sql'], ['CSV', 'csv'], ['XML','xml'], ['JSON','json']], {:selected => 'sql'}), :tabindex => 4) %>
+    </div>
+  </div>
+  <div id="publisher_content">
+    <%= render(:partial => 'agents/publisher_sql') %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Create', :class => 'button right success small radius', :tabindex => 40 %>
+  </div>
+<% end %>

@@ -463,7 +463,7 @@ $crumb-slash: ">";
 // $label-radius: $global-radius;
 
 // We use these to style the label text
-// $label-font-sizing: rem-calc(11);
+//$label-font-sizing: rem-calc(4);//rem-calc(11);
 // $label-font-weight: normal;
 // $label-font-color: #333;
 // $label-font-color-alt: #fff;
@@ -918,7 +918,7 @@ $tooltip-line-height: 1.1;
 // $tooltip-close-font-color: #777;
 // $tooltip-font-size-sml: rem-calc(14);
 // $tooltip-radius: $global-radius;
-// $tooltip-pip-size: 5px;
+$tooltip-pip-size: 4px;//5px;
 
 //
 // TOP BAR
@@ -991,3 +991,13 @@ $topbar-dropdown-label-bg: #FFF;
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 @import 'foundation';
+html{
+  height: 100%;
+}
+
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	  min-height: 100%;
+	  height: 100%;
+}

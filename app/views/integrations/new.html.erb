@@ -1,5 +1,41 @@
-<h1>New integration</h1>
-
+<% content_for :title, "New integration - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li><%= link_to 'Dashboard', integrations_path %></li>
+  <li class="current">New integration</li>
+</ul>
+<h1>New integration<small id="step" class="right">
+    Step
+    <strong>1</strong></small></h1>
 <%= render 'form' %>
-
-<%= link_to 'Back', integrations_path %>
+<div id="select_agent" style="display: none;">
+  <div class="row" >
+    <div class="small-3 columns">
+      <label class="right inline">Select agent</label>
+    </div>
+    <div class="small-9 columns">
+      <select id="agent_select" tabindex="8">
+        <option value="0" selected="selected">Create new agent...</option>
+        <% @agents.each do |agent| %>
+          <option value="<%= agent.id %>"><%= agent.title %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+</div>
+<div style="display: none;">
+  <div class="row">
+    <div class="small-3 columns right">
+      <label class="right inline">
+        Create new agent</label>
+    </div>
+    <div class="small-9 columns">
+      <%= render "agents/new" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns right">
+      <%= link_to 'Save', integrations_path, :class => 'button tiny radius success right' %>
+    </div>
+  </div>
+</div>

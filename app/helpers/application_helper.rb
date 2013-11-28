@@ -1,5 +1,5 @@
 module ApplicationHelper
-
+  
 
   ##
   # => Highlight variables for UI

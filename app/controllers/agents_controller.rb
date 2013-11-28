@@ -6,6 +6,7 @@ class AgentsController < ApplicationController
   # GET /agents.json
   def index
     @agents = User.find(current_user.id).agent
+    @events = Event.all.order('created_at DESC').limit(8)
   end
 
   # GET /agents/1
@@ -13,12 +14,12 @@ class AgentsController < ApplicationController
   def show
     begin
       @agent = User.find(current_user.id).agent.find(params[:id])
+
     rescue Exception => e
-      flash[:notice] = "You are not authorized to view that Agent"
+      flash[:notice] = "You are not authorized to access that Agent"
       Services::Slog.exception e
       redirect_to :root
     end
-
   end
 
   # GET /agents/new
@@ -41,6 +42,7 @@ class AgentsController < ApplicationController
     @help = Services::Helper.new
     @agent = Agent.new agent_params
     @agent.last_check_at = @help.datetime
+    @agent.status = 100
 
     # include seed in agent?
     if params[:seed][:publisher] != 'none' then
@@ -96,6 +98,14 @@ class AgentsController < ApplicationController
 
   def partials
     render :partial => "publisher#{params[:identifier]}"
+  end
+
+  def get
+     @agent = Agent.find(params[:identifier])
+     respond_to do |format|
+      format.json { render :json => @agent}
+      format.xml { render :xml => @agent}
+    end
   end
 
   private

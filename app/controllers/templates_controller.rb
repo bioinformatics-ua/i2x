@@ -6,11 +6,19 @@ class TemplatesController < ApplicationController
   # GET /templates.json
   def index
     @templates =  User.find(current_user.id).template
+    @events = Event.all.order('created_at DESC').limit(8)
   end
 
   # GET /templates/1
   # GET /templates/1.json
   def show
+    begin
+      @template = User.find(current_user.id).template.find(params[:id])
+    rescue Exception => e
+      flash[:notice] = "You are not authorized to access that Template"
+      Services::Slog.exception e
+      redirect_to :root
+    end
   end
 
   # GET /templates/new

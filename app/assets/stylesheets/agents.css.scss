@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'foundation_and_overrides';
 
+html{
+  height: 100%;
+}
+
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	  min-height: 100%;
+	  height: 100%;
+}
 
 $panel-padding: rem-calc(5);
 
@@ -12,29 +22,31 @@ $panel-padding: rem-calc(5);
 
 .info-row {
   border-left: 3px solid #ccc;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 3px solid #FFF;
+  border-top: 3px solid #FFF;
   padding: 4px;
-  margin: 1px;
-  //background-color: #EFEFEF;
-
 }
 
 .info-enabled {
 	@extend .clear-borders;
 	@extend .info-row;
 	border-left-color: lighten($success-color,10%);
+	background-color: lighten($success-color,50%);
 }
 .info-enabled:hover {
 	border-left-color: darken($success-color, 10%);
+	background-color: lighten($success-color,45%);
 }
 
 .info-disabled{
 	@extend .clear-borders;
 	@extend .info-row;
 	border-left-color: lighten($alert-color,10%);
+	background-color: lighten($alert-color,45%);
 }
 .info-disabled:hover {
 	border-left-color: darken($alert-color, 10%);
+	background-color: lighten($alert-color,40%);
 }
 
 .circle_48 {

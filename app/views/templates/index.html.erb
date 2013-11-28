@@ -64,12 +64,5 @@
   </div>
   <div class="small-3 columns right">
     <%= link_to 'Create template <i class="icon-open-book"></i>'.html_safe, new_template_path, :class => 'button small radius' %>
-    <h4 class="subheader">Event History</h4>
-    <ul class="side-nav">
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li class="divider"></li>
-    </ul>
+    <%= render partial: "helper/event_list"  %>
   </div>

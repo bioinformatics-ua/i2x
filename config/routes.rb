@@ -15,6 +15,7 @@ I2X::Application.routes.draw do
   resources :agents
   get "agents/partials/:identifier", to: 'agents#partials'  # what is this?
   get "agents/import/:identifier", to: "agents#import"      # import from JSON file
+  get "agents/get/:identifier", to: "agents#get"            # load agent as JSON
 
   # Caches (internal) control
   resources :caches

@@ -37,7 +37,7 @@ module Services
         Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
         begin          
           if @redis.hexists("#{agent[:identifier]}:#{seed}","#{memory}") then
-            response = {:status => 100, :message => "[i2x][Cashier] Nothing to update"}
+            response = {:status => 200, :message => "[i2x][Cashier] Nothing to update"}
           else
             @redis.hset("#{agent[:identifier]}:#{seed}", "#{memory}", payload)
             response = {:status => 100, :message => "[i2x][Cashier] Memory recorded to cache"}

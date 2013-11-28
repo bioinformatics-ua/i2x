@@ -1,14 +1,16 @@
-<h1>Editing template</h1>
-<div class="row alert-box">
-  <strong>Warning</strong>
-  Full edit support for dynamic metadata is not yet implemented. Proceed at your own risk.
-</div>
+<% content_for :title, "Editing #{@template.title} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li><%= link_to 'Templates', templates_path %></li>
+  <li><%= link_to @template.title, @template %></li>
+  <li class="current">Edit <%= @template.title %></li>
+</ul>
+<h1>Editing <strong><%= @template.title %></strong></h1>
+
 <%= render 'form' %>
+
 <div class="row">
   <div class="small-1 columns right">
-    <%= link_to 'Destroy', @template, :class => 'remove', method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Remove', @template, :class => 'remove', method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>
-<%= link_to 'Show', @template %>
-|
-<%= link_to 'Back', templates_path %>

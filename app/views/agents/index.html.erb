@@ -10,7 +10,7 @@
     <a href="#" class="close">&times;</a>
   </div>
 <% end %>
-<div class="small-9 columns">
+<div class="small-12 medium-9 large-9 columns">
   <% @agents.each do |agent| %>
     <div class="row agent-info <%= (agent.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
       <div class="small-11 columns left">
@@ -20,18 +20,18 @@
           </div>
         </div>
         <div class="info-details">
-          <h6 class="subheader"><%= agent.title %></h6>
+          <h6 class="subheader"><%= link_to agent.title, agent %></h6>
           <span class="label secondary radius"><%= time_ago_in_words(agent.last_check_at) %>
             ago</span>
           <span class="label secondary radius"><i class="icon-level-up"></i><%= agent.publisher %></span>
           <span class="label secondary radius"><i class="icon-back-in-time"></i><%= agent.schedule %></span>
-          <span class="label radius"><%= pluralize(agent.seed.size, 'seed', 'seeds') %></span>
+          <%= (agent.seed.size != 0) ? "<span class=\"label radius\">#{pluralize(agent.seed.size, 'seed')}</span>".html_safe : '' %>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
           <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_agent_path(agent), :class => 'action right' %>
-          <%= link_to '<i class="icon-three-dots" data-tooltip class="has-tip" title="View"></i>'.html_safe, agent, :class => 'action right' %>
+         
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-              <div class="left">
+        <div class="left">
           <div class="circle_48 on">
             &infin;
           </div>
@@ -77,14 +77,7 @@
       </div>
     </div>
   </div>
-  <div class="small-3 columns">
+  <div class="small-12 medium-3 large-3 columns">
     <%= link_to 'Create agent <i class="icon-cycle"></i>'.html_safe, new_agent_path, :class => 'button small radius' %>
-    <h4 class="subheader">Event History</h4>
-    <ul class="side-nav">
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li class="divider"></li>
-    </ul>
+     <%= render partial: "helper/event_list"  %>
   </div>

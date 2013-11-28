@@ -1,38 +1,58 @@
 <%= form_for(@template) do |f| %>
   <% if @template.errors.any? %>
     <div id="error_explanation" class="alert-box alert">
-      <h2><%= pluralize(@template.errors.count, "error") %> prohibited this template from being saved:</h2>
-
+      <h2><%= pluralize(@template.errors.count, "error") %>
+        prohibited this template from being saved:</h2>
       <ul>
-      <% @template.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @template.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :identifier %><br>
-    <%= f.text_field :identifier %>
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :identifier, :class => 'right inline' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_field :identifier, :tabindex => 1, :autofocus => true %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_area :title %>
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :title, :class => 'right inline' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_area :title, :tabindex => 2 %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :help %><br>
-    <%= f.text_area :help %>
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :help, :class => 'right inline' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_area :help, :tabindex => 3 %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :publisher %><br>
-    <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['File','file']])) %>    
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :publisher, :class => 'right inline' %>
+    </div>
+    <div class="small-10 columns">
+      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['File','file']], {:selected => 'sql'}), :tabindex => 4) %>
+    </div>
   </div>
-  <div class="field">
-  <%= f.label :payload %><br>
-<%= f.text_area :payload %>
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :payload, :class => 'right inline' %>
+    </div>
+    <div class="small-10 columns">
+      <%= f.text_area :payload, :tabindex => 3 %>
+    </div>
   </div>
-
-  <div class="row action right">
-    <%= f.submit 'Save', :class => "button right small radius" %>
+  <div class="row">
+    <div class="small-2 columns right">
+      <%= f.submit 'Save', :class => "button right tiny radius success" %>
+    </div>
   </div>
 <% end %>

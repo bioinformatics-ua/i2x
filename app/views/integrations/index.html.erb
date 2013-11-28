@@ -1,35 +1,82 @@
-<h1>Listing integrations</h1>
+<% content_for :title, "Dashboard - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li class="current">Dashboard</li>
+</ul>
+<h1>Dashboard</h1>
+<!-- main content -->
+<% unless flash[:notice].nil? then %>
+  <div data-alert class="alert-box warning radius">
+    <%= flash[:notice].html_safe %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+<div class="small-9 columns">
+  <% @integrations.each do |integration| %>
+    <div class="row agent-info <%= (integration.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
+      <div class="small-11 columns left">
+        <h6 class="subheader"><%= integration.title %></h6>
+        <div class="row">
+          <div class="small-5 columns">
+            <ul class="no-bullet">
+              <% integration.agent.each do |agent| %>
+                <li><%= link_to agent.title, agent %>
+                  <span class="label secondary radius"><i class="icon-level-up"></i><%= agent.publisher %></span>
+                  <span class="label secondary radius"><i class="icon-back-in-time"></i><%= agent.schedule %></span></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="small-1 columns">
+            <i class="icon-chevron-thin-right"></i>
+          </div>
+          <div class="small-5 columns">
+            <ul class="no-bullet">
+              <% integration.template.each do |template| %>
+                <li><%= link_to template.title, template %>
+                  <span class="label secondary radius"><i class="icon-level-up"></i><%= template.publisher %></span></li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="small-1 columns">
+            &nbsp;
+          </div>
+        </div>
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Identifier</th>
-      <th>Title</th>
-      <th>Help</th>
-      <th>Payload</th>
-      <th>Memory</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @integrations.each do |integration| %>
-      <tr>
-        <td><%= integration.identifier %></td>
-        <td><%= integration.title %></td>
-        <td><%= integration.help %></td>
-        <td><%= integration.payload %></td>
-        <td><%= integration.memory %></td>
-        <td><%= link_to 'Show', integration %></td>
-        <td><%= link_to 'Edit', edit_integration_path(integration) %></td>
-        <td><%= link_to 'Destroy', integration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Integration', new_integration_path %>
+      <div class="small-1 columns right">
+              <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_integration_path(integration), :class => 'action right' %>
+            </div>
+    </div>
+  <% end %>
+  <hr>
+    <h5 class="subheader">Add Sample Integration</h5>
+    <div class="row agent-info info-enabled">
+      <div class="small-11 columns">
+        <div class="left">
+          <div class="circle_48 on">
+            &infin;
+          </div>
+        </div>
+        <div class="info-details">
+          <h6 class="subheader">Twitter Monitor</h6>
+          <span class="label secondary"><i class="icon-level-up"></i>json</span>
+          <span class="label secondary"><i class="icon-back-in-time"></i>5m</span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '<i class="icon-plus" data-tooltip class="has-tip" title="Add Twitter monitor agent"></i>'.html_safe, new_agent_path, :class => 'action right' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar -->
+  <div class="small-3 columns">
+    <%= link_to 'New Integration <i class="icon-switch"></i>'.html_safe, new_integration_path, :class => 'button tiny radius' %>
+    <h4>Go to</h4>
+    <ul class="no-bullet">
+      <li><%= link_to '<i class="icon-cycle"></i> Agents'.html_safe, :controller => '/agents'%></li>
+      <li><%= link_to '<i class="icon-open-book"></i> Templates'.html_safe, :controller => '/templates' %></li>
+    </ul>
+    <%= render partial: "helper/event_list"  %>
+  </div>
