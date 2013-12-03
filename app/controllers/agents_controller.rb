@@ -101,11 +101,15 @@ class AgentsController < ApplicationController
   end
 
   def get
+    begin
      @agent = Agent.find(params[:identifier])
      respond_to do |format|
       format.json { render :json => @agent}
       format.xml { render :xml => @agent}
     end
+  rescue Exception => e
+    Services::Slog.exception e
+  end
   end
 
   private

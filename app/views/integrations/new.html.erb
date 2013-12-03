@@ -5,37 +5,78 @@
   <li class="current">New integration</li>
 </ul>
 <h1>New integration<small id="step" class="right">
-    Step
-    <strong>1</strong></small></h1>
-<%= render 'form' %>
-<div id="select_agent" style="display: none;">
-  <div class="row" >
-    <div class="small-3 columns">
-      <label class="right inline">Select agent</label>
-    </div>
-    <div class="small-9 columns">
-      <select id="agent_select" tabindex="8">
-        <option value="0" selected="selected">Create new agent...</option>
-        <% @agents.each do |agent| %>
+  Step
+  <strong>1</strong></small></h1>
+  <%= render 'form' %>
+  <div id="select_agent" style="display: none;">
+    <div class="row" >
+      <div class="small-3 columns">
+        <label class="right inline">Select agent</label>
+      </div>
+      <div class="small-9 columns">
+      <select id="agent_select_list" tabindex="8">
+          <option value="0" selected="selected">Create new agent...</option>
+          <% @agents.each do |agent| %>
           <option value="<%= agent.id %>"><%= agent.title %></option>
-        <% end %>
-      </select>
+          <% end %>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns right">
+        <a href="#" id="save_agent_select" class="button tiny success radius right">Save</a>
+      </div>
     </div>
   </div>
-</div>
-<div style="display: none;">
-  <div class="row">
-    <div class="small-3 columns right">
-      <label class="right inline">
-        Create new agent</label>
+  <div style="display: none;" id="new_agent_form">
+    <div class="row">
+      <div class="small-3 columns right">
+        <label class="right inline">
+          Create new agent</label>
+        </div>
+        <div class="small-9 columns">
+          <%= render "agents/new" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns right">
+          <%= link_to 'Save', integrations_path, :class => 'button tiny radius success right' %>
+        </div>
+      </div>
     </div>
-    <div class="small-9 columns">
-      <%= render "agents/new" %>
+    <div id="select_template" style="display:none">
+      <div class="row" >
+        <div class="small-3 columns">
+          <label class="right inline">Select template</label>
+        </div>
+        <div class="small-9 columns">
+          <select id="agent_select" tabindex="8">
+            <option value="0" selected="selected">Create new template...</option>
+            <% @templates.each do |template| %>
+            <option value="<%= template.id %>"><%= template.title %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-2 columns right">
+          <a href="#" id="save_template_select" class="button tiny success radius right">Save</a>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns right">
-      <%= link_to 'Save', integrations_path, :class => 'button tiny radius success right' %>
+    <div style="display: none" id="new_template_form">
+     <div class="row">
+      <div class="small-3 columns right">
+        <label class="right inline">
+          Create new template</label>
+        </div>
+        <div class="small-9 columns">
+          <%= render "templates/new" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns right">
+          <%= link_to 'Save', integrations_path, :class => 'button tiny radius success right' %>
+        </div>
+      </div>
     </div>
-  </div>
-</div>

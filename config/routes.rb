@@ -47,6 +47,7 @@ I2X::Application.routes.draw do
 
   # Templates controls
   resources :templates
+  get "templates/get/:identifier", to: "templates#get"            # load template as JSON
   post "templates/new"
   get "templates/start"
   

@@ -19,7 +19,7 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <title><%= content_for?(:title) ? yield(:title) : Settings.app.title %></title>
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "custom.modernizr" %>
+    <%= javascript_include_tag "vendor  /custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <body>

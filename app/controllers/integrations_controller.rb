@@ -1,4 +1,4 @@
-class IntegrationsController < ApplicationController
+  class IntegrationsController < ApplicationController
   before_action :set_integration, only: [:show, :edit, :update, :destroy]
 
   # GET /integrations
@@ -24,8 +24,10 @@ class IntegrationsController < ApplicationController
   def new
     @integration = Integration.new
     @agents = User.find(current_user.id).agent
+    @templates = User.find(current_user.id).template
 
     @agent = Agent.new
+    @template = Template.new
   end
 
   # GET /integrations/1/edit
@@ -42,8 +44,8 @@ class IntegrationsController < ApplicationController
       if @integration.save
         current_user.integration.push(@integration)
         current_user.save
-        format.html { redirect_to @integration, notice: 'Integration was successfully created.' }
-        format.json { render status: :created, location: @integration }
+        #format.html { redirect_to @integration, notice: 'Integration was successfully created.' }
+        format.json { render json: @integration, status: :created }#, location: @integration }
       else
         format.html { render action: 'new' }
         format.json { render json: @integration.errors, status: :unprocessable_entity }
