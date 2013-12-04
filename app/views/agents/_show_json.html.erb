@@ -8,7 +8,7 @@
         <strong class="right inline">URI</strong>
       </div>
       <div class="small-10 columns">
-        <%= @agent[:payload][:uri] %>
+        <%= agent[:payload][:uri] %>
       </div>
     </div>
     <div class="row">
@@ -16,7 +16,7 @@
         <strong class="right inline">Cache</strong>
       </div>
       <div class="small-10 columns">
-        <%= @agent[:payload][:cache] %>
+        <%= agent[:payload][:cache] %>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
     <div class="right inline"><i class="icon-flow-branch" data-tooltip class="has-tip tip-top" title="Selectors"></i></div>
   </div>
   <div class="small-11 columns">
-    <% JSON.parse(@agent[:payload][:selectors]).each do |k| %>
+    <% JSON.parse(agent[:payload][:selectors]).each do |k| %>
       <% k.each do |key, value| %>
         <div class="row">
           <div class="small-2 columns">

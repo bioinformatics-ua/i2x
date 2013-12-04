@@ -1,29 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Identifier:</strong>
-  <%= @integration.identifier %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @integration.title %>
-</p>
-
-<p>
-  <strong>Help:</strong>
-  <%= @integration.help %>
-</p>
-
-<p>
-  <strong>Payload:</strong>
-  <%= @integration.payload %>
-</p>
-
-<p>
-  <strong>Memory:</strong>
-  <%= @integration.memory %>
-</p>
-
-<%= link_to 'Edit', edit_integration_path(@integration) %> |
-<%= link_to 'Back', integrations_path %>
+<% content_for :title, "#{@integration.title} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li><%= link_to 'Dashboard', integrations_path %></li>
+  <li class="current"><%= @integration.title %></li>
+</ul>
+<!-- main content -->
+<% unless flash[:notice].nil? then %>
+<div data-alert class="alert-box warning radius">
+  <%= flash[:notice].html_safe %>
+  <a href="#" class="close">&times;</a>
+</div>
+<% end %>
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <h1><%= @integration.title %></h1>
+  </div>
+</div>
+<%= render :partial => "integrations/show", locals: {:integration => @integration} %>

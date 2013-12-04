@@ -8,7 +8,7 @@
         <strong class="right inline">URI</strong>
       </div>
       <div class="small-9 columns">
-        <%= highlight_variables(@template[:payload][:uri]) %>
+        <%= highlight_variables(template[:payload][:uri]) %>
       </div>
     </div>
     <div class="row">
@@ -16,10 +16,10 @@
         <strong class="right inline">Method</strong>
       </div>
       <div class="small-9 columns">
-        <%= highlight_variables(@template[:payload][:method]) %>
+        <%= highlight_variables(template[:payload][:method]) %>
       </div>
     </div>
-    <% @template[:payload].each do |k,v| %>
+    <% template[:payload].each do |k,v| %>
       <% if (k != 'uri') %>
         <% if (k != 'method') %>
           <div class="row">

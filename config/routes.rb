@@ -1,7 +1,5 @@
 I2X::Application.routes.draw do
 
-  
-
   get "about/index"
   get "helper/index"
   get "documentation/index"
@@ -32,6 +30,7 @@ I2X::Application.routes.draw do
 
   # Integrations control
   resources :integrations
+  post "integrations/save/:id", to: 'integrations#save'
 
   # Postman control
   get "postman/load/:publisher/:identifier", to: "postman#load"

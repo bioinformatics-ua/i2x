@@ -50,7 +50,7 @@
           <label class="right inline">Select template</label>
         </div>
         <div class="small-9 columns">
-          <select id="agent_select" tabindex="8">
+          <select id="template_select_list" tabindex="8">
             <option value="0" selected="selected">Create new template...</option>
             <% @templates.each do |template| %>
             <option value="<%= template.id %>"><%= template.title %></option>
@@ -79,4 +79,7 @@
           <%= link_to 'Save', integrations_path, :class => 'button tiny radius success right' %>
         </div>
       </div>
+    </div>
+    <div class="row" id="integration_save" style="display: none;">
+    <a href="#" class="button tiny success radius right" id="integration_save_button">Create Integration</a>
     </div>

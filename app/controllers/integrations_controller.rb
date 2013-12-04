@@ -38,7 +38,7 @@
   # POST /integrations.json
   def create
     @integration = Integration.new(integration_params)
-    @integration.status = 100
+    @integration.status = 200
 
     respond_to do |format|
       if @integration.save
@@ -74,6 +74,22 @@
     respond_to do |format|
       format.html { redirect_to integrations_url }
       format.json { head :no_content }
+    end
+  end
+
+  def save
+    begin
+      @integration = Integration.find(params[:id])
+      @integration.template.push(Template.find(params[:template]))
+      @integration.agent.push(Agent.find(params[:agent]))
+      @integration.status = 100
+      @integration.save
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+    respond_to do |format|
+      format.json {render json: @integration}
+      format.js {render json: @integration}
     end
   end
 

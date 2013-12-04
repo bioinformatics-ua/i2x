@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="small-11 columns left">
+    <span class="label secondary radius"><small>Updated
+      <%= time_ago_in_words(integration.updated_at) %>
+      ago</small></span>
+    </div>
+    <div class="small-1 columns right text-right">
+      <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit integration #{integration.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_integration_path(integration), :class => 'right' %>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="small-12 columns">
+      <%= integration.help %>
+    </div>
+  </div>
+  <br />
+  <!-- Agents -->
+  <div class="row">
+    <div class="small-12 medium-2 large-2 columns">
+      <h3><%= pluralize(integration.agent.size, 'Agent') %></h3>
+    </div>
+    <div class="small-12 medium-10 large-10 columns">
+      <% integration.agent.each do |agent| %>
+      <div class="row">
+        <h3 class="subheader"><%= agent.title %></h3>
+        <%= render :partial => "agents/show", locals: {:agent => agent} %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <br />
+  <!-- Templates -->
+  <div class="row">
+    <div class="small-12 medium-2 large-2 columns">
+      <h3><%= pluralize(integration.template.size, 'Template') %></h3>
+    </div>
+    <div class="small-12 medium-10 large-10 columns">
+      <% integration.template.each do |template| %>
+      <%= link_to "<h3 class=\"subheader\">#{template.title}</h3>".html_safe, template %>
+      <div class="row">
+        <%= render :partial => "templates/show", locals: {:template => template} %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <br />
