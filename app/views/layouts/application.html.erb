@@ -20,7 +20,6 @@
     <title><%= content_for?(:title) ? yield(:title) : Settings.app.title %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "custom.modernizr" %>
-
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -31,7 +30,7 @@
             <ul class="title-area">
               <!-- Title Area -->
               <li class="name">
-                <h1><a href="/" class="icon-i2x"></a></h1>
+                <h1><a href="<%= root_url %>" class="icon-i2x"></a></h1>
               </li>
               <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
             </ul>
