@@ -42,10 +42,11 @@
           </div>
         </div>
       </div>
-
       <div class="small-1 columns right">
-              <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_integration_path(integration), :class => 'action right' %>
-            </div>
+        <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_integration_path(integration), :class => 'action right' %>
+        <br />
+        <%= link_to '<i class="icon-three-dots" data-tooltip class="has-tip" title="View"></i>'.html_safe, integration, :class => 'action right' %>
+      </div>
     </div>
   <% end %>
   <hr>

@@ -33,8 +33,8 @@ gem 'compass-rails', '~> 2.0.alpha.0'
 # Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
 gem 'foundation-rails'
 
-# Entypo icons. Read more: https://github.com/lwe/entypo-rails
-gem 'entypo-rails'
+# Entypo icons. Disabled (multiple issue with generated assets URL). Read more: https://github.com/lwe/entypo-rails
+#gem 'entypo-rails'
 
 # Advanced markdown to HTML converter. Read more: http://kramdown.rubyforge.org
 gem 'kramdown'

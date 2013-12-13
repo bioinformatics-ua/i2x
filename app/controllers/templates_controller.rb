@@ -102,16 +102,16 @@ class TemplatesController < ApplicationController
     end
   end
 
-   def get
+  def get
     begin
-     @template = Template.find(params[:identifier])
-     respond_to do |format|
-      format.json { render :json => @template}
-      format.xml { render :xml => @template}
+      @template = Template.find(params[:identifier])
+      respond_to do |format|
+        format.json { render :json => @template}
+        format.xml { render :xml => @template}
+      end
+    rescue Exception => e
+      Services::Slog.exception e
     end
-  rescue Exception => e
-    Services::Slog.exception e
-  end
   end
 
   private

@@ -30,7 +30,7 @@ I2X::Application.routes.draw do
 
   # Integrations control
   resources :integrations
-  post "integrations/save/:id", to: 'integrations#save'
+  post "integrations/:id/save", to: 'integrations#save'
 
   # Postman control
   get "postman/load/:publisher/:identifier", to: "postman#load"

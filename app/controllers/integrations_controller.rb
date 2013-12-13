@@ -1,4 +1,4 @@
-  class IntegrationsController < ApplicationController
+class IntegrationsController < ApplicationController
   before_action :set_integration, only: [:show, :edit, :update, :destroy]
 
   # GET /integrations
@@ -32,6 +32,8 @@
 
   # GET /integrations/1/edit
   def edit
+    @agents = User.find(current_user.id).agent
+    @templates = User.find(current_user.id).template
   end
 
   # POST /integrations
@@ -80,8 +82,14 @@
   def save
     begin
       @integration = Integration.find(params[:id])
-      @integration.template.push(Template.find(params[:template]))
-      @integration.agent.push(Agent.find(params[:agent]))
+      unless params[:template].nil? then
+        @integration.template.push(Template.find(params[:template]))
+      end
+
+      unless params[:agent].nil? then
+        @integration.agent.push(Agent.find(params[:agent]))
+      end
+
       @integration.status = 100
       @integration.save
     rescue Exception => e
