@@ -5,9 +5,10 @@
       ago</small></span>
     </div>
     <div class="small-1 columns right text-right">
-      <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit integration #{integration.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_integration_path(integration), :class => 'right' %>
+      <%= link_to '', edit_integration_path(integration), :title => "Edit #{integration.title}", :class => 'right icon-settings icon-large has-tip tip-top', :data => {:tooltip => ''} %>
     </div>
   </div>
+
   <br />
   <div class="row">
     <div class="small-12 columns">
@@ -23,7 +24,7 @@
     <div class="small-12 medium-10 large-10 columns">
       <% integration.agent.each do |agent| %>
       <div class="row">
-        <h3 class="subheader"><%= agent.title %></h3>
+        <%= link_to "<h3 class=\"subheader\">#{agent.title}</h3>".html_safe, template %>
         <%= render :partial => "agents/show", locals: {:agent => agent} %>
       </div>
       <% end %>
@@ -37,8 +38,8 @@
     </div>
     <div class="small-12 medium-10 large-10 columns">
       <% integration.template.each do |template| %>
-      <%= link_to "<h3 class=\"subheader\">#{template.title}</h3>".html_safe, template %>
       <div class="row">
+      <%= link_to "<h3 class=\"subheader\">#{template.title}</h3>".html_safe, template %>
         <%= render :partial => "templates/show", locals: {:template => template} %>
       </div>
       <% end %>

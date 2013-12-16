@@ -79,15 +79,28 @@ class IntegrationsController < ApplicationController
     end
   end
 
+  ##
+  # => AJAX updates to integrations (add/remove agents, add/remove templates)
+  #
   def save
     begin
       @integration = Integration.find(params[:id])
-      unless params[:template].nil? then
-        @integration.template.push(Template.find(params[:template]))
-      end
+      if (params[:remove]) then        
+        unless params[:template].nil? then
+          @integration.template.destroy(Template.find(params[:template]))
+        end
 
-      unless params[:agent].nil? then
-        @integration.agent.push(Agent.find(params[:agent]))
+        unless params[:agent].nil? then
+          @integration.agent.destroy(Agent.find(params[:agent]))
+        end
+      else
+        unless params[:template].nil? then
+          @integration.template.push(Template.find(params[:template]))
+        end
+
+        unless params[:agent].nil? then
+          @integration.agent.push(Agent.find(params[:agent]))
+        end
       end
 
       @integration.status = 100
@@ -95,6 +108,7 @@ class IntegrationsController < ApplicationController
     rescue Exception => e
       Services::Slog.exception e
     end
+
     respond_to do |format|
       format.json {render json: @integration}
       format.js {render json: @integration}

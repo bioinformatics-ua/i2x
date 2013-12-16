@@ -1,14 +1,14 @@
 <%= form_for(@integration, :remote => true) do |f| %>
-  <% if @integration.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@integration.errors.count, "error") %>
-        prohibited this integration from being saved:</h2>
-      <ul>
-        <% @integration.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+<% if @integration.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@integration.errors.count, "error") %>
+    prohibited this integration from being saved:</h2>
+    <ul>
+      <% @integration.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
   <h4>Integration Properties</h4>
   <div class="row">
@@ -40,4 +40,4 @@
       <%= f.submit 'Save', :class => 'button tiny success radius right integration_save' %>
     </div>
   </div>
-<% end %>
+  <% end %>
