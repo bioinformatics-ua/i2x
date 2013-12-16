@@ -1,10 +1,23 @@
 class EventsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    begin
+      
+    @events = Kaminari.paginate_array(Event.by_user(current_user)).page(params[:page])
+    unless params[:page].nil? then
+      @events.page params[:page]
+    else
+      params[:page] = 1
+      @events.page 1
+    end
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+    
   end
 
   # GET /events/1
@@ -71,4 +84,4 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:payload, :memory)
     end
-end
+  end

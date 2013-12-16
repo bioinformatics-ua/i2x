@@ -1,29 +1,41 @@
-<h1>Listing events</h1>
+<% content_for :title, "Events page #{params[:page]} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="/">Home</a></li>
+  <li>Events</li>
+  <li class="current">Page <%= params[:page] %></li>
+</ul>
+<h1>Events</h1>
+<% unless flash[:notice].nil? then %>
+<div data-alert class="alert-box warning radius">
+  <%= flash[:notice].html_safe %>
+  <a href="#" class="close">&times;</a>
+</div>
+<% end %>
+<div class="row">
+  <div class="small-12 columns">
+    <table>
+      <thead>
+        <tr>
+          <th><h3>Agent</h3></th>
+          <th><h3>Payload</h3></th>
+          <th><h3>Timestamp</h3></th>
+        </tr>
+        </thead>
+      <tbody>
+        <% @events.each do |event| %>
+        <tr>
+          <td><%= link_to event.agent.title, event.agent %></td>
+          <td><%= truncate(event.payload.to_s, length: 256, omission: link_to(' ... (continued)', event), escape: false ) %></td>
+          <td><%= event.created_at %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Payload</th>
-      <th>Memory</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.payload %></td>
-        <td><%= event.memory %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+<div class="row">
+  <div class="small-12 pagination-centered">
+    <%= paginate @events%>
+  </div>
+</div>

@@ -25,6 +25,9 @@ I2X::Application.routes.draw do
 
   # Events control
   resources :events
+  resources :events do
+    get 'page/:page', :action => :index, :on => :collection
+  end
 
   # FluxCapacitor control
 

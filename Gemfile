@@ -80,6 +80,9 @@ gem "rails_config"
 # JSON Path detection support. Read more: http://rubydoc.info/gems/jsonpath/0.5.5/frames
 gem 'jsonpath'
 
+# Kaminari for pagination of large stuff. Read more: https://github.com/amatsuda/kaminari
+gem 'kaminari'
+
 group :development, :test do
 # Generates UML from Model.
     gem 'railroady'
