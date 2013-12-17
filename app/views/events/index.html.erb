@@ -18,7 +18,7 @@
         <tr>
           <th><h3>Agent</h3></th>
           <th><h3>Payload</h3></th>
-          <th><h3>Timestamp</h3></th>
+          <th><h3>Created</h3></th>
         </tr>
         </thead>
       <tbody>
@@ -26,7 +26,7 @@
         <tr>
           <td><%= link_to event.agent.title, event.agent %></td>
           <td><%= truncate(event.payload.to_s, length: 256, omission: link_to(' ... (continued)', event), escape: false ) %></td>
-          <td><%= event.created_at %></td>
+          <td><%= time_ago_in_words(event.created_at) %> ago</td>
         </tr>
         <% end %>
       </tbody>

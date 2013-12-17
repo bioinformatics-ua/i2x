@@ -1,10 +1,9 @@
-<h6 class="subheader">SQL Publisher Properties</h6>
 <div class="row">
   <div class="small-3 columns">
     <label for="agent_payload_sqlserver" class="right inline">Server</label>
   </div>
   <div class="small-9 columns">
-    <select id="agent_sqlserver" name="agent[sqlserver]" tabindex="8">
+    <select id="agent_sqlserver" name="agent[sqlserver]" tabindex="<%= autotab %>">
       <option selected="selected" value="mysql">MySQL</option>
       <option value="sqlserver">SQL Server</option>
       <option value="postgres">Postgres</option>
@@ -17,7 +16,7 @@
     <label for="agent_payload_host" class="right inline">Host</label>
   </div>
   <div class="small-9 columns">
-    <input type="text" id="agent_payload_host" tabindex="9" name="agent[host]"  placeholder="E.g.: localhost" />
+    <input type="text" id="agent_payload_host" tabindex="<%= autotab %>" value="<%= @agent.host.nil? ? '' : @agent.host %>" name="agent[host]"  placeholder="E.g.: localhost" />
   </div>
 </div>
 <div class="row">
@@ -25,7 +24,7 @@
     <label for="agent_payload_port" class="right inline">Port</label>
   </div>
   <div class="small-9 columns">
-    <input type="number" id="agent_payload_port" name="agent[port]"  tabindex="10" placeholder="E.g.: 3306" />
+    <input type="number" id="agent_payload_port" name="agent[port]"  value="<%= @agent.port.nil? ? '' : @agent.port %>" tabindex="<%= autotab %>" placeholder="E.g.: 3306" />
   </div>
 </div>
 <div class="row">
@@ -33,7 +32,7 @@
     <label for="agent_payload_database" class="right inline">Database</label>
   </div>
   <div class="small-9 columns">
-    <input type="text" id="agent_payload_database" name="agent[database]"  tabindex="11" placeholder="E.g.: i2x" />
+    <input type="text" id="agent_payload_database" name="agent[database]" value="<%= @agent.database.nil? ? '' : @agent.database %>"  tabindex="<%= autotab %>" placeholder="E.g.: i2x" />
   </div>
 </div>
 <div class="row">
@@ -41,7 +40,7 @@
     <label for="agent_payload_username" class="right inline">Username</label>
   </div>
   <div class="small-9 columns">
-    <input type="text" id="agent_payload_username" name="agent[username]"  tabindex="12" placeholder="E.g.: root" />
+    <input type="text" id="agent_payload_username" name="agent[username]" value="<%= @agent.username.nil? ? '' : @agent.username %>"  tabindex="<%= autotab %>" placeholder="E.g.: root" />
   </div>
 </div>
 <div class="row">
@@ -49,7 +48,7 @@
     <label for="agent_payload_password" class="right inline">Password</label>
   </div>
   <div class="small-9 columns">
-    <input type="text" id="agent_payload_password" name="agent[password]"  tabindex="13" placeholder="E.g.: 12345" />
+    <input type="text" id="agent_payload_password" name="agent[password]" value="<%= @agent.password.nil? ? '' : @agent.password %>"  tabindex="<%= autotab %>" placeholder="E.g.: 12345" />
   </div>
 </div>
 <div class="row">
@@ -57,7 +56,7 @@
     <label for="agent_payload_query" class="right inline">Query</label>
   </div>
   <div class="small-9 columns">
-    <textarea id="agent_payload_query" tabindex="14" name="agent[query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
+    <textarea id="agent_payload_query" tabindex="<%= autotab %>" name="agent[query]" placeholder="E.g.: SELECT * FROM..."><%= @agent.query.nil? ? '' : @agent.query %></textarea>
   </div>
 </div>
 <div class="row">
@@ -65,25 +64,7 @@
     <label class="right inline">Cache</label>
   </div>
   <div class="small-9 columns">
-    <input id="agent_payload_cache" name="agent[cache]" type="text" />
-    </div>
+    <input id="agent_payload_cache" tabindex="<%= autotab %>" name="agent[cache]" value="<%= @agent.cache.nil? ? '' : @agent.cache %>"  type="text" />
   </div>
-  <div class="row">
-    <input type="hidden" id="payload_selector_hidden" name="agent[selectors]" value='[]' />
-    <div id="payload_selector_include">
-    </div>
-    <div>
-      <div class="small-3 columns">
-        <span class="right inline">New Selector</span>
-      </div>
-      <div class="small-3 columns">
-        <input type="text" class="payload_selector_key " tabindex="17" data-id="1" placeholder="Key" id="payload_selector_key_1" />
-      </div>
-      <div class="small-3 columns">
-        <input type="text" class="payload_selector_value " tabindex="18" data-id="1" placeholder="Value" id="payload_selector_value_1" />
-      </div>
-      <div class="small-3 columns">
-        <a href="#" data-id="1" class="button prefix payload_selector_add" tabindex="19" id="payload_selector_button_1">Add</a>
-      </div>
-    </div>
-  </div>
+</div>
+<%= render :partial => "edit_selectors", locals: {:agent => @agent} %>

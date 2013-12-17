@@ -42,7 +42,7 @@
    font-family: entypo;
    font-style: normal;
    font-weight: normal;
-   display: inline-block;
+   /*display: inline-block;*/
    width: 1.1em;
    margin-right: .1em;
    text-align: center;
@@ -122,9 +122,10 @@
  .icon-large:before {
 
  }
-
-
-
+.icon-list:before { content: '\2630'; }
+.icon-properties:before { content: '\E73E'; }
+.icon-selectors:before { content: '\1F569'; }
+.icon-view:before { content: '\23F6'; }
 
  /** STATIC CSS **/	
  html{

@@ -5,15 +5,15 @@ class IntegrationsController < ApplicationController
   # GET /integrations
   # GET /integrations.json
   def index
-    @integrations = User.find(current_user.id).integration
-    @events = Event.all.order('created_at DESC').limit(8)
+    @integrations = current_user.integrations
+    @events = Event.by_user_limit current_user
   end
 
   # GET /integrations/1
   # GET /integrations/1.json
   def show
     begin
-      @integration = User.find(current_user.id).integration.find(params[:id])
+      @integration = current_user.integrations.find(params[:id])
     rescue Exception => e
       flash[:notice] = "You are not authorized to access that Integration"
       Services::Slog.exception e
@@ -33,8 +33,8 @@ class IntegrationsController < ApplicationController
 
   # GET /integrations/1/edit
   def edit
-    @agents = User.find(current_user.id).agent
-    @templates = User.find(current_user.id).template
+    @agents = current_user.agents
+    @templates = current_user.templates
   end
 
   # POST /integrations

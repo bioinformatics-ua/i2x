@@ -20,15 +20,15 @@
         </div>
         <div class="info-details">
           <h6 class="subheader"><%= template.title %></h6>
-          <span class="label secondary radius"><%= time_ago_in_words(template.last_execute_at) %>
-            ago</span>
-          <span class="label secondary radius"><i class="icon-level-up"></i><%= template.publisher %></span>
+          <span class="label secondary radius icon-update"><%= time_ago_in_words(template.last_execute_at) %>  ago</span>
+          <span class="label secondary radius icon-publisher"><%= template.publisher %></span>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_template_path(template), :class => 'action right' %>
-          <%= link_to '<i class="icon-three-dots" data-tooltip class="has-tip" title="View"></i>'.html_safe, template, :class => 'action right' %>
+          <%= link_to '', edit_template_path(template), :class => 'action right has-tip icon-settings', :title => "Edit #{template.title}", :data => {:tooltip => ''} %>
+          <br >
+          <%= link_to '', template, :class => 'action right has-tip icon-view', :title => "View #{template.title}", :data => {:tooltip => ''} %>
         </div>
       </div>
     </div>
@@ -39,12 +39,12 @@
       <div class="small-11 columns">
         <div class="info-details">
           <h6 class="subheader">Insert into database</h6>
-          <span class="label secondary"><i class="icon-level-up"></i>sql</span>
+          <span class="label secondary icon-publisher">sql</span>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '<i class="icon-plus" data-tooltip class="has-tip" title="Add insert into database template"></i>'.html_safe, new_template_path, :class => 'action right' %>
+          <%= link_to '', new_template_path, :class => 'action right icon-add' %>
         </div>
       </div>
     </div>
@@ -52,17 +52,22 @@
       <div class="small-11 columns">
         <div class="info-details">
           <h6 class="subheader">POST HTTP</h6>
-          <span class="label secondary"><i class="icon-level-up"></i>http</span>
+          <span class="label secondary icon-publisher">url</span>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '<i class="icon-plus" data-tooltip class="has-tip" title="Add POST HTTP template"></i>'.html_safe, new_template_path, :class => 'action right' %>
+          <%= link_to '', new_template_path, :class => 'action right icon-add' %>
         </div>
       </div>
     </div>
   </div>
   <div class="small-3 columns right">
-    <%= link_to 'Create template <i class="icon-open-book"></i>'.html_safe, new_template_path, :class => 'button small radius' %>
+    <%= link_to ' New Template', new_template_path, :class => 'button small radius icon-template' %>
+     <h4>Go to</h4>
+    <ul class="no-bullet">
+      <li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent'%></li>
+      <li><%= link_to 'Integrations'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration'%></li>
+    </ul>
     <%= render partial: "helper/event_list"  %>
   </div>

@@ -1,73 +1,92 @@
-<%= form_for(@agent) do |f| %>
-  <% if @agent.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
-
-      <ul>
-      <% @agent.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :publisher %><br>
-    <%= f.text_field :publisher %>
-  </div>
-  <div class="field">
-    <%= f.label :payload %><br>
-    <%= f.text_area :payload %>
-  </div>
-  <div class="field">
-    <%= f.label :memory %><br>
-    <%= f.text_area :memory %>
-  </div>
-  <div class="field">
-    <%= f.label :identifier %><br>
-    <%= f.text_field :identifier %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :help %><br>
-    <%= f.text_area :help %>
-  </div>
-  <div class="field">
-    <%= f.label :schedule %><br>
-    <%= f.text_field :schedule %>
-  </div>
-  <div class="field">
-    <%= f.label :events_count %><br>
-    <%= f.number_field :events_count %>
-  </div>
-  <div class="field">
-    <%= f.label :last_check_at %><br>
-    <%= f.datetime_select :last_check_at %>
-  </div>
-  <div class="field">
-    <%= f.label :last_event %><br>
-    <%= f.datetime_select :last_event %>
-  </div>
-  <div class="field">
-    <%= f.label :seed %><br>
-    <%= f.text_area :seed %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br>
-    <%= f.datetime_select :updated_at %>
-  </div>
-  <div class="field">
-    <%= f.label :action %><br>
-    <%= f.text_field :action %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for(@agent, :remote => true) do |f| %>
+<% if @agent.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@agent.errors.count, "error") %> prohibited this agent from being saved:</h2>
+  <ul>
+    <% @agent.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :title, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :title, :tabindex => autotab, :autofocus => true %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :help, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_area :help, :tabindex => autotab %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :schedule, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.select :schedule, options_for_select([['None','none'],['2 min', '2m'], ['5 min', '5m'], ['10 min','10m'], ['30 min','30m'], ['1 hour','1h'], ['2 hours','2h'], ['1 day','1d'], ['1 week','1w']]), {:selected => @agent.schedule}, {:tabindex => autotab} %>
+  </div>
+</div>
+<!-- Publisher processing -->
+<hr>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :publisher, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.select :publisher, options_for_select([['SQL', 'sql'], ['CSV', 'csv'], ['XML','xml'], ['JSON','json']]), {:selected => @agent.publisher}, {:tabindex => autotab} %>
+  </div>
+</div>
+<div id="publisher_content">
+  <%= render(:partial => "agents/publisher_#{@agent.publisher}") %>
+</div>
+
+<hr>
+<!-- Seed processing -->
+<% unless @agent.seeds.size > 0 then %>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">Add Seed</label>
+  </div>
+  <div class="small-9 columns">
+    <select id="seed" tabindex="<%= autotab %>" name="seed[publisher]">
+      <option selected="selected" value="none">None</option>
+      <option value="sql">SQL</option>
+      <option value="csv">CSV</option>
+      <option value="xml">XML</option>
+      <option value="json">JSON</option>
+    </select>
+  </div>
+</div>
+<div id="seed_content">
+</div>
+<% else %>
+<% @agent.seeds.each do |seed| %>
+<div class="row">
+  <div class="small-3 columns">
+   <label class="right inline">Seed</label>
+ </div>
+ <div class="small-9 columns">
+ <%= select_tag 'seed[publisher]', options_for_select([['SQL', 'sql'], ['CSV', 'csv'], ['XML','xml'], ['JSON','json']], {:selected => seed.publisher}), {:tabindex => autotab, :id => 'seed', :name => 'seed[publisher]'} %>
+</div>
+</div>
+<%= render :partial => "agents/seed_#{seed.publisher}", locals: {:seed => seed} %>
+<% end %>
+<% end %>
+<div class="row">
+  <div class="small-12 columns right">
+    <%= f.submit 'Save', :class => 'button right success small radius edit_save_agent', :tabindex => 40 %>
+  </div>
+</div>
+<% end %>
+<div class="row">
+  <div class="small-12 columns right">
+    <%= link_to 'Remove', @agent, :tabindex => autotab, :class => 'remove right', method: :delete, data: { confirm: "Are you sure you want to remove the #{@agent.title} agent?" } %>
+  </div>
+</div>

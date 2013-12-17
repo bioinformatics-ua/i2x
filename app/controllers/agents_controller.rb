@@ -5,15 +5,15 @@ class AgentsController < ApplicationController
   # GET /agents
   # GET /agents.json
   def index
-    @agents = User.find(current_user.id).agent
-    @events = Event.all.order('created_at DESC').limit(8)
+    @agents = current_user.agents
+    @events = Event.by_user_limit current_user
   end
 
   # GET /agents/1
   # GET /agents/1.json
   def show
     begin
-      @agent = User.find(current_user.id).agent.find(params[:id])
+      @agent = current_user.agents.find(params[:id])
 
     rescue Exception => e
       flash[:notice] = "You are not authorized to access that Agent"
@@ -25,6 +25,8 @@ class AgentsController < ApplicationController
   # GET /agents/new
   def new
     @agent = Agent.new
+    @seed = Seed.new
+    @seed.publisher = 'none'
 
     respond_to do |format|
       format.html {render action: "new"}
@@ -43,14 +45,16 @@ class AgentsController < ApplicationController
     @agent = Agent.new agent_params
     @agent.last_check_at = @help.datetime
     @agent.status = 100
+    @agent.events_count = 0
 
     # include seed in agent?
     if params[:seed][:publisher] != 'none' then
-      @seed = @agent.seed.build(seed_params)
+      @seed = @agent.seeds.build(seed_params)
     end
+
     respond_to do |format|
       if @agent.save
-        current_user.agent.push(@gent)
+        current_user.agents.push(@agent)
         current_user.save
         format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
         format.json { render action: 'show', status: :created, location: @agent }
@@ -65,15 +69,19 @@ class AgentsController < ApplicationController
   # PATCH/PUT /agents/1.json
   def update
     respond_to do |format|
-      if @agent.update(agent_params)
-        format.html { redirect_to @agent, notice: 'Agent was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @agent.errors, status: :unprocessable_entity }
+          # include seed in agent?
+          if params[:seed][:publisher] != 'none' then
+            @seed.update(seed_params)
+          end
+          if @agent.update(agent_params)
+            format.html { redirect_to @agent, notice: 'Agent was successfully updated.' }
+            format.json { head :no_content }
+          else
+            format.html { render action: 'edit' }
+            format.json { render json: @agent.errors, status: :unprocessable_entity }
+          end
+        end
       end
-    end
-  end
 
   # DELETE /agents/1
   # DELETE /agents/1.json
@@ -110,9 +118,9 @@ class AgentsController < ApplicationController
   rescue Exception => e
     Services::Slog.exception e
   end
-  end
+end
 
-  private
+private
   # Use callbacks to share common setup or constraints between actions.
   def set_agent
     begin
@@ -128,13 +136,13 @@ class AgentsController < ApplicationController
   def agent_params
     a = params[:agent].clone
     a[:agent] = params[:agent]
-    a.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    a.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
 
   end
 
   def seed_params
     s = params[:seed].clone
     s[:seed] = params[:seed]
-    s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors)
   end
 end

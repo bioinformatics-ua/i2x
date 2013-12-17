@@ -1,8 +1,6 @@
 <h4 class="subheader">Events</h4>
 <ul class="no-bullet">
-  <% @events.each do |event| %>
-    <li><%= link_to "#{event.agent.title}".html_safe, event.agent, :class => 'icon-right' %>
-      <span class="tiny label secondary radius"><%= time_ago_in_words(event.created_at) %>
-        ago</span></li>
-  <% end %>
+	<% @events.each do |event| %>
+	<li><%= link_to "#{event.agent.title}".html_safe, event, :class => 'icon-right' %> <span class="tiny label secondary radius"><%= time_ago_in_words(event.created_at) %> ago </span></li>
+	<% end %>
 </ul>

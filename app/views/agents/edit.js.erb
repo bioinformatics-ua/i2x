@@ -1,11 +1,12 @@
 $(function() {
+	
 	$('#agent_publisher').on('change', agent_update_publisher_view)
+
 	$('#seed').on('change', agent_update_seed_view);
 	update_payload_selector_add();
-	update_seed_selector_add();
 	update_payload_selector_remove();
 	update_seed_selector_remove();
-
+	update_seed_selector_add();
 });
 
 /*
@@ -31,6 +32,11 @@ function agent_update_publisher_view(event) {
  **/
 function agent_update_seed_view(event) {
 	seed = $(this).find(':selected').val();
+	if (seed === undefined) {
+		seed = '<%= @seed.publisher %>';
+	}
+
+	<%= seed = @seed %>
 
 	if (seed === 'csv') {
 		$('#seed_content').html("<%= j render(:partial => 'seed_csv', :locals => {:seed => @seed}) %>");
@@ -81,7 +87,7 @@ function add_payload_selector(id) {
 		origin_value_text.parent().addClass('error');
 	} else {
 		// process
-		destination.append('<div class="row payload_selector_new_' + id + '"><div class="small-3 columns left"><label class="right inline">Selector ' + id + '</label></div><div class="small-4 columns payload_selector_key_' + id + '"><input data-id="' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled payload_selector_key" value="' + origin_key_text.val() + '"></div><div class="small-4 columns payload_selector_value_' + id + '"><input id="payload_selector_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-1 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id + '" class="remove right payload_selector_remove">Remove</a></div></div>');
+		destination.append('<div class="payload_selector_new_' + id + '"><div class="small-3 columns left">&nbsp</div><div class="small-3 columns payload_selector_key_' + id + '"><input data-id="' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled payload_selector_key" value="' + origin_key_text.val() + '"></div><div class="small-3 columns payload_selector_value_' + id + '"><input id="payload_selector_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-3 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id + '" class="button postfix radius alert payload_selector_remove">Remove</a></div></div>');
 		origin_key_text.removeAttr('id');
 		origin_value_text.removeAttr('id');
 		origin_button.removeAttr('id')
@@ -183,7 +189,7 @@ function add_seed_selector(id) {
 		origin_value_text.parent().addClass('error');
 	} else {
 		// process
-		destination.append('<div class="row seed_selector_new_' + id + '"><div class="small-3 columns left"><label class="right inline">Selector ' + id + '</label></div><div class="small-4 columns seed_selector_key_' + id + '"><input data-id="' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled seed_selector_key" value="' + origin_key_text.val() + '"></div><div class="small-4 columns seed_selector_value_' + id + '"><input id="seed_selector_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-1 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id + '" class="remove right seed_selector_remove">Remove</a></div></div>');
+		destination.append('<div class="seed_selector_new_' + id + '"><div class="small-3 columns left">&nbsp</div><div class="small-3 columns seed_selector_key_' + id + '"><input data-id="' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled seed_selector_key" value="' + origin_key_text.val() + '"></div><div class="small-3 columns seed_selector_value_' + id + '"><input id="seed_selector_value_' + id + '" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="' + origin_value_text.val() + '"></div><div class="small-3 columns publisher_url_params_new_' + id + '"><a href="#" data-id="' + id + '" class="button radius postfix alert seed_selector_remove">Remove</a></div></div>');
 		origin_key_text.removeAttr('id');
 		origin_value_text.removeAttr('id');
 		origin_button.removeAttr('id')
@@ -224,7 +230,9 @@ function add_seed_selector_from_keypress(event) {
  **/
 function remove_seed_selector(event) {
 	event.preventDefault();
+	alert($(this));
 	var id = $(this).data('id');
+	alert(id);
 	var selectors = JSON.parse($('#seed_selector_hidden').val());
 	var key = $('#seed_selector_key_' + id).val();
 	var value = $('#seed_selector_value_' + id).val();

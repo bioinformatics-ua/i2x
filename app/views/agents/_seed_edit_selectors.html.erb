@@ -1,0 +1,40 @@
+
+<input type="hidden" id="seed_selector_hidden" name="seed[selectors]" value="<%= seed.selectors.nil? ? '[]' : seed.selectors %>" />
+<% i = 1 %>
+<% unless seed.selectors.nil? then %>
+<% JSON.parse(seed.selectors).each do |selector| %>
+<% selector.each do |k,v| %>
+<div class="row">
+  <div class="seed_selector_new_<%= i %>">
+    <div class="small-3 columns left"><label class="right inline">Selector <%= i %></label></div>
+    <div class="small-4 columns seed_selector_key_<%= i %>">
+      <input data-id="<%= i %>" type="text" placeholder="E.g.: id" disabled class="disabled seed_selector_key" value="<%= k %>" />
+    </div>
+    <div class="small-4 columns seed_selector_value_<%= i %>">
+      <input id="seed_selector_value_<%= i %>" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="<%= v %>">
+    </div>
+    <div class="small-1 columns publisher_url_params_new_<%= i %>">
+      <a href="javascript:remove_seed_selector(this);" title="Remove" data-id="<%= i %>" class="remove right seed_selector_remove">Remove</a>
+    </div>
+  </div>
+</div>
+<% i = i +1 %>
+<% end %>      
+<% end %>
+<% end %>
+<div id="seed_selector_include">
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">New Selector</label>
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="seed_selector_key " tabindex="17" data-id="<%= i %>" placeholder="Key" id="seed_selector_key_<%= i %>">
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="seed_selector_value " tabindex="18" data-id="<%= i %>" placeholder="Value" id="seed_selector_value_<%= i %>">
+  </div>
+  <div class="small-1 columns">
+    <a href="#" data-id="<%= i %>" class="button seed_selector_add tiny radius" tabindex="19" id="seed_selector_button_<%= i %>">Add</a>
+  </div>
+</div>

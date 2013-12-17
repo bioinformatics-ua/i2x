@@ -3,16 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'foundation_and_overrides';
 
-html{
-  height: 100%;
-}
-
-body {
-	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-weight: 300;
-	  min-height: 100%;
-	  height: 100%;
-}
 
 $panel-padding: rem-calc(5);
 

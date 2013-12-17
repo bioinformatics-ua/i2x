@@ -1,16 +1,11 @@
 
 <div class="row">
   <div class="small-11 columns left">
-    <span class="label secondary radius"><small>Updated
-        <%= time_ago_in_words(template.updated_at) %>
-        ago</small></span>
-    <span class="label secondary radius"><small>
-      Last delivery
-      <%= time_ago_in_words(template.last_execute_at) %>
-      ago</small></span>
+    <span class="label secondary radius"><small>Updated <%= time_ago_in_words(template.updated_at) %> ago</small></span>
+    <span class="label secondary radius"><small>Last delivery <%= time_ago_in_words(template.last_execute_at) %> ago</small></span>
   </div>
   <div class="small-1 columns right text-right">
-    <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit #{template.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_template_path(template) %>
+    <%= link_to '', edit_template_path(template), :class => "has-tip icon-settings", :title => "Edit #{template.title}", :data => {:tootlip => ''} %>
   </div>
 </div>
 <br />
@@ -20,13 +15,13 @@
       <div class="big center">
         <%= template.count %>
       </div>
-      <h5 class="center"><i class="icon-list"></i></h5>
+      <h5 class="center icon-list"></h5>
     </div>
     <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Delivery: this template delivers '<%= template.publisher %>'' output" data-options="disable_for_touch:true">
       <div class="big center">
         <%= template.publisher %>
       </div>
-      <h5 class="center"><i class="icon-level-up"></i></h5>
+      <h5 class="center icon-publisher"></h5>
     </div>
   </div>
   <div class="small-10 columns">
@@ -35,20 +30,20 @@
       <%= template.help %>
     </div>
     <hr>
-      <div class="row">
-        <h4 class="subheader">Publisher</h4>
-        <% if template.publisher == 'sql' then %>
-          <%= render partial: "templates/show_sql", locals: {:template => template}%>
-        <% end %>
-        <% if template.publisher == 'file' then %>
-          <%= render partial: "templates/show_file", locals: {:template => template}%>
-        <% end %>
-        <% if template.publisher == 'url' then %>
-          <%= render partial: "templates/show_url", locals: {:template => template}%>
-        <% end %>
-        <% if template.publisher == 'mail' then %>
-          <%= render partial: "templates/show_mail", locals: {:template => template}%>
-        <% end %>
-      </div>
+    <div class="row">
+      <h4 class="subheader">Publisher</h4>
+      <% if template.publisher == 'sql' then %>
+      <%= render partial: "templates/show_sql", locals: {:template => template}%>
+      <% end %>
+      <% if template.publisher == 'file' then %>
+      <%= render partial: "templates/show_file", locals: {:template => template}%>
+      <% end %>
+      <% if template.publisher == 'url' then %>
+      <%= render partial: "templates/show_url", locals: {:template => template}%>
+      <% end %>
+      <% if template.publisher == 'mail' then %>
+      <%= render partial: "templates/show_mail", locals: {:template => template}%>
+      <% end %>
     </div>
   </div>
+</div>

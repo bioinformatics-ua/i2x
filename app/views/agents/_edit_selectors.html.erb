@@ -1,0 +1,39 @@
+<input type="hidden" id="payload_selector_hidden" name="agent[selectors]" value='<%= @agent.selectors.nil? ? '[]' : @agent.selectors %>' />
+<div id="payload_selector_include">
+  <% i = 1 %>
+  <% unless agent.selectors.nil? then %>
+  <% JSON.parse(agent.selectors).each do |selector| %>
+  <% selector.each do |k,v| %>
+  <div class="row">
+    <div class="payload_selector_new_<%= i %>">
+      <div class="small-3 columns left"><label class="right inline">Selector <%= i %></label></div>
+      <div class="small-4 columns payload_selector_key_<%= i %>">
+        <input data-id="<%= i %>" type="text" placeholder="E.g.: id" disabled class="disabled payload_selector_key" value="<%= k %>" />
+      </div>
+      <div class="small-4 columns payload_selector_value_<%= i %>">
+        <input id="payload_selector_value_<%= i %>" type="text" placeholder="E.g.: id" disabled class="disabled template_variable_text" value="<%= v %>" />
+      </div>
+      <div class="small-1 columns publisher_url_params_new_<%= i %>">
+        <a href="#" data-id="<%= i %>" class="remove right payload_selector_remove">Remove</a>
+      </div>
+    </div>
+  </div>
+  <% i = i +1 %>
+  <% end %>      
+  <% end %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+  <label class="right inline">New Selector</label>
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="payload_selector_key " tabindex="<%= autotab %>" data-id="<%= i %>" placeholder="Key" id="payload_selector_key_<%= i %>" />
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="payload_selector_value " tabindex="<%= autotab %>" data-id="<%= i %>" placeholder="Value" id="payload_selector_value_<%= i %>" />
+  </div>
+  <div class="small-1 columns">
+    <a href="#" data-id="<%= i %>" class="button radius tiny payload_selector_add" tabindex="<%= autotab %>" id="payload_selector_button_<%= i %>">Add</a>
+  </div>
+</div>

@@ -8,17 +8,17 @@ class User < ActiveRecord::Base
   # => Use  User Agents  to connect Agents
   #
   has_many  :user_agents
-  has_many  :agent, :through => :user_agents
+  has_many  :agents, :through => :user_agents
 
   ##
   # => Use  User Templates  to connect Templates
   #
   has_many  :user_templates
-  has_many  :template, :through => :user_templates
+  has_many  :templates, :through => :user_templates
 
   ##
   # => Use  User Integrations  to connect Integrations
   #
   has_many  :user_integrations
-  has_many  :integration, :through => :user_integrations
+  has_many  :integrations, :through => :user_integrations
 end

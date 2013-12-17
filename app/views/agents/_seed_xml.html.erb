@@ -1,65 +1,41 @@
 <div class="row">
-	<fieldset>
-		<legend>XML Seed Properties</legend>	
-		<div class="row">
-			<div class="small-3 columns">
-				<label class="right inline">Identifier</label>
-			</div>
-			<div class="small-9 columns">
-				<input id="agent_seed_identifier" name="seed[identifier]" type="text">
-			</div>
-		</div>
-		<div class="row">
-			<div class="small-3 columns">
-				<label class="right inline">Title</label>
-			</div>
-			<div class="small-9 columns">
-				<input id="agent_seed_identifier" name="seed[title]" type="text">
-			</div>
-		</div>
-		<div class="row">	
-			<div class="small-3 columns">
-				<label class="right inline">URI</label>
-			</div>
-			<div class="small-9 columns">
-				<input id="agent_seed_uri" name="seed[uri]" type="text">
-			</div>
-		</div>
-		          <div class="row">
-            <div class="small-3 columns">
-              <label for="agent_seed_query" class="right inline">Query</label>
-            </div>
-            <div class="small-9 columns">
-              <input id="agent_seed_query" tabindex="14" name="seed[query]"  placeholder="E.g.: S" type="text" />
-            </div>
-          </div>
-		<div class="row">
-			<div class="small-3 columns">
-				<label class="right inline">Cache</label>
-			</div>
-			<div class="small-9 columns">
-				<input id="agent_seed_cache" name="seed[cache]" type="text">
-			</div>
-		</div>
-		<div class="row">
-			<input type="hidden" id="seed_selector_hidden" name="seed[selectors]" value='[]'>
-			<div id="seed_selector_include">
-		
-			</div>
-			<div>
-				<div class="small-3 columns">
-					<span class="right inline">New Selector</span>
-				</div>
-				<div class="small-3 columns">
-					<input type="text" class="seed_selector_key " tabindex="17" data-id="1" placeholder="Key" id="seed_selector_key_1">
-				</div>
-				<div class="small-3 columns">
-					<input type="text" class="seed_selector_value " tabindex="18" data-id="1" placeholder="Value" id="seed_selector_value_1">
-				</div>
-				<div class="small-3 columns">
-					<a href="#" data-id="1" class="button prefix seed_selector_add" tabindex="19" id="seed_selector_button_1">Add</a>
-				</div>
-			</div>
-		</div>
-	</fieldset>
+	<div class="small-3 columns">
+		<label class="right inline">Identifier</label>
+	</div>
+	<div class="small-9 columns">
+		<input id="agent_seed_identifier" value="<%= seed.identifier.nil? ? '' : seed.identifier %>" name="seed[identifier]" type="text" />
+	</div>
 </div>
+<div class="row">
+	<div class="small-3 columns">
+		<label class="right inline">Title</label>
+	</div>
+	<div class="small-9 columns">
+		<input id="agent_seed_identifier" value="<%= seed.title.nil? ? '' : seed.title %>" name="seed[title]" type="text">
+	</div>
+</div>
+<div class="row">	
+	<div class="small-3 columns">
+		<label class="right inline">URI</label>
+	</div>
+	<div class="small-9 columns">
+		<input id="agent_seed_uri" value="<%= seed.uri.nil? ? '' : seed.uri %>" name="seed[uri]" type="text">
+	</div>
+</div>
+<div class="row">
+	<div class="small-3 columns">
+		<label for="agent_seed_query" class="right inline">Query</label>
+	</div>
+	<div class="small-9 columns">
+		<input id="agent_seed_query" value="<%= seed.query.nil? ? '' : seed.query %>" tabindex="14" name="seed[query]"  placeholder="E.g.: S" type="text" />
+	</div>
+</div>
+<div class="row">
+	<div class="small-3 columns">
+		<label class="right inline">Cache</label>
+	</div>
+	<div class="small-9 columns">
+		<input id="agent_seed_cache" value="<%= seed.cache.nil? ? '' : seed.cache %>" name="seed[cache]" type="text" />
+	</div>
+</div>
+<%= render :partial => "seed_edit_selectors", locals: {:seed => seed} %>

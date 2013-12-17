@@ -1,14 +1,32 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Payload:</strong>
-  <%= @event.payload %>
-</p>
-
-<p>
-  <strong>Memory:</strong>
-  <%= @event.memory %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<% content_for :title, "Event for #{@event.agent.title} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+	<li><a href="/">Home</a></li>
+	<li><%= link_to 'Events', events_path %></li>
+	<li class="current">Event for <%=  @event.agent.title %></li>
+</ul>
+<div class="row">
+	<h1>Event <strong><%= @event.id %></strong> for <%= link_to "<strong>#{@event.agent.title}</strong>".html_safe, @event.agent %></h1>
+</div>
+<div class="row">
+	<div class="small-12 medium-2 large-2 columns">
+		<h2 class="subheader">Payload</h2>
+		<span class="label secondary radius">Created <%= time_ago_in_words(@event.created_at) %> ago</span>
+	</div>
+	<div class="small-12 medium-10 large-10 columns">
+		<% @event.payload.each do |k,v| %>
+		<div class="row">
+			<div class="small-12 medium-3 large-3 columns">
+				<h6><strong><%= k %></strong></h6>
+			</div>
+			<div class="small-12 medium-9 large-9 columns">
+				<%= v %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 medium-2 large-2 columns right">
+		<%= link_to 'Remove', @event, :class => 'remove right', method: :delete, data: { confirm: "Are you sure you want to remove this event?" } %>
+	</div>
+</div>

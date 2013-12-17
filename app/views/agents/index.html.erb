@@ -16,21 +16,23 @@
       <div class="small-11 columns left">
         <div class="left">
           <div class="circle_48 <%= (agent.status != 0) ? 'on' : 'off'  %>">
-            <%= agent.event.size %>
+            <%= agent.events.size %>
           </div>
         </div>
         <div class="info-details">
-          <h6 class="subheader"><%= link_to agent.title, agent %></h6>
-          <span class="label secondary radius"><%= time_ago_in_words(agent.last_check_at) %>
+          <h6 class="subheader"><%=  agent.title %></h6>
+          <span class="label secondary radius icon-update"><%= time_ago_in_words(agent.last_check_at) %>
             ago</span>
-          <span class="label secondary radius"><i class="icon-level-up"></i><%= agent.publisher %></span>
-          <span class="label secondary radius"><i class="icon-back-in-time"></i><%= agent.schedule %></span>
-          <%= (agent.seed.size != 0) ? "<span class=\"label radius\">#{pluralize(agent.seed.size, 'seed')}</span>".html_safe : '' %>
+          <span class="label secondary radius icon-publisher"><%= agent.publisher %></span>
+          <span class="label secondary radius icon-schedule"><%= agent.schedule %></span>
+          <%= (agent.seeds.size != 0) ? "<span class=\"label radius icon-seed\">#{pluralize(agent.seeds.size, 'seed')}</span>".html_safe : '' %>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '<i class="icon-cog" data-tooltip class="has-tip" title="Edit"></i>'.html_safe, edit_agent_path(agent), :class => 'action right' %>
+          <%= link_to '', edit_agent_path(agent), :class => 'action right icon-settings has-tip',:title => "Edit #{agent.title}", :data => {:tooltip => ''} %>
+          <br />
+          <%= link_to '', agent, :class => 'action right icon-view has-tip',:title => "View #{agent.title}", :data => {:tooltip => ''} %>
          
         </div>
       </div>
@@ -78,6 +80,11 @@
     </div>
   </div>
   <div class="small-12 medium-3 large-3 columns">
-    <%= link_to 'Create agent <i class="icon-cycle"></i>'.html_safe, new_agent_path, :class => 'button small radius' %>
+    <%= link_to ' New Agent', new_agent_path, :title => 'Create new agent', :class => 'button small radius icon-agent', :data => { :tooltip => ''} %>
+     <h4>Go to</h4>
+    <ul class="no-bullet">
+      <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration'%></li>
+      <li><%= link_to 'Templates'.html_safe, {:controller => '/templates'}, :class => 'icon-template'%></li>
+    </ul>
      <%= render partial: "helper/event_list"  %>
   </div>

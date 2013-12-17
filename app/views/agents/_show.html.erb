@@ -9,29 +9,29 @@
         ago</small></span>
       </div>
       <div class="small-1 columns right text-right">
-        <%= link_to "<i class=\"icon-cog\" data-tooltip class=\"has-tip tip-top\" title=\"Edit #{agent.identifier}\" data-options=\"disable_for_touch:true\"></i>".html_safe, edit_agent_path(agent) %>
+        <%= link_to '', edit_agent_path(agent), :data => {:tooltip => ''}, :title => "Edit #{agent.title}", :class => 'has-tip icon-settings' %>
       </div>
     </div>
     <br />
     <div class="row">
       <div class="small-2 columns">
-        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x detected <%= agent.event.size %> for this agent" data-options="disable_for_touch:true">
+        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x detected <%= agent.events.size %> for this agent" data-options="disable_for_touch:true">
           <div class="big center">
-            <%= agent.event.size %>
+            <%= agent.events.size %>
           </div>
-          <h5 class="center"><i class="icon-list"></i></h5>
+          <h5 class="center icon-list"></h5>
         </div>
         <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Schedule: i2x polls this agent every <%= agent.schedule %>" data-options="disable_for_touch:true">
           <div class="big center">
             <%= agent.schedule %>
           </div>
-          <h5 class="center"><i class="icon-back-in-time"></i></h5>
+          <h5 class="center icon-schedule"></h5>
         </div>
-        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: this agent processes '<%= agent.publisher %>'' input" data-options="disable_for_touch:true">
+        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Monitor: this agent processes '<%= agent.publisher %>'' input" data-options="disable_for_touch:true">
           <div class="big center">
             <%= agent.publisher %>
           </div>
-          <h5 class="center"><i class="icon-level-up"></i></h5>
+          <h5 class="center icon-publisher"></h5>
         </div>
       </div>
       <div class="small-10 columns">
@@ -55,11 +55,11 @@
           <%= render partial: "agents/show_csv", locals: {:agent => agent}%>
           <% end %>
         </div>
-        <% if agent.seed.size != 0 then %>
+        <% if agent.seeds.size != 0 then %>
         <hr>
         <div class="row">
           <h4 class="subheader">Seeds</h4>
-          <% agent.seed.each do |s| %>
+          <% agent.seeds.each do |s| %>
           <%= render partial: "seeds/show", locals: {:seed => s}   %>
           <% end %>
         </div>

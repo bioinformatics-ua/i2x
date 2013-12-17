@@ -1,3 +1,7 @@
- $(function(){
-    $.ajax({ url: '/agents/new', type: 'get', dataType:'script' });
-  });
+ $(function() {
+ 	$.ajax({
+ 		url: '/agents/new',
+ 		type: 'get',
+ 		dataType: 'script'
+ 	});
+ });

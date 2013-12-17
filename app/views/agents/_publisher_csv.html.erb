@@ -1,10 +1,9 @@
-<h6 class="subheader">CSV Publisher Properties</h6>
 <div class="row">
   <div class="small-3 columns">
     <label class="right inline">URI</label>
   </div>
   <div class="small-9 columns">
-    <input id="agent_payload_uri" name="agent[uri]" type="text" />
+    <input id="agent_payload_uri" tabindex="<%= autotab %>" value="<%= @agent.uri.nil? ? '' : @agent.uri %>"  name="agent[uri]" type="text" />
   </div>
 </div>
 <div class="row">
@@ -12,7 +11,7 @@
     <label class="right inline">Headers</label>
   </div>
   <div class="small-9 columns">
-    <input id="agent_payload_headers" name="agent[headers]" type="checkbox" checked />
+    <input id="agent_payload_headers" tabindex="<%= autotab %>" <%= @agent.headers ? 'checked' : '' %>  name="agent[headers]" type="checkbox" />
   </div>
 </div>
 <div class="row">
@@ -20,7 +19,7 @@
     <label class="right inline">Delimiter</label>
   </div>
   <div class="small-9 columns">
-    <input id="agent_payload_delimiter" name="agent[delimiter]" type="text" />
+    <input id="agent_payload_delimiter" value="<%= @agent.delimiter.nil? ? '' : @agent.delimiter %>"  name="agent[delimiter]" type="text" />
   </div>
 </div>
 <div class="row">
@@ -28,25 +27,7 @@
     <label class="right inline">Cache</label>
   </div>
   <div class="small-9 columns">
-    <input id="agent_payload_cache" name="agent[cache]" type="number" />
+    <input id="agent_payload_cache" tabindex="<%= autotab %>" value="<%= @agent.cache.nil? ? '' : @agent.cache %>"  name="agent[cache]" type="number" />
   </div>
 </div>
-<div class="row">
-  <input type="hidden" id="payload_selector_hidden" name="agent[selectors]" value='[]' />
-  <div id="payload_selector_include">
-  </div>
-  <div>
-    <div class="small-3 columns">
-      <span class="right inline">New Selector</span>
-    </div>
-    <div class="small-3 columns">
-      <input type="text" class="payload_selector_key " tabindex="17" data-id="1" placeholder="Key" id="payload_selector_key_1" />
-    </div>
-    <div class="small-3 columns">
-      <input type="text" class="payload_selector_value " tabindex="18" data-id="1" placeholder="Value" id="payload_selector_value_1" />
-    </div>
-    <div class="small-3 columns">
-      <a href="#" data-id="1" class="button prefix payload_selector_add" tabindex="19" id="payload_selector_button_1">Add</a>
-    </div>
-  </div>
-</div>
+<%= render :partial => "edit_selectors", locals: {:agent => @agent} %>

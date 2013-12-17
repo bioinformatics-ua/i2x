@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
 
   ##
   # => Highlight variables for UI
@@ -9,6 +9,14 @@ module ApplicationHelper
     highlighter = '<span class="selector">\1</span>'
     matcher = /%{(.*?)}/
     text.gsub(matcher, highlighter).html_safe
+  end
+  
+  ##
+  # => Automating tabindex counts
+  #
+  def autotab
+    @current_tab ||= 0
+    @current_tab += 1
   end
 
   ##

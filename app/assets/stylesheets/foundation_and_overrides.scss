@@ -902,9 +902,9 @@ $table-head-bg: none  ;
 
 $has-tip-border-bottom: none;
 $has-tip-font-weight: 300;
-// $has-tip-font-color: #333;
+$has-tip-font-color: darken($primary-color,10%);
 $has-tip-border-bottom-hover: none;
-// $has-tip-font-color-hover: $primary-color;
+// $has-tip-font-color-hover: darken($primary-color, 10%);
 // $has-tip-cursor-type: help;
 
 $tooltip-padding: 4px;

@@ -1,108 +1,87 @@
+
 <div class="row">
-  <fieldset><legend>SQL Seed Properties</legend>
-    <div class="row">
-      <div class="small-3 columns">
-        <label class="right inline">Identifier</label>
-      </div>
-      <div class="small-9 columns">
-        <input id="agent_seed_identifier" name="seed[identifier]" type="text">
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-3 columns">
-          <label class="right inline">Title</label>
-        </div>
-        <div class="small-9 columns">
-          <input id="agent_seed_identifier" name="seed[title]" type="text">
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-3 columns">
-            <label for="agent_seed_sqlserver" class="right inline">Server</label>
-          </div>
-          <div class="small-9 columns">
-            <select id="agent_sqlserver" name="seed[sqlserver]" tabindex="8">
-              <option selected="selected" value="mysql">MySQL</option>
-              <option value="sqlserver">SQL Server</option>
-              <option value="postgres">Postgres</option>
-              <option value="sqlite">SQLite</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-3 columns">
-            <label for="agent_seed_host" class="right inline">Host</label>
-          </div>
-          <div class="small-9 columns">
-            <input type="text" id="agent_seed_host" tabindex="9" name="seed[host]"  placeholder="E.g.: localhost">
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-3 columns">
-              <label for="agent_seed_port" class="right inline">Port</label>
-            </div>
-            <div class="small-9 columns">
-              <input type="number" id="agent_seed_port" name="seed[port]"  tabindex="10" placeholder="E.g.: 3306">
-              </div>
-            </div>
-            <div class="row">
-              <div class="small-3 columns">
-                <label for="agent_seed_database" class="right inline">Database</label>
-              </div>
-              <div class="small-9 columns">
-                <input type="text" id="agent_seed_database" name="seed[database]"  tabindex="11" placeholder="E.g.: i2x">
-                </div>
-              </div>
-              <div class="row">
-                <div class="small-3 columns">
-                  <label for="agent_seed_username" class="right inline">Username</label>
-                </div>
-                <div class="small-9 columns">
-                  <input type="text" id="agent_seed_username" name="seed[username]"  tabindex="12" placeholder="E.g.: root">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="small-3 columns">
-                    <label for="agent_seed_password" class="right inline">Password</label>
-                  </div>
-                  <div class="small-9 columns">
-                    <input type="text" id="agent_seed_password" name="seed[password]"  tabindex="13" placeholder="E.g.: 12345">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="small-3 columns">
-                      <label for="agent_seed_query" class="right inline">Query</label>
-                    </div>
-                    <div class="small-9 columns">
-                      <textarea id="agent_seed_query" tabindex="14" name="seed[query]"  placeholder="E.g.: SELECT * FROM..."></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="small-3 columns">
-                      <label class="right inline">Cache</label>
-                    </div>
-                    <div class="small-9 columns">
-                      <input id="agent_seed_cache" name="seed[cache]" type="text">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <input type="hidden" id="seed_selector_hidden" name="seed[selectors]" value='[]'>
-                        <div id="seed_selector_include">
-                        </div>
-                        <div>
-                          <div class="small-3 columns">
-                            <span class="right inline">New Selector</span>
-                          </div>
-                          <div class="small-3 columns">
-                            <input type="text" class="seed_selector_key " tabindex="17" data-id="1" placeholder="Key" id="seed_selector_key_1">
-                            </div>
-                            <div class="small-3 columns">
-                              <input type="text" class="seed_selector_value " tabindex="18" data-id="1" placeholder="Value" id="seed_selector_value_1">
-                              </div>
-                              <div class="small-3 columns">
-                                <a href="#" data-id="1" class="button prefix seed_selector_add" tabindex="19" id="seed_selector_button_1">Add</a>
-                              </div>
-                            </div>
-                          </div>
-                        </fieldset>
-                      </div>
+  <div class="small-3 columns">
+    <label class="right inline">Identifier</label>
+  </div>
+  <div class="small-9 columns">
+    <input id="agent_seed_identifier" value="<%= seed.identifier.nil? ? '' : seed.identifier %>" name="seed[identifier]" type="text" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">Title</label>
+  </div>
+  <div class="small-9 columns">
+    <input id="agent_seed_identifier" value="<%= seed.title.nil? ? '' : seed.title %>" name="seed[title]" type="text" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_sqlserver" class="right inline">Server</label>
+  </div>
+  <div class="small-9 columns">
+    <select id="agent_sqlserver" name="seed[sqlserver]" tabindex="8">
+      <option selected="selected" value="mysql">MySQL</option>
+      <option value="sqlserver">SQL Server</option>
+      <option value="postgres">Postgres</option>
+      <option value="sqlite">SQLite</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_host" class="right inline">Host</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="text" id="agent_seed_host" value="<%= seed.host.nil? ? '' : seed.host %>" tabindex="9" name="seed[host]"  placeholder="E.g.: localhost" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_port" class="right inline">Port</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="number" id="agent_seed_port" value="<%= seed.port.nil? ? '' : seed.port %>" name="seed[port]"  tabindex="10" placeholder="E.g.: 3306" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_database" class="right inline">Database</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="text" id="agent_seed_database" value="<%= seed.database.nil? ? '' : seed.database %>" name="seed[database]"  tabindex="11" placeholder="E.g.: i2x" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_username" class="right inline">Username</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="text" id="agent_seed_username" value="<%= seed.username.nil? ? '' : seed.username %>" name="seed[username]"  tabindex="12" placeholder="E.g.: root" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_password" class="right inline">Password</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="text" id="agent_seed_password" value="<%= seed.password.nil? ? '' : seed.password %>" name="seed[password]"  tabindex="13" placeholder="E.g.: 12345" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_seed_query" class="right inline">Query</label>
+  </div>
+  <div class="small-9 columns">
+    <textarea id="agent_seed_query" tabindex="14"  name="seed[query]"  placeholder="E.g.: SELECT * FROM..."><%= seed.query.nil? ? '' : seed.query %></textarea>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">Cache</label>
+  </div>
+  <div class="small-9 columns">
+    <input id="agent_seed_cache" value="<%= seed.cache.nil? ? '' : seed.cache %>" name="seed[cache]" type="text" />
+  </div>
+</div>
+<%= render :partial => "seed_edit_selectors", locals: {:seed => seed} %>
