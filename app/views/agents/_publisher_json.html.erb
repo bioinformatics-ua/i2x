@@ -22,4 +22,4 @@
     <input id="agent_payload_cache" tabindex="<%= autotab %>" value="<%= @agent.cache.nil? ? '' : @agent.cache %>" name="agent[cache]" type="text" />
   </div>
 </div>
-<%= render :partial => "edit_selectors", locals: {:agent => @agent} %>
+<%= render :partial => "agents/edit_selectors", locals: {:agent => @agent} %>

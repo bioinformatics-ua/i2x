@@ -52,7 +52,7 @@ class TemplatesController < ApplicationController
     @template.count = 0
     respond_to do |format|
       if @template.save
-        current_user.template.push(@template)
+        current_user.templates.push(@template)
         current_user.save
         format.html { redirect_to @template, notice: 'Template was successfully created.' }
         format.json { render action: 'show', status: :created, location: @template }

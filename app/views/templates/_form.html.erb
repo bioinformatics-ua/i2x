@@ -1,29 +1,21 @@
 <%= form_for(@template) do |f| %>
-  <% if @template.errors.any? %>
-    <div id="error_explanation" class="alert-box alert">
-      <h2><%= pluralize(@template.errors.count, "error") %>
-        prohibited this template from being saved:</h2>
-      <ul>
-        <% @template.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="row">
-    <div class="small-2 columns">
-      <%= f.label :identifier, :class => 'right inline' %>
-    </div>
-    <div class="small-10 columns">
-      <%= f.text_field :identifier, :tabindex => 1, :autofocus => true %>
-    </div>
+<% if @template.errors.any? %>
+<div id="error_explanation" class="alert-box alert">
+  <h2><%= pluralize(@template.errors.count, "error") %>
+    prohibited this template from being saved:</h2>
+    <ul>
+      <% @template.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
   </div>
+  <% end %>
   <div class="row">
     <div class="small-2 columns">
       <%= f.label :title, :class => 'right inline' %>
     </div>
     <div class="small-10 columns">
-      <%= f.text_area :title, :tabindex => 2 %>
+      <%= f.text_area :title, :tabindex => autotab %>
     </div>
   </div>
   <div class="row">
@@ -31,7 +23,7 @@
       <%= f.label :help, :class => 'right inline' %>
     </div>
     <div class="small-10 columns">
-      <%= f.text_area :help, :tabindex => 3 %>
+      <%= f.text_area :help, :tabindex => autotab %>
     </div>
   </div>
   <div class="row">
@@ -39,20 +31,16 @@
       <%= f.label :publisher, :class => 'right inline' %>
     </div>
     <div class="small-10 columns">
-      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['File','file']], {:selected => 'sql'}), :tabindex => 4) %>
+      <%= f.select :publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['Email', 'email'], ['File','file']], {:selected => @template.publisher}), {}, {:tabindex => autotab, :id => 'edit_template_payload_select'} %>
     </div>
   </div>
-  <div class="row">
-    <div class="small-2 columns">
-      <%= f.label :payload, :class => 'right inline' %>
-    </div>
-    <div class="small-10 columns">
-      <%= f.text_area :payload, :tabindex => 3 %>
-    </div>
-  </div>
+  <!-- Publisher properties -->
+  <div id="edit_template_payload">
+  <%= render :partial => "templates/payload_#{@template.publisher}", locals: {:template => @template} %>
+</div>
   <div class="row">
     <div class="small-2 columns right">
-      <%= f.submit 'Save', :class => "button right tiny radius success" %>
+    <%= f.submit 'Save', :class => "button right small right radius success", :tabindex => autotab %>
     </div>
   </div>
-<% end %>
+  <% end %>

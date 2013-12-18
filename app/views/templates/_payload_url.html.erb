@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="small-2 columns">
+    <label for="publisher_url_method" class="right inline">Method</label>
+  </div>
+  <div class="small-10 columns">
+    <%= select_tag 'template[method]', options_for_select([['POST', 'post'], ['GET', 'get'], ['UPDATE', 'update'],['DELETE', 'delete']], {:selected => template.method}), {:id => 'publisher_url_method', :tabindex => autotab} %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns">
+    <label for="publisher_url_uri" class="right inline">URI</label>
+  </div>
+  <div class="small-10 columns">
+    <input type="url" tabindex="<%= autotab %>" value="<%= template.uri.nil? ? '' : template.uri %>" name="template[uri]" required id="publisher_url_uri" placeholder="E.g.: http://bioinformatics.ua.pt/i2x/..." />
+  </div>
+</div>
+<!-- Conditional POST parameters start -->
+<div id="publiser_url_post_params">
+  <div class="row" id="publisher_url_post_params_include">
+    <% template.payload.each do |k,v| %>
+    <% if (k != 'uri') %>
+    <% if (k != 'method') %>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline"><%= k %></strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(v) %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="small-2 columns">
+      <input type="text" class="publisher_url_post_params_key " tabindex="<%= autotab %>" data-id="1" placeholder="Key" id="publisher_url_post_params_key_1" />
+    </div>
+    <div class="small-7 columns">
+      <input type="text" class="publisher_url_post_params_value " tabindex="<%= autotab %>" data-id="1" placeholder="Value" id="publisher_url_post_params_value_1" />
+    </div>
+    <div class="small-2 columns">
+      <a href="#" data-id="1" class="button prefix publisher_url_post_params_add" tabindex="<%= autotab %>" id="publisher_url_post_params_button_1">Add</a>
+    </div>
+  </div>
+</div>

@@ -24,8 +24,8 @@ class IntegrationsController < ApplicationController
   # GET /integrations/new
   def new
     @integration = Integration.new
-    @agents = User.find(current_user.id).agent
-    @templates = User.find(current_user.id).template
+    @agents = current_user.agents
+    @templates = current_user.templates
 
     @agent = Agent.new
     @template = Template.new
@@ -45,7 +45,7 @@ class IntegrationsController < ApplicationController
 
     respond_to do |format|
       if @integration.save
-        current_user.integration.push(@integration)
+        current_user.integrations.push(@integration)
         current_user.save
         #format.html { redirect_to @integration, notice: 'Integration was successfully created.' }
         format.json { render json: @integration, status: :created }#, location: @integration }
@@ -88,19 +88,19 @@ class IntegrationsController < ApplicationController
       @integration = Integration.find(params[:id])
       if (params[:remove]) then        
         unless params[:template].nil? then
-          @integration.template.destroy(Template.find(params[:template]))
+          @integration.templates.destroy(Template.find(params[:template]))
         end
 
         unless params[:agent].nil? then
-          @integration.agent.destroy(Agent.find(params[:agent]))
+          @integration.agents.destroy(Agent.find(params[:agent]))
         end
       else
         unless params[:template].nil? then
-          @integration.template.push(Template.find(params[:template]))
+          @integration.templates.push(Template.find(params[:template]))
         end
 
         unless params[:agent].nil? then
-          @integration.agent.push(Agent.find(params[:agent]))
+          @integration.agents.push(Agent.find(params[:agent]))
         end
       end
 

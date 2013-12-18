@@ -1,47 +1,45 @@
 <div class="row">
   <div class="small-11 columns left">
-    <span class="label secondary radius"><small>Updated
-      <%= time_ago_in_words(integration.updated_at) %>
-      ago</small></span>
-    </div>
-    <div class="small-1 columns right text-right">
-      <%= link_to '', edit_integration_path(integration), :title => "Edit #{integration.title}", :class => 'right icon-settings icon-large has-tip tip-top', :data => {:tooltip => ''} %>
-    </div>
+    <span class="label secondary radius"><small>Updated <%= time_ago_in_words(integration.updated_at) %> ago</small></span>
   </div>
+  <div class="small-1 columns right text-right">
+    <%= link_to '', edit_integration_path(integration), :title => "Edit #{integration.title}", :class => 'right icon-settings icon-large has-tip tip-top', :data => {:tooltip => ''} %>
+  </div>
+</div>
 
-  <br />
-  <div class="row">
-    <div class="small-12 columns">
-      <%= integration.help %>
-    </div>
+<br />
+<div class="row">
+  <div class="small-12 columns">
+    <%= integration.help %>
   </div>
-  <br />
-  <!-- Agents -->
-  <div class="row">
-    <div class="small-12 medium-2 large-2 columns">
-      <h3><%= pluralize(integration.agent.size, 'Agent') %></h3>
-    </div>
-    <div class="small-12 medium-10 large-10 columns">
-      <% integration.agent.each do |agent| %>
-      <div class="row">
-        <%= link_to "<h3 class=\"subheader\">#{agent.title}</h3>".html_safe, template %>
-        <%= render :partial => "agents/show", locals: {:agent => agent} %>
-      </div>
-      <% end %>
-    </div>
+</div>
+<br />
+<!-- Agents -->
+<div class="row">
+  <div class="small-12 medium-2 large-2 columns">
+    <h3><%= pluralize(integration.agents.size, 'Agent') %></h3>
   </div>
-  <br />
-  <!-- Templates -->
-  <div class="row">
-    <div class="small-12 medium-2 large-2 columns">
-      <h3><%= pluralize(integration.template.size, 'Template') %></h3>
+  <div class="small-12 medium-10 large-10 columns">
+    <% integration.agents.each do |agent| %>
+    <div class="row">
+      <%= link_to "<h3 class=\"subheader\">#{agent.title}</h3>".html_safe, template %>
+      <%= render :partial => "agents/show", locals: {:agent => agent} %>
     </div>
-    <div class="small-12 medium-10 large-10 columns">
-      <% integration.template.each do |template| %>
-      <div class="row">
+    <% end %>
+  </div>
+</div>
+<br />
+<!-- Templates -->
+<div class="row">
+  <div class="small-12 medium-2 large-2 columns">
+    <h3><%= pluralize(integration.templates.size, 'Template') %></h3>
+  </div>
+  <div class="small-12 medium-10 large-10 columns">
+    <% integration.templates.each do |template| %>
+    <div class="row">
       <%= link_to "<h3 class=\"subheader\">#{template.title}</h3>".html_safe, template %>
-        <%= render :partial => "templates/show", locals: {:template => template} %>
-      </div>
-      <% end %>
+      <%= render :partial => "templates/show", locals: {:template => template} %>
     </div>
+    <% end %>
   </div>
+</div>

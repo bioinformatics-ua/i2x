@@ -20,7 +20,7 @@
         </div>
         <div class="info-details">
           <h6 class="subheader"><%= template.title %></h6>
-          <span class="label secondary radius icon-update"><%= time_ago_in_words(template.last_execute_at) %>  ago</span>
+          <span class="label secondary radius icon-update"><%= template.last_execute_at.nil? ? 'Not executed' : time_ago_in_words(template.last_execute_at) + ' ago' %></span>
           <span class="label secondary radius icon-publisher"><%= template.publisher %></span>
         </div>
       </div>

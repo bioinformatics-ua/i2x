@@ -56,8 +56,9 @@ class AgentsController < ApplicationController
       if @agent.save
         current_user.agents.push(@agent)
         current_user.save
-        format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @agent }
+        #format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
+        #format.json { render action: json: @integration, status: :created#'show', status: :created, location: @agent }
+        format.json { render json: @agent, status: :created }
       else
         format.html { render action: 'new' }
         format.json { render json: @agent.errors, status: :unprocessable_entity }

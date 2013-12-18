@@ -1,11 +1,11 @@
-<% content_for :title, "Editing #{@template.title} - #{Settings.app.title}" %>
+<% content_for :title, "Edit #{@template.title} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
   <li><a href="/">Home</a></li>
   <li><%= link_to 'Templates', templates_path %></li>
   <li><%= link_to @template.title, @template %></li>
   <li class="current">Edit <%= @template.title %></li>
 </ul>
-<h1>Editing <strong><%= @template.title %></strong></h1>
+<h1>Editing <strong><%= @template.title %></strong> template</h1>
 
 <%= render 'form' %>
 
