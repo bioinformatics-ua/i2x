@@ -1,6 +1,6 @@
 <% content_for :title, "Edit #{@agent.title} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-  <li><a href="/">Home</a></li>
+  <li><a href="<%= root_url %>">Home</a></li>
   <li><%= link_to 'Agents', agents_path %></li>
   <li><%= link_to  @agent.title, @agent %></li>
   <li class="current">Edit <%= @agent.title %></li>

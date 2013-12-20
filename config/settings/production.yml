@@ -1,2 +1,11 @@
+app:
+ version: 0.1a
+ title: i2x
+ host: http://bioinformatics.ua.pt/i2x
+ debug: false
+
+cache:
+ redis: false
+
 log:
  sentry: false

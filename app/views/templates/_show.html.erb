@@ -2,7 +2,7 @@
 <div class="row">
   <div class="small-11 columns left">
     <span class="label secondary radius"><small>Updated <%= time_ago_in_words(template.updated_at) %> ago</small></span>
-    <span class="label secondary radius"><small>Last delivery <%= time_ago_in_words(template.last_execute_at) %> ago</small></span>
+    <span class="label secondary radius"><small>Last delivery <%= template.last_execute_at.nil? ? 'Not executed' : time_ago_in_words(template.last_execute_at) +' ago' %></small></span>
   </div>
   <div class="small-1 columns right text-right">
     <%= link_to '', edit_template_path(template), :class => "has-tip icon-settings", :title => "Edit #{template.title}", :data => {:tootlip => ''} %>

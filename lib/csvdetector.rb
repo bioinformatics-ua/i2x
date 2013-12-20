@@ -10,6 +10,7 @@ require 'jsonseedreader'
 
 module Services
 
+  ##
   # = CSVDetector
   #
   # Detect changes in CSV files (using column numbers).
@@ -21,7 +22,6 @@ module Services
     # == Detect the changes
     #
     def detect object
-      puts "\n\tDetecting #{object[:identifier]}"
       begin
         CSV.new(open(object[:uri]), :headers => :first_row).each do |row|
           unless object[:cache].nil? then

@@ -40,8 +40,8 @@ module Services
         ##
         # => Process seed data, if available.
         #
-        if @agent.seed.size != 0 then
-          @agent.seed.each do |seed|
+        if @agent.seeds.size != 0 then
+          @agent.seeds.each do |seed|
             case seed[:publisher]
             when 'csv'
               begin
@@ -90,7 +90,7 @@ module Services
           @objects.push object
         end
       rescue Exception => e
-        @response = {:status => 404, :message => "[i2x][JSONDetector] failed to load JSON doc, #{e}"}
+        @response = {:status => 404, :message => "[i2x][Detector] failed to load doc, #{e}"}
         Services::Slog.exception e
       end
 
@@ -99,7 +99,7 @@ module Services
         @agent.increment!(:events_count, @payloads.size)
         @response = { :payload => @payloads, :status => 100}
       rescue Exception => e
-        @response = {:status => 404, :message => "[i2x][JSONDetector] failed to process JSONPath, #{e}"}
+        @response = {:status => 404, :message => "[i2x][Detector] failed to process queries, #{e}"}
         Services::Slog.exception e
       end
       @response

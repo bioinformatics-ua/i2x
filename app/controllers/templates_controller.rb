@@ -29,7 +29,13 @@ class TemplatesController < ApplicationController
       puts params[:message]
       attrs = JSON.parse(params[:message])
       @template = Template.create! attrs
-      response = { :status => 200, :message => "[i2x]: template #{params[:identifier]} loaded", :id => @template[:id] }
+      @template.status = 100
+      @template.count = 0
+      if @template.save
+        current_user.templates.push(@template)
+        current_user.save
+        response = { :status => 200, :message => "[i2x]: template #{params[:identifier]} loaded", :id => @template[:id] }
+      end
       respond_to do |format|
         format.html { redirect_to templates_url }
         format.json { render :json => response}

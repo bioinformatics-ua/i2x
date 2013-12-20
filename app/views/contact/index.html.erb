@@ -1,57 +1,19 @@
-  <% content_for :title, "Contact - i2x" %>
-
+<% content_for :title, "Contact - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+    <li><a href="<%= root_url %>">Home</a></li>
+    <li class="current">Contact</li>
+</ul>
+<div class="row">
   <div class="large-9 columns">
-    <h3>Get in Touch!</h3>
-
-    <p>For research or business queries, just contact us!</p>
-
-    <div class="section-container tabs" data-section="">
-        <section class="section">
-            <h5 class="title"><a href="#panel1">Research Contact</a></h5>
-
-            <div class="content" data-slug="panel1">
-                <ul class="vcard">
-                    <li class="fn">Pedro Lopes</li>
-
-                    <li class="street-address">IEETA</li>
-
-                    <li class="locality">Campus Universitario de Santiago</li>
-
-                    <li><span class="state">Aveiro</span>, <span class="zip">3810-193</span></li>
-
-                    <li class="email"><a href="mailto:pedrolopes@ua.pt?subject=[i2x]">pedrolopes@ua.pt</a></li>
-
-                    <li class="url"><a href="http://bioinformatics.ua.pt/">http://bioinformatics.ua.pt/</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h5 class="title"><a href="#panel2">Business Contact</a></h5>
-
-            <div class="content" data-slug="panel2">
-                <ul class="vcard">
-                    <li class="fn">BMD Software, Lda.</li>
-
-                    <li class="street-address">Edificio 1</li>
-
-                    <li class="locality">Campus Universitario de Santiago</li>
-
-                    <li><span class="state">Aveiro</span>, <span class="zip">3810-193</span></li>
-
-                    <li class="email"><a href="mailto:info@bmd-software.com?subject=[i2x]">info@bmd-software.com</a></li>
-
-                    <li class="url"><a href="http://www.bmd-software.com/" target="_blank">http://www.bmd-software.com/</a></li>
-                </ul>
-            </div>
-        </section>
+      <h3>Get in Touch!</h3>
+      <p>For research or business queries, just contact us!</p>
+  </div>
+</div>
+<div class="row">
+    <div class="small-6 columns">
+        <%= render(:partial => 'contact/research') %>
     </div>
-
-    <div class="large-3 columns">
-        <h5>Map</h5><!-- Clicking this placeholder fires the mapModal Reveal modal -->
-
-        <p><%= image_tag "map.png" %><br>
-           
-            <a target="_blank" href="http://wiki.ieeta.pt/wiki/index.php/About_us">View Map</a></p>
-        </div>
-        
+    <div class="small-6 columns">
+        <%= render(:partial => 'contact/business') %>
+    </div>
+</div>

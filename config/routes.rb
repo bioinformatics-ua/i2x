@@ -1,13 +1,13 @@
 I2X::Application.routes.draw do
+  
 
-  get "about/index"
-  get "helper/index"
-  get "documentation/index"
   # Home
   root  'home#index'
   get 'home' => 'home/index'
   get "home/index"
 
+  # About
+  get "about/index"
 
   # Agents control  
   resources :agents
@@ -23,6 +23,9 @@ I2X::Application.routes.draw do
   post "delivery/post"
   get "delivery/go"
 
+  # Documentation
+  get "documentation/index"
+
   # Events control
   resources :events
   resources :events do
@@ -30,6 +33,9 @@ I2X::Application.routes.draw do
   end
 
   # FluxCapacitor control
+
+  # Helpers
+  get "helper/index"
 
   # Integrations control
   resources :integrations
@@ -96,6 +102,7 @@ I2X::Application.routes.draw do
   get "research/comparison"
 
   # general index redirects
+  get 'documentation' => 'documentation/index'
   get 'reference' => 'reference/index'
   get 'usecases'  => 'useasecases/index'
 

@@ -1,12 +1,22 @@
-<h1>About#index</h1>
-<p>Quisque ut turpis non mi consectetur commodo vitae sagittis neque. In hac habitasse platea dictumst. Sed lorem est, lobortis vitae leo nec, aliquet suscipit tortor. Praesent pretium at dolor eget venenatis. Nunc adipiscing nibh in diam pellentesque, ac elementum purus venenatis. Quisque faucibus scelerisque sapien, ut euismod metus tempor in. Etiam euismod posuere urna, id adipiscing ipsum accumsan a. Aenean bibendum risus augue, vel sagittis nisi ullamcorper sit amet. In aliquet nisl vel augue dictum vulputate. Duis mauris lacus, tincidunt id euismod ut, cursus vel lorem. Nunc a ligula vitae elit volutpat tristique. Phasellus imperdiet lacus id auctor commodo.
+<% content_for :title, "About - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+	<li><a href="<%= root_url %>">Home</a></li>
+	<li class="current">About</li>
+</ul>
+<h1>About <strong>i2x</strong></h1>
 
-Suspendisse at luctus justo. Etiam ornare mattis orci, a vulputate libero ultrices vulputate. Donec pellentesque velit quis lacinia suscipit. Phasellus non viverra augue. Curabitur accumsan sit amet dui non suscipit. Ut ullamcorper nisl nec orci blandit tempor. Fusce sit amet libero nisl. Suspendisse eu lacus scelerisque nunc venenatis commodo. Vivamus aliquam lacus ac sapien mattis, laoreet consectetur odio placerat. Fusce laoreet vestibulum nulla. In placerat, velit quis vulputate tempor, sem eros imperdiet nisl, id adipiscing velit felis ac mauris. Ut iaculis fermentum magna ut sollicitudin. Ut imperdiet, mi ac vulputate egestas, dolor enim luctus lorem, et rutrum tortor dolor at purus. Aliquam ut pretium lorem, in ultrices ipsum. Integer quis diam sodales, vestibulum lacus sed, pharetra turpis. Sed venenatis vitae neque sit amet luctus.
-
-Curabitur eu suscipit diam, non tincidunt sem. Quisque a feugiat tortor. Maecenas accumsan, felis a ultricies iaculis, elit ipsum vestibulum lacus, vel vehicula sapien nunc quis sapien. Etiam quis congue mi. Sed vel magna tempor leo cursus mollis. Duis ut commodo erat, non faucibus dolor. Vivamus sit amet tristique est. Maecenas accumsan condimentum leo. Aenean interdum imperdiet posuere. Morbi hendrerit, mi et tempus pulvinar, sem leo scelerisque mauris, non pretium ligula justo non lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque pharetra ornare nisl vel varius. Proin fermentum justo velit, at consequat nibh dapibus vitae. Quisque eleifend augue risus, vitae pharetra urna scelerisque eu.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla dictum, sem eget volutpat convallis, nunc felis varius est, id consequat arcu urna quis orci. Nullam sollicitudin blandit dolor id congue. Morbi enim neque, mattis non iaculis id, iaculis ut massa. Pellentesque porta diam risus, malesuada fermentum nulla tempor pellentesque. Mauris ac faucibus orci, id blandit diam. Phasellus eleifend facilisis tincidunt. Nulla vel cursus turpis, vel congue eros. Donec pharetra, quam et imperdiet mattis, orci lorem scelerisque nibh, in blandit tellus urna at elit. Proin non augue nec urna facilisis ultrices at pulvinar nulla. Cras faucibus ultrices orci, nec consectetur ipsum egestas ut. Suspendisse convallis pulvinar lobortis. Sed tempor vitae ante at commodo. In hac habitasse platea dictumst. Suspendisse et nibh fermentum, porttitor ligula eu, ultrices quam. Aliquam tincidunt nibh id cursus volutpat.
-
-Donec nec eros massa. Nam quis consequat lorem, a scelerisque tortor. Sed dolor mi, molestie ac dui et, vehicula suscipit mi. Aliquam auctor ornare leo, a feugiat dolor tristique et. Nam blandit velit vel nisl volutpat, et scelerisque sem dapibus. Ut blandit est sit amet justo fermentum, in pharetra nisl convallis. Cras hendrerit velit suscipit, cursus metus sed, tempus urna. Nulla a congue nisi, non adipiscing elit. Aenean nec ante quis arcu placerat rhoncus.
-
-</p>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<strong>i2x</strong> is an ongoing project at the University of Aveiro's bioinformatics group. Please contact us for further information.
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-6 columns">
+		<%= render(:partial => 'contact/research') %>
+	</div>
+	<div class="small-6 columns">
+		<%= render(:partial => 'contact/business') %>
+	</div>
+</div>

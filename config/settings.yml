@@ -1,4 +1,4 @@
-## General I2X settings
+## General i2x settings
 
 ##
 # Internal application settings
@@ -22,5 +22,5 @@ cache:
 # Log settings if Sentry is used
 log:
  sentry: true
- dsn: http://d767ad668a844f8587c57dcbed1a198b:a3c8e700b12a4770b0eb8578f5f8dcae@127.0.0.1:9000/1
+ dsn: http://d0e53af780144534bf4f6d8db6d7baf7:d3d1376610d1477b9a457e15b1e55e25@127.0.0.1:9000/1
  level: low

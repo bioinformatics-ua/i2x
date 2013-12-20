@@ -29,12 +29,12 @@ module Services
     #
     def detect object
       begin
-          if object[:uri] == '' then
-            @doc = object[:content]
-          else
-            url = RestClient.get object[:uri]
-            @doc = url.to_str
-          end
+        if object[:uri] == '' then
+          @doc = object[:content]
+        else
+          url = RestClient.get object[:uri]
+          @doc = url.to_str
+        end
         JsonPath.on(@doc,object[:query]).each do |element|
           JsonPath.on(element, object[:cache]).each do |c|
             @cache = Cashier.verify c, object, c, object[:seed]

@@ -18,7 +18,7 @@ module Services
     # + *agent*: the agent to verify
     #
     def execute agent
-      
+
       Services::Slog.debug({:message => "Processing agent #{agent.identifier}", :module => "Checkup", :task => "agent", :extra => {:agent => agent.identifier, :publisher => agent.publisher}})
 
       case agent.publisher
@@ -58,7 +58,6 @@ module Services
         unless agent.content.nil? then
           @d.content = agent.content
         end
-
         @checkup = @d.checkup
       rescue Exception => e
         Services::Slog.exception e
@@ -83,18 +82,16 @@ module Services
       rescue Exception => e
         Services::Slog.exception e
       end
-      response = {:status => @checkup[:status], :message => "[i2x][Checkup][execute] All OK."}
-      
+      response = {:status => @checkup[:status], :message => "[i2x][Checkup][execute] All OK."}      
     end
     #handle_asynchronously :execute
     
 
     ##
-    # = Initate real-time (poll) check
+    # = Initiate real-time (poll) check
     #
     # + *schedule*: the scheduling being checked
     def check schedule
-
       @agents = Agent.where( :schedule => schedule).where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 2 MINUTE")
       @checkup = {}
       @agents.each do |agent|

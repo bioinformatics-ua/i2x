@@ -1,6 +1,6 @@
 <% content_for :title, "Event for #{@event.agent.title} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-	<li><a href="/">Home</a></li>
+	<li><a href="<%= root_url %>">Home</a></li>
 	<li><%= link_to 'Events', events_path %></li>
 	<li class="current">Event for <%=  @event.agent.title %></li>
 </ul>

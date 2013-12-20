@@ -7,7 +7,7 @@
       <%= f.label :name, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.text_field :name, :required => '', :pattern => '[A-Za-z0_9_]{4,}' %>
+      <%= f.text_field :name, :required => '', :pattern => '[A-Za-z0_9_]{4,}', :autofocus => true, :tabindex => autotab %>
       <small class="error">Your name must have at least 4 characters.</small>
     </div>
   </div>
@@ -16,7 +16,7 @@
       <%= f.label :email, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.email_field :email, :required => '' %>
+      <%= f.email_field :email, :required => '', :tabindex => autotab %>
       <small class="error">A valid email address is required.</small>
     </div>
   </div>
@@ -25,7 +25,7 @@
       <%= f.label :password, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.password_field :password, :required => '' %>
+      <%= f.password_field :password, :required => '' , :tabindex => autotab %>
       <small class="error">There's something wrong with your password (must have at least 8 chars, upper and lower case).</small>
     </div>
   </div>
@@ -34,7 +34,7 @@
       <%= f.label :password_confirmation, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.password_field :password_confirmation, :required => ''%>
+      <%= f.password_field :password_confirmation, :required => '', :tabindex => autotab %>
       <small class="error">There's something wrong with your password confirmation. Is it the same?</small>
     </div>
   </div>

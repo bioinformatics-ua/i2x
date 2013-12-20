@@ -12,20 +12,20 @@
 
 2. Configure your database, mail and Redis/Sentry settings
 
-    config/database.yml
-    config/settings.yml
+        config/database.yml
+        config/settings.yml
 
 3. Run Rails *bundler* (watch out for *gem* install errors)
 
-    bundle install
+        bundle install
 
 4. Create and load database
 
-    rake db:migrate
+        rake db:migrate
 
 5. Run on *rails*
 
-    rails s
+        rails s
 
 
 

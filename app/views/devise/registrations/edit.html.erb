@@ -1,27 +1,70 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% content_for :title, "Edit #{current_user.name} - #{Settings.app.title}" %>
+<ul class="breadcrumbs">
+  <li><a href="<%= root_url %>">Home</a></li>
+  <li class="current"><%= current_user.name %></li>
+</ul>
+<h1>Editing <strong><%= current_user.name %></strong> user</h1>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 <%= devise_error_messages! %>
 
-<div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :name, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :name, :tabindex => autotab, :autofocus => true %>
+  </div>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :email, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+    <% end %>
+    <%= f.email_field :email, :autofocus => true %>
+  </div>
+</div>
 
-  <div><%= f.label :password %> <i class="label secondary">(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, :autocomplete => "off" %></div>
+<div class="row">
+  <div class="small-3 columns">
+  <%= f.label :password, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+  <i class="label secondary">(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, :autocomplete => "off" %>
+  </div>
+</div>
 
-    <div><%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %></div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :password_confirmation, :class => 'right inline'  %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.password_field :password_confirmation %>
+  </div>
+</div>
 
-      <div><%= f.label :current_password %> <i class="label secondary">(we need your current password to confirm your changes)</i><br />
-        <%= f.password_field :current_password %></div>
-
-        <div><%= f.submit "Update", :class => 'button' %></div>
-        <% end %>
-
-        <h3>Cancel my account</h3>
-
-        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'tiny button alert' %></p>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :current_password, :class => 'inline right' %>
+  </div>
+  <div class="small-9 columns">
+  <i class="label secondary">(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns right">
+    <%= f.submit "Save", :class => 'button radius small right' %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns right">
+    <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'remove right' %>
+  </div>
+</div>
+<% end %>

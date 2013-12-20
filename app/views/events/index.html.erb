@@ -1,6 +1,6 @@
 <% content_for :title, "Events page #{params[:page]} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-  <li><a href="/">Home</a></li>
+  <li><a href="<%= root_url %>">Home</a></li>
   <li>Events</li>
   <li class="current">Page <%= params[:page] %></li>
 </ul>

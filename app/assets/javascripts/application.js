@@ -17,14 +17,19 @@
 //= require_tree .
 
 if (typeof String.prototype.startsWith != 'function') {
-  String.prototype.startsWith = function (str){
-    return this.slice(0, str.length) == str;
-  };
+	String.prototype.startsWith = function(str) {
+		return this.slice(0, str.length) == str;
+	};
 }
 
 if (typeof String.prototype.endsWith != 'function') {
-  String.prototype.endsWith = function (str){
-    return this.slice(-str.length) == str;
-  };
+	String.prototype.endsWith = function(str) {
+		return this.slice(-str.length) == str;
+	};
 }
-$(function(){ $(document).foundation(); });
+$(function() {
+	$(document).foundation();
+	$(window).load(function() {
+		$('#content').fadeIn(800);
+	});
+});

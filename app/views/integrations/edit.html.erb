@@ -1,6 +1,6 @@
 <% content_for :title, "Editing #{@integration.title} - #{Settings.app.title}" %>
 <ul class="breadcrumbs">
-  <li><a href="/">Home</a></li>
+  <li><a href="<%= root_url %>">Home</a></li>
   <li><%= link_to 'Dashboard', integrations_path %></li>
   <li><%= link_to @integration.title, @integration %></li>
   <li class="current">Edit

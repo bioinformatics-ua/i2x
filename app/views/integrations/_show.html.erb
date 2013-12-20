@@ -22,7 +22,7 @@
   <div class="small-12 medium-10 large-10 columns">
     <% integration.agents.each do |agent| %>
     <div class="row">
-      <%= link_to "<h3 class=\"subheader\">#{agent.title}</h3>".html_safe, template %>
+      <%= link_to "<h3 class=\"subheader\">#{agent.title}</h3>".html_safe, agent %>
       <%= render :partial => "agents/show", locals: {:agent => agent} %>
     </div>
     <% end %>
