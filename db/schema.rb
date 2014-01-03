@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212121052) do
+ActiveRecord::Schema.define(version: 20140103145552) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -66,13 +66,6 @@ ActiveRecord::Schema.define(version: 20131212121052) do
     t.text     "memory"
     t.integer  "agent_id"
     t.integer  "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "genes", force: true do |t|
-    t.string   "symbol"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -172,6 +165,8 @@ ActiveRecord::Schema.define(version: 20131212121052) do
     t.text     "referring_url"
     t.text     "landing_url"
     t.integer  "status"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

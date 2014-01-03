@@ -34,6 +34,7 @@
       </div>
     </div>
     <% end %></li>
+    <li><label><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></label></li>
     <li><label><%= link_to('Sign up'.html_safe, new_user_registration_path, :class => 'icon-signup')  %></label></li>
   </ul>
   <%end %>

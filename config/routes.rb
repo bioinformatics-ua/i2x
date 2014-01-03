@@ -1,5 +1,5 @@
 I2X::Application.routes.draw do
-  
+
 
   # Home
   root  'home#index'
@@ -71,8 +71,9 @@ I2X::Application.routes.draw do
 
 
   # Authentication
-  devise_for :users
-  get "sign_up", :to => "devise/registrations#new"
+ devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+ get "sign_up", :to => "devise/registrations#new"
+
 
   # Delayed job web interface
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
