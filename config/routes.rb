@@ -32,6 +32,11 @@ I2X::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   end
 
+  # Files control
+  get "files/get/:filename", to: "files#get"
+  get "files/delete/:filename", to: "files#delete"
+  get "files/index"
+
   # FluxCapacitor control
 
   # Helpers

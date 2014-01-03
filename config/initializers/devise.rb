@@ -244,4 +244,6 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
   config.secret_key = '34bf87cc8c2704487180a8c991075101b50fc50110218161da64e6b0e135c948b7a79951fbf06a25db3811b7bc730a37d2383a9af50342ed5401aebc240339f7'
+
+  # Adding facebook
 end

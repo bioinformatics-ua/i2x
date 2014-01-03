@@ -15,33 +15,35 @@ module Services
       when 'create'
         begin
           @template[:payload][:uri]["file://"] = ''
-          #puts @template[:payload][:uri]
-          File.open(@template[:payload][:uri], "w") { |file| file.write("\n") }
-          response = { :status => "200", :message => "File created.", :id =>  @template[:payload][:uri]}
+          @template.users.each do |user|
+            File.open("data/users/#{user.id}/#{@template[:payload][:uri]}", "w") { |file| file.write("\n") }
+            response = { :status => "200", :message => "File created.", :id =>  @template[:payload][:uri]}
 
-          unless @template[:payload][:content].nil? then
-            File.open(@template[:payload][:uri], "w") { |file| file.write(@template[:payload][:content]) }
+            unless @template[:payload][:content].nil? then
+              File.open("data/users/#{user.id}/#{@template[:payload][:uri]}", "w") { |file| file.write(@template[:payload][:content]) }
+            end
           end
+
+          
         rescue Exception => e
           Services::Slog.exception e
           response = { :status => "400", :message => "Method not is unsupported, #{e}"  }
         end
       when 'append'
         begin
-          
+         @template.users.each do |user|
           unless @template[:payload][:content].nil? then
-            File.open(@template[:payload][:uri], "a") { |file| file.write(@template[:payload][:content]) }
+            File.open("data/users/#{user.id}/#{@template[:payload][:uri]}", "a") { |file| file.write(@template[:payload][:content]) }
           end
-          response = { :status => "200", :message => "Content appended to file", :id =>  @template[:payload][:uri]}
-        rescue Exception => e
-          response = { :status => "403", :message => "Error processing file, #{e}" }
-          Services::Slog.exception e
         end
-
+        response = { :status => "200", :message => "Content appended to file", :id =>  @template[:payload][:uri]}
+      rescue Exception => e
+        response = { :status => "403", :message => "Error processing file, #{e}" }
+        Services::Slog.exception e
       end
-
-      response
     end
+    response
+  end
     #handle_asynchronously :execute
 
     ##

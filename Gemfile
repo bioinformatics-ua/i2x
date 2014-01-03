@@ -46,8 +46,14 @@ gem 'pg'
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
 
-# NOT WORKING! Additional User information. Read more: https://github.com/n8/devise_marketable
+# Additional User information. Read more: https://github.com/n8/devise_marketable
 gem 'devise_marketable', "~> 0.0.4"
+
+# OmniAuth authentication system. Read more: https://github.com/intridea/omniauth
+gem 'omniauth'
+
+# OmniAuth Facebook authentication strategy. 
+gem 'omniauth-facebook'
 
 # Daemons for delayed job execution. Read more: https://github.com/collectiveidea/delayed_job
 gem 'daemons'
