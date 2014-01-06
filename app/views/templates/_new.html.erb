@@ -42,7 +42,7 @@
       <%= f.label :publisher, :class => 'right inline' %>
     </div>
     <div class="small-10 columns">
-      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'],['Email', 'mail'], ['File','file']], {:selected => 'sql'}), :tabindex => autotab) %>
+      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'],['Email', 'mail'], ['File','file'],['Dropbox','dropbox']], {:selected => 'sql'}), :tabindex => autotab) %>
     </div>
   </div>
   <div class="publisher_sql">
@@ -177,6 +177,36 @@
       </div>
       <div class="small-10 columns">
         <textarea type="text" required id="publisher_file_content" tabindex="<%= autotab %>" placeholder="E.g.: %{i2x.date},%{id}\n"></textarea>
+      </div>
+    </div>
+  </div>
+    <div class="field publisher_dropbox">
+    <div class="row">
+      <div class="small-2 columns">
+        <label for="publisher_dropbox_method" class="right inline">Method</label>
+      </div>
+      <div class="small-10 columns">
+        <select id="publisher_dropbox_method" tabindex="<%= autotab %>">
+          <option selected="selected" value="append">Append</option>
+          <option value="create">Create</option>
+          <option value="delete">Delete</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <label for="publisher_dropbox_uri"  class="right inline">URI</label>
+      </div>
+      <div class="small-10 columns">
+        <input type="url" required id="publisher_dropbox_uri" tabindex="<%= autotab %>" placeholder="E.g.: this.csv" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <label for="publisher_dropbox_content" class="right inline">Content</label>
+      </div>
+      <div class="small-10 columns">
+        <textarea type="text" required id="publisher_dropbox_content" tabindex="<%= autotab %>" placeholder="E.g.: %{i2x.date},%{id}\n"></textarea>
       </div>
     </div>
   </div>

@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="small-2 columns">
+    <label for="publisher_dropbox_method" class="right inline">Method</label>
+  </div>
+  <div class="small-10 columns">
+   <%= select_tag 'template[method]', options_for_select([['Append', 'append'], ['Create', 'create'], ['Delete', 'delete']], {:selected => template.method}), {:id => 'publisher_dropbox_method', :tabindex => autotab} %>
+ </div>
+</div>
+<div class="row">
+  <div class="small-2 columns">
+    <label for="publisher_dropbox_uri" class="right inline">URI</label>
+  </div>
+  <div class="small-10 columns">
+    <input type="url" required id="publisher_dropbox_uri" tabindex="<%= autotab %>" value="<%= template.uri.nil? ? '' : template.uri %>" name="template[uri]" placeholder="E.g.: file:///home/user/this.csv" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-2 columns">
+    <label for="publisher_dropbox_content" class="right inline">Content</label>
+  </div>
+  <div class="small-10 columns">
+    <textarea type="text" required id="publisher_dropbox_content" tabindex="<%= autotab %>" name="template[content]" placeholder="E.g.: %{i2x.date},%{id}\n"><%= template.content.nil? ? '' : template.content %></textarea>
+  </div>
+</div>

@@ -1,25 +1,24 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.0.0)
-      actionpack (= 4.0.0)
-      mail (~> 2.5.3)
-    actionpack (4.0.0)
-      activesupport (= 4.0.0)
+    actionmailer (0.6.1)
+      actionpack (>= 0.9.5)
+    actionpack (4.0.2)
+      activesupport (= 4.0.2)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    activemodel (4.0.0)
-      activesupport (= 4.0.0)
+    activemodel (4.0.2)
+      activesupport (= 4.0.2)
       builder (~> 3.1.0)
-    activerecord (4.0.0)
-      activemodel (= 4.0.0)
+    activerecord (4.0.2)
+      activemodel (= 4.0.2)
       activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.0)
+      activesupport (= 4.0.2)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activesupport (4.0.0)
+    activesupport (4.0.2)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
@@ -105,17 +104,14 @@ GEM
       addressable (~> 2.2)
       faraday (~> 0.8)
       multi_json (~> 1.3)
-    kramdown (1.3.0)
+    kramdown (1.3.1)
     linkedin (0.4.4)
       hashie (>= 1.2, < 2.1)
       multi_json (~> 1.0)
       oauth (~> 0.4)
-    mail (2.5.4)
-      mime-types (~> 1.16)
-      treetop (~> 1.4.8)
     memoizable (0.4.0)
       thread_safe (~> 0.1.3)
-    mime-types (1.25.1)
+    mime-types (2.0)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -155,30 +151,25 @@ GEM
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     orm_adapter (0.5.0)
-    pg (0.17.0)
-    polyglot (0.3.3)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
     railroady (1.1.1)
-    rails (4.0.0)
-      actionmailer (= 4.0.0)
-      actionpack (= 4.0.0)
-      activerecord (= 4.0.0)
-      activesupport (= 4.0.0)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.0)
-      sprockets-rails (~> 2.0.0)
+    rails (0.9.5)
+      actionmailer (>= 0.6.1)
+      actionpack (>= 1.4.0)
+      activerecord (>= 1.6.0)
+      rake (>= 0.4.15)
     rails_config (0.3.3)
       activesupport (>= 3.0)
-    railties (4.0.0)
-      actionpack (= 4.0.0)
-      activesupport (= 4.0.0)
+    railties (4.0.2)
+      actionpack (= 4.0.2)
+      activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.6)
@@ -186,7 +177,7 @@ GEM
       mime-types (>= 1.16)
     rufus-scheduler (3.0.3)
       tzinfo
-    sass (3.2.12)
+    sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -217,12 +208,9 @@ GEM
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    treetop (1.4.15)
-      polyglot
-      polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.1.0)
       coffee-rails
-    twitter (5.4.1)
+    twitter (5.5.0)
       addressable (~> 2.3)
       buftok (~> 0.2.0)
       descendants_tracker (~> 0.0.3)
@@ -234,7 +222,7 @@ GEM
       memoizable (~> 0.4.0)
       simple_oauth (~> 0.2.0)
     tzinfo (0.3.38)
-    uglifier (2.3.3)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuidtools (2.1.4)
@@ -245,7 +233,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.0.0)
+  coffee-rails
   compass-rails (~> 2.0.alpha.0)
   daemons
   delayed_job_active_record
@@ -271,14 +259,13 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-linkedin
   omniauth-twitter
-  pg
   railroady
-  rails (= 4.0.0)
+  rails
   rails_config
   redis
   rest-client
   rufus-scheduler
-  sass-rails (~> 4.0.0)
+  sass-rails
   sdoc
   sentry-raven
   sqlite3

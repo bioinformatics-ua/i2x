@@ -3,8 +3,10 @@ require 'sqldetector'
 require 'xmldetector'
 require 'csvdetector'
 require 'helper'
+require 'dropbox_sdk'
 
 class TesterController < ApplicationController
+  before_filter :authenticate_user!
 
   def agent
     @d = Services::SQLDetector.new params[:identifier]
@@ -32,6 +34,26 @@ class TesterController < ApplicationController
       format.xml { render :xml => @response}
     end
 
+  end
+
+  def dropbox
+    begin
+      auth = Authorization.where(:provider => 'dropbox_oauth2').first    
+      client = DropboxClient.new(auth.token)
+
+      file = open('data/agents/sql.js')
+      response = client.put_file('/csv.js', file, true)
+
+      @response = response.inspect
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+
+    respond_to do |format|
+      format.json { render :json => @response}
+      format.js { render :json => @response}
+      format.xml { render :xml => @response}
+    end
   end
 
 end

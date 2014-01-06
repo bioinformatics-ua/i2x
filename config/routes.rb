@@ -68,6 +68,7 @@ I2X::Application.routes.draw do
   # Tester controller
   get "tester/regex", to: 'tester#regex'
   get "tester/agent/:identifier", to: 'tester#agent'
+  get 'tester/dropbox', to: 'tester#dropbox'
 
 
   # Authentication

@@ -34,5 +34,5 @@ I2X::Application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.host = 'http://i2x.dev/'
+  #config.host = 'http://i2x.dev/'
 end

@@ -31,21 +31,31 @@ function update_publisher_view(event) {
 		$('.publisher_file').hide();
 		$('.publisher_url').hide();
 		$('.publisher_mail').hide();
+		$('.publisher_dropbox').hide();
 	} else if (type === 'url') {
 		$('.publisher_sql').hide();			
 		$('.publisher_file').hide();
 		$('.publisher_url').show();
 		$('.publisher_mail').hide();
+		$('.publisher_dropbox').hide();
 	} else if (type === 'file') {
 		$('.publisher_sql').hide();			
 		$('.publisher_file').show();
 		$('.publisher_url').hide();
 		$('.publisher_mail').hide();
+		$('.publisher_dropbox').hide();
 	} else if (type === 'mail') {
 		$('.publisher_sql').hide();			
 		$('.publisher_file').hide();
 		$('.publisher_url').hide();
 		$('.publisher_mail').show();
+		$('.publisher_dropbox').hide();
+	} else if (type === 'dropbox') {
+		$('.publisher_sql').hide();			
+		$('.publisher_file').hide();
+		$('.publisher_url').hide();
+		$('.publisher_mail').hide();
+		$('.publisher_dropbox').show();
 	}
 }
 
@@ -194,6 +204,10 @@ function save_template() {
 		payload += '"method":"' + $('#publisher_file_method :selected').val() + '", ';
 		payload += '"uri":"' + $('#publisher_file_uri').val() + '", ';
 		payload += '"content":"' + $('#publisher_file_content').val() + '"';
+	} else if (publisher === 'dropbox') {
+		payload += '"method":"' + $('#publisher_dropbox_method :selected').val() + '", ';
+		payload += '"uri":"' + $('#publisher_dropbox_uri').val() + '", ';
+		payload += '"content":"' + $('#publisher_dropbox_content').val() + '"';
 	}  else if (publisher === 'mail') {
 		payload += '"to":"' + $('#publisher_mail_to').val() + '", ';
 		payload += '"cc":"' + $('#publisher_mail_cc').val() + '", ';
