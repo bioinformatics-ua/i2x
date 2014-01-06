@@ -31,10 +31,10 @@
 
 <div class="row">
   <div class="small-3 columns">
-  <%= f.label :password, :class => 'right inline' %>
+    <%= f.label :password, :class => 'right inline' %>
   </div>
   <div class="small-9 columns">
-  <i class="label secondary">(leave blank if you don't want to change it)</i><br />
+    <i class="label secondary">(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, :autocomplete => "off" %>
   </div>
 </div>
@@ -53,7 +53,7 @@
     <%= f.label :current_password, :class => 'inline right' %>
   </div>
   <div class="small-9 columns">
-  <i class="label secondary">(we need your current password to confirm your changes)</i><br />
+    <i class="label secondary">(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password %>
   </div>
 </div>
@@ -68,3 +68,13 @@
   </div>
 </div>
 <% end %>
+<h3>Connect Accounts</h3>
+<ul class="no-bullet">
+<% ['facebook', 'twitter', 'github', 'linkedin', 'google_oauth2', 'dropbox_oauth2'].each do |provider| %>
+  <% if current_user.authorizations.pluck(:provider).include?(provider.to_s) %>
+  <li><span  class="icon-<%= provider %>"><%= provider.to_s.titleize %> Connected</span></li>
+  <% else %>
+  <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path('user', provider), :class => "icon-#{provider}" %></li>
+  <% end %>
+  <% end %>
+</ul>

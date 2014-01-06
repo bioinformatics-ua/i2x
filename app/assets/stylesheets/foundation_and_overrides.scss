@@ -998,3 +998,7 @@ html{
   height: 100%;
 }
 
+/** Hack for displaying correct icons on external applications login in sidenav **/
+ul.off-canvas-list li a {
+  display: inline-block;
+}

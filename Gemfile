@@ -1,4 +1,3 @@
-
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -52,8 +51,28 @@ gem 'devise_marketable', "~> 0.0.4"
 # OmniAuth authentication system. Read more: https://github.com/intridea/omniauth
 gem 'omniauth'
 
-# OmniAuth Facebook authentication strategy. 
+# OmniAuth strategies.
 gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+gem 'omniauth-dropbox-oauth2'
+
+##
+# External services APIs
+#
+# Koala for Facebook. Read more: https://github.com/arsduo/koala
+gem 'koala'
+
+# LinkedIn gem. Read more: https://github.com/hexgnu/linkedin
+gem 'linkedin'
+
+# Twitter gem. Read more: https://github.com/sferik/twitter
+gem 'twitter'
+
+# Dropbox SDK for file access. Read more: https://www.dropbox.com/developers/core/sdks/ruby
+gem 'dropbox-sdk'
 
 # Daemons for delayed job execution. Read more: https://github.com/collectiveidea/delayed_job
 gem 'daemons'
@@ -91,7 +110,7 @@ gem 'kaminari'
 
 group :development, :test do
 # Generates UML from Model.
-    gem 'railroady'
+gem 'railroady'
 end
 
 group :doc do

@@ -1,7 +1,14 @@
-require "omniauth-facebook"
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  # 
+  keys = File.join(Rails.root, 'config', "#{Settings.app.keys}.yml")
+  details = HashWithIndifferentAccess.new(YAML::load(IO.read(keys)))[Rails.env]
+  details.each do |k,v|
+    ENV[k.upcase] ||= v
+  end
+
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
@@ -246,7 +253,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
   config.secret_key = '34bf87cc8c2704487180a8c991075101b50fc50110218161da64e6b0e135c948b7a79951fbf06a25db3811b7bc730a37d2383a9af50342ed5401aebc240339f7'
 
-  # Adding facebook
-
-config.omniauth :facebook, "1405945099651477", "927617a8bc1400f6e0fc92afceed2f4b", :strategy_class => OmniAuth::Strategies::Facebook
+  # Adding OmniAuth Strategies, Key/Secret loaded from environment variables.
+  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"], { :scope => 'email, offline_access'}
+  config.omniauth :twitter, ENV["TWITTER_KEY"], ENV["TWITTER_SECRET"], { :scope => 'r_fullprofile, r_emailaddress'}
+  config.omniauth :linkedin, ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET"], { :scope => 'r_fullprofile r_emailaddress'}
+  config.omniauth :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'], scope: "user, public_repo"
+  config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET']
+  config.omniauth :dropbox_oauth2, ENV['DROPBOX_KEY'], ENV['DROPBOX_SECRET']
 end

@@ -71,7 +71,7 @@ I2X::Application.routes.draw do
 
 
   # Authentication
- devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+ devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
  get "sign_up", :to => "devise/registrations#new"
 
 

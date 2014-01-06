@@ -3,6 +3,7 @@ app:
  title: i2x
  host: http://bioinformatics.ua.pt/i2x
  debug: false
+ keys: keys
 
 cache:
  redis: false

@@ -1,0 +1,37 @@
+development:
+  facebook_key: "KEY"
+  facebook_secret: "SECRET"
+
+  twitter_key: "KEY"
+  twitter_secret: "SECRET"
+
+  github_key: "KEY"
+  github_secret: "SECRET"
+
+  linkedin_key: "KEY"
+  linkedin_secret: "SECRET"
+
+  google_key: "KEY"
+  google_secret: "SECRET"
+
+  dropbox_key: "KEY"
+  dropbox_secret: "SECRET"
+
+production:
+  facebook_key: "KEY"
+  facebook_secret: "SECRET"
+
+  twitter_key: "KEY"
+  twitter_secret: "SECRET"
+
+  github_key: "KEY"
+  github_secret: "SECRET"
+
+  linkedin_key: "KEY"
+  linkedin_secret: "SECRET"
+
+  google_key: "KEY"
+  google_secret: "SECRET"
+
+  dropbox_key: "KEY"
+  dropbox_secret: "SECRET"

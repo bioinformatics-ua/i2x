@@ -55,7 +55,7 @@
 
  span[class^='icon']:before, span[class*=" icon"]:before {
    font-size: 150%;
- 
+   
  }
 
  .icon-i2x:before {
@@ -122,13 +122,22 @@
  .icon-large:before {
 
  }
-.icon-list:before { content: '\2630'; }
-.icon-properties:before { content: '\E73E'; }
-.icon-selectors:before { content: '\1F569'; }
-.icon-view:before { content: '\23F6'; }
-.icon-files:before { content: '\E800'; }
-.icon-download:before { content: '\1F4E5'; }
-.icon-delete:before { content: '\1F6AB'; color: #FF0000;}
+ .icon-list:before { content: '\2630'; }
+ .icon-properties:before { content: '\E73E'; }
+ .icon-selectors:before { content: '\1F569'; }
+ .icon-view:before { content: '\23F6'; }
+ .icon-files:before { content: '\E800'; }
+ .icon-download:before { content: '\1F4E5'; }
+ .icon-delete:before { content: '\1F6AB'; color: #FF0000;}
+
+ /** Social icons **/
+ .icon-facebook:before { font-family: 'entypo-social'; content: '\F30E'; }
+ .icon-twitter:before { font-family: 'entypo-social'; content: '\F309'; }
+ .icon-linkedin:before { font-family: 'entypo-social'; content: '\F318'; }
+ .icon-github:before { font-family: 'entypo-social'; content: '\F300'; }
+ .icon-dropbox_oauth2:before { font-family: 'entypo-social'; content: '\F330'; }
+ .icon-google_oauth2:before { font-family: 'entypo-social'; content: '\F30F'; }
+
 
  /** STATIC CSS **/	
  html{

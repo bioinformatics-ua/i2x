@@ -1,0 +1,31 @@
+class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+
+	skip_before_filter :authenticate_user!
+	def all
+		begin
+			user = User.from_omniauth(env["omniauth.auth"], current_user)
+			if user.persisted?
+				flash[:notice] = "Successfully logged in."
+				sign_in_and_redirect(user)
+			else
+				session["devise.user_attributes"] = user.attributes
+				redirect_to new_user_registration_url
+			end
+		rescue Exception => e
+			Services::Slog.exception e
+		end
+	end
+
+	def failure
+      super
+  end
+
+
+  alias_method :facebook, :all
+  alias_method :twitter, :all
+  alias_method :linkedin, :all
+  alias_method :github, :all
+  alias_method :passthru, :all
+  alias_method :google_oauth2, :all
+  alias_method :dropbox_oauth2, :all
+end

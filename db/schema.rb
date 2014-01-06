@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140103145552) do
+ActiveRecord::Schema.define(version: 20140103153402) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20140103145552) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "status"
+  end
+
+  create_table "authorizations", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.string   "token"
+    t.string   "secret"
+    t.string   "username"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "caches", force: true do |t|
@@ -167,6 +178,8 @@ ActiveRecord::Schema.define(version: 20140103145552) do
     t.integer  "status"
     t.string   "provider"
     t.string   "uid"
+    t.string   "image"
+    t.string   "location"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
