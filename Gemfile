@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', "~> 4.0.2"
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -31,9 +31,6 @@ gem 'compass-rails', '~> 2.0.alpha.0'
 
 # Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
 gem 'foundation-rails'
-
-# Entypo icons. Disabled (multiple issue with generated assets URL). Read more: https://github.com/lwe/entypo-rails
-#gem 'entypo-rails'
 
 # Advanced markdown to HTML converter. Read more: http://kramdown.rubyforge.org
 gem 'kramdown'
@@ -98,6 +95,9 @@ gem 'redis'
 
 # Sentry logger access. Read more: https://github.com/getsentry/raven-ruby
 gem "sentry-raven"
+
+# Sanitize file names (they're trouble). Read more: https://github.com/madrobby/zaru
+gem 'zaru'
 
 # Simpler configuration properties. Read more: https://github.com/railsjedi/rails_config
 gem "rails_config"

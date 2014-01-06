@@ -10,7 +10,7 @@
 
 1. Clone or download **i2x** code from GitHub
 
-2. Configure your database, mail and Redis/Sentry settings
+2. Configure your database, services, mail, Redis and Sentry settings
 
         config/database.yml
         config/settings.yml
@@ -30,6 +30,10 @@
 
 
 ## Changelog
+
+2014-01-07
+
+* Added support for DropBox and registration/signin from common social services (Facebook, Dropbox, Github, Google and LinkedIn)
 
 2013-12-20
 
