@@ -7,14 +7,14 @@ module Services
     public
 
     ##
-    # => Performs the actual delivery, in this case, execure SQL query.
+    # => Performs the actual delivery, in this case, execute SQL query.
     #
     def execute
       Services::Slog.debug({:message => "File write for #{@template[:identifier]}", :module => "FileTemplate", :task => "execute", :extra => {:template => @template[:identifier], :payload => @template[:payload]}})
       case @template[:payload][:method]
       when 'create'
         begin
-          @template[:payload][:uri]["file://"] = ''
+          
           @template.users.each do |user|
             File.open("data/users/#{user.id}/#{@template[:payload][:uri]}", "w") { |file| file.write("\n") }
             response = { :status => "200", :message => "File created.", :id =>  @template[:payload][:uri]}

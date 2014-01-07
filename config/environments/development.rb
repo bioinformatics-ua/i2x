@@ -29,3 +29,4 @@ I2X::Application.configure do
 
   config.host = 'http://localhost:3000/'
 end
+

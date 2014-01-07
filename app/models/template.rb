@@ -12,6 +12,6 @@ class Template < ActiveRecord::Base
   ##
   # => Use  User Templates  to connect Users
   #
-  has_many  :user_template
+  has_many  :user_templates
   has_many  :users, :through => :user_templates
 end

@@ -8,7 +8,7 @@ module Services
     public
 
     ##
-    # => Performs the actual delivery, in this case, execure SQL query.
+    # => Performs the actual delivery, in this case, create/update file on Dropbox.
     #
     def execute
       Services::Slog.debug({:message => "File write for #{@template[:identifier]}", :module => "FileTemplate", :task => "execute", :extra => {:template => @template[:identifier], :payload => @template[:payload]}})

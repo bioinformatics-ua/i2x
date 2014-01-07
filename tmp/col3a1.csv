@@ -1,0 +1,136 @@
+
+2014-01-07,'COL3A1:c.638G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00333','
+      symbol:COL3A1
+      id:0000350
+      position_mRNA:NM_000090.3:c.638
+      position_genomic:chr2:189854123
+      Variant/DNA:c.638G>A
+      Variant/DBID:COL3A1_00333
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.647G>C','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00281','
+      symbol:COL3A1
+      id:0000291
+      position_mRNA:NM_000090.3:c.647
+      position_genomic:chr2:189854132
+      Variant/DNA:c.647G>C
+      Variant/DBID:COL3A1_00281
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.649_1663-86del','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00128','
+      symbol:COL3A1
+      id:0000128
+      position_mRNA:NM_000090.3:c.649_1663-86
+      position_genomic:chr2:189854134_189861038
+      Variant/DNA:c.649_1663-86del
+      Variant/DBID:COL3A1_00128
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.655G>T','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00012','
+      symbol:COL3A1
+      id:0000012
+      position_mRNA:NM_000090.3:c.655
+      position_genomic:chr2:189854140
+      Variant/DNA:c.655G>T
+      Variant/DBID:COL3A1_00012
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.665G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00211','
+      symbol:COL3A1
+      id:0000211
+      position_mRNA:NM_000090.3:c.665
+      position_genomic:chr2:189854150
+      Variant/DNA:c.665G>A
+      Variant/DBID:COL3A1_00211
+      Times_reported:2
+    '
+2014-01-07,'COL3A1:c.665G>T','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00301','
+      symbol:COL3A1
+      id:0000313
+      position_mRNA:NM_000090.3:c.665
+      position_genomic:chr2:189854150
+      Variant/DNA:c.665G>T
+      Variant/DBID:COL3A1_00301
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.674G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00259','
+      symbol:COL3A1
+      id:0000269
+      position_mRNA:NM_000090.3:c.674
+      position_genomic:chr2:189854159
+      Variant/DNA:c.674G>A
+      Variant/DBID:COL3A1_00259
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.674G>T','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00013','
+      symbol:COL3A1
+      id:0000013
+      position_mRNA:NM_000090.3:c.674
+      position_genomic:chr2:189854159
+      Variant/DNA:c.674G>T
+      Variant/DBID:COL3A1_00013
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.683G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00014','
+      symbol:COL3A1
+      id:0000014
+      position_mRNA:NM_000090.3:c.683
+      position_genomic:chr2:189854168
+      Variant/DNA:c.683G>A
+      Variant/DBID:COL3A1_00014
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.690+1G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00141','
+      symbol:COL3A1
+      id:0000141
+      position_mRNA:NM_000090.3:c.690+1
+      position_genomic:chr2:189854176
+      Variant/DNA:c.690+1G>A
+      Variant/DBID:COL3A1_00141
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.690+1G>T','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00314','
+      symbol:COL3A1
+      id:0000328
+      position_mRNA:NM_000090.3:c.690+1
+      position_genomic:chr2:189854176
+      Variant/DNA:c.690+1G>T
+      Variant/DBID:COL3A1_00314
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.690+2T>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00142','
+      symbol:COL3A1
+      id:0000142
+      position_mRNA:NM_000090.3:c.690+2
+      position_genomic:chr2:189854177
+      Variant/DNA:c.690+2T>A
+      Variant/DBID:COL3A1_00142
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.690+2T>G','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00143','
+      symbol:COL3A1
+      id:0000143
+      position_mRNA:NM_000090.3:c.690+2
+      position_genomic:chr2:189854177
+      Variant/DNA:c.690+2T>G
+      Variant/DBID:COL3A1_00143
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.691-2A>G','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00162','
+      symbol:COL3A1
+      id:0000162
+      position_mRNA:NM_000090.3:c.691-2
+      position_genomic:chr2:189854820
+      Variant/DNA:c.691-2A>G
+      Variant/DBID:COL3A1_00162
+      Times_reported:1
+    '
+2014-01-07,'COL3A1:c.692G>A','https://eds.gene.le.ac.uk/variants.php?select_db=COL3A1&action=search_unique&search_Variant%2FDBID=COL3A1_00329','
+      symbol:COL3A1
+      id:0000346
+      position_mRNA:NM_000090.3:c.692
+      position_genomic:chr2:189854823
+      Variant/DNA:c.692G>A
+      Variant/DBID:COL3A1_00329
+      Times_reported:1
+    '

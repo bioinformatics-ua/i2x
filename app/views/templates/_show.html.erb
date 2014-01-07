@@ -44,6 +44,9 @@
       <% if template.publisher == 'mail' then %>
       <%= render partial: "templates/show_mail", locals: {:template => template}%>
       <% end %>
+       <% if template.publisher == 'dropbox' then %>
+      <%= render partial: "templates/show_dropbox", locals: {:template => template}%>
+      <% end %>
     </div>
   </div>
 </div>

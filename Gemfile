@@ -6,6 +6,9 @@ gem 'rails', "~> 4.0.2"
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
+# Send emails. Read more: https://github.com/mikel/mail
+gem 'mail'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
@@ -27,7 +30,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'compass-rails'
 
 # Base gem for Zurb Foundation theming. Read more: http://foundation.zurb.com
 gem 'foundation-rails'
@@ -70,6 +73,9 @@ gem 'twitter'
 
 # Dropbox SDK for file access. Read more: https://www.dropbox.com/developers/core/sdks/ruby
 gem 'dropbox-sdk'
+
+# Google API for Drive integration. Read more: https://developers.google.com/drive/quickstart-ruby
+gem 'google-api-client'
 
 # Daemons for delayed job execution. Read more: https://github.com/collectiveidea/delayed_job
 gem 'daemons'

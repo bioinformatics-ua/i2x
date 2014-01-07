@@ -3,6 +3,8 @@ require 'delivery'
 require 'sqltemplate'
 require 'filetemplate'
 require 'urltemplate'
+require 'mailtemplate'
+require 'dropboxtemplate'
 require 'raven'
 
 class PostmanController < ApplicationController
@@ -12,7 +14,8 @@ class PostmanController < ApplicationController
     @delivery
     begin
       @template = Template.find_by! identifier: params[:identifier]
-      puts "Delivery for #{@template.title}"
+      puts "\n\n\t#{@template.id}"
+
       case @template[:publisher]
       when 'sql'
         @delivery = Services::SQLTemplate.new @template
@@ -20,10 +23,14 @@ class PostmanController < ApplicationController
         @delivery = Services::FileTemplate.new @template
       when 'url'
         @delivery = Services::URLTemplate.new @template
+      when 'mail'
+        @delivery = Services::MailTemplate.new @template
+      when 'dropbox'
+        @delivery = Services::DropboxTemplate.new @template
       end
     rescue Exception => e
       @response = { :status => "401", :message => "[i2x] Unable to load selected Delivery Template", :identifier => params[:identifier], :error => e }
-       Services::Slog.exception e
+      Services::Slog.exception e
     end
 
     begin
