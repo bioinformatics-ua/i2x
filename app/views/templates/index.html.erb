@@ -1,4 +1,4 @@
-<% content_for :title, "Templates - #{Settings.app.title}" %>
+<% content_for :title, "Templates - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
   <li class="current">Templates</li>

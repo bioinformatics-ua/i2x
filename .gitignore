@@ -1,11 +1,13 @@
-# Settings
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
-
 # Can ignore specific files
 .DS_Store
+.bundle
+.bundle/*
 
 # logs and stuff
 log/*
 
+# Ignore application configuration
+/config/application.yml
+
+# Ignore i2x temporary files
+tmp/i2x/*

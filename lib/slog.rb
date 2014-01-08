@@ -1,5 +1,5 @@
 require 'raven'
-require 'rails_config'
+
 
 module Services
 	class Slog
@@ -10,14 +10,14 @@ module Services
 		#
 		def self.exception exception
 			begin
-				if Settings.log.sentry then
+				if ENV["LOG_SENTRY"] then
 					Raven.capture_exception(exception)
 				else
 					puts exception.inspect
 				end
 				
 			rescue Exception => e
-				if Settings.log.sentry then
+				if ENV["LOG_SENTRY"] then
 					Raven.capture_exception(e)
 				else
 					puts e.inspect
@@ -31,7 +31,7 @@ module Services
 		def self.info message
 			begin
 				message[:l] = 'info'
-				if Settings.log.sentry then
+				if ENV["LOG_SENTRY"] then
 					capture_message message
 				end
 			rescue Exception => e
@@ -45,9 +45,9 @@ module Services
 		#
 		def self.debug message
 			begin
-				if Settings.app.debug then
+				if ENV["APP_DEBUG"] then
 					message[:l] = 'debug'
-					if Settings.log.sentry then
+					if ENV["LOG_SENTRY"] then
 						capture_message message
 					end
 				end
@@ -61,9 +61,9 @@ module Services
 		#
 		def self.warn message
 			begin
-				if Settings.app.debug then
+				if ENV["APP_DEBUG"] then
 					message[:l] = 'warn'
-					if Settings.log.sentry then
+					if ENV["LOG_SENTRY"] then
 						capture_message message
 					end
 				end
@@ -84,11 +84,11 @@ module Services
 																:level => message[:l],
 																:tags => {
 																	'environment' => Rails.env,
-																	'version' => Settings.app.version,
+																	'version' => ENV["APP_VERSION"],
 																	'module' => message[:module],
 																	'task' => message[:task]
 																},
-																:server_name => Settings.app.host,
+																:server_name => ENV["APP_HOST"],
 																:extra => message[:extra]
 				})
 			rescue Exception => e

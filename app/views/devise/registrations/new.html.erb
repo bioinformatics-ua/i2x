@@ -1,4 +1,4 @@
-<% content_for :title, "New user sign up - #{Settings.app.title}" %>
+<% content_for :title, "New user sign up - #{ENV["APP_TITLE"]}" %>
 <h1>Sign up</h1>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:"data-abide" => ''}) do |f| %>
   <%= devise_error_messages! %>

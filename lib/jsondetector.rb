@@ -2,7 +2,7 @@ require 'helper'
 require 'cashier'
 require 'open-uri'
 require 'raven'
-require 'rails_config'
+
 require 'slog'
 require 'jsonpath'
 require 'rest-client'

@@ -73,7 +73,7 @@ class Agent < ActiveRecord::Base
           integration.templates.each do |t|
             Services::Slog.debug({:message => "Sending #{identifier} for delivery by #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier}})
             checkup[:payload].each do |payload|
-              response = RestClient.post "#{Settings.app.host}postman/deliver/#{t.identifier}.js", payload
+              response = RestClient.post "#{ENV["APP_HOST"]}postman/deliver/#{t.identifier}.js", payload
               case response.code
               when 200
                 @event = Event.new({:payload => payload, :status => 100, :agent => self})

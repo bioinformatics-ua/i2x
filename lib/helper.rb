@@ -1,4 +1,4 @@
-require 'rails_config'
+
 require 'slog'
 
 module Services
@@ -18,7 +18,7 @@ module Services
 
     public
     def hostname
-      Settings.app.host
+      ENV["APP_HOST"]
     end
 
     def datetime

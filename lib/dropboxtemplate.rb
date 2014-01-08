@@ -49,23 +49,25 @@ module Services
 
           # Check if there are dropbox authorizations for user
           if authorizations.empty? then
-            response = { :status => "400", :message => "No linked Dropbox account.", :id =>  @template[:payload][:uri]}
+            response = { :status => "400", :message => "No linked Dropbox account.", :id =>  @template[:identifier]}
           else
             # Connect to Dropbox
             auth = authorizations.first    
             client = DropboxClient.new(auth.token)
 
-            # Download existing file and copy to temp
-            contents, metadata = client.get_file_and_metadata(@template[:payload][:uri])
-            open("tmp/#{@template[:payload][:uri]}", 'w') {|f| f.puts contents }
-
+            # Download existing file and copy to temp (if exists)
+            begin
+              contents, metadata = client.get_file_and_metadata(@template[:payload][:uri])
+              open("tmp/i2x/#{@template[:payload][:uri]}", 'w') {|f| f.puts contents }
+            rescue 
+            end
             # Append new content to file
             unless @template[:payload][:content].nil? then
-              File.open("tmp/#{@template[:payload][:uri]}", "a") { |file| file.write(@template[:payload][:content]) }
+              File.open("tmp/i2x/#{@template[:payload][:uri]}", "a") { |file| file.write(@template[:payload][:content]) }
             end
 
             # Upload modified file to dropbox
-            reply = client.put_file(@template[:payload][:uri], open("tmp/#{@template[:payload][:uri]}"), true)
+            reply = client.put_file(@template[:payload][:uri], open("tmp/i2x/#{@template[:payload][:uri]}"), true)
 
             response = { :status => "200", :message => "File updated on Dropbox account.", :id =>  @template[:payload][:uri], :reply => reply}            
           end

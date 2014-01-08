@@ -1,4 +1,4 @@
-<% content_for :title, "Edit #{current_user.name} - #{Settings.app.title}" %>
+<% content_for :title, "Edit #{current_user.name} - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
   <li class="current"><%= current_user.name %></li>

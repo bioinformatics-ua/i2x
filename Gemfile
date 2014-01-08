@@ -3,12 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', "~> 4.0.2"
 
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-
-# Send emails. Read more: https://github.com/mikel/mail
-gem 'mail'
-
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
@@ -24,9 +18,6 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -40,7 +31,6 @@ gem 'kramdown'
 
 # Databases
 gem  'mysql2'
-#gem 'pg'
 
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
@@ -105,14 +95,14 @@ gem "sentry-raven"
 # Sanitize file names (they're trouble). Read more: https://github.com/madrobby/zaru
 gem 'zaru'
 
-# Simpler configuration properties. Read more: https://github.com/railsjedi/rails_config
-gem "rails_config"
-
 # JSON Path detection support. Read more: http://rubydoc.info/gems/jsonpath/0.5.5/frames
 gem 'jsonpath'
 
 # Kaminari for pagination of large stuff. Read more: https://github.com/amatsuda/kaminari
 gem 'kaminari'
+
+# Figaro for easy configuration variables. Read more: https://github.com/laserlemon/figaro
+gem "figaro"
 
 group :development, :test do
 # Generates UML from Model.

@@ -1,4 +1,4 @@
-<% content_for :title, "Dashboard - #{Settings.app.title}" %>
+<% content_for :title, "Dashboard - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
   <li class="current">Dashboard</li>

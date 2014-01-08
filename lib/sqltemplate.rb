@@ -1,6 +1,6 @@
 require 'delivery'
 require 'raven'
-require 'rails_config'
+
 
 module Services
   class SQLTemplate < Delivery
@@ -24,7 +24,7 @@ module Services
           response = { :status => "400", :message => "SQL Server is unsupported" }
         end
       rescue Exception => e
-        if Settings.log.sentry then
+        if ENV["LOG_SENTRY"] then
           Raven.capture_exception(e)
         end
       end
@@ -59,7 +59,7 @@ module Services
           end
         end
       rescue Exception => e
-        if Settings.log.sentry then
+        if ENV["LOG_SENTRY"] then
           Raven.capture_exception(e)
         end
       end

@@ -1,5 +1,5 @@
 require 'slog'
-require 'rails_config'
+
 
 module Services
   class Cashier
@@ -24,16 +24,16 @@ module Services
       begin
         
         # if Redis is enabled...
-        if Settings.cache.redis then          
+        if ENV["CACHE_REDIS"] then          
           # give me some cache!
-          @redis = Redis.new :host => Settings.cache.host, :port => Settings.cache.port
+          @redis = Redis.new :host => ENV["CACHE_HOST"], :port => ENV["CACHE_PORT"]
         end
       rescue Exception => e
         Services::Slog.exception e
       end
 
       # the actual verification
-      if Settings.cache.redis then
+      if ENV["CACHE_REDIS"] then
         Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
         begin          
           if @redis.hexists("#{agent[:identifier]}:#{seed}","#{memory}") then
@@ -53,7 +53,7 @@ module Services
       #
       # => To Do: Recheck implementation.
       #
-      if Settings.cache.internal then
+      if ENV["CACHE_INTERNAL"] then
         results = Cache.where memory: memory, agent_id: agent.id
         if results.size == 0 then
           begin

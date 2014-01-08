@@ -1,4 +1,4 @@
-<% content_for :title, "Agents - #{Settings.app.title}" %>
+<% content_for :title, "Agents - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
   <li class="current">Agents</li>

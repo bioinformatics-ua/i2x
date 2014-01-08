@@ -1,0 +1,66 @@
+##
+# Application configuration variables
+# 
+
+### DEFAULTS
+
+##
+# Internal application settings
+APP_VERSION: 0.1a
+APP_TITLE: i2x
+APP_HOST: http://localhost:3000/
+APP_DEBUG: true
+
+##
+# Cache settings
+# * redis: uses Redis caching, with default values
+# * internal: uses internal database and controllers
+CACHE_REDIS: true
+CACHE_HOST: localhost
+CACHE_PORT: 6379
+CACHE_INTERNAL: false
+
+##
+# Log settings if Sentry is used
+LOG_SENTRY: true
+LOG_DSN: <sentry dsn>
+LOG_LEVEL: low
+
+### ENVIRONMENTS
+
+development:
+
+##
+# Mail settings
+ MAIL_FROM: <origin email address>
+ MAIL_ADDRESS: <smtp server>
+ MAIL_PORT: <smtp port>
+ MAIL_DOMAIN: <smtp domain>
+ MAIL_PASSWORD: <smtp password>
+ MAIL_USERNAME: <stmp username>
+ MAIL_AUTHENTICATION: <smtp authentication method>
+ MAIL_STARTTLS: <smtp with starttls>
+
+##
+# Application OAuth key/secret for external services
+ FACEBOOK_KEY: KEY
+ FACEBOOK_SECRET: SECRET
+
+ TWITTER_KEY: KEY
+ TWITTER_SECRET: SECRET
+
+ GITHUB_KEY: KEY
+ GITHUB_SECRET: SECRET
+
+ LINKEDIN_KEY: KEY
+ LINKEDIN_SECRET: KEY
+
+ GOOGLE_KEY: KEY
+ GOOGLE_SECRET: SECRET
+
+ DROPBOX_KEY: KEY
+ DROPBOX_SECRET: SECRET
+
+test:
+
+production:

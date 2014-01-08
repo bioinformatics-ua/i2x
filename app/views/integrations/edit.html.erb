@@ -1,4 +1,4 @@
-<% content_for :title, "Editing #{@integration.title} - #{Settings.app.title}" %>
+<% content_for :title, "Editing #{@integration.title} - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
   <li><%= link_to 'Dashboard', integrations_path %></li>

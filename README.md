@@ -13,7 +13,7 @@
 2. Configure your database, services, mail, Redis and Sentry settings
 
         config/database.yml
-        config/settings.yml
+        config/application.yml # copy from config/application.sample.yml
 
 3. Run Rails *bundler* (watch out for *gem* install errors)
 
@@ -21,6 +21,7 @@
 
 4. Create and load database
 
+        rake db:create
         rake db:migrate
 
 5. Run on *rails*
@@ -30,6 +31,10 @@
 
 
 ## Changelog
+
+2014-01-08
+
+* Moved all configuration properties (internal, mail, services) to a single configuration file _config/application.yml_ importing everything to environment variables. Setup using Figaro gem.
 
 2014-01-07
 
