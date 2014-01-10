@@ -34,7 +34,8 @@ module Services
 
       # the actual verification
       if ENV["CACHE_REDIS"] then
-        Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
+        # commented, do not log all cache verifications
+        #Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
         begin          
           if @redis.hexists("#{agent[:identifier]}:#{seed}","#{memory}") then
             response = {:status => 200, :message => "[i2x][Cashier] Nothing to update"}

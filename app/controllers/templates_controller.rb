@@ -37,8 +37,9 @@ class TemplatesController < ApplicationController
         response = { :status => 200, :message => "[i2x]: template #{params[:identifier]} loaded", :id => @template[:id] }
       end
       respond_to do |format|
-        format.html { redirect_to templates_url }
-        format.json { render :json => response}
+        #format.html { redirect_to templates_url }
+        #format.json { render :json => response}
+        format.json { render json: @template, status: :created }
       end
     else
     end
@@ -53,15 +54,16 @@ class TemplatesController < ApplicationController
   # POST /templates.json
   def create
     @template = Template.new(template_params)
-    @template.last_execute_at = Time.now
+    @template.last_execute_at = nil
     @template.status = 100
     @template.count = 0
     respond_to do |format|
       if @template.save
         current_user.templates.push(@template)
         current_user.save
-        format.html { redirect_to @template, notice: 'Template was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @template }
+        #format.html { redirect_to @template, notice: 'Template was successfully created.' }
+        #format.json { render action: 'show', status: :created, location: @template }
+        format.json { render json: @template, status: :created }
       else
         format.html { render action: 'new' }
         format.json { render json: @template.errors, status: :unprocessable_entity }
@@ -72,6 +74,7 @@ class TemplatesController < ApplicationController
   # PATCH/PUT /templates/1
   # PATCH/PUT /templates/1.json
   def update
+    p "updating #{params[:id]}"
     respond_to do |format|
       if @template.update(template_params)
         format.html { redirect_to @template, notice: 'Template was successfully updated.' }
@@ -134,6 +137,6 @@ class TemplatesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def template_params
-    params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at)
+    params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at, :method, :content,:uri, :cache, :checked, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :server, :to, :cc, :bcc, :subject, :message)
   end
 end

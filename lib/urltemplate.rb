@@ -8,7 +8,7 @@ module Services
     public
 
     ##
-    # => Performs the actual delivery, in this case, execure SQL query.
+    # => Performs the actual delivery, in this case, execute URL request.
     #
     def execute
       case @template[:payload][:method]
@@ -42,6 +42,7 @@ module Services
           response = {:status => 440, :message => "Unable to perform DELETE request (not implemented), #{e}"}
         end
       end
+      super
       response
     end
     #handle_asynchronously :execute

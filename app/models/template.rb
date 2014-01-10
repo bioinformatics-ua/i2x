@@ -14,4 +14,17 @@ class Template < ActiveRecord::Base
   #
   has_many  :user_templates
   has_many  :users, :through => :user_templates
+
+  ##
+  # => Update time for last execute.
+  #
+  def update_execute_at time
+    begin
+      self.last_execute_at = time
+      self.save
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+    
+  end
 end

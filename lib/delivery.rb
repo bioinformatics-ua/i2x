@@ -1,6 +1,5 @@
 require 'helper'
 require 'slog'
-require 'json'
 
 module Services
 
@@ -70,8 +69,13 @@ module Services
     ##
     # => Execute final delivery, to be override by inherited classes
     #
-    def execute
-    end
-
-  end
+    def update_metadata
+      begin
+        @template.update_execute_at Time.now
+        @template.increment(:count)
+      rescue Exception => e
+       Services::Slog.exception e
+     end
+   end
+ end
 end

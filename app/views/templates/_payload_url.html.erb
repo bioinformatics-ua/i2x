@@ -1,46 +1,60 @@
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_url_method" class="right inline">Method</label>
   </div>
-  <div class="small-10 columns">
-    <%= select_tag 'template[method]', options_for_select([['POST', 'post'], ['GET', 'get'], ['UPDATE', 'update'],['DELETE', 'delete']], {:selected => template.method}), {:id => 'publisher_url_method', :tabindex => autotab} %>
+  <div class="small-9 columns">
+    <%= select_tag 'template[method]', options_for_select([['POST', 'post'], ['GET', 'get'], ['UPDATE', 'update'],['DELETE', 'delete']], {:selected => (template.method.nil?) ? 'get' : template.method}), {:id => 'publisher_url_method', :tabindex => autotab} %>
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_url_uri" class="right inline">URI</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="url" tabindex="<%= autotab %>" value="<%= template.uri.nil? ? '' : template.uri %>" name="template[uri]" required id="publisher_url_uri" placeholder="E.g.: http://bioinformatics.ua.pt/i2x/..." />
   </div>
 </div>
 <!-- Conditional POST parameters start -->
 <div id="publiser_url_post_params">
-  <div class="row" id="publisher_url_post_params_include">
-    <% template.payload.each do |k,v| %>
-    <% if (k != 'uri') %>
-    <% if (k != 'method') %>
-    <div class="row">
-      <div class="small-3 columns">
-        <strong class="right inline"><%= k %></strong>
-      </div>
-      <div class="small-9 columns">
-        <%= highlight_variables(v) %>
-      </div>
-    </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </div>
+  <input type="hidden" id="url_post_params_hidden" name="template[selectors]" value='<%= @template.selectors.nil? ? '[]' : @template.selectors %>' />
+
+  <% i = 1 %>
+  <% unless template.selectors.nil? then %>
+  <% JSON.parse(template.selectors).each do |selector| %> 
+  <% selector.each do |k,v| %>
   <div class="row">
-    <div class="small-2 columns">
-      <input type="text" class="publisher_url_post_params_key " tabindex="<%= autotab %>" data-id="1" placeholder="Key" id="publisher_url_post_params_key_1" />
+    <div class="url_post_params_<%= i %> publisher_url_post_params_new_<%= i %>">
+      <div class="small-3 columns left">
+        <label class="right inline">Parameter <%= i %></label>
+      </div>
+      <div class="small-4 columns url_post_params_key_<%= i %>">
+        <input id="publisher_url_post_params_key_<%= i %>" data-id="<%= i %>" type="text" disabled class="disabled publisher_url_post_params_key" value="<%= k %>" />
+      </div>
+      <div class="small-4 columns url_post_params_value_<%= i %>">
+        <input id="publisher_url_post_params_value_<%= i %>" type="text" placeholder="E.g.: id" disabled class="disabled" value="<%= v %>" />
+      </div>
+      <div class="small-1 columns">
+        <a href="#" data-id="<%= i %>" class="remove right publisher_url_params_remove">Remove</a>
+      </div>
     </div>
-    <div class="small-7 columns">
-      <input type="text" class="publisher_url_post_params_value " tabindex="<%= autotab %>" data-id="1" placeholder="Value" id="publisher_url_post_params_value_1" />
-    </div>
-    <div class="small-2 columns">
-      <a href="#" data-id="1" class="button prefix publisher_url_post_params_add" tabindex="<%= autotab %>" id="publisher_url_post_params_button_1">Add</a>
-    </div>
+  </div> 
+  <% i = i +1 %>
+  <% end %>
+  <% end %>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">New parameter</label>
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="publisher_url_post_params_key " tabindex="<%= autotab %>" data-id="<%= i %>" placeholder="Key" id="publisher_url_post_params_key_<%= i %>" />
+  </div>
+  <div class="small-4 columns">
+    <input type="text" class="publisher_url_post_params_value " tabindex="<%= autotab %>" data-id="<%= i %>" placeholder="Value" id="publisher_url_post_params_value_<%= i %>" />
+  </div>
+  <div class="small-1 columns">
+    <a href="#" data-id="<%= i %>" class="button tiny radius publisher_url_post_params_add" tabindex="<%= autotab %>" id="publisher_url_post_params_button_<%= i %>">Add</a>
   </div>
 </div>

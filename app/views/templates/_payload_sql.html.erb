@@ -1,56 +1,56 @@
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_server" class="right inline">Server</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
   <%= select_tag 'template[server]', options_for_select([['MySQL', 'mysql'], ['SQL Server', 'sqlserver'], ['Postgres', 'postgres'], ['SQLite','sqlite']], {:selected => template.server}), {:id => 'publisher_sql_server', :tabindex => autotab} %>
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_host" class="right inline">Host</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="text" id="publisher_sql_host" tabindex="<%= autotab %>" value="<%= template.host.nil? ? '' : template.host %>" name="template[host]" required placeholder="E.g.: localhost" />
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_port" class="right inline">Port</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="number" required pattern="number" id="publisher_sql_port" tabindex="<%= autotab %>" value="<%= template.port.nil? ? '' : template.port %>" name="template[port]"placeholder="E.g.: 3306" />
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_database" class="right inline">Database</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="text" id="publisher_sql_database" required tabindex="<%= autotab %>" value="<%= template.database.nil? ? '' : template.database %>" name="template[database]" placeholder="E.g.: i2x" />
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_username" class="right inline">Username</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="text" id="publisher_sql_username" required tabindex="<%= autotab %>" value="<%= template.username.nil? ? '' : template.username %>" name="template[username]" placeholder="E.g.: root" />
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_password" class="right inline">Password</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <input type="text" id="publisher_sql_password" tabindex="<%= autotab %>" value="<%= template.password.nil? ? '' : template.password %>" name="template[password]"placeholder="E.g.: 12345" />
   </div>
 </div>
 <div class="row">
-  <div class="small-2 columns">
+  <div class="small-3 columns">
     <label for="publisher_sql_query" class="right inline">Query</label>
   </div>
-  <div class="small-10 columns">
+  <div class="small-9 columns">
     <textarea id="publisher_sql_query" required tabindex="<%= autotab %>"  name="template[query]"placeholder="E.g.: INSERT INTO..."><%= template.query.nil? ? '' : template.query %></textarea>
   </div>
 </div>

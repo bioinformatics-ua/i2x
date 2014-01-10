@@ -45,8 +45,8 @@ class Agent < ActiveRecord::Base
   #
   def update_check_at time
     begin
-      last_check_at = time
-      save
+      self.last_check_at = time
+      self.save
     rescue Exception => e
       Services::Slog.exception e
     end

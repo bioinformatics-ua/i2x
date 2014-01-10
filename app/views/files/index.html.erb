@@ -14,12 +14,12 @@
 <div class="small-9 columns">
 	<table>
 		<thead>
-			<th style="width: 60%;">Filename</th><th>Actions</th>
+			<th>Filename</th><th>Actions</th>
 		</thead>
 		<tbody>
 			<% @files.each do |file| %>
 			<tr>
-				<td style="width: 60%;"><a href="<%= "../files/get/#{File.basename(file)}" %>"><%= File.basename(file) %></a></td>
+				<td><a href="<%= "../files/get/#{File.basename(file)}" %>"><%= File.basename(file) %></a></td>
 				<td class="right"><a href="<%= "../files/get/#{File.basename(file)}" %>" class="icon-download"></a> <a href="<%= "../files/delete/#{File.basename(file)}" %>" class="icon-delete"></a></td>
 			</tr>
 			<% end %>
@@ -27,7 +27,6 @@
 	</table>
 </div>
 <div class="small-3 columns">
-	<%= link_to ' New Integration'.html_safe, new_integration_path, :class => 'button small radius icon-integration' %>
 	<h4>Go to</h4>
 	<ul class="no-bullet">
 		<li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent'%></li>

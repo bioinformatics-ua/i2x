@@ -231,6 +231,7 @@ function remove_seed_selector(event) {
 	selectors = remove_obj_from_array(selectors, JSON.parse('{"' + key + '":"' + value + '"}'));
 	$('#seed_selector_hidden').val(JSON.stringify(selectors));
 	$('.seed_selector_new_' + $(this).data('id')).remove();
+	$('#save_agents').val('Save');
 
 }
 
@@ -261,8 +262,6 @@ function remove_obj_from_array(list, val) {
 					i--;
 				}
 			}
-
-
 		}
 	}
 	return list;

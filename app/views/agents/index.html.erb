@@ -85,6 +85,7 @@
     <ul class="no-bullet">
       <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration'%></li>
       <li><%= link_to 'Templates'.html_safe, {:controller => '/templates'}, :class => 'icon-template'%></li>
+        <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files' %></li>
     </ul>
      <%= render partial: "helper/event_list"  %>
   </div>

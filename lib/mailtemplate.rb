@@ -34,7 +34,7 @@ module Services
       Services::Slog.exception e
       response = { :status => "400", :message => "Unable to send email, #{e}"  }
     end
-
+    super
     response = { :status => "200", :message => "Email sent to #{@template[:payload][:to]}", :id =>  @template[:identifier]}            
   end
     #handle_asynchronously :execute

@@ -19,19 +19,19 @@
         <%= highlight_variables(template[:payload][:method]) %>
       </div>
     </div>
-    <% template[:payload].each do |k,v| %>
-      <% if (k != 'uri') %>
-        <% if (k != 'method') %>
-          <div class="row">
-            <div class="small-3 columns">
-              <strong class="right inline"><%= k %></strong>
-            </div>
-            <div class="small-9 columns">
-              <%= highlight_variables(v) %>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
+    <% unless template.selectors.nil? then %>
+    <% JSON.parse(template.selectors).each do |selector| %> 
+    <% selector.each do |k,v| %>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline"><%= k %></strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(v) %>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
     <% end %>
   </div>
 </div>

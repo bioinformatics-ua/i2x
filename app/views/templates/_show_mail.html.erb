@@ -1,40 +1,47 @@
 <div class="row">
-  <div class="small-2 columns">
-    <label for="publisher_mail_host" class="right inline">To</label>
+  <div class="small-1 columns">
+    <div class="right inline"><span class="icon-details" data-tooltip class="has-tip tip-top" title="Email Details"> </span></div>
   </div>
-  <div class="small-10 columns">
-    <input type="text" id="publisher_mail_host" tabindex="<%= autotab %>" value="<%= template.to.nil? ? '' : template.to %>" name="template[to]" required placeholder="E.g.: john@gmail.com" />
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <label for="publisher_mail_cc" class="right inline">CC</label>
-  </div>
-  <div class="small-10 columns">
-   <input type="text" id="publisher_mail_cc" tabindex="<%= autotab %>" value="<%= template.cc.nil? ? '' : template.cc %>" name="template[cc]" required placeholder="E.g.: alice@gmail.com" />
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <label for="publisher_mail_bcc" class="right inline">BCC</label>
-  </div>
-  <div class="small-10 columns">
-    <input type="text" id="publisher_mail_bcc" required tabindex="<%= autotab %>" value="<%= template.bcc.nil? ? '' : template.bcc %>" name="template[bcc]" placeholder="E.g.: bob@gmail.com" />
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <label for="publisher_mail_subject" class="right inline">Subject</label>
-  </div>
-  <div class="small-10 columns">
-    <input type="text" id="publisher_mail_subject" required tabindex="<%= autotab %>" value="<%= template.subject.nil? ? '' : template.subject %>" name="template[subject]" placeholder="E.g.: Hello from i2x" />
-  </div>
-</div>
-<div class="row">
-  <div class="small-2 columns">
-    <label for="publisher_mail_message" class="right inline">Message</label>
-  </div>
-  <div class="small-10 columns">
-    <textarea id="publisher_mail_message" required tabindex="<%= autotab %>"  name="template[message]"placeholder="E.g.: INSERT INTO..."><%= template.message.nil? ? '' : template.message %></textarea>
+  <div class="small-11 columns">
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">To</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= highlight_variables(template[:payload][:to]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">CC</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= highlight_variables(template[:payload][:cc]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">BCC</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= highlight_variables(template[:payload][:bcc]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">Subject</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= highlight_variables(template[:payload][:subject]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns">
+        <strong class="right inline">Message</strong>
+      </div>
+      <div class="small-10 columns">
+        <%= highlight_variables(template[:payload][:message]) %>
+      </div>
+    </div>
   </div>
 </div>

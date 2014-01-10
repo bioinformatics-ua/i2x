@@ -14,7 +14,7 @@ class PostmanController < ApplicationController
     @delivery
     begin
       @template = Template.find_by! identifier: params[:identifier]
-      puts "\n\n\t#{@template.id}"
+      
 
       case @template[:publisher]
       when 'sql'
@@ -147,12 +147,8 @@ class PostmanController < ApplicationController
       client = Mysql2::Client.new(:host => template['payload']['host'], :username => template['payload']['username'] , :password => template['payload']['password'] , :database => template['payload']['database'] )
       # update query with POST params
       template['payload']['properties'].each do |prop|
-        #puts "i2x property processed: #{prop} at " + template['payload']['query'][prop]
         template['payload']['query']["%{#{prop}}"] = params[prop]
       end
-
-      #template['payload']['query']['#{variant}'] = params[:variant]
-      #template['payload']['query']['#{refseq}'] = params[:refseq]
 
       # execute query
       result = client.query(template['payload']['query'])

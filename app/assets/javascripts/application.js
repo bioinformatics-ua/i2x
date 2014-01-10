@@ -27,6 +27,12 @@ if (typeof String.prototype.endsWith != 'function') {
 		return this.slice(-str.length) == str;
 	};
 }
+if (typeof String.prototype.addSlashes != 'function') {
+	String.prototype.addSlashes = function() {
+		return this; //.replace(/["']/g, '\\$&').replace(/\u0000/g, '\\0');
+	}
+}
+
 $(function() {
 	$(document).foundation();
 	$(window).load(function() {

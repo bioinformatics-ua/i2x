@@ -19,7 +19,7 @@ class Authorization < ActiveRecord::Base
 		self.username = facebook_data['username']
 		self.save
 		self.user.username = facebook_data['username'] if self.user.username.blank?
-		self.user.remote_image_url = "http://graph.facebook.com/" + self.username + "/picture?type=large" if self.user.image.blank?
+		self.user.image = "http://graph.facebook.com/" + self.username + "/picture?type=large" if self.user.image.blank?
 		self.user.location = facebook_data['location'] if self.user.location.blank?
 		self.user.save
 	end
@@ -36,7 +36,7 @@ class Authorization < ActiveRecord::Base
 		self.username = twitter_data.username
 		self.save
 		self.user.username = twitter_data.username if self.user.username.blank?
-		self.user.remote_image_url = twitter_data.profile_image_url if self.user.image.blank?
+		self.user.image = twitter_data.profile_image_url if self.user.image.blank?
 		self.user.location = twitter_data.location if self.user.location.blank?
 		self.user.save(:validate => false)
 	end

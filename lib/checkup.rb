@@ -58,6 +58,7 @@ module Services
         unless agent.content.nil? then
           @d.content = agent.content
         end
+        agent.update_check_at Time.now
         @checkup = @d.checkup
       rescue Exception => e
         Services::Slog.exception e

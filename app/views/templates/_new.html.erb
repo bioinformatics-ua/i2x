@@ -1,4 +1,4 @@
-<%= form_for(@template, :html => {:"data-abide" => ''}, :remote => true) do |f| %>
+<%= form_for(@template, :remote => true) do |f| %>
 <% if @template.errors.any? %>
 <div id="error_explanation" class="alert-box alert">
   <h2><%= pluralize(@template.errors.count, "error") %>
@@ -12,247 +12,41 @@
   <% end %>
   <h4 class="subheader">Template Properties</h4>
   <div class="row">
-    <div class="small-2 columns">
+    <div class="small-3 columns">
       <%= f.label :identifier, :class => 'right inline' %>
     </div>
-    <div class="small-10 columns">
+    <div class="small-9 columns">
       <%= f.text_field :identifier, :tabindex => autotab, :autofocus => true, :required => '' %>
-      <small class="error">You must set an identifier</small>
     </div>
   </div>
   <div class="row">
-    <div class="small-2 columns">
+    <div class="small-3 columns">
       <%= f.label :title, :class => 'right inline' %>
     </div>
-    <div class="small-10 columns">
+    <div class="small-9 columns">
       <%= f.text_area :title, :tabindex => autotab, :required => '' %>
-      <small class="error">You must set set a title</small>
     </div>
   </div>
   <div class="row">
-    <div class="small-2 columns">
+    <div class="small-3 columns">
       <%= f.label :help, :class => 'right inline' %>
     </div>
-    <div class="small-10 columns">
+    <div class="small-9 columns">
       <%= f.text_area :help, :tabindex => autotab %>
     </div>
   </div>
   <div class="row">
-    <div class="small-2 columns">
+    <div class="small-3 columns">
       <%= f.label :publisher, :class => 'right inline' %>
     </div>
-    <div class="small-10 columns">
-      <%= select_tag(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'],['Email', 'mail'], ['File','file'],['Dropbox','dropbox']], {:selected => 'sql'}), :tabindex => autotab) %>
+    <div class="small-9 columns">
+      <%= f.select(:publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'],['Email', 'mail'], ['File','file'],['Dropbox','dropbox']], {:selected => 'url'}), :tabindex => autotab) %>
     </div>
   </div>
-  <div class="publisher_sql">
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_server" class="right inline">Server</label>
-      </div>
-      <div class="small-10 columns">
-        <select id="publisher_sql_server" tabindex="<%= autotab %>">
-          <option selected="selected" value="mysql">MySQL</option>
-          <option value="sqlserver">SQL Server</option>
-          <option value="postgres">Postgres</option>
-          <option value="sqlite">SQLite</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_host" class="right inline">Host</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="text" id="publisher_sql_host" required tabindex="<%= autotab %>" placeholder="E.g.: localhost" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_port" class="right inline">Port</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="number" required pattern="number" id="publisher_sql_port" tabindex="<%= autotab %>" placeholder="E.g.: 3306" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_database" class="right inline">Database</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="text" id="publisher_sql_database" required tabindex="<%= autotab %>" placeholder="E.g.: i2x" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_username" class="right inline">Username</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="text" id="publisher_sql_username" required tabindex="<%= autotab %>" placeholder="E.g.: root" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_password" class="right inline">Password</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="text" id="publisher_sql_password" tabindex="<%= autotab %>" placeholder="E.g.: 12345" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_sql_query" class="right inline">Query</label>
-      </div>
-      <div class="small-10 columns">
-        <textarea id="publisher_sql_query" required tabindex="<%= autotab %>" placeholder="E.g.: INSERT INTO..."></textarea>
-      </div>
-    </div>
+  <div id="publisher_content">
+    <%= render :partial => "templates/payload_url", locals: {:template => @template} %>
   </div>
-  <div class="field publisher_url">
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_url_method" class="right inline">Method</label>
-      </div>
-      <div class="small-10 columns">
-        <select id="publisher_url_method" tabindex="<%= autotab %>">
-          <option selected="selected" value="get">GET</option>
-          <option value="post">POST</option>
-          <option value="update">UPDATE</option>
-          <option value="delete">DELETE</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_url_uri" class="right inline">URI</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="url" tabindex="<%= autotab %>" required id="publisher_url_uri" placeholder="E.g.: http://bioinformatics.ua.pt/i2x/..." />
-      </div>
-    </div>
-    <!-- Conditional POST parameters start -->
-    <div id="publiser_url_post_params">
-      <div class="row" id="publisher_url_post_params_include">
-      </div>
-      <div class="row">
-      <div class="small-2 columns left">
-      &nbsp;
-      </div>
-        <div class="small-4 columns">
-          <input type="text" class="publisher_url_post_params_key " tabindex="<%= autotab %>" data-id="1" placeholder="Key" id="publisher_url_post_params_key_1" />
-        </div>
-        <div class="small-4 columns">
-          <input type="text" class="publisher_url_post_params_value " tabindex="<%= autotab %>" data-id="1" placeholder="Value" id="publisher_url_post_params_value_1" />
-        </div>
-        <div class="small-2 columns">
-          <a href="#" data-id="1" class="button small-12 tiny radius publisher_url_post_params_add" tabindex="<%= autotab %>" id="publisher_url_post_params_button_1">Add</a>
-        </div>
-      </div>
-    </div>
+  <div class="actions">
+    <%= f.submit 'Create', :class => 'button right success small radius', :tabindex => autotab %>
   </div>
-  <div class="field publisher_file">
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_file_method" class="right inline">Method</label>
-      </div>
-      <div class="small-10 columns">
-        <select id="publisher_file_method" tabindex="<%= autotab %>">
-          <option selected="selected" value="append">Append</option>
-          <option value="create">Create</option>
-          <option value="delete">Delete</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_file_uri"  class="right inline">URI</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="url" required id="publisher_file_uri" tabindex="<%= autotab %>" placeholder="E.g.: file:///home/user/this.csv" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_file_content" class="right inline">Content</label>
-      </div>
-      <div class="small-10 columns">
-        <textarea type="text" required id="publisher_file_content" tabindex="<%= autotab %>" placeholder="E.g.: %{i2x.date},%{id}\n"></textarea>
-      </div>
-    </div>
-  </div>
-    <div class="field publisher_dropbox">
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_dropbox_method" class="right inline">Method</label>
-      </div>
-      <div class="small-10 columns">
-        <select id="publisher_dropbox_method" tabindex="<%= autotab %>">
-          <option selected="selected" value="append">Append</option>
-          <option value="create">Create</option>
-          <option value="delete">Delete</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_dropbox_uri"  class="right inline">URI</label>
-      </div>
-      <div class="small-10 columns">
-        <input type="url" required id="publisher_dropbox_uri" tabindex="<%= autotab %>" placeholder="E.g.: this.csv" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_dropbox_content" class="right inline">Content</label>
-      </div>
-      <div class="small-10 columns">
-        <textarea type="text" required id="publisher_dropbox_content" tabindex="<%= autotab %>" placeholder="E.g.: %{i2x.date},%{id}\n"></textarea>
-      </div>
-    </div>
-  </div>
-  <div class="field publisher_mail">
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_mail_host" class="right inline">To</label>
-      </div>
-      <div class="small-10 columns">
-      <input type="text" id="publisher_mail_to" tabindex="<%= autotab %>" value="<%= @template.to.nil? ? '' : @template.to %>" name="template[to]" required placeholder="E.g.: john@gmail.com" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="small-2 columns">
-        <label for="publisher_mail_cc" class="right inline">CC</label>
-      </div>
-      <div class="small-10 columns">
-       <input type="text" id="publisher_mail_cc" tabindex="<%= autotab %>" value="<%= @template.cc.nil? ? '' : @template.cc %>" name="template[cc]" required placeholder="E.g.: alice@gmail.com" />
-     </div>
-   </div>
-   <div class="row">
-    <div class="small-2 columns">
-      <label for="publisher_mail_bcc" class="right inline">BCC</label>
-    </div>
-    <div class="small-10 columns">
-      <input type="text" id="publisher_mail_bcc" required tabindex="<%= autotab %>" value="<%= @template.bcc.nil? ? '' : @template.bcc %>" name="template[bcc]" placeholder="E.g.: bob@gmail.com" />
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-2 columns">
-      <label for="publisher_mail_subject" class="right inline">Subject</label>
-    </div>
-    <div class="small-10 columns">
-      <input type="text" id="publisher_mail_subject" required tabindex="<%= autotab %>" value="<%= @template.subject.nil? ? '' : @template.subject %>" name="template[subject]" placeholder="E.g.: Hello from i2x" />
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-2 columns">
-      <label for="publisher_mail_message" class="right inline">Message</label>
-    </div>
-    <div class="small-10 columns">
-      <textarea id="publisher_mail_message" required tabindex="<%= autotab %>"  name="template[message]"placeholder="E.g.: This is i2x..."><%= @template.message.nil? ? '' : @template.message %></textarea>
-    </div>
-  </div>
-</div>
-<div class="actions">
-  <a class="button success right small radius" tabindex="40" id="start">Submit</a>
-</div>
-<% end %>
+  <% end %>

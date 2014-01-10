@@ -3,7 +3,7 @@ class CreateUserAgent < ActiveRecord::Migration
     create_table :user_agents do |t|
       t.belongs_to :user
       t.belongs_to :agent
-      t.integer :status
+      t.integer :status, :default => 100
       t.timestamps
     end
   end

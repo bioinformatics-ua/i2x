@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140103153402) do
+ActiveRecord::Schema.define(version: 20140103153204) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -29,12 +29,13 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.text     "help"
     t.string   "schedule"
     t.integer  "events_count"
+    t.integer  "status",        default: 100
     t.datetime "last_check_at"
-    t.datetime "last_event"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status"
   end
+
+  add_index "agents", ["identifier"], name: "index_agents_on_identifier", unique: true, using: :btree
 
   create_table "authorizations", force: true do |t|
     t.string   "provider"
@@ -55,6 +56,8 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "caches", ["id"], name: "index_caches_on_id", using: :btree
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -94,10 +97,12 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.text     "help"
     t.text     "payload"
     t.text     "memory"
+    t.integer  "status",     default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status"
   end
+
+  add_index "integrations", ["identifier"], name: "index_integrations_on_identifier", unique: true, using: :btree
 
   create_table "seed_mappings", force: true do |t|
     t.integer  "agent_id"
@@ -113,9 +118,9 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.text     "help"
     t.text     "payload"
     t.text     "memory"
+    t.integer  "status",     default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status"
   end
 
   create_table "templates", force: true do |t|
@@ -123,20 +128,21 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.text     "title"
     t.text     "help"
     t.string   "publisher"
-    t.text     "variables"
     t.text     "payload"
     t.text     "memory"
     t.integer  "count"
+    t.integer  "status",          default: 100
     t.datetime "last_execute_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status"
   end
+
+  add_index "templates", ["identifier"], name: "index_templates_on_identifier", unique: true, using: :btree
 
   create_table "user_agents", force: true do |t|
     t.integer  "user_id"
     t.integer  "agent_id"
-    t.integer  "status"
+    t.integer  "status",     default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -144,7 +150,7 @@ ActiveRecord::Schema.define(version: 20140103153402) do
   create_table "user_integrations", force: true do |t|
     t.integer  "user_id"
     t.integer  "integration_id"
-    t.integer  "status"
+    t.integer  "status",         default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -152,14 +158,14 @@ ActiveRecord::Schema.define(version: 20140103153402) do
   create_table "user_templates", force: true do |t|
     t.integer  "user_id"
     t.integer  "template_id"
-    t.integer  "status"
+    t.integer  "status",      default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",  null: false
+    t.string   "encrypted_password",     default: "",  null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -173,13 +179,11 @@ ActiveRecord::Schema.define(version: 20140103153402) do
     t.string   "name"
     t.string   "username"
     t.string   "apikey"
-    t.text     "referring_url"
-    t.text     "landing_url"
-    t.integer  "status"
-    t.string   "provider"
-    t.string   "uid"
+    t.integer  "status",                 default: 100
     t.string   "image"
     t.string   "location"
+    t.text     "referring_url"
+    t.text     "landing_url"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

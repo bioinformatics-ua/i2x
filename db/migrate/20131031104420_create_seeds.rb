@@ -6,7 +6,8 @@ class CreateSeeds < ActiveRecord::Migration
       t.string :publisher
       t.text :help
       t.text :payload
-      t.text :memmory
+      t.text :memory
+      t.integer :status, :default => 100
 
       t.timestamps
     end
