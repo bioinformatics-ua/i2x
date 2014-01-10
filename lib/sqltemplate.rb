@@ -28,7 +28,6 @@ module Services
           Raven.capture_exception(e)
         end
       end
-      super
       response
     end
     #handle_asynchronously :execute

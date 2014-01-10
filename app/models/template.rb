@@ -16,12 +16,13 @@ class Template < ActiveRecord::Base
   has_many  :users, :through => :user_templates
 
   ##
-  # => Update time for last execute.
+  # => Update metadata for last execute.
   #
-  def update_execute_at time
+  def update_execute
     begin
-      self.last_execute_at = time
-      self.save
+      last_execute_at = Time.now
+      
+      save
     rescue Exception => e
       Services::Slog.exception e
     end

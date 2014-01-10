@@ -23,7 +23,6 @@ class TemplatesController < ApplicationController
 
   # GET /templates/new
   def new
-
     @template = Template.new
     if request.post? then
       puts params[:message]
