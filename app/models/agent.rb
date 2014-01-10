@@ -1,3 +1,10 @@
+require 'detector'
+require 'csvdetector'
+require 'jsondetector'
+require 'xmldetector'
+require 'sqldetector'
+require 'delayed_job'
+
 class Agent < ActiveRecord::Base
   ##
   # => Store for saving Hashes in DB
@@ -50,11 +57,82 @@ class Agent < ActiveRecord::Base
     rescue Exception => e
       Services::Slog.exception e
     end
-    
   end
   
   ##
-  # => Initiate agent processing to perform delivery
+  # => Perform the actual agent monitoring tasks.
+  #
+  def execute
+    @checkup = {}
+    Services::Slog.debug({:message => "Processing agent #{identifier}", :module => "Checkup", :task => "agent", :extra => {:agent => identifier, :publisher => publisher}})
+
+    case publisher
+    when 'sql'
+      begin
+        @d = Services::SQLDetector.new(identifier)
+      rescue Exception => e
+        Services::Slog.exception e
+        @response = {:status => 400, :error => e}
+      end
+    when 'csv'
+      begin
+        @d = Services::CSVDetector.new(identifier)
+      rescue Exception => e
+        Services::Slog.exception e
+        @response = {:status => 400, :error => e}
+      end
+    when 'xml'
+      begin
+        @d = Services::XMLDetector.new(identifier)
+      rescue Exception => e
+        Services::Slog.exception e
+        @response = {:status => 400, :error => e}
+      end
+    when 'json'
+      begin
+        @d = Services::JSONDetector.new(identifier)
+      rescue Exception => e
+        Services::Slog.exception e
+        @response = {:status => 400, :error => e}
+      end
+    end
+
+
+      # Start checkup
+      begin
+        unless content.nil? then
+          @d.content = content
+        end
+        update_check_at Time.now
+        @checkup = @d.checkup
+      rescue Exception => e
+        Services::Slog.exception e
+      end
+
+      # Start detection
+      begin
+        @d.objects.each do |object|
+          @d.detect object
+        end
+      rescue Exception => e
+        Services::Slog.exception e
+      end
+
+      begin
+        if @checkup[:status] == 100 then
+          Services::Slog.info({:message => "Starting integrations processing", :module => "Checkup", :task => "integrations", :extra => {:agent => identifier, :payload => @checkup[:payload].size}})
+          process @checkup
+        else
+        end
+      rescue Exception => e
+        Services::Slog.exception e
+      end
+      response = {:status => @checkup[:status], :message => "[i2x][Checkup][execute] All OK."}     
+    end
+    handle_asynchronously :execute
+
+  ##
+  # => Finish agent processing to perform delivery
   #
   def process checkup
     ##
@@ -67,7 +145,7 @@ class Agent < ActiveRecord::Base
     
     ## this should be simpler!!!
     begin
-      
+
       AgentMapping.where(:agent_id => id).each do |mapping|
         Integration.where(:id => mapping.integration_id).each do |integration|
           integration.templates.each do |t|

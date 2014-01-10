@@ -28,9 +28,17 @@
 
         rails s
 
+6. Initiate the tasks (on a distinct shell, check *delayed_job* documentation)
+
+    rake jobs:work
+
 
 
 ## Changelog
+
+2014-01-10
+
+* Fixed job queue integration
 
 2014-01-08
 
