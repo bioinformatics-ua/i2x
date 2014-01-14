@@ -4,12 +4,6 @@ $(function() {
 
 	// Remote save edited agent
 	$('.edit_agent').on('ajax:success', edit_agent_save);
-
-	$.ajax({
-		url: '/agents/new',
-		type: 'get',
-		dataType: 'script'
-	});
 });
 
 /**

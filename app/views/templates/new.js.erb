@@ -1,5 +1,5 @@
 $(function() {
-		// Remote save new template
+	// Remote save new template
 	$('#new_template').on('ajax:success', new_template_save);
 
 	// Update template action
@@ -8,19 +8,19 @@ $(function() {
 	$('#template_publisher').on('change', template_update_publisher_view)
 	$('#edit_template_payload_select').on('change', edit_update_payload);
 
-	$('#publisher_url_method').on('change', update_publisher_url_params_view )
+	$('#publisher_url_method').on('change', update_publisher_url_params_view)
 
 	update_url_post_params_remove();
 });
 
 /**
-*	Toggle URL request params form according to request method
-**/
+ *	Toggle URL request params form according to request method
+ **/
 function update_publisher_url_params_view(event) {
 	type = $(this).find(':selected').val();
-	if(type == 'post') {
+	if (type == 'post') {
 		$('#publiser_url_post_params').show();
-	} else {//if(type == 'get') {
+	} else { //if(type == 'get') {
 		$('#publiser_url_post_params').hide();
 	}
 }
@@ -59,9 +59,9 @@ function template_update_publisher_view(event) {
 		$('#publisher_content').html("<%= j render(:partial => 'payload_mail', :locals => {:template => @template}) %>");
 	} else if (publisher === 'sql') {
 		$('#publisher_content').html("<%= j render(:partial => 'payload_sql', :locals => {:template => @template}) %>");
-	}else if (publisher === 'url') {
+	} else if (publisher === 'url') {
 		$('#publisher_content').html("<%= j render(:partial => 'payload_url', :locals => {:template => @template}) %>");
-	} else if (publisher === 'dropbox') {
+		update_payload_selector_add();
+
 	}
-	update_payload_selector_add();
 }

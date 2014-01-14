@@ -31,7 +31,7 @@
       <%= f.label :publisher, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.select :publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['Email', 'email'], ['File','file'], ['Dropbox','dropbox']], {:selected => @template.publisher}), {}, {:tabindex => autotab, :id => 'edit_template_payload_select'} %>
+      <%= f.select :publisher, options_for_select([['SQL', 'sql'], ['URL', 'url'], ['Email', 'email'], ['File','file'], ['Dropbox','dropbox']], {:selected => (@template.publisher.nil?) ? 'url' : @template.publisher}), {:tabindex => autotab} %>
     </div>
   </div>
   <!-- Publisher properties -->

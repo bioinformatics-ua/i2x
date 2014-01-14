@@ -1,8 +1,12 @@
+<% content_for :javascript_includes do %>
+<%= javascript_include_tag "#{ENV['APP_HOST']}agents/new.js" %>
+<% end %>
+
 <% content_for :title, "New agent - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
-  <li><a href="<%= root_url %>">Home</a></li>
-  <li><%= link_to 'Agents', agents_path %></li>
-  <li class="current">New agent</li>
+	<li><a href="<%= root_url %>">Home</a></li>
+	<li><%= link_to 'Agents', agents_path %></li>
+	<li class="current">New agent</li>
 </ul>
 <h1>New agent</h1>
 <%= render 'new' %>

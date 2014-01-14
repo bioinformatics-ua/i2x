@@ -23,16 +23,17 @@ module Services
     #
     # + *schedule*: the scheduling being checked
     def check schedule
-      @agents = Agent.where( :schedule => schedule).where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 2 MINUTE")
-      #@checkup = {}
-      @agents.each do |agent|
-        begin
-          self.execute agent
-        rescue Exception => e
-          Services::Slog.exception e
+      Integration.all.each do |integration|
+        @agents = integration.agents.where( :schedule => schedule).where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 5 MINUTE")
+        @agents.each do |agent|
+          begin
+            self.execute agent
+          rescue Exception => e
+            Services::Slog.exception e
+          end
         end
       end
     end
-    
+
   end
 end

@@ -55,11 +55,12 @@ module Services
       # => To Do: Recheck implementation.
       #
       if ENV["CACHE_INTERNAL"] then
-        results = Cache.where memory: memory, agent_id: agent.id
+        results = Cache.where memory: memory, agent_id: agent.id, seed: seed
         if results.size == 0 then
           begin
-            @cached = Cache.new({:memory => memory, :agent_id => agent.id, :payload => payload})
+            @cached = Cache.new({:memory => memory, :agent_id => agent.id, :payload => payload, :seed => seed})
             @cached.save
+            response = {:status => 100, :message => "[i2x][Cashier] Memory recorded to cache"}
           rescue Exception => e
             response = {:message => "[i2x][Cashier] unable to save new cache content, #{e}", :status => 300}
             Services::Slog.exception e

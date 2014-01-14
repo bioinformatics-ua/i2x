@@ -7,15 +7,8 @@ $(function() {
 
 
 	// Manage POST params list
-	$('.publisher_url_post_params_add').on('click', add_url_post_params_from_click)
-	$('.publisher_url_post_params_value').on('keypress', add_url_post_params_from_keypress)
-
-	// EDIT stuff
-	$.ajax({
-		url: '/templates/new',
-		type: 'get',
-		dataType: 'script'
-	});
+	$('.publisher_url_post_params_add').on('click', add_url_post_params_from_click);
+	$('.publisher_url_post_params_value').on('keypress', add_url_post_params_from_keypress);
 });
 
 

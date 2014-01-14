@@ -1,3 +1,7 @@
+<% content_for :javascript_includes do %>
+<%= javascript_include_tag "#{ENV['APP_HOST']}templates/new.js" %>
+<% end %>
+
 <% content_for :title, "New template - #{ENV["APP_TITLE"]}" %>
 <ul class="breadcrumbs">
   <li><a href="<%= root_url %>">Home</a></li>
