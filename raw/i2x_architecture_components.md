@@ -1,6 +1,6 @@
-<aside class="large-3 columns" markdown="1">
+<aside class="large-3 columns" markdown="1" style="position:fixed;font-size:80%;">
 
-##### Outline
+###### Outline
 {:.no_toc}
 
 * TOC
@@ -10,7 +10,7 @@
 
  <div class="large-9 columns" role="content"  markdown="1">
 
-## COEUS
+# COEUS
 
 ### Description
 
@@ -25,7 +25,12 @@
 		- for diffs
 	- templates
 
-## Flux Capacitor
+### Status
+
+- Semantic Web features are not available at the moment.
+
+
+# Flux Capacitor
 
 ### Description
 
@@ -38,7 +43,11 @@ The **Flux Capacitor** is the main application controller, registering and proxy
 	- can receive from web hooks
 	- can receive from event detector
 
-## Log
+### Status
+
+- Available through multiple disparate code pieces.
+
+# Log
 
 ### Description
 
@@ -47,9 +56,12 @@ The **Log** stores summary information for all actions and flows occurring withi
 ### Features
 
 - logs everything
-	- Sentry?
 
-## Postman
+### Status
+
+- Sentry integration available for error and action logging.
+
+# Postman
 
 ### Description
 
@@ -61,13 +73,16 @@ The **Postman**, as implied by its naming, performs the final delivery of each a
 	- sends transformed data to destination
 - template-based
 	- SQL query
-	- XML file
+	- File write
+	- Dropbox write
 	- REST call
-	- system call
-	- mail call
-	- ...
+	- mail send
 
-## Ruler
+### Status
+
+- Available as unique controller through POSTs to `postman/deliver/<template_name>.js`. Template variables must be passed as POST parameters.
+
+# Ruler
 
 ### Description
 
@@ -88,7 +103,11 @@ Rule processing uses a semantic engine, where new results can be inferred from e
 		- reasoning and inference
 - reads rules from COEUS
 
-## STD: Spot The Differences
+### Status
+
+- Rule processing engine is not available at the moment.
+
+# STD: Spot The Differences
 
 ### Description
 
@@ -97,7 +116,11 @@ Rule processing uses a semantic engine, where new results can be inferred from e
 ### Features
 
 - change detection engine
-- connects to external resources (according to preconfigured settings), and detects what has changed since the last successful integration
+- connects to external resources (according to pre-configured settings), and detects what has changed since the last successful integration
+
+### Status
+
+ - Available through agent monitoring, using multiple disparate pieces.
 
 </div>
 

@@ -36,9 +36,9 @@
     <% end %></li>
     <li><label><%= link_to('Sign up'.html_safe, new_user_registration_path, :class => 'icon-signup')  %></label></li>
     <li>
-      <% ['facebook', 'github', 'linkedin', 'google_oauth2', 'dropbox_oauth2'].each do |provider| %>
-      <%= link_to "", omniauth_authorize_path('user', provider), :class => "no-block icon-#{provider}" %>
-      <% end %>
-    </li>    
-  </ul>
-  <%end %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+     <%= link_to "", omniauth_authorize_path('user', provider), :class => "no-block icon-#{provider}" %>
+     <% end -%>
+   </li>    
+ </ul>
+ <%end %>
