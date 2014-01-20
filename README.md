@@ -1,6 +1,6 @@
 # i2x
 
-**[i2x](http://bioinformatics.ua.pt/i2x/): integrate everything**
+**[i2x](https://bioinformatics.ua.pt/i2x/): integrate everything**
 
 **i2x** is a barebones framework for deploying custom automated, real-time, data integration platform.
 

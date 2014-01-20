@@ -29,7 +29,7 @@ if (typeof String.prototype.endsWith != 'function') {
 }
 if (typeof String.prototype.addSlashes != 'function') {
 	String.prototype.addSlashes = function() {
-		return this; 
+		return this;
 	}
 }
 
@@ -38,4 +38,48 @@ $(function() {
 	$(window).load(function() {
 		$('#content').fadeIn(800);
 	});
+
+
+	// API KEY MANAGEMENT
+	update_user_remove_key_selectors();
+
+	//temp for user adding keys
+	$('#user_add_api_key').on('click', update_user_generate_key);
+
 });
+
+/**
+ *	Add User API keys (no reload!).
+ *
+ **/
+function update_user_generate_key(event) {
+	event.preventDefault();
+
+	$.post('../fluxcapacitor/generate_key.json', function(response) {
+		if (response.status === 100) {
+			$('#api_keys').append('<li id="user_api_key_' + response.access_token + '"><a href="#" class="remove icon-trash user_remove_api_key" data-id="' + response.access_token + '"></a> ' + response.access_token + '</li>')
+			update_user_remove_key_selectors();
+		} else {
+			alert('[i2x] unable to generate new API key.')
+		}
+	});
+
+}
+
+
+/**
+ *	Remove User API keys (no reload!).
+ *
+ **/
+function update_user_remove_key_selectors() {
+	$('.user_remove_api_key').on('click', function(event) {
+		event.preventDefault();
+		var data = {};
+		data.access_token = $(this).data('id');
+		$.post('../fluxcapacitor/remove_key.json', data, function(response) {
+			if (response.status === 100) {
+				$('#user_api_key_' + response.access_token).remove();
+			}
+		});
+	});
+}

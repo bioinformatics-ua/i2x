@@ -27,4 +27,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_url_options
+    if Rails.env.production?
+      {
+        :host => "bioinformatics.ua.pt",
+        :protocol => 'https://'
+      }
+    else  
+      {}
+    end
+  end
 end

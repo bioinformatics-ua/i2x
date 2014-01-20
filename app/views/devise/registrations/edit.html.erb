@@ -71,10 +71,18 @@
 <h3>Connect Accounts</h3>
 <ul class="no-bullet">
  <%- resource_class.omniauth_providers.each do |provider| %>
-   <% if current_user.authorizations.pluck(:provider).include?(provider.to_s) %>
-  <li><span  class="icon-<%= provider %>"><%= provider.to_s.titleize %> Connected</span></li>
-  <% else %>
-  <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path('user', provider), :class => "icon-#{provider}" %></li>
-  <% end %>
+ <% if current_user.authorizations.pluck(:provider).include?(provider.to_s) %>
+ <li><span  class="icon-<%= provider %>"><%= provider.to_s.titleize %> Connected</span></li>
+ <% else %>
+ <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path('user', provider), :class => "icon-#{provider}" %></li>
+ <% end %>
+ <% end %>
+</ul>
+<h3>API Keys</h3>
+<ul class="no-bullet" id="api_keys">
+  <% current_user.api_keys.each do |apikey| %>
+  <li id="user_api_key_<%= apikey.access_token %>"><a href="#" data-id="<%= apikey.access_token %>" class="remove icon-trash user_remove_api_key"></a> <%= apikey.access_token %></li>
   <% end %>
 </ul>
+<br />
+<a href="#" id="user_add_api_key" title="Add new API key" class="button tiny radius icon-add">Add</a>

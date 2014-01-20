@@ -28,6 +28,12 @@ class User < ActiveRecord::Base
   #
   has_many :authorizations
 
+  ##
+  # => User has many keys for access
+  #
+  has_many :api_keys
+
+
   def self.new_with_session(params,session)
     if session["devise.user_attributes"]
       new(session["devise.user_attributes"],without_protection: true) do |user|

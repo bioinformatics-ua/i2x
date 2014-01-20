@@ -26,7 +26,7 @@ module Services
       mail.subject = "[i2x] #{@template[:payload][:subject]}"
       mail.bcc = @template[:payload][:bcc]
       mail.cc = @template[:payload][:cc]
-      mail.body = "#{@template[:payload][:message]}\n\nMessage sent automatically by i2x platform, http://bioinformatics.ua.pt/i2x/"
+      mail.body = "#{@template[:payload][:message]}\n\nMessage sent automatically by i2x platform, https://bioinformatics.ua.pt/i2x/"
       
       mail.deliver
 

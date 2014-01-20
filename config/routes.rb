@@ -38,7 +38,10 @@ I2X::Application.routes.draw do
   get "files/index"
 
   # FluxCapacitor control
-
+  post "fluxcapacitor/generate_key", to: 'flux_capacitor#generate_key'
+  post "fluxcapacitor/remove_key", to: 'flux_capacitor#remove_key'
+  post "fluxcapacitor/validate_key", to: 'flux_capacitor#validate_key'
+  
   # Helpers
   get "helper/index"
 
