@@ -83,7 +83,7 @@ gem "delayed_job_web"
 # Simplest way to perform REST request (for URL Delivery Templates). Read more: https://github.com/rest-client/rest-client
 gem 'rest-client'
 
-# XML, HTML, Reader parser.
+# XML, HTML, Reader parser. Read more: http://nokogiri.org
 gem 'nokogiri'
 
 # Redis cache access. Read more: https://github.com/redis/redis-rb

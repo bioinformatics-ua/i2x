@@ -11,7 +11,7 @@ class Agent < ActiveRecord::Base
   # => Accessors to make everything easy to access
   #
   store 	:payload, accessors: [:uri, :cache, :checked, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors]
-  store	:memory
+  store	  :memory
   attr_accessor :content
 
   ##

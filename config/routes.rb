@@ -32,6 +32,9 @@ I2X::Application.routes.draw do
     get 'page/:page', :action => :index, :on => :collection
   end
 
+  # Caches control
+  post 'cache/verify', to: 'flux_capacitor#verify'
+
   # Files control
   get "files/get/:filename", to: "files#get"
   get "files/delete/:filename", to: "files#delete"
@@ -41,6 +44,7 @@ I2X::Application.routes.draw do
   post "fluxcapacitor/generate_key", to: 'flux_capacitor#generate_key'
   post "fluxcapacitor/remove_key", to: 'flux_capacitor#remove_key'
   post "fluxcapacitor/validate_key", to: 'flux_capacitor#validate_key'
+  post 'fluxcapacitor/verify', to: 'flux_capacitor#verify'
   
   # Helpers
   get "helper/index"
