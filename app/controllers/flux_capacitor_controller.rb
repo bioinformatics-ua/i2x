@@ -2,7 +2,7 @@ require 'cashier'
 
 class FluxCapacitorController < ApplicationController
 	#before_filter :authenticate_user!
-	respond_to :json
+	#respond_to :json
 
 	##
 	# => Generate new API key for authenticated user
@@ -80,6 +80,21 @@ class FluxCapacitorController < ApplicationController
 	  	end
 	  end
 
+	  ##
+	  # => Generate sample client code for user API key.
+	  #
+	  def generate_client
+	  	@client = File.read("data/clients/sample_client.js").to_str
+	  	@client['%{host}'] = ENV["APP_HOST"]
+	  	@client['%{name}'] = ENV["APP_TITLE"]
+	  	@client['%{access_token}'] = (params[:access_token].nil? ? '<access_token>' : params[:access_token])
+	  	respond_to do |format|
+	  		format.json  {
+	  			render :json => @client
+	  		}
+	  	end
+	  end
+
 	  def validate_key
 	  	begin
 	  		api_key = ApiKey.find_by_access_token(params[:access_token])
@@ -96,5 +111,19 @@ class FluxCapacitorController < ApplicationController
 	  	end
 	  end
 
+	  def ping
+	  	response = {:pong => params[:ping]}
+	  	respond_to do |format|
+	  		format.json  {
+	  			render :json => response
+	  		}
+	  		format.xml  {
+	  			render :xml => response
+	  		}
+	  		format.js  {
+	  			render :json => response
+	  		}
+	  	end
+	  end
 
 	end

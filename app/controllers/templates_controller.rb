@@ -87,6 +87,17 @@ class TemplatesController < ApplicationController
   # DELETE /templates/1
   # DELETE /templates/1.json
   def destroy
+    current_user.templates.delete(@template)
+        # Remove from integrations
+        @template.integrations.each do |integration|
+          integration.templates.delete(@template)
+
+      # check if integrations has agents, remove if all empty
+      if integration.agents.empty?
+        current_user.integrations.delete(integration)
+        integration.destroy
+      end
+    end
     @template.destroy
     respond_to do |format|
       format.html { redirect_to templates_url }
@@ -112,6 +123,7 @@ class TemplatesController < ApplicationController
   def get
     begin
       @template = Template.find(params[:identifier])
+
       respond_to do |format|
         format.json { render :json => @template}
         format.xml { render :xml => @template}
@@ -119,6 +131,23 @@ class TemplatesController < ApplicationController
     rescue Exception => e
       Services::Slog.exception e
     end
+  end
+
+  ##
+  # => Add existing sample templates to user.
+  #
+  def add
+    @object = JSON.parse(File.read("data/templates/#{params[:identifier]}.js"))
+    @object['identifier'] = "#{@object['identifier']}_#{current_user.id}"
+    @template = Template.create! @object
+    @template.identifier = "#{@template.id}_#{@template.identifier}"
+    @template.status = 100
+    @template.count = 0
+
+    current_user.templates.push @template
+    respond_to do |format|
+      format.html { redirect_to edit_template_path(@template) }
+    end if @template.save
   end
 
   private

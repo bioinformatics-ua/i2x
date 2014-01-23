@@ -14,31 +14,31 @@ class Authorization < ActiveRecord::Base
 	# => Load user details from Facebook
 	#
 	def fetch_details_from_facebook
-		graph = Koala::Facebook::API.new(self.token)
-		facebook_data = graph.get_object("me")
-		self.username = facebook_data['username']
-		self.save
-		self.user.username = facebook_data['username'] if self.user.username.blank?
-		self.user.image = "http://graph.facebook.com/" + self.username + "/picture?type=large" if self.user.image.blank?
-		self.user.location = facebook_data['location'] if self.user.location.blank?
-		self.user.save
+		# graph = Koala::Facebook::API.new(self.token)
+		# facebook_data = graph.get_object("me")
+		# self.username = facebook_data['username']
+		# self.save
+		# self.user.username = facebook_data['username'] if self.user.username.blank?
+		# self.user.image = "http://graph.facebook.com/" + self.username + "/picture?type=large" if self.user.image.blank?
+		# self.user.location = facebook_data['location'] if self.user.location.blank?
+		# self.user.save
 	end
 
 	##
 	# => Load user details from Twitter
 	#
 	def fetch_details_from_twitter
-		twitter_object = Twitter::Client.new(
-			:oauth_token => self.token,
-			:oauth_token_secret => self.secret
-			)
-		twitter_data = Twitter.user(self.uid.to_i)
-		self.username = twitter_data.username
-		self.save
-		self.user.username = twitter_data.username if self.user.username.blank?
-		self.user.image = twitter_data.profile_image_url if self.user.image.blank?
-		self.user.location = twitter_data.location if self.user.location.blank?
-		self.user.save(:validate => false)
+		# twitter_object = Twitter::Client.new(
+		# 	:oauth_token => self.token,
+		# 	:oauth_token_secret => self.secret
+		# 	)
+		# twitter_data = Twitter.user(self.uid.to_i)
+		# self.username = twitter_data.username
+		# self.save
+		# self.user.username = twitter_data.username if self.user.username.blank?
+		# self.user.image = twitter_data.profile_image_url if self.user.image.blank?
+		# self.user.location = twitter_data.location if self.user.location.blank?
+		# self.user.save(:validate => false)
 	end
 
 	##

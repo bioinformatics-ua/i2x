@@ -57,7 +57,7 @@ function update_user_generate_key(event) {
 
 	$.post('../fluxcapacitor/generate_key.json', function(response) {
 		if (response.status === 100) {
-			$('#api_keys').append('<li id="user_api_key_' + response.access_token + '"><a href="#" class="remove icon-trash user_remove_api_key" data-id="' + response.access_token + '"></a> ' + response.access_token + '</li>')
+			$('#api_keys').append('<li id="user_api_key_' + response.access_token + '"><a href="../fluxcapacitor/generate_client.json?access_token=' + response.access_token + '" class="has-tip icon-download" title="Download sample client" target="_blank" data-tooltip></a> ' + response.access_token + ' <a href="#" title="Remove API key" data-tooltip class="has-tip remove icon-trash user_remove_api_key" data-id="' + response.access_token + '"></a></li>')
 			update_user_remove_key_selectors();
 		} else {
 			alert('[i2x] unable to generate new API key.')

@@ -2,6 +2,8 @@
 .DS_Store
 .bundle
 .bundle/*
+.idea
+.idea/*
 
 # logs and stuff
 log/*

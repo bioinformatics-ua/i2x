@@ -87,6 +87,19 @@ class AgentsController < ApplicationController
   # DELETE /agents/1
   # DELETE /agents/1.json
   def destroy
+    current_user.agents.delete(@agent)
+
+    # Remove from integrations
+    @agent.integrations.each do |integration|
+      integration.agents.delete(@agent)
+
+      # check if integrations has templates, remove if all empty
+      if integration.templates.empty?
+        current_user.integrations.delete(integration)
+        integration.destroy
+      end
+    end
+
     @agent.destroy
     respond_to do |format|
       format.html { redirect_to agents_url }
@@ -107,7 +120,7 @@ class AgentsController < ApplicationController
   end
 
   ##
-  # => Add existing samples to user
+  # => Add existing sample agents to user.
   #
   def add
     @object = JSON.parse(File.read("data/agents/#{params[:identifier]}.js"))
@@ -115,6 +128,7 @@ class AgentsController < ApplicationController
     @agent = Agent.create! @object
     @agent.events_count = 0
     @agent.last_check_at = Time.now
+    @agent.identifier = "#{@agent.id}_#{@agent.identifier}"
     current_user.agents.push @agent
     if @agent.save then    
       respond_to do |format|

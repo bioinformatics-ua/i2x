@@ -1,8 +1,5 @@
 I2X::Application.routes.draw do
 
-
-
-
   # Home
   root  'home#index'
   get 'home' => 'home/index'
@@ -40,11 +37,15 @@ I2X::Application.routes.draw do
   get "files/delete/:filename", to: "files#delete"
   get "files/index"
 
-  # FluxCapacitor control
+  # FluxCapacitor control [API]
   post "fluxcapacitor/generate_key", to: 'flux_capacitor#generate_key'
   post "fluxcapacitor/remove_key", to: 'flux_capacitor#remove_key'
   post "fluxcapacitor/validate_key", to: 'flux_capacitor#validate_key'
   post 'fluxcapacitor/verify', to: 'flux_capacitor#verify'
+  get 'fluxcapacitor/ping/:ping', to: 'flux_capacitor#ping'
+  post 'fluxcapacitor/ping', to: 'flux_capacitor#ping'
+  post 'fluxcapacitor/generate_client', to: 'flux_capacitor#generate_client'
+  get 'fluxcapacitor/generate_client', to: 'flux_capacitor#generate_client'
   
   # Helpers
   get "helper/index"
@@ -70,6 +71,7 @@ I2X::Application.routes.draw do
   get "templates/get/:identifier", to: "templates#get"            # load template as JSON
   post "templates/new"
   get "templates/start"
+  get "templates/add/:identifier", to: 'templates#add'            # add template from samples to user
   
 
   # Tester controller

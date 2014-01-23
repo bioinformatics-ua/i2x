@@ -59,7 +59,7 @@
 </div>
 <div class="row">
   <div class="small-2 columns right">
-    <%= f.submit "Save", :class => 'button radius small right' %>
+    <%= f.submit "Save", :class => 'button radius success small right' %>
   </div>
 </div>
 <div class="row">
@@ -68,21 +68,26 @@
   </div>
 </div>
 <% end %>
-<h3>Connect Accounts</h3>
-<ul class="no-bullet">
- <%- resource_class.omniauth_providers.each do |provider| %>
- <% if current_user.authorizations.pluck(:provider).include?(provider.to_s) %>
- <li><span  class="icon-<%= provider %>"><%= provider.to_s.titleize %> Connected</span></li>
- <% else %>
- <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path('user', provider), :class => "icon-#{provider}" %></li>
- <% end %>
- <% end %>
-</ul>
-<h3>API Keys</h3>
-<ul class="no-bullet" id="api_keys">
-  <% current_user.api_keys.each do |apikey| %>
-  <li id="user_api_key_<%= apikey.access_token %>"><a href="#" data-id="<%= apikey.access_token %>" class="remove icon-trash user_remove_api_key"></a> <%= apikey.access_token %></li>
-  <% end %>
-</ul>
-<br />
-<a href="#" id="user_add_api_key" title="Add new API key" class="button tiny radius icon-add">Add</a>
+<div class="row">
+  <div class="small-6 columns">
+    <h3>Connect Accounts</h3>
+    <ul class="no-bullet">
+     <%- resource_class.omniauth_providers.each do |provider| %>
+     <% if current_user.authorizations.pluck(:provider).include?(provider.to_s) %>
+     <li><span  class="icon-<%= provider %>"><%= provider.to_s.titleize %> Connected</span></li>
+     <% else %>
+     <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path('user', provider), :class => "icon-#{provider}" %></li>
+     <% end %>
+     <% end %>
+   </ul>
+ </div>
+ <div class="small-6 columns">
+  <h3>API Keys</h3>
+  <ul class="no-bullet" id="api_keys">
+    <% current_user.api_keys.each do |apikey| %>
+    <li id="user_api_key_<%= apikey.access_token %>"><%= link_to '', {:controller => '/flux_capacitor', :action => 'generate_client', :access_token => apikey.access_token, :format => 'json'}, :class => 'has-tip icon-download', :method => :post, :title => 'Download sample client', :target => '_blank', :data => {:tooltip => ''} %> <%= apikey.access_token %> <a href="#" data-id="<%= apikey.access_token %>" title="Remove API key" data-tooltip class="remove icon-trash user_remove_api_key has-tip"></a></li>
+    <% end %>
+  </ul>
+  <a href="#" id="user_add_api_key" title="Add new API key" class="button tiny radius icon-add">Add</a>
+</div>
+</div>

@@ -37,4 +37,5 @@ production:
   host: 127.0.0.1
   port: 3306
   pool: 500
-  timeout: 5000
+  timeout: 200
+  wait_timeout: 300

@@ -28,7 +28,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	# => Redirect all services to same method.
 	#
 	alias_method :facebook, :all
-	alias_method :twitter, :all
 	alias_method :linkedin, :all
 	alias_method :github, :all
 	alias_method :passthru, :all

@@ -73,6 +73,7 @@ class IntegrationsController < ApplicationController
   # DELETE /integrations/1
   # DELETE /integrations/1.json
   def destroy
+    current_user.integrations.delete(@integration)
     @integration.destroy
     respond_to do |format|
       format.html { redirect_to integrations_url }
