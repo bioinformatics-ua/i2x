@@ -1,21 +1,9 @@
 {
     "identifier": "sql",
-    "title": "SQL Agent",
-    "help": "Check for content changes on variant SQL databases",
+    "title": "WAVe SQL agent",
+    "help": "Read data for BRCA2 mutations from WAVe database, available through SQL queries.",
     "publisher": "sql",
     "schedule": "2d",
-    "action": "wave",
-    "seed": {
-        "publisher": "csv",
-        "uri": "http://pedrolopes.net/i2x/log.csv",
-        "headers": true,
-        "delimiter": ",",
-        "selectors": [
-            {
-                "gene": "1"
-            }
-        ]
-    },
     "payload": {
         "server": "mysql",
         "host": "localhost",
@@ -23,18 +11,8 @@
         "username": "root",
         "password": "telematica",
         "database": "i2x",
-        "query": "SELECT * FROM variants WHERE gene LIKE '%{gene}';",
+        "query": "SELECT * FROM variants WHERE gene LIKE 'BRCA2';",
         "cache": "id",
-        "selectors": [
-            {
-                "refseq": "refseq"
-            },
-            {
-                "variant": "variant"
-            },
-            {
-                "locus": "gene"
-            }
-        ]
+        "selectors": "[{\"refseq\":\"rs\"},{\"variant\":\"mutation\"},{\"locus\": \"gene\"}]"
     }
 }

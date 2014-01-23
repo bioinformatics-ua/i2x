@@ -11,3 +11,4 @@ log/*
 
 # Ignore i2x temporary files
 tmp/i2x/*
+tmp/*

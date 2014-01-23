@@ -24,7 +24,7 @@ class Agent < ActiveRecord::Base
   # => Use  User Agents  to connect Users
   #
   has_many  :user_agents
-  has_many  :user, :through => :user_agents
+  has_many  :users, :through => :user_agents
   
   ##
   # => Use AgentMappings to connect Agents

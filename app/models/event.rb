@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
 	#
 	def self.by_user user
 		begin
-			@events = Event.joins(agent: :user).where(users: {:id => user.id}).order(created_at: :desc)
+			@events = Event.joins(agent: :users).where(users: {:id => user.id}).order(created_at: :desc)
 		rescue Exception => e
 			Services::Slog.exception e
 		end
@@ -22,7 +22,7 @@ class Event < ActiveRecord::Base
 	#
 	def self.by_user_limit user
 		begin
-			@events = Event.joins(agent: :user).where(users: {:id => user.id}).order(created_at: :desc).limit(8)
+			@events = Event.joins(agent: :users).where(users: {:id => user.id}).order(created_at: :desc).limit(8)
 		rescue Exception => e
 			Services::Slog.exception e
 		end

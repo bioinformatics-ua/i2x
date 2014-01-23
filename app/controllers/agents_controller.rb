@@ -98,10 +98,28 @@ class AgentsController < ApplicationController
     @file = File.read("data/agents/#{params[:identifier]}.js")
     puts @file
     @agent = Agent.create! JSON.parse(@file)
+
     response = { :status => 200, :message => "[i2x]: agent #{params[:identifier]} imported", :id => @agent[:id] }
     respond_to do |format|
       format.json { render :json => response}
       format.xml { render :xml => response}
+    end
+  end
+
+  ##
+  # => Add existing samples to user
+  #
+  def add
+    @object = JSON.parse(File.read("data/agents/#{params[:identifier]}.js"))
+    @object['identifier'] = "#{@object['identifier']}_#{current_user.id}"
+    @agent = Agent.create! @object
+    @agent.events_count = 0
+    @agent.last_check_at = Time.now
+    current_user.agents.push @agent
+    if @agent.save then    
+      respond_to do |format|
+        format.html { redirect_to edit_agent_path(@agent) }
+      end
     end
   end
 
@@ -136,14 +154,13 @@ private
   # Never trust parameters from the scary internet, only allow the white list through.
   def agent_params
     a = params[:agent].clone
-    a[:agent] = params[:agent]
-    a.require(:agent).permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
-
+    #a[:selectors] = JSON.parse(a[:selectors])
+    a.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
   end
 
   def seed_params
     s = params[:seed].clone
     s[:seed] = params[:seed]
-    s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors)
+    s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors => [])
   end
 end
