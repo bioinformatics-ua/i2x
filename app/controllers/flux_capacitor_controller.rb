@@ -59,23 +59,25 @@ class FluxCapacitorController < ApplicationController
 	  		unless api_key.nil? then
 	  			user = api_key.user
 	  			agent = user.agents.find_by_identifier(params[:agent])
-	  			@cache = Services::Cashier.verify params[:memory], agent, params[:payload], params[:seed]
-	  			@templates = Array.new
-	  			agent.integrations.each do |integration|
-	  				integration.templates.each do |template|
-	  					@templates.push template.identifier
+	  			@cache = Services::Cashier.verify params[:cache], agent, params[:payload], params[:seed]
+	  			if @cache[:status] == 100 then
+	  				@templates = Array.new
+	  				agent.integrations.each do |integration|
+	  					integration.templates.each do |template|
+	  						@templates.push template.identifier
+	  					end
 	  				end
-	  			end
-	  			respond_to do |format|
-	  				format.json  {
-	  					render :json => {:cache => @cache, :templates => @templates}
-	  				}
-	  			end
+	  			end	  			
 	  		end
 	  	rescue Exception => e
 	  		Services::Slog.exception e
+	  		render(:file => File.join(Rails.root, 'public/403.html'), :status => 403, :layout => false)
 	  	end
-	  	render(:file => File.join(Rails.root, 'public/403.html'), :status => 403, :layout => false)
+	  	respond_to do |format|
+	  		format.json  {
+	  			render :json => {:cache => @cache, :templates => @templates}
+	  		}
+	  	end
 	  end
 
 	  def validate_key

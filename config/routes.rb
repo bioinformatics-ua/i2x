@@ -1,6 +1,8 @@
 I2X::Application.routes.draw do
 
 
+
+
   # Home
   root  'home#index'
   get 'home' => 'home/index'
@@ -31,9 +33,6 @@ I2X::Application.routes.draw do
   resources :events do
     get 'page/:page', :action => :index, :on => :collection
   end
-
-  # Caches control
-  post 'cache/verify', to: 'flux_capacitor#verify'
 
   # Files control
   get "files/get/:filename", to: "files#get"
@@ -79,8 +78,8 @@ I2X::Application.routes.draw do
 
 
   # Authentication
- devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
- get "sign_up", :to => "devise/registrations#new"
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  get "sign_up", :to => "devise/registrations#new"
 
 
   # Delayed job web interface
@@ -114,9 +113,13 @@ I2X::Application.routes.draw do
   get "research/others"
   get "research/swot"
   get "research/comparison"
+  get "faq/index"
+  get "how_to/index"
 
   # general index redirects
   get 'documentation' => 'documentation/index'
+  get "faq" => 'faq/index'
+  get "how_to" => 'how_to/index'
   get 'reference' => 'reference/index'
   get 'usecases'  => 'useasecases/index'
 

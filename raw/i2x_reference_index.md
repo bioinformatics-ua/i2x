@@ -11,18 +11,21 @@
 <!-- [TOC] for Python markdown parser -->
 
  <div class="large-9 columns" role="content"  markdown="1">
+
 # Agents
 
-Agents are used by the [STD][] to monitor external resources for content changes.
+**Agents** use [Detectors][] to monitor, in real-time, via [polling][], external [sources][] for content changes.
+
+**Agents** can be run at **i2x**'s server, or configured for local execution using the **i2x** [client][].
 
 
-# Agent Types
+# Agent Publishers
 
-Each [agent][] has one and only one type. Types are defined in the `publisher` property of each [agent][]. 
+Each [agent][] has one and only one publisher. Publishers are defined in the `publisher` property of each [agent][]. 
 
 ## Delimited File
 
-**STD** monitors delimited files accessible through a valid URI (`http://`, `ftp://`, `file://`). These files can have any number of columns delimited by common data exchange delimiters (`;`,`,`,`:`,`|`,`\t`). If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the **STD** performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows.
+A [Detector][] monitors delimited files accessible through a valid URI (`http://`, `ftp://`, `file://`). These files can have any number of columns delimited by common data exchange delimiters (`;`,`,`,`:`,`|`,`\t`). If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the [Detector][] performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows.
 
 **Example**
 
@@ -50,7 +53,7 @@ Each [agent][] has one and only one type. Types are defined in the `publisher` p
 
 ## Database
 
-**STD** can be configured to monitor a database. In this scenario, a _SELECT_ query must be configured to access the database, retrieving the list of values that are being monitored. If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the **STD** performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows. **Note** that there is forced a query limit of 1000 rows.
+A [Detector][] can be configured to monitor a database. In this scenario, a _SELECT_ query must be configured to access the database, retrieving the list of values that are being monitored. If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the **Detector** performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows. **Note** that there is forced a query limit of 1000 rows.
 
 **Example**
 
@@ -70,16 +73,16 @@ Each [agent][] has one and only one type. Types are defined in the `publisher` p
             "id": "id"
           },
           {
-            "refseq": "refseq"
+            "refseq": "rs"
           },
           {
-            "variant": "variant"
+            "variant": "mutation"
           },
           {
             "gene": "gene"
           },
           {
-            "url": "url"
+            "url": "link"
           }
         ]
       },
@@ -96,7 +99,7 @@ Each [agent][] has one and only one type. Types are defined in the `publisher` p
   <a href="#" class="close">&times;</a>
 </div>
 
-STD can be used to monitor LinkedData URIs. These must be publicly resolveable addresses and must respond properly to `Accept Encoding` headers, according [to the LinkedData principles][linkeddata]. With LinkedData monitors, STD checks all `predicates` described in the URI response. If any new predicate is detected or if a predicate object has changed, STD will generate a new event.
+Detector can be used to monitor LinkedData URIs. These must be publicly resolveable addresses and must respond properly to `Accept Encoding` headers, according [to the LinkedData principles][linkeddata]. With LinkedData monitors, Detector checks all `predicates` described in the URI response. If any new predicate is detected or if a predicate object has changed, Detector will generate a new event.
 
 ## SPARQL Endpoint
 
@@ -107,60 +110,90 @@ STD can be used to monitor LinkedData URIs. These must be publicly resolveable a
 
 ## Structured File
 
-**STD** can monitor structured files for more complex data exchange scenarios. Structured files are accessible through a valid URI (`http://`, `ftp://`, `file://`) and their content must be valid XML or JSON. Monitored data are configured through XPath or JSONPath queries. If an `id` query is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` query is setup, the **STD** performs a hashing function over the entire processed query response content. In this case, the resulting `hash` is matched against the list of already integrated results.
+A **Detector** can monitor structured files for more complex data exchange scenarios. Structured files are accessible through a valid URI (`http://`, `ftp://`, `file://`) and their content must be valid XML or JSON. Monitored data are configured through XPath or JSONPath queries. If an `id` query is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` query is setup, the **Detector** performs a hashing function over the entire processed query response content. In this case, the resulting `hash` is matched against the list of already integrated results.
+
+# Client
+
+[Agents][] can be executed locally using the [i2x client script](https://github.com/pdrlps/i2x-client). This script uses the **i2x** [gem][] to access **i2x**'s [API](#fluxcapacitor), analyzing local content and processing identified [events][] (i.e., delivering the template directly).
+
+Local clients bring three key benefits to the **i2x** platform: distributed monitoring, improved load control and better security.
+At the architecture level, any number of agents can be remotely deployed and configured to push data to the main **i2x** server. 
+[Agents][]' scheduling is more flexible. [Agents][] run as a standalone ruby script with an associated configuration file. Script execution can be automated, using a cron job task for instance, or can be run ad-hoc, when the data owners want to integrate/publish new data.
+With client-side [agents][], sensitive content,  such as authentication credentials or private API tokens, do not need to be registered in **i2x**'s server platform. 
+
+# Detector
+
+The **Detector** engine will perform the [polling][] of configured [sources][] using configured [agents][]. Spot the Differences monitors specified resources looking for changes in the output content. **Detector**'s algorithm identifies what has changed since the last visit to a data source (using hashes and id matching). When content changes are detected, the **Detector** triggers a new [event][]. [Events][] will then be processed through configured **i2x** integration rules. In the system, detected events are sent for processing to the **FluxCapacitor**.
 
 # Events
 
-**Events** are occurrences of specific conditions that will trigger an [Action](#actions). i2x events can be registered when:
+**Events** are occurrences of specific conditions that will trigger an [Action](#actions). **i2x** events are registered when:
 
 - New issue  (Ex: GitHub)
 - New row in table (Ex: WAVe)
 - New image in index (Ex: Dicoogle)
 
-You can think of an Event as the ignition of a new data integration Action.
+You can think of an **Event** as the ignition of a new [integration][].
 
-Basically, they're things that happen in monitored systems which cause a defined action to happen. Additionally, events supply data about what happened. These data will be passed on to the Integrations controller, which validates them and moves them to the Postman for execution in the [Delivery Template][deliverytemplate].
+Basically, they're things that happen in monitored systems which cause a defined action to happen. Additionally, events supply data about what happened. These data will be passed on to the [Integrations][] controller, which validates them and moves them to the [Postman][] for execution through the [Delivery Template][deliverytemplate].
 
-For example, say a service has a "New Row Added" event being monitored. We will detect when this event happens by [polling][payload]. The general event data will be something like this:
+For example, say a service has a "New Row Added" event being monitored. We will detect when this event happens using a [polling][] strategy. The general event data will be something like this:
 
     {
       "id": 987654,
-      "owner_id": 321,
-      "date_created": "Mon, 17 Sep 2013 15:07:01 0000",
-      "description": "Row added",
-      "type": "sql",
+      "create_at": "Mon, 17 Sep 2013 15:07:01 0000",
+      "agent_id": 1,
       "payload": { ... }
     }
 
 These key/value objects are available for mapping into the action as required.
 
-## Metadata
+# FluxCapacitor
 
-### Title
+**FluxCapacitor** is **i2x**'s' API. It controls everything happening within the platform, whether it was triggered internally or by any of the distributed clients.
 
-Human readable, short name of the event. Shown in various places in our interface.
+## Public Methods
 
-**Example**: *New Ticket Created* or *New Email with Label*
+### Verify Cache
 
-### Identifier
+This methods is used by [client][] [agents][] to verify if a specific set of properties has already been processed by **i2x**. When the content is not on the cache, i.e. has not been processed yet, this method returns the list of [templates][deliverytemplate] associated with provided [agent][] for delivery.
 
-This is a field only really used internally for both prefill and scripting references. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
+**Address**: POST to `../i2x/fluxcapacitor/verify.json`
 
-**Example**: *create_issue*, *ticket* or *newEmailLabel*
+**Example**
+  
+      {
+      "access_token": 987654,
+      "agent":"csv_agent"",
+      "cache": 1,
+      "seed": "abc",
+      "payload": { ... }
+    }
 
-### Help Text
+# Gem
 
-A longer description of what this event actually watches for.
+**i2x** [gem](http://rubygems.org/gems/i2x) includes all monitoring and detection features required by distributed [agents][] in a single [open-source package](https://github.com/pdrlps/i2x-gem).
 
-**Example**: *Triggered when a new row is added to a configured database.*
+To install, add this line to your application's Gemfile:
 
-## Hooks
+    gem 'i2x'
 
-The traditional workflow uses the [STD][std] to detect new [events][events]. However, [events][events] can be pushed in the system using the Web/REST hooks interface. In this case, the hook payload is directly [pushed][push] to the [Integration][intgratios] in the `payload` object.
+
+And then execute:
+
+    $ bundle
+
+
+Or install it yourself as:
+
+    $ gem install i2x
+
+
+Sample usage can be found in **i2x**'s [client][].
 
 # Helper Functions
 
-**i2x** included several internal functions allowing quick access to general variables that can be used in all templates. These functions allow the templates to retrieve information such as date/time, random numbers or strings, action names, among many others.
+**i2x** includes several internal functions allowing quick access to generic variables that can be used in all [templates][deliverytemplates]. These functions allow the templates to retrieve information such as date/time, random numbers or strings, action names, among many others.
 
 ## Usage
 
@@ -175,16 +208,24 @@ The traditional workflow uses the [STD][std] to detect new [events][events]. How
 * `environment`: returns the server execution environment (from Rails)
 * `hostname`: returns the postman server hostname
 
+# Hooks
 
+The traditional workflow uses the [Detector][] to detect new [events][]. However, [events][] can be pushed into **i2x** using the Web/REST hooks interface. In this case, the hook payload is directly [pushed][push] to the [Integration][].
+Relevant data must be sent in the POST request parameters. Upon receiving these data, **i2x** will start the [detector][] for the identified [agent][], processing the associated [integrations][].
+
+**Address**: Hooks must [push][] data to `i2x/push/<agent_identifier>.js` address.
 
 # Integrations
 
-Integrations represent what the users are trying to achieve:
+**Integrations** are the complete workflows of what users want to achieve, associating one or more [agents][] with one or more [templates][deliverytemplates].
+
+**Examples**
+
 - Add metadata to index (Ex: Dicoogle)
 - Add new data to database (Ex: WAVe)
-- Create issue (Ex: Redmine)
+- Create issue from task (Ex: Redmine)
 
-You can think of Integrations as POSTs, writes, query executions, or the creation of a resource. **Integrations** are performed by the [Postman](#Postman) using the specified [delivery template][].
+You can think of **Integrations** as the full path from database SELECTs or file processing to POSTs, writes, query executions, or the creation of a resource. **Integrations** start with the [agents][] and are finalized by the [Postman](#Postman) using the specified [delivery templates][].
 
 ## Metadata
 
@@ -206,45 +247,9 @@ This is some human-readable explanatory text, usually something that clarifies w
 
 **Example**: *Adds a new variant to the configured database*.
 
-# Integration Fields
-
-Integration Fields answer the question: What details can a user provide when creating an Integration? These are the fields available for customization in the [delivery template][]. These are things like:
-
-- Title  (EG: Issue Title in Redmine)
-- Description  (EG: Issue Description from Github)
-- Parent Object  (span relationships via prefill)
-- Variant Description  (EG: HGVS description)
-
-**Note**: each action should have at least one action field. It really makes no sense to send no custom data to the delivery template.
-
-## Metadata
-
-### Identifier
-
-A key for consumption in the Delivery Templates. This is available for variable syntax in the Delivery Template. Needs to be at least 2 characters long, start with an alpha, and only contain a-z, A-Z, 0-9 or _.
-We'll take double underscores and convert them to nested dictionaries before execution.
-
-**Example**: *room* or *project__title*  (converts to *{"project": {"title": "some value"} }*)
-
-### Title
-
-A human readable Label shown in the UI as a user works to complete an Integration.
-
-**Example**: *Variant* or *Title*
-
-### Help Text
-
-Human readable description of an action field, useful for describing some detail you couldn't list in the Label.
-
-*Example*: *Choose which room to send the message to.* or *Add a title to the note.*
-
-### Default
-
-A default value that is preloaded in the execution if no values are obtained for Integration execution.
-
 # Polling
 
-Polling is the process of repeatedly hitting the same endpoint looking for new data. Unfortunately, i2x uses the **STD** to do this. We don't like doing this (its wasteful), vendors don't like us doing it (again, its wasteful) and users dislike it (they have to wait a maximum interval to detect new events). However, it is the one method that is ubiquitous, so we support it.
+Polling is the process of repeatedly hitting the same endpoint looking for new data. Unfortunately, i2x uses the **Detector** to do this. We don't like doing this (its wasteful), vendors don't like us doing it (again, its wasteful) and users dislike it (they have to wait a maximum interval to detect new events). However, it is the one method that is ubiquitous, so we support it.
 
 It is also closely tied into how i2x handles deduplication.
 
@@ -264,11 +269,7 @@ Handles the final step of the [integrations][]: gets the [integration fields][] 
 
 # Sources
 
-**Sources** setup the location of external content for event detection. The [STD][] uses a [polling][] process to identify new [events][] in monitored resources. There a few changes tough, URL Routes can only be GET and SQL queries must contain a SELECT statement.
-
-# STD: Spot The Differences
-
-The **STD** engine will perform the [polling][] of configured [sources][] using configured [agents][]. Spot the Differences monitors specified resources looking for changes in the output content. **STD**'s algorithm identifies what has changed since the last visit to a data source (using hashes and id matching). When content changes are detected, the **STD** triggers a new [event][]. [Events][] will then be processed through configured **i2x** integration rules. In the system, detected events are sent for processing to the **FluxCapacitor**.
+**Sources** setup the location of external content for event detection. The [Detector][] uses a [polling][] process to identify new [events][] in monitored resources. There a few changes tough, URL Routes can only be GET and SQL queries must contain a SELECT statement.
 
 # Templates
 
@@ -337,11 +338,6 @@ Sample configuration for exchanged data between the application controller and t
 
 ## Email
 
-<div data-alert class="alert-box warning radius">
-  <strong>Note</strong>: Email support is not yet available.
-  <a href="#" class="close">&times;</a>
-</div>
-
 Sends custom emails to the configured recipients. **Note** that emails are sent from the server configured in **i2x**'s Rails settings.
 
 ### Metadata
@@ -386,6 +382,10 @@ The body for the message being sent.
 
 **Property**: `body` (maps to `i2x:body`)
 
+## Dropbox Management
+
+In addition to accessing files on your server workspace, **i2x** can interact with your Dropbox to create or update files. The configuration is just like the **File Management** template, detailed next.
+
 ## File Management
 
 Changes files directly on the file system. 
@@ -420,14 +420,23 @@ The _create_ method will create a new file with the generated content (from the 
 
 The file URI. Not that filenames can include _variables_. The use of full system file URIs (starting with _file://_) is advised.
 
-**Example**: *file://Temp/log.csv*
+**Example**: */Temp/log.csv*
 
-**Property**: `uri` (mas to `i2x:uri`)
+**Property**: `uri` (maps to `i2x:uri`)
 
 ### Sample
 
     {
-    "identifier":"github_2_file","title":"GitHub to File","help":"a","publisher":"file","variables":null,"payload":{"method":"append","uri":"data/github.csv","content":"\"%{i2x.date}\",\"%{before}\",\"%{after}\",\"%{repository}\"\n"}
+      "identifier": "github_2_file",
+      "title": "GitHub to File",
+      "help": "a",
+      "publisher": "file",
+      "variables": null,
+      "payload": {
+        "method": "append",
+        "uri": "data/github.csv",
+        "content": "%{i2x.date},%{before},%{after},%{repository}\n"
+      }
     }
 
 ## SQL Query
@@ -531,17 +540,17 @@ This URL Route POSTs extracted data to the defined URL route. [Action Fields][ac
 
 The destination URL for the request.
 
-**Example**: *http://bioinformatics.ua.pt/i2x/postman/%{id}*, *http://bmd-software.com/*
+**Example**: http://bioinformatics.ua.pt/i2x/postman/%{id}, http://bmd-software.com/
 
 **Property**: `uri` (maps to `i2x:uri`)
 
 # Variables
 
-[Agents][] and [Deliveries][delivery] can have an endless number of variables being matched within **i2x**. Variables are available in _payload_ objects in any configuration. Variables are extracted from the [Selectors][] configured in [Agents][] and [Templates][].
+[Agents][] and [delivery templates][delivery] can have an endless number of variables being matched within **i2x**. Variables are available in _payload_ objects in any configuration. Variables are extracted from configured in [Agents][] and [Templates][].
 
 ## Usage
 
-**i2x** identifies variables by matching content in property values within `%{ }`. On template processing, each variable is replaced with content from the sent payload. Variables can be included in SQL queries, URIs or request parameters. **Note** that **i2x** helper functions are also variables.
+**i2x** identifies variables by matching content in property values within `%{ }`. On [template][] processing, each variable is replaced with content from the sent payload. Variables can be included in SQL queries, URIs or request parameters. **Note** that **i2x** [helper functions][helpers] are also variables.
 
 **Example**:  `%{name}` is replaced by the `name` property in the calling function parameters hash. 
 
@@ -550,21 +559,26 @@ The destination URL for the request.
 
 [agent]:              #agents
 [agents]:             #agents
+[client]:             #client
+[gem]:                #gem
 [Integration]:        #integrations
 [Integrations]:       #actions
 [integration fields]: #integration-fields
 [delivery]:           #deliveries
 [deliverytemplate]:   #delivery-templates
+[deliverytemplates]:  #delivery-templates
 [delivery template]:  #delivery-templates
 [delivery templates]: #delivery-templates
+[Detector]:           #Detector
+[Detectors]:          #Detector
 [event]:              #events
 [events]:             #events
 [Field Types]:        #field-types
+[helpers]:            #helper-functions
 [polling]:            #polling
 [Postman]:            #postman
 [source]:             #sources
 [sources]:            #sources
-[STD]:                #std
 [Template]:           #templates
 [Templates]:          #templates
 [variables]:          #variables

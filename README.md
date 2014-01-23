@@ -58,7 +58,7 @@
 
 2013-09-20
 
-* main release for docs to http://bioinformatics.ua.pt/i2x
+* main release for docs to https://bioinformatics.ua.pt/i2x
 
 2013-07-30
 
