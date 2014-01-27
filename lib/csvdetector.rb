@@ -24,19 +24,19 @@ module Services
     def detect object
       begin
         CSV.new(open(object[:uri]), :headers => :first_row).each do |row|
-          unless object[:cache].nil? then
+          unless object[:cache].nil?
             @cache = Cashier.verify row[object[:cache].to_i], object, row, object[:seed]
           else
             @cache = Cashier.verify row[0], object, row, object[:seed]
           end
           # The actual processing
           #
-          if @cache[:status] == 100 then
+          if @cache[:status] == 100
 
             # add row data to payload from selectors (key => key, value => column name)
             payload = Hash.new
             JSON.parse(object[:selectors]).each do |selector|
-              selector.each do |k,v|
+              selector.each do |k, v|
                 payload[k] = row[v.to_i]
               end
             end
@@ -48,7 +48,5 @@ module Services
         Services::Slog.exception e
       end
     end
-
-    
   end
 end

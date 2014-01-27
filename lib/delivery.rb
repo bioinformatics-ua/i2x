@@ -19,7 +19,7 @@ module Services
         @template = template
         @help = Services::Helper.new
         
-        self.process_helpers
+
       rescue Exception => e
         Services::Slog.exception e
       end
@@ -39,8 +39,8 @@ module Services
         @template[:payload].each_pair do |key,value|
           variables = @help.identify_variables @template[:payload][key]
           variables.each do |v|
-            unless params[v].nil? then
-              if params[v].kind_of? Array then
+            unless params[v].nil?
+              if params[v].kind_of? Array
                 @template[:payload][key].gsub!("%{#{v}}", params[v].to_json)
               else
                 @template[:payload][key].gsub!("%{#{v}}", params[v].to_s)
@@ -48,6 +48,7 @@ module Services
             end
           end
         end
+        self.process_helpers
       rescue Exception => e
         Services::Slog.exception e
       end
@@ -59,7 +60,10 @@ module Services
     def process_helpers
       begin
         @template[:payload].each_pair do |key, value|
+          # load simple replacements
           @help.replacements.each {|replacement| @template[:payload][key].gsub!(replacement[0], replacement[1])}
+          # process functions
+          @template[:payload][key] = @help.process_code value
         end
       rescue Exception => e
         Services::Slog.exception e

@@ -193,20 +193,38 @@ Sample usage can be found in **i2x**'s [client][].
 
 # Helper Functions
 
-**i2x** includes several internal functions allowing quick access to generic variables that can be used in all [templates][deliverytemplates]. These functions allow the templates to retrieve information such as date/time, random numbers or strings, action names, among many others.
+**i2x** includes several internal functions allowing quick access to generic variables that can be used in all [templates][deliverytemplates]. These functions allow the templates to retrieve information such as date/time, random numbers or strings, among many others.
 
 ## Usage
 
-**i2x** helper functions are used just like the template [variables][]. These reserved keywords are written as `i2x.function name`.
+**i2x** helper functions are used just like the template [variables][], changing only the start character form `%` to `$`. These reserved keywords are written as `i2x.function name`.
 
 ## Function list
 
 * `date`: returns the system date
 * `datetime`: returns the system date with time included (until _ms_)
-* `action_identifier`: returns the ongoing action identifier
-* `template_identifier`: returns the ongoing delivery template
 * `environment`: returns the server execution environment (from Rails)
 * `hostname`: returns the postman server hostname
+* `random_int`: returns a random integer number
+* `random_string`: returns a random string with 8 characters
+* `random_hex`: returns a random hex string with 64 characters
+
+## Code
+
+The `i2x.code` function allows running arbitrary code Ruby within your template. This allows implementing simple variable comparisons or more complex operations. For instance, the functions listed previously could be reproduced using a `code` segment:
+
+* _datetime_: `${i2x.code( Time.now )}`
+
+Other **examples**:
+
+* _if_ statement, appending to file: `%{title},${i2x.code( %{b} > %{a} ? '%{big}' : '%{small}'  )}``
+
+
+Some additional notes on `code` blocks:
+
+* There are some validations to prevent executing malicious code. However, there are still open security issues. Handle with care.
+* The `code` block must return (or use) something (object, function, array) that can be cast as a String.
+* Multiline code is **not** possible.
 
 # Hooks
 

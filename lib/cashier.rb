@@ -1,12 +1,10 @@
 require 'slog'
 
-
 module Services
   class Cashier
 
-
     public
-    
+
     ##
     # = Verify
     # => Verify if items have already been seen in the past (on the cache).
@@ -22,9 +20,9 @@ module Services
       # => Redis implementation, use cache.
       #
       begin
-        
+
         # if Redis is enabled...
-        if ENV["CACHE_REDIS"] then          
+        if ENV["CACHE_REDIS"] then
           # give me some cache!
           @redis = Redis.new :host => ENV["CACHE_HOST"], :port => ENV["CACHE_PORT"]
         end
@@ -36,8 +34,8 @@ module Services
       if ENV["CACHE_REDIS"] then
         # commented, do not log all cache verifications
         #Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
-        begin          
-          if @redis.hexists("#{agent[:identifier]}:#{seed}","#{memory}") then
+        begin
+          if @redis.hexists("#{agent[:identifier]}:#{seed}", "#{memory}") then
             response = {:status => 200, :message => "[i2x][Cashier] Nothing to update"}
           else
             @redis.hset("#{agent[:identifier]}:#{seed}", "#{memory}", payload)
@@ -45,7 +43,7 @@ module Services
           end
         rescue Exception => e
           response = {:message => "[i2x][Cashier] unable to verify cache content, #{e}", :status => 301}
-          Services::Slog.exception e     
+          Services::Slog.exception e
         end
       end
 
