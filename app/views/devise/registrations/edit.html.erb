@@ -16,7 +16,14 @@
     <%= f.text_field :name, :tabindex => autotab, :autofocus => true %>
   </div>
 </div>
-
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :username, :class => 'right inline' %>
+  </div>
+  <div class="small-9 columns">
+    <%= f.text_field :username, :tabindex => autotab %>
+  </div>
+</div>
 <div class="row">
   <div class="small-3 columns">
     <%= f.label :email, :class => 'right inline' %>

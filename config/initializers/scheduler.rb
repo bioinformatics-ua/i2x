@@ -3,6 +3,19 @@ require 'rufus/scheduler'
 require 'checkup'
 require 'slog'
 
+Thread.new {
+  begin
+    unless ActiveRecord::Base.connected?
+      ActiveRecord::Base.connection.verify!(0)
+    end
+    Services::Checkup.new.boot
+  rescue Exception => e
+    Services::Slog.exception e
+  ensure
+    ActiveRecord::Base.connection_pool.release_connection
+  end
+}
+
 scheduler = Rufus::Scheduler.new
 
 if Rails.env.production? then

@@ -19,6 +19,21 @@ module Services
     
 
     ##
+    # = Real-time poll started on server boot.
+    #
+    def boot
+      Integration.all.each do |integration|
+        integration.agents.each do |agent|
+          begin
+            self.execute agent
+          rescue Exception => e
+            Services::Slog.exception e
+          end
+        end
+      end
+    end
+
+    ##
     # = Initiate real-time (poll) check
     #
     # + *schedule*: the scheduling being checked

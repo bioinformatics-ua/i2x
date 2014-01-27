@@ -110,7 +110,7 @@ function remove_url_post_params(event) {
 function new_template_save(e, data, status, xhr) {
 	if (status === 'success') {
 		template = JSON.parse(xhr.responseText);
-		window.location = '/templates/' + template.id;
+		window.location = '../templates/' + template.id;
 	}
 }
 

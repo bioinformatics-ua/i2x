@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :marketable, :omniauthable
   validates_presence_of :email
+  validates :username, :uniqueness => { :case_sensitive => false }
+
+  attr_accessor :login
   
   ##
   # => Use  User Agents  to connect Agents
@@ -33,6 +36,17 @@ class User < ActiveRecord::Base
   #
   has_many :api_keys
 
+  ##
+  # => Allow login via email or username.
+  #
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+    else
+      where(conditions).first
+    end
+  end
 
   def self.new_with_session(params,session)
     if session["devise.user_attributes"]
@@ -56,8 +70,8 @@ class User < ActiveRecord::Base
        user.email = auth.info.email
        if (auth.provider == "twitter") then
         user.email = user.name + '@twitter.com'
-       end
-       user.save
+      end
+      user.save
        #user.save(:validate => false)
      end
      authorization.username = auth.info.nickname

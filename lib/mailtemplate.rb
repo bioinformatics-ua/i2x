@@ -20,7 +20,7 @@ module Services
         end
 
         mail = Mail.new
-        mail.from = 'pedrolopes@ua.pt'
+        mail.from = ENV['MAIL_FROM']
         mail.to = @template[:payload][:to]
         mail.subject = "[i2x] #{@template[:payload][:subject]}"
         mail.bcc = @template[:payload][:bcc]

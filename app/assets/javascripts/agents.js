@@ -12,7 +12,7 @@ $(function() {
 function new_agent_save(e, data, status, xhr) {
 	if (status === 'success') {
 		agent = JSON.parse(xhr.responseText);
-		window.location = '/agents/' + agent.id;
+		window.location = '../agents/' + agent.id;
 	}
 }
 
