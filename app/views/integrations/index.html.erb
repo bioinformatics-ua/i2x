@@ -54,19 +54,37 @@
       <div class="row agent-info info-enabled">
         <div class="small-11 columns">
           <div class="left">
-            <div class="circle_48 on">
-              &infin;
-            </div>
           </div>
           <div class="info-details">
-            <h6 class="subheader">Twitter Monitor</h6>
-            <span class="label secondary icon-publisher">json</span>
-            <span class="label secondary icon-schedule">5m</span>
+            <h6 class="subheader">SQL to CSV file</h6>
+            <span class="label secondary icon-publisher">sql</span>
+            <span class="label secondary icon-schedule">2d</span>
+            <span class="icon-forward"></span>
+            <span class="label secondary radius icon-publisher">file</span>
           </div>
         </div>
         <div class="small-1 columns right">
           <div class="right">
-            <%= link_to ''.html_safe, new_agent_path, :class => 'action right has-tooltip icon-add', :title => "Add Twitter Monitor sample integration", data: {:tooltip => ''}  %>
+            <%= link_to ''.html_safe, {:controller => 'integrations', :action => 'add', :agent => 'sql', :template => 'file'}, :class => 'action right has-tooltip icon-add', :title => "Add SQL results to CSV file sample integration", data: {:tooltip => ''}  %>
+          </div>
+        </div>
+      </div>
+
+            <div class="row agent-info info-enabled">
+        <div class="small-11 columns">
+          <div class="left">
+          </div>
+          <div class="info-details">
+            <h6 class="subheader">XML to SQL table</h6>
+            <span class="label secondary radius icon-publisher">xml</span>
+            <span class="label secondary radius icon-schedule">2h</span>
+            <span class="icon-forward"></span>
+            <span class="label secondary radius icon-publisher">sql</span>
+          </div>
+        </div>
+        <div class="small-1 columns right">
+          <div class="right">
+            <%= link_to ''.html_safe, {:controller => 'integrations', :action => 'add', :agent => 'xml', :template => 'sql'}, :class => 'action right has-tooltip icon-add', :title => "Add XML to SQL table integration", data: {:tooltip => ''}  %>
           </div>
         </div>
       </div>

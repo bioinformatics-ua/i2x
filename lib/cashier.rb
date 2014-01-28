@@ -35,10 +35,10 @@ module Services
         # commented, do not log all cache verifications
         #Services::Slog.debug({:message => "Verifying cache", :module => "Cashier", :task => "cache", :extra => {:agent => agent[:identifier], :memory => memory, :payload => payload, :seed => seed}})
         begin
-          if @redis.hexists("#{agent[:identifier]}:#{seed}", "#{memory}") then
+          if @redis.hexists("i2x:#{agent[:identifier]}:#{seed}", "#{memory}") then
             response = {:status => 200, :message => "[i2x][Cashier] Nothing to update"}
           else
-            @redis.hset("#{agent[:identifier]}:#{seed}", "#{memory}", payload)
+            @redis.hset("i2x:#{agent[:identifier]}:#{seed}", "#{memory}", payload)
             response = {:status => 100, :message => "[i2x][Cashier] Memory recorded to cache"}
           end
         rescue Exception => e

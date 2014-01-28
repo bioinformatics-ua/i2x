@@ -10,10 +10,11 @@ I2X::Application.routes.draw do
 
   # Agents control  
   resources :agents
-  get "agents/partials/:identifier", to: 'agents#partials'  # what is this?
-  get "agents/import/:identifier", to: "agents#import"      # import from JSON file
-  get "agents/get/:identifier", to: "agents#get"            # load agent as JSON
-  get "agents/add/:identifier", to: "agents#add"            # add sample agent to user
+  get "agents/partials/:identifier", to: 'agents#partials'  		# what is this?
+  get "agents/import/:identifier", to: "agents#import"      		# import from JSON file
+  get "agents/get/:identifier", to: "agents#get"            		# load agent as JSON
+  get "agents/add/:identifier", to: "agents#add"            		# add sample agent to user
+  
   
   # Caches (internal) control
   resources :caches
@@ -24,7 +25,8 @@ I2X::Application.routes.draw do
   get "delivery/go"
 
   # Documentation
-  get "documentation/index"
+  get "docs", to: 'docs#index'
+  get 'docs/:section/:topic', to: 'docs#show'
 
   # Events control
   resources :events
@@ -46,6 +48,7 @@ I2X::Application.routes.draw do
   post 'fluxcapacitor/ping', to: 'flux_capacitor#ping'
   post 'fluxcapacitor/generate_client', to: 'flux_capacitor#generate_client'
   get 'fluxcapacitor/generate_client', to: 'flux_capacitor#generate_client'
+  post 'fluxcapacitor/agents/:id/update_meta', to: 'flux_capacitor#agent_update_meta'
   
   # Helpers
   get "helper/index"
@@ -53,6 +56,7 @@ I2X::Application.routes.draw do
   # Integrations control
   resources :integrations
   post "integrations/:id/save", to: 'integrations#save'
+  get "integrations/add/:agent/:template", to: 'integrations#add'
 
   # Postman control
   get "postman/load/:publisher/:identifier", to: "postman#load"

@@ -1,0 +1,6 @@
+<% content_for :title, "#{params[:topic].titleize} - #{params[:section].titleize} - Docs - #{ENV['APP_TITLE']}" %>
+
+<article id="<%= params[:topic] %>">
+    <%= @content.html_safe %>
+</article>
+

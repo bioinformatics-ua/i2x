@@ -126,4 +126,25 @@ class FluxCapacitorController < ApplicationController
 	  	end
 	  end
 
+	  ## Agents API
+	  def agent_update_meta
+	  	@agent = Agent.find(params[:id])
+	  	agent_params.each do |k,v|
+	  		@agent[k] = v	  		
+	  	end
+	  	respond_to do |format|
+	  		if @agent.save
+	  			format.json  {
+	  				render :json => {:status => 100}
+	  			}
+	  		end
+	  	end
+
+
+	  end
+
+	  def agent_params
+	  	params.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :last_check_at, :events_count)
+	  end
+
 	end

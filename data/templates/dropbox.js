@@ -6,6 +6,6 @@
 	"payload": {
 		"method": "append",
 		"uri": "i2x_log.csv",
-		"content": "%{i2x.datetime},%{id},%{title}\n"
+		"content": "${i2x.datetime},%{id},%{title}\n"
 	}
 }

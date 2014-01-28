@@ -2,7 +2,7 @@
 
 **[i2x](https://bioinformatics.ua.pt/i2x/): integrate everything**
 
-**i2x** is a barebones framework for deploying custom automated, real-time, data integration platform.
+**i2x** is a barebones framework for deploying custom automated, real-time, data integration platforms.
 
 ## Setup
 
@@ -35,6 +35,9 @@
 
 
 ## Changelog
+
+2014-01-28
+* Beta is online
 
 2014-01-10
 

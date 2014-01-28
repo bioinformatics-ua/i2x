@@ -8,10 +8,10 @@
         "server": "mysql",
         "host": "localhost",
         "port": 3306,
-        "username": "root",
-        "password": "telematica",
-        "database": "i2x",
-        "query": "SELECT * FROM variants WHERE gene LIKE 'BRCA2';",
+        "username": "demo",
+        "password": "demo1234",
+        "database": "hummer",
+        "query": "SELECT * FROM variants;",
         "cache": "id",
         "selectors": "[{\"refseq\":\"rs\"},{\"variant\":\"mutation\"},{\"locus\": \"gene\"}]"
     }

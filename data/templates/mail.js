@@ -8,6 +8,6 @@
         "cc": "pdrlps@gmail.com",
         "bcc": "hello@pedrolopes.net",
         "subject": "New email with %{title}",
-        "message": "<b>Title:</b>%{title}<br /><br/>%{content}<br />%{i2x.datetime}"
+        "message": "<b>Title:</b>%{title}<br /><br/>%{content}<br />${i2x.datetime}"
     }
 }

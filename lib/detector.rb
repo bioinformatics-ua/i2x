@@ -31,9 +31,7 @@ module Services
     ##
     # == Start original source detection process
     #
-    def checkup
-      # update checkup time
-      @agent.update_check_at @help.datetime
+    def checkup	
 
       begin
 

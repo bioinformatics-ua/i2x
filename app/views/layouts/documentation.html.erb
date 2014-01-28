@@ -43,60 +43,32 @@
                 <li class="has-dropdown not-click">
                   <a href="#">Architecture</a>
                   <ul class="dropdown" >
-                    <li><%= link_to "Components", :controller => '/architecture', :action => 'components' %></li>
-                    <li><%= link_to "Flows", :controller => '/architecture', :action => 'flows' %></li>
-                    <li><%= link_to "Models", :controller => '/architecture', :action => 'models' %></li>
+                    <li><%= link_to "Components", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'components' %></li>
+                    <li><%= link_to "Flows", :controller => '/docs', :action => 'show', :section => 'architecture', :topic =>'flows' %></li>
+                    <li><%= link_to "Models", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'models' %></li>
                     <li><label>Sequences</label></li>
-                    <li><%= link_to "Apply Integration Rules", :controller => '/sequences', :action => 'rules' %></li>
-                    <li><%= link_to "Execute Delivery Template", :controller => '/sequences', :action => 'template' %></li>
-                    <li><%= link_to "Full Sequence Diagram", :controller => '/sequences', :action => 'full' %></li>
-                    <li><%= link_to "Poll Content Changes", :controller => '/sequences', :action => 'content' %></li>
-                    <li><%= link_to "Translate Diff", :controller => '/sequences', :action => 'diff' %></li>
+                    <li><%= link_to "Apply Integration Rules", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'rules' %></li>
+                    <li><%= link_to "Execute Delivery Template", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'template' %></li>
+                    <li><%= link_to "Full Sequence Diagram", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'full' %></li>
+                    <li><%= link_to "Poll Content Changes", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'content' %></li>
+                    <li><%= link_to "Translate Diff", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'diff' %></li>
                   </ul>
                 </li>
                 <li class="divider"></li>
-               <!-- <li class="has-dropdown not-click">
-                  <a href="#">Publications</a>
-                  <ul class="dropdown">
-                    <li><label>Bioinformatics</label></li>
-                    <li><%= link_to "Automating biomedical integration", :controller => '/publications', :action => 'automating' %></li>
-                    <li><%= link_to "WAVe", :controller => '/publications', :action => 'wave' %></li>
-                    <li><label>Technical</label></li>
-                    <li><%= link_to "Architecture for content change detection", :controller => '/publications', :action => 'content' %></li>
-                    <li><%= link_to "Exploring semantic rule-based integration", :controller => '/publications', :action => 'rule' %></li>
-                    <li><%= link_to "Framework for active data integration", :controller => '/publications', :action => 'framework' %></li>
-                    <li><%= link_to "Semantics", :controller => '/publications', :action => 'semantic' %></li>
-                    <li><%= link_to "Template-based autonomous integration", :controller => '/publications', :action => 'template' %></li>
-                  </ul>
-                </li>
-                <li class="divider"></li>-->
-                <li><%= link_to "FAQ", :controller => '/faq' %></li>
+                <li><%= link_to "FAQ", :controller => '/docs', :action => 'show', :section => 'faq', :topic => 'index' %></li>
                 <li class="divider"></li>
-                <li><%= link_to "How To", :controller => '/how_to' %></li>
+                <li><%= link_to "How To", :controller => '/docs', :action => 'show', :section => 'how_to', :topic => 'index' %></li>
                 <li class="divider"></li>
-                <li><%= link_to "Reference", :controller => '/reference' %></li>
+                <li><%= link_to "Reference", :controller => '/docs' %></li>
                 <li class="divider"></li>
                 <li class="has-dropdown not-click">
                   <a href="#">Research</a>
                   <ul class="dropdown">
-                    <li><%= link_to "Comparison", :controller => '/research', :action => 'comparison' %></li>
-                    <li><%= link_to "Others", :controller => '/research', :action => 'others' %></li>
-                    <li><%= link_to "SWOT", :controller => '/research', :action => 'swot' %></li>
+                    <li><%= link_to "Others", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'others' %></li>
+                    <li><%= link_to "SWOT", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'swot' %></li>
                   </ul>
                 </li>
                 <li class="divider"></li>
-
-                <!--<li class="has-dropdown not-click">
-                  <%= link_to "Use Cases", :controller => '/usecases', :action => 'index' %>
-                  <ul class="dropdown">
-                    <li><%= link_to "CRM", :controller => '/usecases', :action => 'crm' %></li>
-                    <li><%= link_to "Medical Imaging", :controller => '/usecases', :action => 'medical' %></li>
-                    <li><%= link_to "Newborn Management", :controller => '/usecases', :action => 'newborn' %></li>
-                    <li><%= link_to "Project Management", :controller => '/usecases', :action => 'management' %></li>
-                    <li><%= link_to "Variome Integration", :controller => '/usecases', :action => 'variome' %></li>
-                  </ul>
-                </li>
-                <li class="divider"></li>-->
                 <li><%= link_to "Contact", :controller => '/contact' %></li>
                 <li class="divider"></li>
               </ul>

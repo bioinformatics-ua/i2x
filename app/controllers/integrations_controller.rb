@@ -117,6 +117,48 @@ class IntegrationsController < ApplicationController
     end
   end
 
+    ##
+  # => Add existing sample integration to user.
+  #
+  def add
+    # load agent
+    @helper = Services::Helper.new
+
+
+    agent_object = JSON.parse(File.read("data/agents/#{params[:agent]}.js"))
+    agent_object['identifier'] = "#{agent_object['identifier']}_#{current_user.id}_#{@helper.random_int}"
+    @agent = Agent.create! agent_object
+    @agent.events_count = 0
+    @agent.last_check_at = Time.now
+    
+    current_user.agents.push @agent
+
+    #load template
+    template_object = JSON.parse(File.read("data/templates/#{params[:template]}.js"))
+    template_object['identifier'] = "#{template_object['identifier']}_#{current_user.id}_#{@helper.random_int}"
+    @template = Template.create! template_object    
+    @template.status = 100
+    @template.count = 0
+    current_user.templates.push @template
+
+    # create integrations
+    integration_object = {}
+    integration_object[:identifier] =  "#{@agent[:identifier]}_2_#{@template[:identifier]}"
+    integration_object[:title] = "#{@agent[:title]} to #{@template[:title]}"
+    integration_object[:status] = 100
+    @integration = Integration.create! integration_object 
+    @integration.agents.push @agent
+    @integration.templates.push @template
+
+    current_user.integrations.push @integration
+
+    if @agent.save && @template.save && @integration.save then    
+      respond_to do |format|
+        format.html { redirect_to @integration }
+      end
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_integration

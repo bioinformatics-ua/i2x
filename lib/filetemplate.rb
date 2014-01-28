@@ -10,7 +10,6 @@ module Services
     # => Performs the actual delivery, in this case, execute SQL query.
     #
     def execute
-      puts "\n\n\t\t#{Dir.pwd}"
       Services::Slog.debug({:message => "File write for #{@template[:identifier]}", :module => "FileTemplate", :task => "execute", :extra => {:template => @template[:identifier], :payload => @template[:payload]}})
       case @template[:payload][:method]
       when 'create'
