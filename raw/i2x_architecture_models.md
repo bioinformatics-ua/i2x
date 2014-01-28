@@ -1,3 +1,0 @@
-## Overview
-
-**i2x** general architecture highlights the connections amongst its various internal components (from left to right, *STD*, *Log*, *COEUS*, *FluxCapacitor*, *Postman* and *Ruler*). Starting from the content change detection engine, **STD** will push new Events data into the main application controller, the **Flux Capacitor**. This element will then coordinate all the required activities for each integration task. **COEUS** is used for semantic data storage and management, acting as the platform knowledge base for the **Flux Capacitor**, **Ruler** and **Postman**. These last independent components are used for rule processing and final delivery, respectively.
