@@ -14,6 +14,16 @@
 
 # How to create new agents?
 
-- You can create new agents in the [agents](../agents) listing page, pressing the **New Agent** button.
+- You can create new agents in the [agents][] listing page, pressing the **New Agent** button.
 <hr>
 </div>
+
+
+[agent]:        /docs/#agents
+[agents]:       /docs/#agents
+[event]:        /docs/#events
+[templates]:    /docs/#templates
+[template]:     /docs/#templates
+[integrations]: /docs/#integrations
+[integration]:  /docs/#integrations
+[sources]:      /docs/#sources

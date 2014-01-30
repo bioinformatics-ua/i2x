@@ -31,6 +31,7 @@ gem 'kramdown'
 
 # Databases
 gem  'mysql2'
+gem 'pg'
 
 
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br

@@ -43,17 +43,19 @@ module Services
               # Download existing file and copy to temp (if exists)
               begin
                 contents, metadata = client.get_file_and_metadata(@template[:payload][:uri])
-                open("tmp/i2x/#{@template[:payload][:uri]}", 'w') {|f| f.puts contents }
-              rescue 
+                File.open("tmp/i2x/#{@template[:payload][:uri]}", 'a+') {|f| f.puts contents }
+              rescue Exception => e
+                Services::Slog.exception e
               end
               # Append new content to file
               unless @template[:payload][:content].nil? then
-                File.open("tmp/i2x/#{@template[:payload][:uri]}", "a") { |file| file.write(@template[:payload][:content]) }
+                File.open("tmp/i2x/#{@template[:payload][:uri]}", "a+") { |file| file.write(@template[:payload][:content]) }
               end
 
             # Upload modified file to dropbox
             reply = client.put_file(@template[:payload][:uri], open("tmp/i2x/#{@template[:payload][:uri]}"), true)
 
+            
             response = { :status => "200", :message => "File updated on Dropbox account.", :id =>  @template[:payload][:uri], :reply => reply} 
           rescue Exception => e
             Services::Slog.exception e

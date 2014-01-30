@@ -20,7 +20,7 @@ class RegistrationsController < Devise::RegistrationsController
     		puts directory_name           #=> Note 2
     		Dir.mkdir(path + directory_name)                #=> Note 3
 		rescue Exception => e
-			puts e
+			Services::Slog.exception e
 		end
 	end
 end

@@ -10,6 +10,7 @@ module Services
     #
     def execute agent
       begin
+        puts "Launching #{agent.identifier}"
         @response = agent.execute
       rescue Exception => e
         Services::Slog.exception e
@@ -39,7 +40,9 @@ module Services
     # + *schedule*: the scheduling being checked
     def check schedule
       Integration.all.each do |integration|
-        @agents = integration.agents.where( :schedule => schedule).where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 5 MINUTE")
+        query = Rails.env.production? ? "last_check_at < (now() - '10 minutes'::interval)" : 'last_check_at < CURRENT_TIMESTAMP - INTERVAL 10 MINUTE'
+
+        @agents = integration.agents.where( :schedule => schedule).where(query) #.where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 5 MINUTE")
         @agents.each do |agent|
           begin
             self.execute agent

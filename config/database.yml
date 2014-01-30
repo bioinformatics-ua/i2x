@@ -10,13 +10,13 @@ development:
   timeout: 5000
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   database: i2x
   username: i2x
   password: Telematica1234
   host: 127.0.0.1
-  port: 3306
+  port: 5432
   pool: 500
   timeout: 200
   wait_timeout: 300

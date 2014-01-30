@@ -12,7 +12,7 @@
         "password": "demo1234",
         "database": "hummer",
         "query": "SELECT * FROM variants;",
-        "cache": "id",
+        "cache": "rs",
         "selectors": "[{\"refseq\":\"rs\"},{\"variant\":\"mutation\"},{\"locus\": \"gene\"}]"
     }
 }

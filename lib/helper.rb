@@ -22,7 +22,7 @@ module Services
     end
 
     def random_int
-      SecureRandom.random_number(1..1000)
+      SecureRandom.random_number(1000)
     end
 
     def random_string

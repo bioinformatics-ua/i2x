@@ -59,11 +59,11 @@ class AgentsController < ApplicationController
 	        #format.html { redirect_to @agent, notice: 'Agent was successfully created.' }
 	        #format.json { render action: json: @integration, status: :created#'show', status: :created, location: @agent }
 	        format.json { render json: @agent, status: :created }
-	    else
-	    	format.html { render action: 'new' }
-	    	format.json { render json: @agent.errors, status: :unprocessable_entity }
-	    end
-	end
+       else
+        format.html { render action: 'new' }
+        format.json { render json: @agent.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /agents/1
@@ -72,17 +72,22 @@ class AgentsController < ApplicationController
   	respond_to do |format|
           # include seed in agent?
           if params[:seed][:publisher] != 'none' then
-          	@seed.update(seed_params)
-          end
-          if @agent.update(agent_params)
-          	format.html { redirect_to @agent, notice: 'Agent was successfully updated.' }
-          	format.json { head :no_content }
-          else
-          	format.html { render action: 'edit' }
-          	format.json { render json: @agent.errors, status: :unprocessable_entity }
-          end
-      end
-  end
+            @seed = Seed.where(:identifier => params[:seed][:identifier]).first
+            if @seed.nil?
+              @seed = @agent.seeds.build(seed_params)
+            else
+             @seed.update(seed_params)
+           end
+         end
+         if @agent.update(agent_params)
+           format.html { redirect_to @agent, notice: 'Agent was successfully updated.' }
+           format.json { head :no_content }
+         else
+           format.html { render action: 'edit' }
+           format.json { render json: @agent.errors, status: :unprocessable_entity }
+         end
+       end
+     end
 
   # DELETE /agents/1
   # DELETE /agents/1.json
@@ -98,25 +103,25 @@ class AgentsController < ApplicationController
       	current_user.integrations.delete(integration)
       	integration.destroy
       end
+    end
+
+    @agent.destroy
+    respond_to do |format|
+     format.html { redirect_to agents_url }
+     format.json { head :no_content }
+   end
+ end
+
+ def import
+   @file = File.read("data/agents/#{params[:identifier]}.js")
+   puts @file
+   @agent = Agent.create! JSON.parse(@file)
+
+   response = { :status => 200, :message => "[i2x]: agent #{params[:identifier]} imported", :id => @agent[:id] }
+   respond_to do |format|
+    format.json { render :json => response}
+    format.xml { render :xml => response}
   end
-
-  @agent.destroy
-  respond_to do |format|
-  	format.html { redirect_to agents_url }
-  	format.json { head :no_content }
-  end
-end
-
-def import
-	@file = File.read("data/agents/#{params[:identifier]}.js")
-	puts @file
-	@agent = Agent.create! JSON.parse(@file)
-
-	response = { :status => 200, :message => "[i2x]: agent #{params[:identifier]} imported", :id => @agent[:id] }
-	respond_to do |format|
-		format.json { render :json => response}
-		format.xml { render :xml => response}
-	end
 end
 
   ##
@@ -132,7 +137,7 @@ end
   	current_user.agents.push @agent
   	if @agent.save then    
   		respond_to do |format|
-  			format.html { redirect_to edit_agent_path(@agent) }
+  			format.html { redirect_to @agent }
   		end
   	end
   end
@@ -170,11 +175,11 @@ end
   	a = params[:agent].clone
     #a[:selectors] = JSON.parse(a[:selectors])
     a.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
-end
+  end
 
-def seed_params
-	s = params[:seed].clone
-	s[:seed] = params[:seed]
-	s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors => [])
-end
+  def seed_params
+   s = params[:seed].clone
+   s[:seed] = params[:seed]
+   s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors => [])
+ end
 end

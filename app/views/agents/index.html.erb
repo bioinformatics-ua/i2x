@@ -60,7 +60,7 @@
       </div>
     </div>
 
-        <div class="row agent-info info-enabled">
+    <div class="row agent-info info-enabled">
       <div class="small-11 columns">
         <div class="left">
           <div class="circle_48 on">
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-        <div class="row agent-info info-enabled">
+    <div class="row agent-info info-enabled">
       <div class="small-11 columns">
         <div class="left">
           <div class="circle_48 on">
@@ -100,7 +100,7 @@
       </div>
     </div>
 
-        <div class="row agent-info info-enabled">
+    <div class="row agent-info info-enabled">
       <div class="small-11 columns">
         <div class="left">
           <div class="circle_48 on">
@@ -116,6 +116,26 @@
       <div class="small-1 columns right">
         <div class="right">
           <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'csv'}, :class => 'icon-add action right has-tip',:title => 'Add sample CSV agent', :data => {:tooltip => ''} %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row agent-info info-enabled">
+      <div class="small-11 columns">
+        <div class="left">
+          <div class="circle_48 on">
+            &infin;
+          </div>
+        </div>
+        <div class="info-details">
+          <h6 class="subheader">RSS Agent</h6>
+          <span class="label secondary icon-publisher">xml</span>
+          <span class="label secondary icon-schedule">5m</span>
+        </div>
+      </div>
+      <div class="small-1 columns right">
+        <div class="right">
+          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'rss'}, :class => 'icon-add action right has-tip',:title => 'Add sample RSS agent', :data => {:tooltip => ''} %>
         </div>
       </div>
     </div>
