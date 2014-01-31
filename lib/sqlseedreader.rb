@@ -41,6 +41,7 @@ module Services
                 Services::Slog.exception e
               end
             end
+            @client.close
           when 'postgresql'
             client = PG::Connection.new(:host => @seed[:payload][host], :user => @seed[:payload][:username], :password => @seed[:payload][:password], :dbname => @seed[:payload][:database])
             client.exec(@seed[:payload][:query]).each do |row|

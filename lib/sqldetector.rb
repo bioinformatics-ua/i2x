@@ -44,6 +44,7 @@ module Services
                 @payloads.push payload
               end
             end
+            @client.close
           when 'postgresql'
             client = PG::Connection.new(:host => object[:host], :user => object[:username], :password => object[:password], :dbname => object[:database])
             client.exec(object[:query]).each do |row|
