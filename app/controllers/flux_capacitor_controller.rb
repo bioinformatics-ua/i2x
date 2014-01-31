@@ -144,7 +144,7 @@ class FluxCapacitorController < ApplicationController
 	  end
 
 	  def agent_params
-	  	params.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :last_check_at, :events_count)
+	  	params.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :uri, :cache, :headers, :delimiter, :checked ,:server, :host, :port, :database, :username, :password, :query, :selectors, :last_check_at, :events_count)
 	  end
 
 	end

@@ -61,7 +61,7 @@ A [Detector][] can be configured to monitor a database. In this scenario, a _SEL
       "publisher": "sql",
       "payload": {
         "cache": "id",
-        "sqlserver": "mysql",
+        "server": "mysql",
         "host": "localhost",
         "port": "3306",
         "database": "i2x",

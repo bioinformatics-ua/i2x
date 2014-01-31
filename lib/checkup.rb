@@ -10,7 +10,6 @@ module Services
     #
     def execute agent
       begin
-        puts "Launching #{agent.identifier}"
         @response = agent.execute
       rescue Exception => e
         Services::Slog.exception e

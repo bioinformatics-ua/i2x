@@ -164,6 +164,6 @@ class TemplatesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def template_params
-    params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at, :method, :content,:uri, :cache, :checked, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :server, :to, :cc, :bcc, :subject, :message)
+    params.require(:template).permit(:identifier, :title, :help, :publisher, :variables, :payload, :memory, :count, :last_execute_at, :created_at, :updated_at, :method, :content,:uri, :cache, :checked, :headers, :delimiter, :host, :port, :database, :username, :password, :query, :selectors, :server, :to, :cc, :bcc, :subject, :message)
   end
 end

@@ -26,7 +26,7 @@ module Services
         mail.bcc = @template[:payload][:bcc]
         mail.cc = @template[:payload][:cc]
         mail.content_type = 'text/html; charset=UTF-8'
-        mail.body = "#{@template[:payload][:message]}<br /><br />nMessage sent automatically by <a href=\"https://bioinformatics.ua.pt/i2x/\">i2x</a> platform"
+        mail.body = "#{@template[:payload][:message]}<br /><br />Message sent automatically by <a href=\"https://bioinformatics.ua.pt/i2x/\">i2x</a> platform"
 
         mail.deliver
 

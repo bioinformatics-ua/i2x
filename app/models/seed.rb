@@ -1,5 +1,5 @@
 class Seed < ActiveRecord::Base
-  store 	:payload, accessors: [:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :checked]
+  store 	:payload, accessors: [:uri, :cache, :headers, :delimiter, :server, :host, :port, :database, :username, :password, :query, :selectors, :checked]
   store		:memory
 
   has_many	:seed_mapping

@@ -21,3 +21,4 @@ production:
   timeout: 200
   wait_timeout: 300
   reconnect: true
+  sslmode: disable

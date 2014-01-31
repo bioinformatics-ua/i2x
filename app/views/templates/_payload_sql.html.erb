@@ -3,7 +3,7 @@
     <label for="publisher_sql_server" class="right inline">Server</label>
   </div>
   <div class="small-9 columns">
-  <%= select_tag 'template[server]', options_for_select([['MySQL', 'mysql'], ['SQL Server', 'sqlserver'], ['Postgres', 'postgres'], ['SQLite','sqlite']], {:selected => template.server}), {:id => 'publisher_sql_server', :tabindex => autotab} %>
+  <%= select_tag 'template[server]', options_for_select([['MySQL', 'mysql'], ['Postgres', 'postgresql']], {:selected => template.server}), {:id => 'publisher_sql_server', :tabindex => autotab} %>
   </div>
 </div>
 <div class="row">

@@ -1,5 +1,5 @@
 class Template < ActiveRecord::Base
-  store 	:payload, accessors: [:method, :content,:uri, :cache, :checked, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors, :server, :to, :cc, :bcc, :subject, :message]
+  store 	:payload, accessors: [:method, :content,:uri, :cache, :checked, :headers, :delimiter, :server, :host, :port, :database, :username, :password, :query, :selectors, :server, :to, :cc, :bcc, :subject, :message]
   store	  :memory
   serialize	:variables
 

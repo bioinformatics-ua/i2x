@@ -174,12 +174,12 @@ end
   def agent_params
   	a = params[:agent].clone
     #a[:selectors] = JSON.parse(a[:selectors])
-    a.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:sqlserver, :host, :port, :database, :username, :password, :query, :selectors)
+    a.permit(:publisher, :payload, :identifier, :title, :help, :schedule, :seed, :action, :uri, :cache, :headers, :delimiter, :checked ,:server, :host, :port, :database, :username, :password, :query, :selectors)
   end
 
   def seed_params
    s = params[:seed].clone
    s[:seed] = params[:seed]
-   s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :sqlserver, :host, :port, :database, :checked,:username, :password, :query, :selectors => [])
+   s.require(:seed).permit(:publisher, :payload, :identifier, :title, :help,:uri, :cache, :headers, :delimiter, :server, :host, :port, :database, :checked,:username, :password, :query, :selectors)
  end
 end

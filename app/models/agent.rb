@@ -10,7 +10,7 @@ class Agent < ActiveRecord::Base
   # => Store for saving Hashes in DB
   # => Accessors to make everything easy to access
   #
-  store 	:payload, accessors: [:uri, :cache, :checked, :headers, :delimiter, :sqlserver, :host, :port, :database, :username, :password, :query, :selectors]
+  store 	:payload, accessors: [:uri, :cache, :checked, :headers, :delimiter, :server, :host, :port, :database, :username, :password, :query, :selectors]
   store	  :memory
   attr_accessor :content
 
@@ -43,6 +43,7 @@ class Agent < ActiveRecord::Base
   # => Perform the actual agent monitoring tasks.
   #
   def execute
+    puts "\n\tExecuting #{identifier}"
   	@checkup = {}
   	Services::Slog.debug({:message => "Processing agent #{identifier}", :module => "Checkup", :task => "agent", :extra => {:agent => identifier, :publisher => publisher}})
 
