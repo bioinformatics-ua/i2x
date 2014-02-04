@@ -78,7 +78,6 @@ class Agent < ActiveRecord::Base
   		end
   	end
 
-
       # Start checkup
       begin
       	unless content.nil? then
@@ -109,7 +108,7 @@ class Agent < ActiveRecord::Base
       end
       response = {:status => @checkup[:status], :message => "[i2x][Checkup][execute] All OK."}     
   end
-  handle_asynchronously :execute
+  #handle_asynchronously :execute
 
   ##
   # => Finish agent processing to perform delivery
@@ -129,7 +128,7 @@ class Agent < ActiveRecord::Base
     	AgentMapping.where(:agent_id => id).each do |mapping|
     		Integration.where(:id => mapping.integration_id).each do |integration|
     			integration.templates.each do |t|
-    				Services::Slog.debug({:message => "Sending #{identifier} for delivery by #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier}})
+    				Services::Slog.debug({:message => "Sending #{identifier} for delivery by #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier, :payload => checkup[:payload].to_s, :destination => "#{ENV["APP_HOST"]}postman/deliver/#{t.identifier}.js"}})
     				checkup[:payload].each do |payload|
     					response = RestClient.post "#{ENV["APP_HOST"]}postman/deliver/#{t.identifier}.js", payload
     					case response.code
@@ -144,7 +143,7 @@ class Agent < ActiveRecord::Base
     			end
     		end
     	end
-    	RestClient.post "#{ENV["APP_HOST"]}fluxcapacitor/agents/#{id}/update_meta", {:events_count => events_count + i, :last_check_at => Time.now}
+    	RestClient.post("#{ENV["APP_HOST"]}fluxcapacitor/agents/#{id}/update_meta", {:events_count => events_count + i, :last_check_at => Time.now}) if i > 1
     rescue Exception => e
     	Services::Slog.exception e
     end

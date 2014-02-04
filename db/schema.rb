@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140120113220) do
     t.string   "title"
     t.text     "help"
     t.string   "schedule"
-    t.integer  "events_count",  default: 0
+    t.integer  "events_count"
     t.integer  "status",        default: 100
     t.datetime "last_check_at"
     t.datetime "created_at"
@@ -138,7 +138,7 @@ ActiveRecord::Schema.define(version: 20140120113220) do
     t.string   "publisher"
     t.text     "payload"
     t.text     "memory"
-    t.integer  "count",           default: 0
+    t.integer  "count"
     t.integer  "status",          default: 100
     t.datetime "last_execute_at"
     t.datetime "created_at"

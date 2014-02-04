@@ -9,7 +9,7 @@ require 'raven'
 
 class PostmanController < ApplicationController
   def deliver
-    Services::Slog.debug({:message => "Starting delivery for #{params[:identifier]}", :module => "Postman", :task => "deliver", :extra => {:template => params[:identifier]}})
+    Services::Slog.debug({:message => "Starting delivery for #{params[:identifier]}", :module => "Postman", :task => "deliver", :extra => {:template => params[:identifier], :params => params}})
 
     @delivery
     begin

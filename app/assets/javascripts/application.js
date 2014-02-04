@@ -36,7 +36,7 @@ if (typeof String.prototype.addSlashes != 'function') {
 $(function() {
 	$(document).foundation();
 	$(window).load(function() {
-		$('#content').fadeIn(800);
+		//$('#content').fadeIn(800);
 	});
 
 
