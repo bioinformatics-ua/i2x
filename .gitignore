@@ -7,8 +7,6 @@
 
 # logs and stuff
 log/*
-data/users
-data/users/*
 
 # Ignore application configuration
 /config/application.yml

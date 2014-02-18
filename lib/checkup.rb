@@ -20,7 +20,7 @@ module Services
 
     ##
     # = Real-time poll started on server boot.
-    #
+    # pdrlps@gmail.com
     def boot
       Integration.all.each do |integration|
         integration.agents.each do |agent|

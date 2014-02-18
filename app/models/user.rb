@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates :username, :uniqueness => { :case_sensitive => false }
 
+  store :meta, accessors: [:has_dropbox, :has_facebook, :has_linkedin, :has_github, :has_google]
+
   attr_accessor :login
   
   ##

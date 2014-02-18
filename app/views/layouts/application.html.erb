@@ -52,6 +52,7 @@
               <ul class="right">
                 <li data-tooltip class="has-tip" title="About"><%= link_to '', {:controller => '/about', :action => 'index'}, :class => 'icon-about' %></li>
                 <li data-tooltip class="has-tip" title="Documentation"><%= link_to '', {:controller => '/docs'}, :class => 'icon-documentation' %></li>
+                <li data-tooltip class="has-tip" title="Install"><%= link_to "", {:controller => '/docs', :action => 'show', :section => 'install', :topic => 'index'}, :class => 'icon-install' %></li>
               </ul>
             </section>
           </nav>

@@ -80,17 +80,17 @@ module Services
 		#
 		def self.capture_message message
 			begin
-			Raven.capture_message("#{message[:message]}", {
-																:level => message[:l],
-																:tags => {
-																	'environment' => Rails.env,
-																	'version' => ENV["APP_VERSION"],
-																	'module' => message[:module],
-																	'task' => message[:task]
-																},
-																:server_name => ENV["APP_HOST"],
-																:extra => message[:extra]
-				})
+				Raven.capture_message("#{message[:message]}", {
+					:level => message[:l],
+					:tags => {
+						'environment' => Rails.env,
+						'version' => ENV["APP_VERSION"],
+						'module' => message[:module],
+						'task' => message[:task]
+						},
+						:server_name => ENV["APP_HOST"],
+						:extra => message[:extra]
+						})
 			rescue Exception => e
 				exception e
 			end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120113220) do
+ActiveRecord::Schema.define(version: 20140204111437) do
 
   create_table "agent_mappings", force: true do |t|
     t.integer  "integration_id"
@@ -192,6 +192,7 @@ ActiveRecord::Schema.define(version: 20140120113220) do
     t.string   "location"
     t.text     "referring_url"
     t.text     "landing_url"
+    t.text     "meta"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

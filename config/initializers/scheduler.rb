@@ -5,14 +5,14 @@ require 'slog'
 
 Thread.new {
   begin
-    unless ActiveRecord::Base.connected?
-      ActiveRecord::Base.connection.verify!(0)
-    end
+   # unless ActiveRecord::Base.connected?
+   #   ActiveRecord::Base.connection.verify!(0)
+    #end
     Services::Checkup.new.boot
   rescue Exception => e
     Services::Slog.exception e
   ensure
-    ActiveRecord::Base.connection_pool.release_connection
+  #  ActiveRecord::Base.connection_pool.release_connection
   end
 }
 

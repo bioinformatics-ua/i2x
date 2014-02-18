@@ -12,6 +12,24 @@
 </div>
 <% end %>
 <div class="small-9 columns">
+  <% if @integrations.empty? %>
+  <div class="row">
+    <div class="small-12 columns">
+      <p><strong>Integrations</strong> control your integration flow, connecting intelligent <%= link_to 'agents'.html_safe, {:controller => '/agents'}, :class => ''%> with delivery <%= link_to 'templates', {:controller => '/templates'}, :class => '' %>.</p>
+      <% if current_user.agents.empty? %>
+      <h5 class="subheader">Start by creating a <%= link_to 'new agent', new_agent_path, :title => 'Create new agent', :class => '', :data => { :tooltip => ''} %></h5>
+      <% else %>
+      <% if current_user.templates.empty? %>
+      <h5 class="subheader">You have agents, now add a <%= link_to 'new template', new_template_path, :class => '' %></h5>
+      <% else %>
+      <h5 class="subheader">You agents and templates are ready, create a <%= link_to 'new integration'.html_safe, new_integration_path, :class => '' %></h5>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <% end %>
+
   <% @integrations.each do |integration| %>
   <div class="row agent-info <%= (integration.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
     <div class="small-11 columns left">
@@ -50,7 +68,7 @@
       </div>
       <% end %>
       <hr>
-      <h5 class="subheader">Add Sample Integration</h5>
+      <h5 class="subheader">or <strong>add a sample integration</strong></h5>
       <div class="row agent-info info-enabled">
         <div class="small-11 columns">
           <div class="left">
@@ -70,7 +88,7 @@
         </div>
       </div>
 
-            <div class="row agent-info info-enabled">
+      <div class="row agent-info info-enabled">
         <div class="small-11 columns">
           <div class="left">
           </div>

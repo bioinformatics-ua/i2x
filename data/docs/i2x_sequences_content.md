@@ -3,7 +3,7 @@
 Check configured data sources for changes in content from the previous integration.
 </div>
 
-1. Pool Content *STD-Origin Resource*: connect to external data source and load content
+1. Poll Content *STD-Origin Resource*: connect to external data source and load content
 	- Data can be loaded from delimited files, structured files, LinkedData interfaces and SQL/SPARQL endpoints
 2. Return Content *Origin Resource-STD*: The origin data source returns with the requested content
 3. Check Changes *STD-COEUS*: The **STD** imports the data into the internal content store and check if there have been any changes since the last update (the diff)

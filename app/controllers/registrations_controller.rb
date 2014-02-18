@@ -15,12 +15,9 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def create_folder
 		begin
-    		path =  Pathname.new(Rails.root.to_s + '/data/users/') #=> Note 1
-    		directory_name = resource.id.to_s     
-    		puts directory_name           #=> Note 2
-    		Dir.mkdir(path + directory_name)                #=> Note 3
-		rescue Exception => e
-			Services::Slog.exception e
-		end
-	end
+    		Dir.mkdir(Pathname.new(Rails.root.to_s + '/data/users/') +resource.id.to_s)                #=> Note 3
+    	rescue Exception => e
+    		Services::Slog.exception e
+    	end
+    end
 end

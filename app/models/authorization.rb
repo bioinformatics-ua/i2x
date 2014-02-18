@@ -22,6 +22,8 @@ class Authorization < ActiveRecord::Base
 		# self.user.image = "http://graph.facebook.com/" + self.username + "/picture?type=large" if self.user.image.blank?
 		# self.user.location = facebook_data['location'] if self.user.location.blank?
 		# self.user.save
+		self.user.has_facebook = true
+		self.user.save
 	end
 
 	##
@@ -39,6 +41,8 @@ class Authorization < ActiveRecord::Base
 		# self.user.image = twitter_data.profile_image_url if self.user.image.blank?
 		# self.user.location = twitter_data.location if self.user.location.blank?
 		# self.user.save(:validate => false)
+		self.user.has_twitter = true
+		self.user.save
 	end
 
 	##
@@ -46,6 +50,8 @@ class Authorization < ActiveRecord::Base
 	#
 	def fetch_details_from_github
 		# To Do
+		self.user.has_github = true
+		self.user.save
 	end
 
 	##
@@ -53,6 +59,8 @@ class Authorization < ActiveRecord::Base
 	#
 	def fetch_details_from_linkedin
 		# To Do
+		self.user.has_linkedin = true
+		self.user.save
 	end
 
 	##
@@ -60,6 +68,8 @@ class Authorization < ActiveRecord::Base
 	#
 	def fetch_details_from_google_oauth2
 		# To Do
+		self.user.has_google = true
+		self.user.save
 	end
 
 	##
@@ -67,5 +77,7 @@ class Authorization < ActiveRecord::Base
 	#
 	def fetch_details_from_dropbox_oauth2
 		# To Do
+		self.user.has_dropbox = true
+		self.user.save
 	end	
 end
