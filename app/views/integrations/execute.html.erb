@@ -1,0 +1,19 @@
+<% content_for :title, "#{@integration.title} - #{ENV["APP_TITLE"]}" %>
+<ul class="breadcrumbs">
+  <li><a href="<%= root_url %>">Home</a></li>
+  <li><%= link_to 'Dashboard', integrations_path %></li>
+  <li class="current"><%= @integration.title %></li>
+</ul>
+<!-- main content -->
+<% unless flash[:notice].nil? then %>
+<div data-alert class="alert-box warning radius">
+  <%= flash[:notice].html_safe %>
+  <a href="#" class="close">&times;</a>
+</div>
+<% end %>
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">
+    <h1><%= @integration.title %></h1>
+  </div>
+</div>
+<%= render :partial => "integrations/show", locals: {:integration => @integration} %>

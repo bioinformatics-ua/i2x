@@ -124,6 +124,29 @@ class AgentsController < ApplicationController
   end
 end
 
+##
+# => Start agent monitoring process (on demand).
+#
+def execute
+  begin
+    @agent = current_user.agents.find(params[:id])
+    Thread.new {
+      begin
+        response = @agent.execute
+      rescue Exception => e
+        Services::Slog.exception e
+      end
+    }
+
+    respond_to do |format|
+      format.html { redirect_to @agent, notice: 'Agent execution started.' }
+    end
+  rescue Exception => e
+    Services::Slog.exception e
+  end
+
+end
+
   ##
   # => Add existing sample agents to user.
   #

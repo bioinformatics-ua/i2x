@@ -117,6 +117,32 @@ class IntegrationsController < ApplicationController
     end
   end
 
+
+##
+# => Start agent monitoring process (on demand).
+#
+def execute
+  begin
+    @integration = Integration.all.find(params[:id])
+
+    @integration.agents.each do |agent|
+      Thread.new {
+        begin
+          agent.execute
+        rescue Exception => e
+          Services::Slog.exception e
+        end
+      }
+    end
+    respond_to do |format|
+      format.html { redirect_to @integration, notice: 'Integration execution started.' }
+    end
+  rescue Exception => e
+    Services::Slog.exception e
+  end
+
+end
+
     ##
   # => Add existing sample integration to user.
   #

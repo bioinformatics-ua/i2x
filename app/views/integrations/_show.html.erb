@@ -3,6 +3,7 @@
     <span class="label secondary radius"><small>Updated <%= time_ago_in_words(integration.updated_at) %> ago</small></span>
   </div>
   <div class="small-1 columns right text-right">
+  <%= link_to '', {:controller => 'integrations', :action => 'execute', :id => integration.id}, :class => 'icon-play has-tip',:title => "Execute #{integration.title}", :data => {:tooltip => ''} %>
     <%= link_to '', edit_integration_path(integration), :title => "Edit #{integration.title}", :class => 'right icon-settings icon-large has-tip tip-top', :data => {:tooltip => ''} %>
   </div>
 </div>

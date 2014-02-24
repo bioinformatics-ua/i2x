@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="small-11 columns left">
+  <div class="small-10 columns left">
     <span class="label secondary radius"><small>Updated
       <%= time_ago_in_words(agent.updated_at) %>
       ago</small></span>
@@ -8,8 +8,10 @@
         <%= time_ago_in_words(agent.last_check_at) %>
         ago</small></span>
       </div>
-      <div class="small-1 columns right text-right">
+      <div class="small-2 columns right text-right">
+      <%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'icon-play has-tip',:title => "Execute #{agent.title}", :data => {:tooltip => ''} %>
         <%= link_to '', edit_agent_path(agent), :data => {:tooltip => ''}, :title => "Edit #{agent.title}", :class => 'has-tip icon-settings' %>
+        
       </div>
     </div>
     <br />

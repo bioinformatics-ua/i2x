@@ -14,6 +14,7 @@ I2X::Application.routes.draw do
   get "agents/import/:identifier", to: "agents#import"      		# import from JSON file
   get "agents/get/:identifier", to: "agents#get"            		# load agent as JSON
   get "agents/add/:identifier", to: "agents#add"            		# add sample agent to user
+  get "agents/:id/execute", to: "agents#execute"                # launch on-demand agent execution
   
   
   # Caches (internal) control
@@ -57,6 +58,7 @@ I2X::Application.routes.draw do
   resources :integrations
   post "integrations/:id/save", to: 'integrations#save'
   get "integrations/add/:agent/:template", to: 'integrations#add'
+  get "integrations/:id/execute", to: 'integrations#execute'      # execute integration on-demand
 
   # Postman control
   get "postman/load/:publisher/:identifier", to: "postman#load"
@@ -92,37 +94,6 @@ I2X::Application.routes.draw do
 
   # Delayed job web interface
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
-
-  # Documentation control
-  get "usecases/variome"
-  get "usecases/management"
-  get "usecases/medical"
-  get "usecases/newborn"
-  get "usecases/crm"
-  get "usecases/index"
-  get "sequences/diff"
-  get "sequences/content"
-  get "sequences/rules"
-  get "sequences/template"
-  get "sequences/full"
-  get "architecture/models"
-  get "architecture/components"
-  get "architecture/flows"
-  get "publications/automating"
-  get "publications/wave"
-  get "publications/framework"
-  get "publications/template"
-  get "publications/semantic"
-  get "publications/rule"
-  get "publications/content"
-  get "publications/index"
-  get "contact/index"
-  get "reference/index"
-  get "research/others"
-  get "research/swot"
-  get "research/comparison"
-  get "faq/index"
-  get "how_to/index"
 
   # general index redirects
   get 'documentation' => 'documentation/index'

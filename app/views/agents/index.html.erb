@@ -30,10 +30,11 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
+          <%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'action right icon-play has-tip',:title => "Execute #{agent.title}", :data => {:tooltip => ''} %>
+          <br />
           <%= link_to '', edit_agent_path(agent), :class => 'action right icon-settings has-tip',:title => "Edit #{agent.title}", :data => {:tooltip => ''} %>
           <br />
           <%= link_to '', agent, :class => 'action right icon-view has-tip',:title => "View #{agent.title}", :data => {:tooltip => ''} %>
-
         </div>
       </div>
     </div>

@@ -61,6 +61,8 @@
           </div>
         </div>
         <div class="small-1 columns right">
+         <%= link_to '', {:controller => 'integrations', :action => 'execute', :id => integration.id}, :class => 'action right icon-play has-tip',:title => "Execute #{integration.title}", :data => {:tooltip => ''} %>
+          <br />
           <%= link_to '', edit_integration_path(integration), :class => 'action right icon-settings' %>
           <br />
           <%= link_to '', integration, :class => 'action right icon-view' %>
