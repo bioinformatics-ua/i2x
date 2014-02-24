@@ -20,7 +20,7 @@ module Services
 
     ##
     # = Real-time poll started on server boot.
-    # pdrlps@gmail.com
+    # 
     def boot
       Integration.all.each do |integration|
         integration.agents.each do |agent|
@@ -38,10 +38,10 @@ module Services
     #
     # + *schedule*: the scheduling being checked
     def check schedule
-      Integration.all.each do |integration|
-        query = Rails.env.production? ? "last_check_at < (now() - '10 minutes'::interval)" : 'last_check_at < CURRENT_TIMESTAMP - INTERVAL 10 MINUTE'
+      query = (ActiveRecord::Base.connection.instance_of? ActiveRecord::ConnectionAdapters::MysqlAdapter) ? 'last_check_at < CURRENT_TIMESTAMP - INTERVAL 10 MINUTE' : "last_check_at < (now() - '10 minutes'::interval)"
 
-        @agents = integration.agents.where( :schedule => schedule).where(query) #.where("last_check_at < CURRENT_TIMESTAMP - INTERVAL 5 MINUTE")
+      Integration.all.each do |integration|
+        @agents = integration.agents.where( :schedule => schedule).where(query)
         @agents.each do |agent|
           begin
             self.execute agent
