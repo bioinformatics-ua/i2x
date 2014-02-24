@@ -21,7 +21,7 @@ scheduler = Rufus::Scheduler.new
 if Rails.env.production? then
   timings = %w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d]
 else
-  timings = %w[5m 10m 30m 1h 2h 5h 12h 1d 2d 7d]
+  timings = %w[20s 5m 10m 30m 1h 2h 5h 12h 1d 2d 7d]
 end
 
 

@@ -38,7 +38,14 @@ module Services
     #
     # + *schedule*: the scheduling being checked
     def check schedule
-      query = (ActiveRecord::Base.connection.instance_of? ActiveRecord::ConnectionAdapters::MysqlAdapter) ? 'last_check_at < CURRENT_TIMESTAMP - INTERVAL 10 MINUTE' : "last_check_at < (now() - '10 minutes'::interval)"
+      
+      case ActiveRecord::Base.configurations[Rails.env]['adapter']
+      when 'mysql2'
+        query = 'last_check_at < CURRENT_TIMESTAMP - INTERVAL 10 MINUTE'
+        
+      when 'postgresql'
+        query =  "last_check_at < (now() - '10 minutes'::interval)"
+      end
 
       Integration.all.each do |integration|
         @agents = integration.agents.where( :schedule => schedule).where(query)
