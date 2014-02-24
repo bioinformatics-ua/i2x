@@ -10,6 +10,7 @@ APP_VERSION: 0.1a
 APP_TITLE: i2x
 APP_HOST: http://localhost:3000/
 APP_DEBUG: true
+APP_SCHEDULE: '[{"10s":"10 seconds"}, {"30s":"30 seconds"},{"5m":"5 minutes"},{"15m":"15 minutes"},{"30m":"30 minutes"},{"1h":"1 hour"}, {"1d":"1 day"}, {"1w":"1 week"}]'
 
 ##
 # Cache settings

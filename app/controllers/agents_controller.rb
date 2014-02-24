@@ -24,18 +24,32 @@ class AgentsController < ApplicationController
 
   # GET /agents/new
   def new
-  	@agent = Agent.new
-  	@seed = Seed.new
-  	@seed.publisher = 'none'
+    @schedules = {}
+    timings = JSON.parse(ENV["APP_SCHEDULE"])
+    timings.each do |timing|
+      timing.each do |schedule, full|
+        @schedules[schedule] = full
+      end
+    end
+    @agent = Agent.new
+    @seed = Seed.new
+    @seed.publisher = 'none'
 
-  	respond_to do |format|
-  		format.html {render action: "new"}
-  		format.js { render layout: "application" }
-  	end
+    respond_to do |format|
+      format.html {render action: "new"}
+      format.js { render layout: "application" }
+    end
   end
 
   # GET /agents/1/edit
   def edit
+    @schedules = {}
+    timings = JSON.parse(ENV["APP_SCHEDULE"])
+    timings.each do |timing|
+      timing.each do |schedule, full|
+        @schedules[schedule] = full
+      end
+    end
   end
 
   # POST /agents
