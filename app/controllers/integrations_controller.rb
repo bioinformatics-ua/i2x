@@ -23,6 +23,13 @@ class IntegrationsController < ApplicationController
 
   # GET /integrations/new
   def new
+    @schedules = {}
+    timings = JSON.parse(ENV["APP_SCHEDULE"])
+    timings.each do |timing|
+      timing.each do |schedule, full|
+        @schedules[schedule] = full
+      end
+    end
     @integration = Integration.new
     @agents = current_user.agents
     @templates = current_user.templates

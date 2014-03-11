@@ -125,8 +125,9 @@ class Agent < ActiveRecord::Base
     ## this should be simpler!!!
     begin
     	i = 0
-    	AgentMapping.where(:agent_id => id).each do |mapping|
-    		Integration.where(:id => mapping.integration_id).each do |integration|
+    	#AgentMapping.where(:agent_id => id).each do |mapping|
+    		#Integration.where(:id => mapping.integration_id).each do |integration|
+        self.integrations.each do |integration|
     			integration.templates.each do |t|
     				Services::Slog.debug({:message => "Sending #{identifier} for delivery by #{t.identifier}", :module => "Agent", :task => "process", :extra => {:agent => identifier, :template => t.identifier, :payload => checkup[:payload].to_s, :destination => "#{ENV["APP_HOST"]}postman/deliver/#{t.identifier}.js"}})
     				checkup[:payload].each do |payload|
@@ -141,7 +142,7 @@ class Agent < ActiveRecord::Base
     					end              
     				end
     			end
-    		end
+    		#end
     	end
     	RestClient.post("#{ENV["APP_HOST"]}fluxcapacitor/agents/#{id}/update_meta", {:events_count => events_count + i, :last_check_at => Time.now}) if i > 1
     rescue Exception => e

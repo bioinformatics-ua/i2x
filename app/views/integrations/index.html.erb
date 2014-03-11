@@ -22,7 +22,7 @@
       <% if current_user.templates.empty? %>
       <h5 class="subheader">You have agents, now add a <%= link_to 'new template', new_template_path, :class => '' %></h5>
       <% else %>
-      <h5 class="subheader">You agents and templates are ready, create a <%= link_to 'new integration'.html_safe, new_integration_path, :class => '' %></h5>
+      <h5 class="subheader">Your agents and templates are ready, create a <%= link_to 'new integration'.html_safe, new_integration_path, :class => '' %></h5>
       <% end %>
       <% end %>
     </div>

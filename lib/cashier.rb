@@ -52,11 +52,12 @@ module Services
       #
       # => To Do: Recheck implementation.
       #
+      @a = Agent.where(:identifier => agent[:identifier]).first
       if ENV["CACHE_INTERNAL"] then
-        results = Cache.where memory: memory, agent_id: agent.id, seed: seed
+        results = Cache.where memory: memory, agent_id: @a[:id], seed: seed
         if results.size == 0 then
           begin
-            @cached = Cache.new({:memory => memory, :agent_id => agent.id, :payload => payload, :seed => seed})
+            @cached = Cache.new({:memory => memory, :publisher => agent[:publisher], :agent_id => @a[:id], :payload => payload, :seed => seed})
             @cached.save
             response = {:status => 100, :message => "[i2x][Cashier] Memory recorded to cache"}
           rescue Exception => e

@@ -107,8 +107,8 @@ gem 'kaminari'
 gem "figaro"
 
 group :development, :test do
-# Generates UML from Model.
-gem 'railroady'
+	# Generates UML from Model.
+	gem 'railroady'
 end
 
 group :doc do
