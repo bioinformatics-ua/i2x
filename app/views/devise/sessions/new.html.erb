@@ -1,8 +1,15 @@
-<h1>Sign <strong>in</strong></h1>
+<% content_for :title, "Sign in - #{ENV["APP_TITLE"]}" %>
 
+<h1>Sign <strong>in</strong></h1>
+<% unless flash[:notice].nil? then %>
+<div data-alert class="alert-box warning radius">
+  <%= flash[:notice].html_safe %>
+  <a href="#" class="close">&times;</a>
+</div>
+<% end %>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= devise_error_messages! %>
 <div class="row">
-	
 	<div class="small-12 medium-8 large-8 columns">
 		<div>
 			<%= f.label :login %>
@@ -10,10 +17,8 @@
 			<%= f.email_field :login, :autofocus => true %>
 		</div>
 	</div>
-	
 </div>
 <div class="row">
-	
 	<div class="small-12 medium-8 large-8 columns">
 		<div>
 			<%= f.label :password %>
@@ -21,18 +26,14 @@
 			<%= f.password_field :password %>
 		</div>
 	</div>
-	
 </div>
 <div class="row">
-	
 	<div class="small-12 medium-8 large-8 columns">
 		<div>
 			<%= f.check_box :remember_me %> <%= f.label :remember_me %>
-			
 			<%= f.submit "Sign in", :class => 'button small right radius success' %>
 		</div>
 	</div>
-	
 </div>
 
 <% end %>

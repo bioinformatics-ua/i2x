@@ -20,6 +20,9 @@ I2X::Application.routes.draw do
   # Caches (internal) control
   resources :caches
 
+  # Contact
+  get "contact/index", to: 'contact#index'
+
   # Delivery control
   get "delivery/get"
   post "delivery/post"
@@ -97,6 +100,7 @@ I2X::Application.routes.draw do
 
   # general index redirects
   get 'documentation' => 'documentation/index'
+  get 'contact' => 'contact/index'
   get "faq" => 'faq/index'
   get "how_to" => 'how_to/index'
   get 'reference' => 'reference/index'

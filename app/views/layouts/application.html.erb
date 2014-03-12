@@ -19,6 +19,7 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <title><%= content_for?(:title) ? yield(:title) : ENV["APP_TITLE"] %></title>
     <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "animate.min" %>
     <%= javascript_include_tag "custom.modernizr" %>
     <%= csrf_meta_tags %>
     <script>
@@ -36,23 +37,23 @@
     <div class="off-canvas-wrap">
       <div class="inner-wrap">
         <div class="fixed">
-          <nav class="top-bar">
+          <nav class="top-bar animated fadeInDown">
             <ul class="title-area">
               <!-- Title Area -->
               <li class="name">
                 <h1><a href="<%= root_url %>" class="logo icon-i2x"></a></h1>
               </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+              <li class="toggle-topbar menu-icon"><a href="#" title="<%= ENV["APP_TITLE"] %>"><span>menu</span></a></li>
             </ul>
             <section class="top-bar-section application-nav">
               <ul class="right">
-                <li><a class="right-off-canvas-toggle has-tip icon-user" title="User" data-tooltip> </a></li>
+                <li class="has-tip radius" data-tooltip title="User"><a class="right-off-canvas-toggle icon-user" title="User"> </a></li>
               </ul>
               <!-- Right Nav Section -->
               <ul class="right">
-                <li data-tooltip class="has-tip" title="About"><%= link_to '', {:controller => '/about', :action => 'index'}, :class => 'icon-about' %></li>
-                <li data-tooltip class="has-tip" title="Documentation"><%= link_to '', {:controller => '/docs'}, :class => 'icon-documentation' %></li>
-                <li data-tooltip class="has-tip" title="Install"><%= link_to "", {:controller => '/docs', :action => 'show', :section => 'install', :topic => 'index'}, :class => 'icon-install' %></li>
+                <li data-tooltip class="has-tip radius" title="About"><%= link_to '', {:controller => '/about', :action => 'index'}, :class => 'icon-about' %></li>
+                <li data-tooltip class="has-tip radius" title="Documentation"><%= link_to '', {:controller => '/docs'}, :class => 'icon-documentation' %></li>
+                <li data-tooltip class="has-tip radius" title="Install"><%= link_to "", {:controller => '/docs', :action => 'show', :section => 'install', :topic => 'index'}, :class => 'icon-install' %></li>
               </ul>
             </section>
           </nav>
@@ -64,7 +65,7 @@
         <br />
         <!-- Finish main content -->
         <!-- User sidebar -->
-        <aside class="right-off-canvas-menu side-user">
+        <aside class="right-off-canvas-menu side-user" id="sidebar">
           <%= render partial: "helper/sidenav"  %>
         </aside>
         <a class="exit-off-canvas"></a>
@@ -74,7 +75,7 @@
 
     <%= yield :javascript_includes %>
   </body>
-  </html>
+</html>
 <!--
  _  ____        
 (_)|___ \ __  __

@@ -35,10 +35,12 @@ if (typeof String.prototype.addSlashes != 'function') {
 
 $(function() {
 	$(document).foundation();
-	$(window).load(function() {
-		//$('#content').fadeIn(800);
-	});
 
+	// fix sidebar height
+	if ($('#sidebar').height() < $(window).height()) {
+		$('#sidebar').height($(window).height());
+	}
+	
 
 	// API KEY MANAGEMENT
 	update_user_remove_key_selectors();

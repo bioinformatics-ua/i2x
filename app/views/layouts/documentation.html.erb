@@ -19,6 +19,7 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <title><%= content_for?(:title) ? yield(:title) : "Docs - #{ENV["APP_TITLE"]}" %></title>
     <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "animate.min" %>
     <%= javascript_include_tag "custom.modernizr" %>
     <%= csrf_meta_tags %>
     <script>
@@ -36,7 +37,7 @@
     <div class="off-canvas-wrap">
       <div class="inner-wrap">
         <div class="fixed">
-          <nav class="top-bar">
+          <nav class="top-bar animated fadeInDown">
             <ul class="title-area">
               <!-- Title Area -->
               <li class="name">

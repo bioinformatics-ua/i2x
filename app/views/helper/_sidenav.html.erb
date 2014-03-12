@@ -1,6 +1,6 @@
 <% if user_signed_in? then %>
 <ul class="off-canvas-list">
-  <li><label><%=  current_user.name %></label></li>
+<li><label><%=  current_user.name ||= current_user.username %></label></li>
   <li><%= link_to('Details'.html_safe, edit_user_registration_path, :class => 'icon-userdetails') %></li>
   <li><%= link_to('Sign Out'.html_safe, destroy_user_session_path, :method => :delete, :class => 'icon-signout') %></li>
 </ul>
@@ -16,10 +16,10 @@
 <ul class="off-canvas-list">
   <li><label>Login</label></li>
   <li>
-    <%= form_for("user", :url => user_session_path) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div class="row">
       <div class="small-12">
-        <%= f.text_field :email, :placeholder => 'Email' %>
+        <%= f.email_field :login, :autofocus => true, :placeholder => 'Login' %>
       </div>
       <div class="small-12">
         <%= f.password_field :password, :placeholder => 'Password' %>
@@ -36,9 +36,9 @@
     <% end %></li>
     <li><label><%= link_to('Sign up'.html_safe, new_user_registration_path, :class => 'icon-signup')  %></label></li>
     <li>
-    <%- resource_class.omniauth_providers.each do |provider| %>
-     <%= link_to "", omniauth_authorize_path('user', provider), :class => "no-block icon-#{provider}" %>
-     <% end -%>
-   </li>    
- </ul>
- <%end %>
+      <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to "", omniauth_authorize_path('user', provider), :class => "no-block icon-#{provider}" %>
+      <% end -%>
+    </li>    
+  </ul>
+  <%end %>
