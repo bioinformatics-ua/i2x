@@ -82,6 +82,7 @@ module Services
           object = @help.deep_copy @agent[:payload]
           object[:identifier] = @agent[:identifier]
           object[:seed] = object[:identifier]
+          object[:id] = @agent.id
           unless self.content.nil? then
             object[:content] = self.content
           end
