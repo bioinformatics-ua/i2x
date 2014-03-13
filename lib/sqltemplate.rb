@@ -66,9 +66,7 @@ module Services
           end
         end
       rescue Exception => e
-        if ENV["LOG_SENTRY"] then
-          Raven.capture_exception(e)
-        end
+        Services::Slog.exception e
       end
 
     end

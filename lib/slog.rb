@@ -2,11 +2,17 @@ require 'raven'
 
 
 module Services
+	
+	##
+	# = Slog
+	#
+	# => General (internal) logging engine.
+	#
 	class Slog
 		
 		public
 		##
-		# => Log Exceptions to Sentry using Raven
+		# == Log Exceptions to Sentry using Raven
 		#
 		def self.exception exception
 			begin
@@ -26,7 +32,7 @@ module Services
 		end
 		
 		##
-		# => Log information messages to Sentry using Raven
+		# == Log information messages to Sentry using Raven
 		#
 		def self.info message
 			begin
@@ -41,7 +47,7 @@ module Services
 		end
 		
 		##
-		# => Log debug messages to Sentry using Raven
+		# == Log debug messages to Sentry using Raven
 		#
 		def self.debug message
 			begin
@@ -57,7 +63,7 @@ module Services
 		end
 
 		##
-		# => Log warning messages to Sentry using Raven
+		# == Log warning messages to Sentry using Raven
 		#
 		def self.warn message
 			begin
@@ -76,7 +82,7 @@ module Services
 		private
 		
 		##
-		# => Generic message capture
+		# == Generic message capture
 		#
 		def self.capture_message message
 			begin
@@ -92,7 +98,9 @@ module Services
 						:extra => message[:extra]
 						})
 			rescue Exception => e
-				exception e
+				puts message
+				puts e.inspect
+
 			end
 		end
 	end

@@ -18,9 +18,7 @@ module Services
           response = {:status => 200, :message => "[i2] GET request on #{@template[:payload][:uri]} executed.", :id => @template[:payload][:uri], :response => out.to_str}
         rescue Exception => e
           response = {:status => 400, :message => "Unable to perform GET request, #{e}"}
-          if ENV["LOG_SENTRY"] then
-            Raven.capture_exception(e)
-          end
+          Services::Slog.exception e
         end
       when 'post'
         begin
