@@ -80,8 +80,26 @@ class IntegrationsController < ApplicationController
   # DELETE /integrations/1
   # DELETE /integrations/1.json
   def destroy
-    current_user.integrations.delete(@integration)
-    @integration.destroy
+    # remove integrations from user
+    begin
+     current_user.integrations.delete(@integration)
+
+      # remove integrations from agents
+      current_user.agents.each do |agent|
+        agent.integrations.delete(@integration)
+      end
+
+      # remove integrations from templates
+      current_user.templates.each do |template|
+        template.integrations.delete(@integration)
+      end
+
+      # remove integration
+      @integration.destroy
+    rescue Exception => e
+      Services::Slog.exception e
+    end
+
     respond_to do |format|
       format.html { redirect_to integrations_url }
       format.json { head :no_content }

@@ -15,7 +15,7 @@
       <label class="right inline">Select agent</label>
     </div>
     <div class="small-9 columns">
-      <select tabindex="10" id="new_agent_select_list" tabindex="8">
+      <select id="new_agent_select_list" tabindex="<%= autotab %>">
         <option value="0" selected="selected">Create new agent...</option>
         <% @agents.each do |agent| %>
           <option value="<%= agent.id %>"><%= agent.title %></option>
@@ -25,23 +25,7 @@
   </div>
   <div class="row">
     <div class="small-2 columns right">
-      <a href="#" tabindex="11" id="new_save_agent_select" class="button tiny success radius right">Next</a>
-    </div>
-  </div>
-</div>
-<div class="hidden" id="new_agent_form">
-  <div class="row">
-    <div class="small-3 columns right">
-      <label class="right inline">
-        Create new agent</label>
-    </div>
-    <div class="small-9 columns">
-      <%= render "agents/new" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns right">
-      <%= link_to 'Next', integrations_path, :class => 'button tiny radius success right' %>
+      <a href="#" tabindex="<%= autotab %>" id="new_save_agent_select" class="button tiny success radius right">Next</a>
     </div>
   </div>
 </div>
@@ -52,7 +36,7 @@
       <label class="right inline">Select template</label>
     </div>
     <div class="small-9 columns">
-      <select tabindex="20" id="new_template_select_list" tabindex="8">
+      <select tabindex="<%= autotab %>" id="new_template_select_list" tabindex="8">
         <option value="0" selected="selected">Create new template...</option>
         <% @templates.each do |template| %>
           <option value="<%= template.id %>"><%= template.title %></option>
@@ -62,7 +46,7 @@
   </div>
   <div class="row">
     <div class="small-2 columns right">
-      <a tabindex="21" href="#" id="new_save_template_select" class="button tiny success radius right">Next</a>
+      <a tabindex="<%= autotab %>" href="#" id="new_save_template_select" class="button tiny success radius right">Next</a>
     </div>
   </div>
 </div>
@@ -78,12 +62,12 @@
   </div>
   <div class="row">
     <div class="small-12 columns right">
-      <%= link_to 'Next', integrations_path, :class => 'button tiny radius success right' %>
+      <%= link_to 'Next', integrations_path, :class => 'button tiny radius success right', :tabindex => autotab %>
     </div>
   </div>
 </div>
 
 <!-- Finalize -->
 <div class="row hidden" id="new_integration_save">
-  <a tabindex="40" href="#" class="button small success radius right icon-integration" id="new_integration_save_button">Create Integration</a>
+  <a tabindex="<%= autotab %>" href="#" class="button small success radius right icon-integration" id="new_integration_save_button">Create Integration</a>
 </div>

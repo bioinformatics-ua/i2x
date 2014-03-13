@@ -16,7 +16,7 @@
       <%= f.label :identifier, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.text_field :identifier, :tabindex => 1, :autofocus => true %>
+      <%= f.text_field :identifier, :tabindex => autotab, :autofocus => true %>
     </div>
   </div>
   <div class="row">
@@ -24,7 +24,7 @@
       <%= f.label :title, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.text_field :title, :tabindex => 2 %>
+      <%= f.text_field :title, :tabindex => autotab %>
     </div>
   </div>
   <div class="row">
@@ -32,12 +32,12 @@
       <%= f.label :help, :class => 'right inline' %>
     </div>
     <div class="small-9 columns">
-      <%= f.text_area :help, :tabindex => 3 %>
+      <%= f.text_area :help, :tabindex => autotab %>
     </div>
   </div>
   <div class="row">
     <div class="small-2 columns actions right">
-      <%= f.submit 'Save', :class => 'button tiny success radius right integration_save' %>
+      <%= f.submit 'Save', :class => 'button tiny success radius right integration_save', :tabindex => autotab %>
     </div>
   </div>
   <% end %>

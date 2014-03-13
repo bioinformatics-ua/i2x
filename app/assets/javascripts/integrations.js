@@ -53,7 +53,8 @@ function new_save_agent_select(event) {
 	var selected = $('#new_agent_select_list').find(':selected').val();
 	if (selected === '0') {
 		// show new agent form
-		$('#new_agent_form').fadeIn(500);
+		//$('#new_agent_form').fadeIn(500);
+		window.location = '../agents/new';
 	} else {
 		// load existing agent data
 		$.getJSON('../agents/get/' + selected + '.json', function(data) {
@@ -74,7 +75,8 @@ function new_save_template_select(event) {
 	var selected = $('#new_template_select_list').find(':selected').val();
 	if (selected === '0') {
 		// show new agent form
-		$('#new_template_form').fadeIn(500);
+		//$('#new_template_form').fadeIn(500);
+		window.location = '../templates/new';
 	} else {
 		// load existing agent data
 		$.getJSON('../templates/get/' + selected + '.json', function(data) {
