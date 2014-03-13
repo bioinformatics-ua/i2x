@@ -14,27 +14,21 @@
   <% @agents.each do |agent| %>
   <div class="row agent-info <%= (agent.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
     <div class="small-11 columns left">
-      <div class="left">
-        <div class="circle_48 <%= (agent.status != 0) ? 'on' : 'off'  %>">
-          <%= agent.events.size %>
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader"><%=  agent.title %></h6>
+        <span class="label secondary radius icon-list"><%= agent.events.size %> Events</span>
         <span class="label secondary radius icon-update"><%= time_ago_in_words(agent.last_check_at) %>
           ago</span>
-          <span class="label secondary radius icon-publisher"><%= agent.publisher %></span>
-          <span class="label secondary radius icon-schedule"><%= agent.schedule %></span>
-          <%= (agent.seeds.size != 0) ? "<span class=\"label radius icon-seed\">#{pluralize(agent.seeds.size, 'seed')}</span>".html_safe : '' %>
+        <span class="label secondary radius icon-publisher"><%= agent.publisher %></span>
+        <span class="label secondary radius icon-schedule"><%= agent.schedule %></span>
+        <%= (agent.seeds.size != 0) ? "<span class=\"label radius icon-seed\">#{pluralize(agent.seeds.size, 'seed')}</span>".html_safe : '' %>
         </div>
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'action right icon-play has-tip',:title => "Execute #{agent.title}", :data => {:tooltip => ''} %>
-          <br />
-          <%= link_to '', edit_agent_path(agent), :class => 'action right icon-settings has-tip',:title => "Edit #{agent.title}", :data => {:tooltip => ''} %>
-          <br />
-          <%= link_to '', agent, :class => 'action right icon-view has-tip',:title => "View #{agent.title}", :data => {:tooltip => ''} %>
+          <span class="action right has-tip tip-right radius" data-tooltip title="Execute <%=agent.title %>"><%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'icon-play',:title => "Execute #{agent.title}" %></span>
+          <span class="action right has-tip tip-right radius" data-tooltip title="Edit <%=agent.title %>"><%= link_to '', edit_agent_path(agent), :class => 'icon-settings',:title => "Edit #{agent.title}" %></span>
+          <span class="action right has-tip tip-bottom radius" data-tooltip title="View <%=agent.title %>"><%= link_to '', agent, :class => 'icon-view ',:title => "View #{agent.title}" %></span>
         </div>
       </div>
     </div>
@@ -44,11 +38,6 @@
     <h5 class="subheader">or <strong>add a sample agent</strong></h5>
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-        <div class="left">
-          <div class="circle_48 on">
-            &infin;
-          </div>
-        </div>
         <div class="info-details">
           <h6 class="subheader">XML Agent</h6>
           <span class="label secondary icon-publisher">xml</span>
@@ -57,18 +46,13 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'xml'}, :class => 'icon-add action right has-tip',:title => 'Add sample XML agent', :data => {:tooltip => ''} %>
+          <span class="has-tip tip-top radius" data-tooltip title="Add sample XML agent"><%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'xml'}, :class => 'icon-add action right has-tip',:title => 'Add sample XML agent', :data => {:tooltip => ''} %></span>
         </div>
       </div>
     </div>
 
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-        <div class="left">
-          <div class="circle_48 on">
-            &infin;
-          </div>
-        </div>
         <div class="info-details">
           <h6 class="subheader">JSON Agent</h6>
           <span class="label secondary icon-publisher">json</span>
@@ -77,18 +61,13 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'json'}, :class => 'icon-add action right has-tip',:title => 'Add sample JSON agent', :data => {:tooltip => ''} %>
+          <span class="has-tip tip-top radius" data-tooltip title="Add sample JSON agent"><%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'json'}, :class => 'icon-add action right',:title => 'Add sample JSON agent' %></span>
         </div>
       </div>
     </div>
 
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-        <div class="left">
-          <div class="circle_48 on">
-            &infin;
-          </div>
-        </div>
         <div class="info-details">
           <h6 class="subheader">SQL Agent</h6>
           <span class="label secondary icon-publisher">sql</span>
@@ -97,18 +76,13 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'sql'}, :class => 'icon-add action right has-tip',:title => 'Add sample SQL agent', :data => {:tooltip => ''} %>
+          <span class="has-tip tip-top radius" data-tooltip title="Add sample SQL agent"><%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'sql'}, :class => 'icon-add action right has-tip',:title => 'Add sample SQL agent', :data => {:tooltip => ''} %></span>
         </div>
       </div>
     </div>
 
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-        <div class="left">
-          <div class="circle_48 on">
-            &infin;
-          </div>
-        </div>
         <div class="info-details">
           <h6 class="subheader">CSV Agent</h6>
           <span class="label secondary icon-publisher">csv</span>
@@ -117,18 +91,13 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'csv'}, :class => 'icon-add action right has-tip',:title => 'Add sample CSV agent', :data => {:tooltip => ''} %>
+          <span class="has-tip tip-top radius" data-tooltip title="Add sample CSV agent"><%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'csv'}, :class => 'icon-add action right has-tip',:title => 'Add sample CSV agent', :data => {:tooltip => ''} %></span>
         </div>
       </div>
     </div>
 
     <div class="row agent-info info-enabled">
       <div class="small-11 columns">
-        <div class="left">
-          <div class="circle_48 on">
-            &infin;
-          </div>
-        </div>
         <div class="info-details">
           <h6 class="subheader">RSS Agent</h6>
           <span class="label secondary icon-publisher">xml</span>
@@ -137,20 +106,20 @@
       </div>
       <div class="small-1 columns right">
         <div class="right">
-          <%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'rss'}, :class => 'icon-add action right has-tip',:title => 'Add sample RSS agent', :data => {:tooltip => ''} %>
+          <span class="has-tip tip-top radius" data-tooltip title="Add sample RSS agent"><%= link_to '', {:controller => 'agents', :action => 'add', :identifier => 'rss'}, :class => 'icon-add action right has-tip',:title => 'Add sample RSS agent', :data => {:tooltip => ''} %></span>
         </div>
       </div>
     </div>
 
   </div>
   <!-- sidebar -->
-  <div class="small-12 medium-3 large-3 columns">
+  <div class="small-12 medium-3 large-3 columns animated fadeIn">
     <%= link_to ' New Agent', new_agent_path, :title => 'Create new agent', :class => 'button small radius icon-agent', :data => { :tooltip => ''} %>
     <h4>Go to</h4>
     <ul class="no-bullet">
-      <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration'%></li>
-      <li><%= link_to 'Templates'.html_safe, {:controller => '/templates'}, :class => 'icon-template'%></li>
-      <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files' %></li>
+      <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration', :title => 'Go to Dashboard'%></li>
+      <li><%= link_to 'Templates'.html_safe, {:controller => '/templates'}, :class => 'icon-template', :title => 'Go to Templates'%></li>
+      <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files', :title => 'Go to Files' %></li>
     </ul>
     <%= render partial: "helper/event_list"  %>
   </div>

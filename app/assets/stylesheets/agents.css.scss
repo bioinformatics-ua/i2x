@@ -11,10 +11,10 @@ $panel-padding: rem-calc(5);
 }
 
 .info-row {
-  border-left: 3px solid #ccc;
-  border-bottom: 3px solid #FFF;
-  border-top: 3px solid #FFF;
-  padding: 4px;
+	border-left: 3px solid #ccc;
+	border-bottom: 3px solid #FFF;
+	border-top: 3px solid #FFF;
+	padding: 4px;
 }
 
 .info-enabled {
@@ -41,11 +41,11 @@ $panel-padding: rem-calc(5);
 
 .circle_48 {
 	height: 48px;
-  	width: 48px;
-  	display: table-cell;
-  	text-align: center;
-  	vertical-align: middle;
-  	border-radius: 50%; 
+	width: 48px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 50%; 
 }
 
 .on {
@@ -61,19 +61,18 @@ $panel-padding: rem-calc(5);
 }
 
 .action {
-	float:right;
 	display: block;
-	width: 22px;
-	height: 22px;
 	margin: 0 auto;
-	margin-top: 4px;
 	clear: both;
-	font-size: 20px;
+	width: 22px;
+	height: 20px;
+	font-size: 22px;
 	vertical-align: bottom;
 }
 
+
 .info-details {
-	margin-left: 60px;
+	margin-left: 8px;
 }
 
 .big {

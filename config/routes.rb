@@ -23,6 +23,9 @@ I2X::Application.routes.draw do
   # Contact
   get "contact/index", to: 'contact#index'
 
+  # Dashboard
+  get 'dashboard',to: redirect('/integrations')
+
   # Delivery control
   get "delivery/get"
   post "delivery/post"

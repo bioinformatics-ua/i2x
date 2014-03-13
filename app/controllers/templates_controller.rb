@@ -39,6 +39,7 @@ class TemplatesController < ApplicationController
         #format.html { redirect_to templates_url }
         #format.json { render :json => response}
         format.json { render json: @template, status: :created }
+        format.js { render json: @template, status: :created }
       end
     else
     end
@@ -73,6 +74,7 @@ class TemplatesController < ApplicationController
   # PATCH/PUT /templates/1
   # PATCH/PUT /templates/1.json
   def update
+    puts template_params
     respond_to do |format|
       if @template.update(template_params)
         format.html { redirect_to @template, notice: 'Template was successfully updated.' }

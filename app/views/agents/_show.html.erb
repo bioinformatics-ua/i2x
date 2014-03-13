@@ -9,63 +9,61 @@
         ago</small></span>
       </div>
       <div class="small-2 columns right text-right">
-      <%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'icon-play has-tip',:title => "Execute #{agent.title}", :data => {:tooltip => ''} %>
-        <%= link_to '', edit_agent_path(agent), :data => {:tooltip => ''}, :title => "Edit #{agent.title}", :class => 'has-tip icon-settings' %>
-        
+        <span class="has-tip radius right" data-tooltip title="Edit <%= agent.title %>"><%= link_to '', edit_agent_path(agent), :data => {:tooltip => ''}, :title => "Edit #{agent.title}", :class => 'icon-settings xl-icon' %></span>
+        <span class="has-tip radius right" data-tooltip title="Execute <%= agent.title %>"><%= link_to '', {:controller => 'agents', :action => 'execute', :id => agent.id}, :class => 'icon-play xl-icon',:title => "Execute #{agent.title}", :data => {:tooltip => ''} %></span>
       </div>
     </div>
     <br />
     <div class="row">
       <div class="small-2 columns">
-        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x detected <%= agent.events.size %> for this agent" data-options="disable_for_touch:true">
+        <div class="agent-hl ">
           <div class="big center">
-            <%= agent.events.size %>
+            <span class="has-tip radius" data-tooltip title="Events: i2x detected <%= agent.events.size %> for this agent"><%= agent.events.size %></span>
           </div>
-          <h5 class="center icon-list"></h5>
+          <h5 class="center icon-list xl-icon"></h5>
         </div>
-        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Schedule: i2x polls this agent every <%= agent.schedule %>" data-options="disable_for_touch:true">
+        <div class="agent-hl">
           <div class="big center">
-            <%= agent.schedule %>
-          </div>
-          <h5 class="center icon-schedule"></h5>
-        </div>
-        <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Monitor: this agent processes '<%= agent.publisher %>'' input" data-options="disable_for_touch:true">
-          <div class="big center">
-            <%= agent.publisher %>
-          </div>
-          <h5 class="center icon-publisher"></h5>
-        </div>
-      </div>
-      <div class="small-10 columns">
-        <div class="row">
-          <h4 class="subheader">Help</h4>
-          <%= agent.help %>
-        </div>
-        <hr>
-        <div class="row">
-          <h4 class="subheader">Publisher</h4>
-          <% if agent.publisher == 'sql' then %>
-          <%= render partial: "agents/show_sql", locals: {:agent => agent}%>
-          <% end %>
-          <% if agent.publisher == 'xml' then %>
-          <%= render partial: "agents/show_xml", locals: {:agent => agent}%>
-          <% end %>
-          <% if agent.publisher == 'json' then %>
-          <%= render partial: "agents/show_json", locals: {:agent => agent}%>
-          <% end %>
-          <% if agent.publisher == 'csv' then %>
-          <%= render partial: "agents/show_csv", locals: {:agent => agent}%>
-          <% end %>
-        </div>
-        <% if agent.seeds.size != 0 then %>
-        <hr>
-        <div class="row">
-          <h4 class="subheader">Seeds</h4>
-          <% agent.seeds.each do |s| %>
-          <%= render partial: "seeds/show", locals: {:seed => s}   %>
-          <% end %>
-        </div>
-        <% end %>
-      </div>
+           <span class="has-tip radius" data-tooltip title="Schedule: i2x polls this agent every <%= agent.schedule %>"><%= agent.schedule %></span>
+         </div>
+         <h5 class="center icon-schedule xl-icon"></h5>
+       </div>
+       <div class="agent-hl">
+        <div class="big center">
+         <span class="has-tip radius" data-tooltip title="Monitor: this agent processes '<%= agent.publisher %>'' input"><%= agent.publisher %></span>
+       </div>
+       <h5 class="center icon-publisher xl-icon"></h5>
+     </div>
+   </div>
+   <div class="small-10 columns">
+    <div class="row">
+      <h4 class="subheader">Help</h4>
+      <%= agent.help %>
     </div>
-    
+    <hr>
+    <div class="row">
+      <h4 class="subheader">Publisher</h4>
+      <% if agent.publisher == 'sql' then %>
+      <%= render partial: "agents/show_sql", locals: {:agent => agent}%>
+      <% end %>
+      <% if agent.publisher == 'xml' then %>
+      <%= render partial: "agents/show_xml", locals: {:agent => agent}%>
+      <% end %>
+      <% if agent.publisher == 'json' then %>
+      <%= render partial: "agents/show_json", locals: {:agent => agent}%>
+      <% end %>
+      <% if agent.publisher == 'csv' then %>
+      <%= render partial: "agents/show_csv", locals: {:agent => agent}%>
+      <% end %>
+    </div>
+    <% if agent.seeds.size != 0 then %>
+    <hr>
+    <div class="row">
+      <h4 class="subheader">Seeds</h4>
+      <% agent.seeds.each do |s| %>
+      <%= render partial: "seeds/show", locals: {:seed => s}   %>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>

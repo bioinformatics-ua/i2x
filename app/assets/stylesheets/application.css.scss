@@ -137,7 +137,7 @@
  .icon-trash:before { content: '\E729'; color: #FF0000;}
  .icon-mail:before { content: '\1F53F';}
  .icon-install:before { content: '\E778';}
- .icon-play:before { padding-left: 2px; content: '\25B6';}
+ .icon-play:before { margin-left: -10px; content: '\25B6'; float: left;}
 
  /** Social icons **/
  .icon-facebook:before { font-family: 'entypo-social'; content: '\F30E'; }
@@ -147,6 +147,10 @@
  .icon-dropbox_oauth2:before { font-family: 'entypo-social'; content: '\F330'; }
  .icon-google_oauth2:before { font-family: 'entypo-social'; content: '\F30F'; }
 
+
+.xl-icon {
+  font-size: 24px;
+}
 
  /** STATIC CSS **/	
  html{

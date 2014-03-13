@@ -5,23 +5,23 @@
     <span class="label secondary radius"><small>Last delivery <%= template.last_execute_at.nil? ? 'Not executed' : time_ago_in_words(template.last_execute_at) +' ago' %></small></span>
   </div>
   <div class="small-1 columns right text-right">
-    <%= link_to '', edit_template_path(template), :class => "has-tip icon-settings", :title => "Edit #{template.title}", :data => {:tootlip => ''} %>
-  </div>
+   <span class="has-tip tip-top radius" data-tooltip title="Edit <%= template.title %>"><%= link_to '', edit_template_path(template), :class => "icon-settings xl-icon", :title => "Edit #{template.title}" %></span>
+ </div>
 </div>
 <br />
 <div class="row">
   <div class="small-2 columns">
-    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Events: i2x delivered this template <%= template.count %> times" data-options="disable_for_touch:true">
+    <div class="agent-hl">
       <div class="big center">
-        <%= template.count %>
+       <span class="has-tip tip-top radius" data-tooltip title="Events: i2x delivered this template <%= template.count %> times"><%= template.count %></span>
       </div>
-      <h5 class="center icon-list"></h5>
+      <h5 class="center icon-list xl-icon"></h5>
     </div>
-    <div class="agent-hl" data-tooltip class="has-tip tip-top" title="Delivery: this template delivers '<%= template.publisher %>'' output" data-options="disable_for_touch:true">
+    <div class="agent-hl">
       <div class="big center">
-        <%= template.publisher %>
+        <span class="has-tip tip-top radius" data-tooltip title="Delivery: this template delivers '<%= template.publisher %>'' output"><%= template.publisher %></span>
       </div>
-      <h5 class="center icon-publisher"></h5>
+      <h5 class="center icon-publisher xl-icon"></h5>
     </div>
   </div>
   <div class="small-10 columns">
@@ -44,7 +44,7 @@
       <% if template.publisher == 'mail' then %>
       <%= render partial: "templates/show_mail", locals: {:template => template}%>
       <% end %>
-       <% if template.publisher == 'dropbox' then %>
+      <% if template.publisher == 'dropbox' then %>
       <%= render partial: "templates/show_dropbox", locals: {:template => template}%>
       <% end %>
     </div>

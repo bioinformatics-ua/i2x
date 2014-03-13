@@ -1,10 +1,22 @@
 $(function() {
 	// Remote save new template
-	$('#new_template').on('ajax:success', new_template_save);
+	//$('#new_template').on('ajax:success', new_template_save);
 
 	// Update template action
-	$('.edit_template').on('ajax:success', edit_template_save);
+	//$('.edit_template').on('ajax:success', edit_template_save);
 
+	//$('#template_publisher').on('change', template_update_publisher_view)
+	//$('#edit_template_payload_select').on('change', edit_update_payload);
+
+	//$('#publisher_url_method').on('change', update_publisher_url_params_view)
+
+	//update_url_post_params_remove();
+
+	// Manage POST params list
+	$('.publisher_url_post_params_add').on('click', add_url_post_params_from_click);
+	$('.publisher_url_post_params_value').on('keypress', add_url_post_params_from_keypress);
+
+	//
 	$('#template_publisher').on('change', template_update_publisher_view)
 	$('#edit_template_payload_select').on('change', edit_update_payload);
 
@@ -26,21 +38,22 @@ function update_publisher_url_params_view(event) {
 }
 
 /**
+
  *	Handles reloading forms on changing template publisher.
  **/
 function edit_update_payload(event) {
 	event.preventDefault();
 	publisher = $(this).find(':selected').val();
 	if (publisher === 'file') {
-		$('#edit_template_payload').html("<%= j render(:partial => 'payload_file', :locals => {:template => @template}) %>");
+		$('#publisher_content').html("<%= j render(:partial => 'payload_file', :locals => {:template => @template}) %>");
 	} else if (publisher === 'mail') {
-		$('#edit_template_payload').html("<%= j render(:partial => 'payload_mail', :locals => {:template => @template}) %>");
+		$('#publisher_content').html("<%= j render(:partial => 'payload_mail', :locals => {:template => @template}) %>");
 	} else if (publisher === 'sql') {
-		$('#edit_template_payload').html("<%= j render(:partial => 'payload_sql', :locals => {:template => @template}) %>");
+		$('#publisher_content').html("<%= j render(:partial => 'payload_sql', :locals => {:template => @template}) %>");
 	} else if (publisher === 'url') {
-		$('#edit_template_payload').html("<%= j render(:partial => 'payload_url', :locals => {:template => @template}) %>");
+		$('#publisher_content').html("<%= j render(:partial => 'payload_url', :locals => {:template => @template}) %>");
 	} else if (publisher === 'dropbox') {
-		$('#edit_template_payload').html("<%= j render(:partial => 'payload_dropbox', :locals => {:template => @template}) %>");
+		$('#publisher_content').html("<%= j render(:partial => 'payload_dropbox', :locals => {:template => @template}) %>");
 	}
 }
 

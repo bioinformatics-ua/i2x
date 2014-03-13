@@ -4,11 +4,6 @@ $(function() {
 
 	// Update template action
 	$('.edit_template').on('ajax:success', edit_template_save);
-
-
-	// Manage POST params list
-	$('.publisher_url_post_params_add').on('click', add_url_post_params_from_click);
-	$('.publisher_url_post_params_value').on('keypress', add_url_post_params_from_keypress);
 });
 
 

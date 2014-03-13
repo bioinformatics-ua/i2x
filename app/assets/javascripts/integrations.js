@@ -201,12 +201,7 @@ function edit_save_agent_select(event) {
  *	Show stuff with fade in and slide down
  **/
 function show_down(element) {
-	element.css('opacity', 0).slideDown('slow').animate({
-		opacity: 1
-	}, {
-		queue: false,
-		duration: 'slow'
-	}).removeClass('hidden');
+	element.removeClass('hidden').addClass('animated fadeIn');
 }
 
 /**

@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20140204111437) do
   end
 
   create_table "caches", force: true do |t|
-    t.string   "publisher"
     t.integer  "agent_id"
     t.text     "payload"
     t.text     "memory"

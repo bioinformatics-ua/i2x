@@ -7,10 +7,10 @@
 <br/>
 <ul class="off-canvas-list">
   <li><label>Go To</label></li>
-  <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration' %></li>
-  <li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent'%></li>
-  <li><%= link_to 'Templates', {:controller => '/templates'}, :class => 'icon-template' %></li>
-  <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files' %></li>
+  <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration', :title => 'Go to Dashboard' %></li>
+  <li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent', :title => 'Go to Agents'%></li>
+  <li><%= link_to 'Templates', {:controller => '/templates'}, :class => 'icon-template', :title => 'Go to Templates' %></li>
+  <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files', :title => 'Go to Files' %></li>
 </ul>
 <% else %>
 <ul class="off-canvas-list">
@@ -19,7 +19,7 @@
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div class="row">
       <div class="small-12">
-        <%= f.email_field :login, :autofocus => true, :placeholder => 'Login' %>
+        <%= f.text_field :login, :autofocus => true, :placeholder => 'Login' %>
       </div>
       <div class="small-12">
         <%= f.password_field :password, :placeholder => 'Password' %>

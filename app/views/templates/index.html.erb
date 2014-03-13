@@ -13,22 +13,17 @@
   <% @templates.each do |template| %>
   <div class="row agent-info <%= (template.status != 0) ? 'info-enabled' : 'info-disabled'  %>">
     <div class="small-11 columns left">
-      <div class="left">
-        <div class="circle_48 <%= (template.status != 0) ? 'on' : 'off'  %>">
-          <%= template.count %>
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader"><%= template.title %></h6>
+        <span class="label secondary radius icon-list"><%= template.count %></span>
         <span class="label secondary radius icon-update"><%= template.last_execute_at.nil? ? 'Not executed' : time_ago_in_words(template.last_execute_at) + ' ago' %></span>
         <span class="label secondary radius icon-publisher"><%= template.publisher %></span>
       </div>
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', edit_template_path(template), :class => 'action right has-tip icon-settings', :title => "Edit #{template.title}", :data => {:tooltip => ''} %>
-        <br >
-        <%= link_to '', template, :class => 'action right has-tip icon-view', :title => "View #{template.title}", :data => {:tooltip => ''} %>
+        <span class="has-tip tip-right radius action right" data-tooltip title="Edit <%=template.title%>"><%= link_to '', edit_template_path(template), :class => 'icon-settings', :title => "Edit #{template.title}" %></span>
+        <span class="has-tip tip-right radius action right" data-tooltip title="View <%=template.title%>"><%= link_to '', template, :class => 'icon-view', :title => "View #{template.title}" %></span>
       </div>
     </div>
   </div>
@@ -39,11 +34,6 @@
 
   <div class="row agent-info info-enabled">
     <div class="small-11 columns">
-      <div class="left">
-        <div class="circle_48 on">
-          &infin;
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader">SQL Template</h6>
         <span class="label secondary icon-publisher">sql</span>
@@ -51,18 +41,13 @@
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'sql'}, :class => 'icon-add action right has-tip',:title => 'Add sample SQL template', :data => {:tooltip => ''} %>
+        <span class="has-tip tip-top radius" data-tooltip title="Add sample SQL template"><%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'sql'}, :class => 'icon-add xl-icon action right',:title => 'Add sample SQL template', :data => {:tooltip => ''} %></span>
       </div>
     </div>
   </div>
 
   <div class="row agent-info info-enabled">
     <div class="small-11 columns">
-      <div class="left">
-        <div class="circle_48 on">
-          &infin;
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader">URL Template</h6>
         <span class="label secondary icon-publisher">url</span>
@@ -70,18 +55,13 @@
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'url'}, :class => 'icon-add action right has-tip',:title => 'Add sample URL template', :data => {:tooltip => ''} %>
+         <span class="has-tip tip-top radius" data-tooltip title="Add sample URL template"><%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'url'}, :class => 'icon-add action right',:title => 'Add sample URL template', :data => {:tooltip => ''} %></span>
       </div>
     </div>
   </div>
 
   <div class="row agent-info info-enabled">
     <div class="small-11 columns">
-      <div class="left">
-        <div class="circle_48 on">
-          &infin;
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader">File Template</h6>
         <span class="label secondary icon-publisher">file</span>
@@ -89,18 +69,13 @@
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'file'}, :class => 'icon-add action right has-tip',:title => 'Add sample File template', :data => {:tooltip => ''} %>
+         <span class="has-tip tip-top radius" data-tooltip title="Add sample file template"><%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'file'}, :class => 'icon-add action right',:title => 'Add sample File template', :data => {:tooltip => ''} %></span>
       </div>
     </div>
   </div>
 
   <div class="row agent-info info-enabled">
     <div class="small-11 columns">
-      <div class="left">
-        <div class="circle_48 on">
-          &infin;
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader">Dropbox Template</h6>
         <span class="label secondary icon-publisher">dropbox</span>
@@ -108,18 +83,13 @@
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'dropbox'}, :class => 'icon-add action right has-tip',:title => 'Add sample Dropbox template', :data => {:tooltip => ''} %>
+         <span class="has-tip tip-top radius" data-tooltip title="Add sample Dropbox file template"><%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'dropbox'}, :class => 'icon-add action right',:title => 'Add sample Dropbox template', :data => {:tooltip => ''} %></span>
       </div>
     </div>
   </div>
 
   <div class="row agent-info info-enabled">
     <div class="small-11 columns">
-      <div class="left">
-        <div class="circle_48 on">
-          &infin;
-        </div>
-      </div>
       <div class="info-details">
         <h6 class="subheader">Mail Template</h6>
         <span class="label secondary icon-publisher">mail</span>
@@ -127,19 +97,19 @@
     </div>
     <div class="small-1 columns right">
       <div class="right">
-        <%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'mail'}, :class => 'icon-add action right has-tip',:title => 'Add sample Mail template', :data => {:tooltip => ''} %>
+         <span class="has-tip tip-top radius" data-tooltip title="Add sample mail template"><%= link_to '', {:controller => 'templates', :action => 'add', :identifier => 'mail'}, :class => 'icon-add action right',:title => 'Add sample Mail template', :data => {:tooltip => ''} %></span>
       </div>
     </div>
   </div>
 
 </div>
 <div class="small-3 columns right">
-  <%= link_to ' New Template', new_template_path, :class => 'button small radius icon-template' %>
+  <%= link_to ' New Template', new_template_path, :class => 'button small radius icon-template', :title => 'Create new template' %>
   <h4>Go to</h4>
   <ul class="no-bullet">
-    <li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent'%></li>
-    <li><%= link_to 'Integrations'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration'%></li>
-    <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files' %></li>
+    <li><%= link_to 'Dashboard'.html_safe, {:controller => '/integrations'}, :class => 'icon-integration', :title => 'Go to Dashboard'%></li>
+    <li><%= link_to 'Agents'.html_safe, {:controller => '/agents'}, :class => 'icon-agent', :title => 'Go to Agents'%></li>
+    <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files', :title => 'Go to Files' %></li>
   </ul>
   <%= render partial: "helper/event_list"  %>
 </div>

@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-1 columns">
-    <div class="right inline icon-properties has-tip" data-tooltip class="has-tip tip-top" title="Connection Details">&nbsp;</div>
+    <div class="right inline icon-properties xl-icon has-tip" data-tooltip class="has-tip tip-top" title="Connection Details">&nbsp;</div>
   </div>
   <div class="small-11 columns">
     <div class="row">
@@ -32,20 +32,20 @@
 <br />
 <div class="row">
   <div class="small-1 columns">
-    <div class="right inline icon-selectors has-tip" title="Selectors" data-tooltip>&nbsp;</div>
+    <div class="right inline icon-selectors xl-icon has-tip" title="Selectors" data-tooltip>&nbsp;</div>
   </div>
   <div class="small-11 columns">
     <% JSON.parse(agent[:payload][:selectors]).each do |k| %>
-      <% k.each do |key, value| %>
-        <div class="row">
-          <div class="small-3 columns">
-            <strong class="right inline"><%= key %></strong>
-          </div>
-          <div class="small-9 columns">
-            <%= value %>
-          </div>
-        </div>
-      <% end %>
+    <% k.each do |key, value| %>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline"><%= key %></strong>
+      </div>
+      <div class="small-9 columns">
+        <%= value %>
+      </div>
+    </div>
+    <% end %>
     <% end %>
   </div>
 </div>
