@@ -12,7 +12,7 @@ I2X::Application.routes.draw do
   resources :agents
   get "agents/partials/:identifier", to: 'agents#partials'  		# what is this?
   get "agents/import/:identifier", to: "agents#import"      		# import from JSON file
-  get "agents/get/:identifier", to: "agents#get"            		# load agent as JSON
+  get "agents/:id/get", to: "agents#get"            		# load agent as JSON
   get "agents/add/:identifier", to: "agents#add"            		# add sample agent to user
   get "agents/:id/execute", to: "agents#execute"                # launch on-demand agent execution
   
@@ -94,7 +94,7 @@ I2X::Application.routes.draw do
 
   # Authentication
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks", :registrations => "registrations" }
-  #devise_for :users, :controllers => {}
+  devise_scope :user do get "users/sign_out" => 'devise/sessions#destroy' end
   get "sign_up", :to => "devise/registrations#new"
 
 

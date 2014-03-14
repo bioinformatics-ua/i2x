@@ -7,7 +7,7 @@
   <a href="#" class="close">&times;</a>
 </div>
 <% end %>
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:novalidate => true}) do |f| %>
 <%= devise_error_messages! %>
 <div class="row">
 	<div class="small-12 medium-8 large-8 columns">

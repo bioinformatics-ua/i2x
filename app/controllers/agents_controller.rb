@@ -185,7 +185,7 @@ end
 
   def get
   	begin
-  		@agent = Agent.find(params[:identifier])
+  		@agent = Agent.find(params[:id])
   		respond_to do |format|
   			format.json { render :json => @agent}
   			format.xml { render :xml => @agent}

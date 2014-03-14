@@ -1,6 +1,7 @@
+<!-- User logged in, display details and links to work areas -->
 <% if user_signed_in? then %>
 <ul class="off-canvas-list">
-<li><label><%=  current_user.name ||= current_user.username %></label></li>
+  <li><label><%=  current_user.name ||= current_user.username %></label></li>
   <li><%= link_to('Details'.html_safe, edit_user_registration_path, :class => 'icon-userdetails') %></li>
   <li><%= link_to('Sign Out'.html_safe, destroy_user_session_path, :method => :delete, :class => 'icon-signout') %></li>
 </ul>
@@ -12,14 +13,15 @@
   <li><%= link_to 'Templates', {:controller => '/templates'}, :class => 'icon-template', :title => 'Go to Templates' %></li>
   <li><%= link_to 'Files', {:controller => '/files', :action => 'index'}, :class => 'icon-files', :title => 'Go to Files' %></li>
 </ul>
+<!-- User not logged in, display login and social authentication links -->
 <% else %>
 <ul class="off-canvas-list">
   <li><label>Login</label></li>
   <li>
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+     <%= form_for("user", :url => user_session_path, :html => {:novalidate => true}) do |f| %>
     <div class="row">
       <div class="small-12">
-        <%= f.text_field :login, :autofocus => true, :placeholder => 'Login' %>
+        <%= f.text_field :login, :placeholder => 'Login' %>
       </div>
       <div class="small-12">
         <%= f.password_field :password, :placeholder => 'Password' %>
@@ -42,3 +44,7 @@
     </li>    
   </ul>
   <%end %>
+
+
+
+
