@@ -47,62 +47,62 @@
             </ul>
             <section class="top-bar-section">
               <ul class="right">
-                <li><a class="right-off-canvas-toggle has-tip icon-user" title="User" data-tooltip> </a></li>
-              </ul>
-              <!-- Right Nav Section -->
-              <ul class="right">
-                <li class="has-dropdown not-click">
-                  <a href="#">Architecture</a>
-                  <ul class="dropdown" >
-                    <li><%= link_to "Components", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'components' %></li>
-                    <li><%= link_to "Flows", :controller => '/docs', :action => 'show', :section => 'architecture', :topic =>'flows' %></li>
-                    <li><%= link_to "Models", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'models' %></li>
-                    <li><label>Sequences</label></li>
-                    <li><%= link_to "Apply Integration Rules", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'rules' %></li>
-                    <li><%= link_to "Execute Delivery Template", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'template' %></li>
-                    <li><%= link_to "Full Sequence Diagram", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'full' %></li>
-                    <li><%= link_to "Poll Content Changes", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'content' %></li>
-                    <li><%= link_to "Translate Diff", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'diff' %></li>
-                  </ul>
-                </li>
-                <li class="divider"></li>
-                <li><%= link_to "FAQ", :controller => '/docs', :action => 'show', :section => 'faq', :topic => 'index' %></li>
-                <li class="divider"></li>
-                <li><%= link_to "How To", :controller => '/docs', :action => 'show', :section => 'how_to', :topic => 'index' %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Reference", :controller => '/docs' %></li>
-                <li class="divider"></li>
-                <li class="has-dropdown not-click">
-                  <a href="#">Research</a>
-                  <ul class="dropdown">
-                    <li><%= link_to "Others", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'others' %></li>
-                    <li><%= link_to "SWOT", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'swot' %></li>
-                  </ul>
-                </li>
-                <li class="divider"></li>
-                <li><%= link_to "Contact", :controller => '/contact' %></li>
-                <li class="divider"></li>
-              </ul>
-            </section>
-          </nav>
-        </div><!-- End Top Bar -->
-        <!-- Start main content -->
-        <div class="row content" id="content">
-          <%= yield %>
-        </div>
-        <!-- Finish main content -->
-        <!-- User sidebar -->
-        <aside class="right-off-canvas-menu side-user sticky">
-          <%= render partial: "helper/sidenav"  %>
-        </aside>
-        
-        <a class="exit-off-canvas"></a>
+               <li class="has-tip radius" data-tooltip title="User"><a class="icon-user right-off-canvas-toggle xl-icon" title="User"><%= user_signed_in? ? (current_user.name ||= current_user.username) : 'Sign in' %></a></li>
+             </ul>
+             <!-- Right Nav Section -->
+             <ul class="right">
+              <li class="has-dropdown not-click">
+                <a href="#">Architecture</a>
+                <ul class="dropdown" >
+                  <li><%= link_to "Components", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'components' %></li>
+                  <li><%= link_to "Flows", :controller => '/docs', :action => 'show', :section => 'architecture', :topic =>'flows' %></li>
+                  <li><%= link_to "Models", :controller => '/docs', :action => 'show', :section => 'architecture', :topic => 'models' %></li>
+                  <li><label>Sequences</label></li>
+                  <li><%= link_to "Apply Integration Rules", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'rules' %></li>
+                  <li><%= link_to "Execute Delivery Template", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'template' %></li>
+                  <li><%= link_to "Full Sequence Diagram", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'full' %></li>
+                  <li><%= link_to "Poll Content Changes", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'content' %></li>
+                  <li><%= link_to "Translate Diff", :controller => '/docs', :action => 'show', :section => '/sequences', :topic => 'diff' %></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li><%= link_to "FAQ", :controller => '/docs', :action => 'show', :section => 'faq', :topic => 'index' %></li>
+              <li class="divider"></li>
+              <li><%= link_to "How To", :controller => '/docs', :action => 'show', :section => 'how_to', :topic => 'index' %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Reference", :controller => '/docs' %></li>
+              <li class="divider"></li>
+              <li class="has-dropdown not-click">
+                <a href="#">Research</a>
+                <ul class="dropdown">
+                  <li><%= link_to "Others", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'others' %></li>
+                  <li><%= link_to "SWOT", :controller => '/docs', :action => 'show', :section => '/research', :topic => 'swot' %></li>
+                </ul>
+              </li>
+              <li class="divider"></li>
+              <li><%= link_to "Contact", :controller => '/contact' %></li>
+              <li class="divider"></li>
+            </ul>
+          </section>
+        </nav>
+      </div><!-- End Top Bar -->
+      <!-- Start main content -->
+      <div class="row content animated fadeIn" id="content">
+        <%= yield %>
       </div>
+      <!-- Finish main content -->
+      <!-- User sidebar -->
+      <aside class="right-off-canvas-menu side-user sticky">
+        <%= render partial: "helper/sidenav"  %>
+      </aside>
+      
+      <a class="exit-off-canvas"></a>
     </div>
-    <%= javascript_include_tag "application" %>
+  </div>
+  <%= javascript_include_tag "application" %>
 
-  </body>
-  </html>
+</body>
+</html>
 <!--
  _  ____        
 (_)|___ \ __  __

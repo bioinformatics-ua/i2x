@@ -10,14 +10,10 @@ class ApplicationController < ActionController::Base
   # => Allow more parameters to user details
   #
   def configure_devise_params
-  	devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :remember_me) }
-  	devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
-  	devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }
+  	devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :remember_me) }
+  	devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:name, :login, :username, :email, :password, :remember_me) }
+  	devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :current_password) }
   end
-
-  #def after_sign_in_path_for(resource)
-  #  request.env['omniauth.origin'] || root_url
-  #end
 
   def default_url_options
   	if Rails.env.production?
@@ -29,4 +25,5 @@ class ApplicationController < ActionController::Base
   		{}
   	end
   end
+
 end

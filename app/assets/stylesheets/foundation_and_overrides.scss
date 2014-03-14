@@ -956,7 +956,7 @@ $topbar-link-color: $primary-color;
 $topbar-link-color-hover: darken($primary-color, 15%);
 $topbar-link-color-active: darken($primary-color, 15%);
 // $topbar-link-weight: normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(10);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg-hover: #FFF  ;
 // $topbar-link-bg-active: $primary-color;

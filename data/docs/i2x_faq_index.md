@@ -43,11 +43,11 @@ Putting it simply, [Integrations][] connect [agents][] with [templates][]. Hence
 
 </div>
 
-[agent]:        /docs/#agents
-[agents]:       /docs/#agents
-[event]:        /docs/#events
-[templates]:    /docs/#templates
-[template]:     /docs/#templates
-[integrations]: /docs/#integrations
-[integration]:  /docs/#integrations
-[sources]:      /docs/#sources
+[agent]:        /i2x/docs/#agents
+[agents]:       /i2x/docs/#agents
+[event]:        /i2x/docs/#events
+[templates]:    /i2x/docs/#templates
+[template]:     /i2x/docs/#templates
+[integrations]: /i2x/docs/#integrations
+[integration]:  /i2x/docs/#integrations
+[sources]:      /i2x/docs/#sources

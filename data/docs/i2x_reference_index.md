@@ -127,13 +127,13 @@ The **Detector** engine will perform the [polling][] of configured [sources][] u
 
 # Events
 
-**Events** are occurrences of specific conditions that will trigger an [Action](#actions). **i2x** events are registered when:
+**Events** are occurrences of specific conditions that will trigger an [Integration][]. **i2x** events are registered when:
 
 - New issue  (Ex: GitHub)
 - New row in table (Ex: WAVe)
 - New image in index (Ex: Dicoogle)
 
-You can think of an **Event** as the ignition of a new [integration][].
+You can think of an **Event** as the _ignition_ of a new [integration][].
 
 Basically, they're things that happen in monitored systems which cause a defined action to happen. Additionally, events supply data about what happened. These data will be passed on to the [Integrations][] controller, which validates them and moves them to the [Postman][] for execution through the [Delivery Template][deliverytemplate].
 
@@ -233,6 +233,35 @@ Relevant data must be sent in the POST request parameters. Upon receiving these 
 
 **Address**: Hooks must [push][] data to `i2x/push/<agent_identifier>.js` address.
 
+# Icons
+
+Here's **i2x** iconography legend.
+
+<ul class="no-bullet">
+<li><a class="icon-about xl-icon"> </a> about</li>
+<li><a class="icon-add xl-icon"> </a> add (add sample agent, integration or template)</li>
+<li><a class="icon-agent xl-icon"> </a> agent</li>
+<li><a class="icon-delete xl-icon"> </a> delete/remove</li>
+<li><a class="icon-details xl-icon"> </a> details (agent or template configuration details)</li>
+<li><a class="icon-documentation xl-icon"> </a> documentation</li>
+<li><a class="icon-download xl-icon"> </a> download</li>
+<li><a class="icon-settings xl-icon"> </a> edit/settings</li>
+<li><a class="icon-list xl-icon"> </a> events (on agent: events found, on template: deliveries made)</li>
+<li><a class="icon-files xl-icon"> </a> files</li>
+<li><a class="icon-i2x xl-icon"> </a> logo</li>
+<li><a class="icon-install xl-icon"> </a> install</li>
+<li><a class="icon-integration xl-icon"> </a> integration</li>
+<li><a class="icon-publisher xl-icon"> </a> publisher</li>
+<li><a class="icon-schedule xl-icon"> </a> schedule</li>
+<li><a class="icon-selectors xl-icon"> </a> selectors</li>
+<li><a class="icon-signout xl-icon"> </a> sign out</li>
+<li><a class="icon-signup xl-icon"> </a> sign up</li>
+<li><a class="icon-template xl-icon"> </a> template</li>
+<li><a class="icon-trash xl-icon"> </a> trash</li>
+<li><a class="icon-user xl-icon"> </a> user</li>
+<li><a class="icon-view xl-icon"> </a> view</li>
+</ul>
+
 # Integrations
 
 **Integrations** are the complete workflows of what users want to achieve, associating one or more [agents][] with one or more [templates][deliverytemplates].
@@ -267,11 +296,11 @@ This is some human-readable explanatory text, usually something that clarifies w
 
 # Polling
 
-Polling is the process of repeatedly hitting the same endpoint looking for new data. Unfortunately, i2x uses the **Detector** to do this. We don't like doing this (its wasteful), vendors don't like us doing it (again, its wasteful) and users dislike it (they have to wait a maximum interval to detect new events). However, it is the one method that is ubiquitous, so we support it.
+Polling is the process of repeatedly hitting the same endpoint looking for new data. Unfortunately, i2x uses the [Detector][] to do this. We don't like doing this (its wasteful), vendors don't like us doing it (again, its wasteful) and users dislike it (they have to wait a maximum interval to detect new events). However, it is the one method that is ubiquitous, so we support it.
 
 It is also closely tied into how i2x handles deduplication.
 
-A more modern approach uses Web/REST hooks. This way, services can push data into **i2x**, which reduces the application load.
+A more modern approach uses Web/REST hooks. This way, services can [push][] data into **i2x**, which reduces the application load.
 
 # Postman
 
@@ -279,11 +308,13 @@ Handles the final step of the [integrations][]: gets the [integration fields][] 
 
 # Push
 
-**i2x** in addition to polling, [integrations][] can be configured to receive data directly from external services. *Pushing* data into **i2x** will start processing the [agents]][] specified in the push request. [Agents][] can be configured to not run in any specific schedule, meaning that they will only run when they receive data via push. However, note that you can push data into any [agent][], even if they have specific monitoring schedules.
+**i2x** in addition to polling, [integrations][] can be configured to receive data directly from external services. *Pushing* data into **i2x** will start processing the [agents][] specified in the push request. [Agents][] can be configured to not run in any specific schedule, meaning that they will only run when they receive data via push. However, note that you can push data into any [agent][], even if they have specific monitoring schedules.
 
 # Seeds
 
-[Agents][] can have any number of **Seeds** where you can configure an initial dataset to start the monitoring. Seeds are useful for monitoring long lists of similar sources
+[Agents][] can have any number of **Seeds** where you can configure an initial dataset to start the monitoring. Seeds are useful for monitoring long lists of similar sources.
+
+**Seeds** configuration is identical to [agents][]'. Variables defined in **seed** selectors will replace content in the [agents][] settings, enabling the composition of dynamic queries or file access strategies.
 
 # Sources
 
@@ -580,21 +611,23 @@ The destination URL for the request.
 [client]:             #client
 [gem]:                #gem
 [Integration]:        #integrations
-[Integrations]:       #actions
+[Integrations]:       #integrations
 [integration fields]: #integration-fields
 [delivery]:           #deliveries
-[deliverytemplate]:   #delivery-templates
-[deliverytemplates]:  #delivery-templates
-[delivery template]:  #delivery-templates
-[delivery templates]: #delivery-templates
-[Detector]:           #Detector
-[Detectors]:          #Detector
+[deliverytemplate]:   #templates
+[deliverytemplates]:  #templates
+[delivery template]:  #templates
+[delivery templates]: #templates
+[Detector]:           #detector
+[Detectors]:          #detector
 [event]:              #events
 [events]:             #events
 [Field Types]:        #field-types
 [helpers]:            #helper-functions
 [polling]:            #polling
 [Postman]:            #postman
+[postman]:            #postman
+[push]:               #push
 [source]:             #sources
 [sources]:            #sources
 [Template]:           #templates

@@ -47,13 +47,13 @@
             </ul>
             <section class="top-bar-section application-nav">
               <ul class="right">
-                <li class="has-tip radius" data-tooltip title="User"><a class="right-off-canvas-toggle icon-user" title="User"></a></li>
+                <li class="has-tip radius" data-tooltip title="User"><a class="icon-user right-off-canvas-toggle xl-icon" title="User"><%= user_signed_in? ? (current_user.name ||= current_user.username) : 'Sign in' %></a></li>
               </ul>
               <!-- Right Nav Section -->
               <ul class="right">
-                <li data-tooltip class="has-tip radius" title="About"><%= link_to '', {:controller => '/about', :action => 'index'}, :class => 'icon-about' %></li>
-                <li data-tooltip class="has-tip radius" title="Documentation"><%= link_to '', {:controller => '/docs'}, :class => 'icon-documentation' %></li>
-                <li data-tooltip class="has-tip radius" title="Install"><%= link_to "", {:controller => '/docs', :action => 'show', :section => 'install', :topic => 'index'}, :class => 'icon-install' %></li>
+                <li data-tooltip class="has-tip radius" title="About"><%= link_to '', {:controller => '/about', :action => 'index'}, :class => 'icon-about xl-icon' %></li>
+                <li data-tooltip class="has-tip radius" title="Documentation"><%= link_to '', {:controller => '/docs'}, :class => 'icon-documentation xl-icon' %></li>
+                <li data-tooltip class="has-tip radius" title="Install"><%= link_to "", {:controller => '/docs', :action => 'show', :section => 'install', :topic => 'index'}, :class => 'icon-install xl-icon' %></li>
               </ul>
             </section>
           </nav>

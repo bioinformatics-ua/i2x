@@ -57,7 +57,7 @@ function new_save_agent_select(event) {
 		window.location = '../agents/new';
 	} else {
 		// load existing agent data
-		$.getJSON('../agents/get/' + selected + '.json', function(data) {
+		$.getJSON('../agents/' + selected + '/get.json', function(data) {
 			$('#new_select_agent').html('<h5 id="agent" data-id="' + data.id + '"><a href="../agents/' + data.id + '" target="_blank">Agent <strong>' + data.title + '</strong></a></h5><div class="row"><div class="small-11 medium-12 large-11 columns right"><span class="label secondary radius icon-publisher">' + data.publisher + '</span> <span class="label secondary radius icon-schedule">' + data.schedule + '</span></div></div>');
 		})
 	}
@@ -79,7 +79,7 @@ function new_save_template_select(event) {
 		window.location = '../templates/new';
 	} else {
 		// load existing agent data
-		$.getJSON('../templates/get/' + selected + '.json', function(data) {
+		$.getJSON('../templates/' + selected + '/get.json', function(data) {
 			$('#new_select_template').html('<h5 id="template" data-id="' + data.id + '"><a href="../templates/' + data.id + '" target="_blank">Template <strong>' + data.title + '</strong></a></h5><div class="row"><div class="small-11 medium-12 large-11 columns right"><span class="label secondary radius icon-publisher">' + data.publisher + '</span></div></div>');
 		})
 	}

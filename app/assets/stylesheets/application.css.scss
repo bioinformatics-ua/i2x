@@ -53,104 +53,6 @@
    -webkit-font-smoothing: antialiased;
  }
 
- a[class^='icon']:before, a[class*=" icon"]:before, div[class*=" icon"]:before,div[class*=" icon"]:before {
-   font-size: 150%;
- }
-
- span[class^='icon']:before, span[class*=" icon"]:before {
-   font-size: 150%;
-   
- }
-
- .icon-i2x:before {
-   content: '\1F500';
- }
-
- .icon-about:before {
-   content: '\2139';	
- }
-
- .icon-documentation:before {
-   content: '\1F4D6';	
- }
-
- .icon-user:before {
-   content: '\1F464';	
- }
-
- .icon-agent:before {
-   content: '\1F504';	
- }
-
- .icon-integration:before {
-   content: '\21C6';	
- }
-
- .icon-template:before {
-   content: '\1F4C4';	
- }
- .icon-realtime:before {
-   content: '\E771';	
- }
- .icon-schedule:before {
-   content: '\E771';	
- }
- .icon-signout:before {
-   content: '\232B';
- }
- .icon-signup:before {
-   content: '\E700';
- }
- .icon-userdetails:before {
-   content: '\E722';
- }
- .icon-publisher:before {
-   content: '\21B0';
- }
- .icon-forward:before {
-   content: '\E762';
- }
- .icon-settings:before {
-   content: '\2699';
- }
- .icon-view:before {
-   content: '\23F6';
- }
- .icon-add:before {
-   content: '\2795';
- }
- .icon-right:before { content: '\E75E'; }
- .icon-update:before { content: '\1F554'; }
- .icon-seed:before { content: '\1F56A'; }
-
- .icon-large:before {
-
- }
- .icon-list:before { content: '\2630'; }
- .icon-properties:before { content: '\E73E'; }
- .icon-selectors:before { content: '\1F569'; }
- .icon-view:before { content: '\23F6'; }
- .icon-files:before { content: '\E800'; }
- .icon-download:before { content: '\1F4E5'; }
- .icon-delete:before { content: '\1F6AB'; color: #FF0000;}
- .icon-details:before { content: '\E73E';}
- .icon-trash:before { content: '\E729'; color: #FF0000;}
- .icon-mail:before { content: '\1F53F';}
- .icon-install:before { content: '\E778';}
- .icon-play:before { margin-left: -10px; content: '\25B6'; float: left;}
-
- /** Social icons **/
- .icon-facebook:before { font-family: 'entypo-social'; content: '\F30E'; }
- .icon-twitter:before { font-family: 'entypo-social'; content: '\F309'; }
- .icon-linkedin:before { font-family: 'entypo-social'; content: '\F318'; }
- .icon-github:before { font-family: 'entypo-social'; content: '\F300'; }
- .icon-dropbox_oauth2:before { font-family: 'entypo-social'; content: '\F330'; }
- .icon-google_oauth2:before { font-family: 'entypo-social'; content: '\F30F'; }
-
-
-.xl-icon {
-  font-size: 24px;
-}
 
  /** STATIC CSS **/	
  html{
@@ -185,7 +87,13 @@ em {
 }
 
 section.application-nav ul li a {
-  font-size: 1.1em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+
+section.top-bar-section ul li a {
+  font-size: 0.8em;
+  vertical-align: top;
 }
 
 li.social {
@@ -253,4 +161,106 @@ a:hover.remove  {
 /** HIDDEN **/
 .hidden {
 	display: none;
+}
+
+
+/** ICONS **/
+a[class^='icon']:before, a[class*=" icon"]:before, div[class*=" icon"]:before,div[class*=" icon"]:before {
+ font-size: 150%;
+}
+
+span[class^='icon']:before, span[class*=" icon"]:before {
+ font-size: 150%;
+
+}
+
+.icon-i2x:before {
+ content: '\1F500';
+}
+
+a[class^='icon-about']:before, a[class*=" icon-about"]:before {
+  font-size: 200%;
+ content: '\2139';  
+}
+
+a[class^='icon-documentation']:before, a[class*=" icon-documentation"]:before{
+  font-size: 200%;
+ content: '\1F4D6'; 
+}
+
+a[class^='icon-user']:before, a[class*=" icon-user"]:before {
+  font-size: 200%;
+  content: '\1F464'; 
+}
+
+.icon-agent:before {
+ content: '\1F504'; 
+}
+
+.icon-integration:before {
+ content: '\21C6';  
+}
+
+.icon-template:before {
+ content: '\1F4C4'; 
+}
+.icon-realtime:before {
+ content: '\E771';  
+}
+.icon-schedule:before {
+ content: '\E771';  
+}
+.icon-signout:before {
+ content: '\232B';
+}
+.icon-signup:before {
+ content: '\E700';
+}
+.icon-userdetails:before {
+ content: '\E722';
+}
+.icon-publisher:before {
+ content: '\21B0';
+}
+.icon-forward:before {
+ content: '\E762';
+}
+.icon-settings:before {
+ content: '\2699';
+}
+.icon-view:before {
+ content: '\23F6';
+}
+.icon-add:before {
+ content: '\2795';
+}
+.icon-right:before { content: '\E75E'; }
+.icon-update:before { content: '\1F554'; }
+.icon-seed:before { content: '\1F56A'; }
+
+.icon-list:before { content: '\2630'; }
+.icon-properties:before { content: '\E73E'; }
+.icon-selectors:before { content: '\1F569'; }
+.icon-view:before { content: '\23F6'; }
+.icon-files:before { content: '\E800'; }
+.icon-download:before { content: '\1F4E5'; }
+.icon-delete:before { content: '\1F6AB'; color: #FF0000;}
+.icon-details:before { content: '\E73E';}
+.icon-trash:before { content: '\E729'; color: #FF0000;}
+.icon-mail:before { content: '\1F53F';}
+a[class^='icon-install']:before, a[class*=" icon-install"]:before { font-size: 200%;content: '\E778';}
+.icon-play:before { margin-left: -10px; content: '\25B6'; float: left;}
+
+/** Social icons **/
+.icon-facebook:before { font-family: 'entypo-social'; content: '\F30E'; }
+.icon-twitter:before { font-family: 'entypo-social'; content: '\F309'; }
+.icon-linkedin:before { font-family: 'entypo-social'; content: '\F318'; }
+.icon-github:before { font-family: 'entypo-social'; content: '\F300'; }
+.icon-dropbox_oauth2:before { font-family: 'entypo-social'; content: '\F330'; }
+.icon-google_oauth2:before { font-family: 'entypo-social'; content: '\F30F'; }
+
+
+
+.xl-icon {
+  font-size: 24px;
 }

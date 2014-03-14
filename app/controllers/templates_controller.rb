@@ -124,7 +124,7 @@ class TemplatesController < ApplicationController
 
   def get
     begin
-      @template = Template.find(params[:identifier])
+      @template = Template.find(params[:id])
 
       respond_to do |format|
         format.json { render :json => @template}
