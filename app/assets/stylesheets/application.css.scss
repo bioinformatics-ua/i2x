@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation_and_overrides
+ *= require 'foundation_and_overrides'
  *= require_tree .
  */
  @charset "UTF-8";
@@ -180,12 +180,12 @@ span[class^='icon']:before, span[class*=" icon"]:before {
 
 a[class^='icon-about']:before, a[class*=" icon-about"]:before {
   font-size: 200%;
- content: '\2139';  
+  content: '\2139';  
 }
 
 a[class^='icon-documentation']:before, a[class*=" icon-documentation"]:before{
   font-size: 200%;
- content: '\1F4D6'; 
+  content: '\1F4D6'; 
 }
 
 a[class^='icon-user']:before, a[class*=" icon-user"]:before {
