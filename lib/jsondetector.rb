@@ -35,7 +35,9 @@ module Services
           url = RestClient.get object[:uri]
           @doc = url.to_str
         end
+
         JsonPath.on(@doc,object[:query]).each do |element|
+          puts element
           JsonPath.on(element, object[:cache]).each do |c|
             @cache = Cashier.verify c, object, c, object[:seed]
           end

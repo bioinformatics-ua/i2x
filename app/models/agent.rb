@@ -43,7 +43,6 @@ class Agent < ActiveRecord::Base
   # => Perform the actual agent monitoring tasks.
   #
   def execute
-    puts "\n\tExecuting #{identifier}"
   	@checkup = {}
   	Services::Slog.debug({:message => "Processing agent #{identifier}", :module => "Checkup", :task => "agent", :extra => {:agent => identifier, :publisher => publisher}})
 
@@ -78,6 +77,7 @@ class Agent < ActiveRecord::Base
   		end
   	end
 
+
       # Start checkup
       begin
       	unless content.nil? then
@@ -87,6 +87,8 @@ class Agent < ActiveRecord::Base
       rescue Exception => e
       	Services::Slog.exception e
       end
+
+
 
       # Start detection
       begin

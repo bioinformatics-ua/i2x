@@ -3,9 +3,12 @@ class PushController < ApplicationController
     begin
       @agent = Agent.find_by! identifier: params[:identifier]
       @agent.content = params.to_json
-      Thread.new {@checkup = Services::Checkup.new.execute(@agent)}
-      #@checkup = params[:payload]
+      File.open("tmp/data/#{params[:identifier]}.js", 'w+') { |file| file.write("#{@agent.content}") }
+      Thread.new {
+        @checkup = @agent.execute
+      }
       respond_to do |format|
+        format.xml { render json: @agent }
         format.json { render json: @agent }
         format.js { render json: @agent }
       end
