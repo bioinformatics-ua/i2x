@@ -20,7 +20,12 @@ $(function() {
 	$('#template_publisher').on('change', template_update_publisher_view)
 	$('#edit_template_payload_select').on('change', edit_update_payload);
 
-	$('#publisher_url_method').on('change', update_publisher_url_params_view)
+	// handler for show/hide parameters with request type
+	$('#publisher_url_method').on('change', update_publisher_url_params_view);
+
+	// handler to show/hide content according to request type
+	$('#publisher_url_message').on('change', update_publisher_message_view)
+
 
 	update_url_post_params_remove();
 });
@@ -34,6 +39,18 @@ function update_publisher_url_params_view(event) {
 		$('#publiser_url_post_params').show();
 	} else { //if(type == 'get') {
 		$('#publiser_url_post_params').hide();
+	}
+}
+
+/**
+*	Toggle content box form according to message request type
+**/
+function update_publisher_message_view(event) {
+	type = $(this).find(':selected').val();
+	if (type == 'form') {
+		$('#publisher_url_content_box').hide();
+	} else {
+		$('#publisher_url_content_box').show();
 	}
 }
 

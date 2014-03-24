@@ -54,7 +54,7 @@
  }
 
 
- /** STATIC CSS **/	
+ /** STATIC CSS **/
  html{
   height: 100%;
 }
@@ -67,11 +67,11 @@ body {
 	padding-top: 48px;
 }
 
-pre , code, kbd, samp { 
-  font-family: monospace; 
+pre , code, kbd, samp {
+  font-family: monospace;
   border-radius:3px;
   background-color: #F8F8F8;
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
 }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
 pre code { border: 0px !important; padding: 0;}
@@ -121,11 +121,21 @@ li.social {
 .mg-right {
 	margin-right: 4px;
 }
+
+/** highlight variables **/
 .selector {
 	font-weight: 600;
 	font-style: italic;
 	color: #f04124;
 }
+
+/** highlight code **/
+.code {
+  font-weight: 600;
+  font-style: italic;
+  color: #548ACF;
+}
+
 
 .right-off-canvas-menu, .off-canvas-list {
 	font-weight: 300;
@@ -180,35 +190,35 @@ span[class^='icon']:before, span[class*=" icon"]:before {
 
 a[class^='icon-about']:before, a[class*=" icon-about"]:before {
   font-size: 200%;
-  content: '\2139';  
+  content: '\2139';
 }
 
 a[class^='icon-documentation']:before, a[class*=" icon-documentation"]:before{
   font-size: 200%;
-  content: '\1F4D6'; 
+  content: '\1F4D6';
 }
 
 a[class^='icon-user']:before, a[class*=" icon-user"]:before {
   font-size: 200%;
-  content: '\1F464'; 
+  content: '\1F464';
 }
 
 .icon-agent:before {
- content: '\1F504'; 
+ content: '\1F504';
 }
 
 .icon-integration:before {
- content: '\21C6';  
+ content: '\21C6';
 }
 
 .icon-template:before {
- content: '\1F4C4'; 
+ content: '\1F4C4';
 }
 .icon-realtime:before {
- content: '\E771';  
+ content: '\E771';
 }
 .icon-schedule:before {
- content: '\E771';  
+ content: '\E771';
 }
 .icon-signout:before {
  content: '\232B';

@@ -13,6 +13,22 @@
     </div>
     <div class="row">
       <div class="small-3 columns">
+        <strong class="right inline">Message Type</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= template[:payload][:message] %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
+        <strong class="right inline">Content</strong>
+      </div>
+      <div class="small-9 columns">
+        <%= highlight_variables(template[:payload][:content]) %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-3 columns">
         <strong class="right inline">Method</strong>
       </div>
       <div class="small-9 columns">
@@ -20,7 +36,7 @@
       </div>
     </div>
     <% unless template.selectors.nil? then %>
-    <% JSON.parse(template.selectors).each do |selector| %> 
+    <% JSON.parse(template.selectors).each do |selector| %>
     <% selector.each do |k,v| %>
     <div class="row">
       <div class="small-3 columns">

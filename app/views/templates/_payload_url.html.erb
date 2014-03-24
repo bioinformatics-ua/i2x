@@ -3,7 +3,7 @@
     <label for="publisher_url_method" class="right inline">Method</label>
   </div>
   <div class="small-9 columns">
-    <%= select_tag 'template[method]', options_for_select([['POST', 'post'], ['GET', 'get'], ['UPDATE', 'update'],['DELETE', 'delete']], {:selected => (template.method.nil?) ? 'get' : template.method}), {:id => 'publisher_url_method', :tabindex => autotab} %>
+    <%= select_tag 'template[method]', options_for_select([['POST', 'post'], ['GET', 'get']], {:selected => (template.method.nil?) ? 'post' : template.method}), {:id => 'publisher_url_method', :tabindex => autotab} %>
   </div>
 </div>
 <div class="row">
@@ -14,13 +14,29 @@
     <input type="url" tabindex="<%= autotab %>" value="<%= template.uri.nil? ? '' : template.uri %>" name="template[uri]" required id="publisher_url_uri" placeholder="E.g.: https://bioinformatics.ua.pt/i2x/..." />
   </div>
 </div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="publisher_url_message" class="right inline">Message type</label>
+  </div>
+  <div class="small-9 columns">
+    <%= select_tag 'template[message]', options_for_select([['Form data', 'form'], ['Text (text/plain)', 'text/plain'], ['JSON (application/json)', 'application/json'], ['JavaScript', 'application/javascript'], ['XML (application/xml)', 'application/xml'], ['XML (text/xml)', 'text/xml'], ['HTML (text/html)', 'text/html']], {:selected => (template.message.nil?) ? 'application/json' : template.message}), {:id => 'publisher_url_message', :tabindex => autotab} %>
+  </div>
+</div>
+<div class="row" id="publisher_url_content_box">
+  <div class="small-3 columns">
+    <label for="publisher_url_content" class="right inline">Content</label>
+  </div>
+  <div class="small-9 columns">
+    <textarea tabindex="<%= autotab %>" name="template[content]" id="publisher_url_content" placeholder="E.g.: {'id':'123', ...}"><%= template.content.nil? ? '' : template.content %></textarea>
+  </div>
+</div>
 <!-- Conditional POST parameters start -->
 <div id="publiser_url_post_params">
   <input type="hidden" id="url_post_params_hidden" name="template[selectors]" value='<%= @template.selectors.nil? ? '[]' : @template.selectors %>' />
 
   <% i = 1 %>
   <% unless template.selectors.nil? then %>
-  <% JSON.parse(template.selectors).each do |selector| %> 
+  <% JSON.parse(template.selectors).each do |selector| %>
   <% selector.each do |k,v| %>
   <div class="row">
     <div class="url_post_params_<%= i %> publisher_url_post_params_new_<%= i %>">
@@ -37,7 +53,7 @@
         <a href="#" data-id="<%= i %>" class="remove right publisher_url_params_remove">Remove</a>
       </div>
     </div>
-  </div> 
+  </div>
   <% i = i +1 %>
   <% end %>
   <% end %>

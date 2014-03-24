@@ -2,15 +2,21 @@ module ApplicationHelper
 
 
   ##
-  # => Highlight variables for UI
+  # => Highlight variables and code for UI
   #
   def highlight_variables(text)
-    # Based on ActionView::Helpers::TextHelper#highlight
+
+    # highlight variables
     highlighter = '<span class="selector">\1</span>'
     matcher = /%{(.*?)}/
-    text.gsub(matcher, highlighter).html_safe
+    a = text.gsub(matcher, highlighter).html_safe
+
+    # highlight code
+    highlighter = '<span class="code">\1</span>'
+    matcher = /\${(.*?)}/
+    text = a.gsub(matcher, highlighter).html_safe
   end
-  
+
   ##
   # => Automating tabindex counts
   #

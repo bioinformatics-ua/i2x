@@ -36,6 +36,12 @@
 
 ## Changelog
 
+2014-03-24
+* Added support for distinct content types on URL delivery templates
+
+2014-03-18
+* Final bug fixes and started dissemination
+
 2014-01-28
 * Beta is online
 

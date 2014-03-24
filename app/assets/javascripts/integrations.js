@@ -59,11 +59,11 @@ function new_save_agent_select(event) {
 		// load existing agent data
 		$.getJSON('../agents/' + selected + '/get.json', function(data) {
 			$('#new_select_agent').html('<h5 id="agent" data-id="' + data.id + '"><a href="../agents/' + data.id + '" target="_blank">Agent <strong>' + data.title + '</strong></a></h5><div class="row"><div class="small-11 medium-12 large-11 columns right"><span class="label secondary radius icon-publisher">' + data.publisher + '</span> <span class="label secondary radius icon-schedule">' + data.schedule + '</span></div></div>');
-		})
+		});
 	}
 
 	set_step(3);
-	show_down($('#new_select_template'))
+	show_down($('#new_select_template'));
 	$('#new_template_select_list').focus();
 }
 
@@ -81,7 +81,7 @@ function new_save_template_select(event) {
 		// load existing agent data
 		$.getJSON('../templates/' + selected + '/get.json', function(data) {
 			$('#new_select_template').html('<h5 id="template" data-id="' + data.id + '"><a href="../templates/' + data.id + '" target="_blank">Template <strong>' + data.title + '</strong></a></h5><div class="row"><div class="small-11 medium-12 large-11 columns right"><span class="label secondary radius icon-publisher">' + data.publisher + '</span></div></div>');
-		})
+		});
 	}
 
 	set_step(3);
@@ -101,7 +101,7 @@ function new_integration_save(event) {
 	data.id = $('#integration').data('id');
 	$.post('../integrations/' + data.id + '/save.json', data, function(response) {
 		window.location = '../integrations/' + data.id;
-	})
+	});
 }
 
 
@@ -117,7 +117,7 @@ function new_integration_save_meta(e, data, status, xhr) {
 		set_step(2);
 
 	}
-	// show agent select 	
+	// show agent select
 	show_down($('#new_select_agent'));
 	$('#new_agent_select_list').focus();
 }
@@ -130,7 +130,7 @@ function save_edit_integration(e, data, status, xhr) {
 		$('.integration_save').val('Saved');
 		$('.edit_integration :input').on('change', function() {
 			$('.integration_save').val('Save');
-		})
+		});
 	}
 }
 
@@ -145,7 +145,7 @@ function remove_template_integration(event) {
 	data.template = $(this).data('id');
 	$.post('../' + data.id + '/save.json', data, function(response) {
 		window.location.reload();
-	})
+	});
 }
 /**
  *	Detach agent from integration.
@@ -158,7 +158,7 @@ function remove_agent_integration(event) {
 	data.agent = $(this).data('id');
 	$.post('../' + data.id + '/save.json', data, function(response) {
 		window.location.reload();
-	})
+	});
 }
 
 
@@ -177,7 +177,7 @@ function edit_save_template_select(event) {
 		data.template = selected;
 		$.post('../' + data.id + '/save.json', data, function(response) {
 			window.location.reload();
-		})
+		});
 	}
 }
 
@@ -196,7 +196,7 @@ function edit_save_agent_select(event) {
 		data.agent = selected;
 		$.post('../' + data.id + '/save.json', data, function(response) {
 			window.location.reload();
-		})
+		});
 	}
 }
 /**
