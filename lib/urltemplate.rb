@@ -11,6 +11,7 @@ module Services
     # => Performs the actual delivery, in this case, execute URL request.
     #
     def execute
+
       case @template[:payload][:method]
       when 'get'
         begin
@@ -27,33 +28,33 @@ module Services
           when 'form'
             out = RestClient.post @template[:payload][:uri], @template[:payload]
           when 'text/plain'
-            out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'text/plain'
+            out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'text/plain'
           when 'application/javascript'
             if @template[:payload][:content].nil?
-              out = RestClient.post @template[:payload].to_json, @template[:payload], :content_type => 'application/javascript'
+              out = RestClient.post @template[:payload][:uri], @template[:payload].to_json, :content_type => 'application/javascript'
             else
-              out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'application/javascript'
+              out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'application/javascript'
             end
-          when 'application/json'
+          when "application/json"
             if @template[:payload][:content].nil?
-              out = RestClient.post @template[:payload].to_json, @template[:payload], :content_type => 'application/json'
+              out = RestClient.post @template[:payload][:uri], @template[:payload].to_json, :content_type => 'application/json'
             else
-              out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'application/json'
+              out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'application/json'
             end
           when 'application/xml'
             if @template[:payload][:content].nil?
-              out = RestClient.post @template[:payload].to_xml, @template[:payload], :content_type => 'application/xml'
+              out = RestClient.post @template[:payload][:uri], @template[:payload].to_xml, :content_type => 'application/xml'
             else
-              out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'application/xml'
+              out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'application/xml'
             end
           when 'text/xml'
             if @template[:payload][:content].nil?
-              out = RestClient.post @template[:payload].to_xml, @template[:payload], :content_type => 'text/xml'
+              out = RestClient.post @template[:payload][:uri], @template[:payload].to_xml, :content_type => 'text/xml'
             else
-              out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'text/xml'
+              out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'text/xml'
             end
           when 'text/html'
-            out = RestClient.post @template[:payload][:content], @template[:payload], :content_type => 'text/html'
+            out = RestClient.post @template[:payload][:uri], @template[:payload][:content], :content_type => 'text/html'
           end
 
           response = {:status => 200, :message => "[i2] POST request on #{@template[:payload][:uri]} executed.", :id => @template[:payload][:uri], :response => out.to_str}

@@ -8,7 +8,7 @@ class PushController < ApplicationController
         @checkup = @agent.execute
       }
       respond_to do |format|
-        format.xml { render json: @agent }
+        format.xml { render xml: @agent }
         format.json { render json: @agent }
         format.js { render json: @agent }
       end
