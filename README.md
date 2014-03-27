@@ -36,6 +36,9 @@
 
 ## Changelog
 
+2014-03-27
+* Fixed URL Delivery Templates, POSTing is now fully working
+
 2014-03-24
 * Added support for distinct content types on URL delivery templates
 
