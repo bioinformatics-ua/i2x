@@ -53,7 +53,7 @@ A [Detector][] monitors delimited files accessible through a valid URI (`http://
 
 ## Database
 
-A [Detector][] can be configured to monitor a database. In this scenario, a _SELECT_ query must be configured to access the database, retrieving the list of values that are being monitored. If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the **Detector** performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows. **Note** that there is forced a query limit of 1000 rows.
+A [Detector][] can be configured to monitor a database. In this scenario, a _SELECT_ query must be configured to access the database, retrieving the list of values that are being monitored. If an `id` column is configured, the change detection is performed using simple identifier matching: if the `id` has not been seen yet, it is sent for integration. If no `id` column is setup, the **Detector** performs a hashing function over the entire row content. In this case, the resulting `hash` is matched against the list of already integrated rows.
 
 **Example**
 
