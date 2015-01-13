@@ -30,7 +30,7 @@
 
 6. Initiate the tasks (on a distinct shell, check *delayed_job* documentation)
 
-    rake jobs:work
+        rake jobs:work
 
 
 

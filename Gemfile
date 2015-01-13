@@ -109,11 +109,6 @@ gem "figaro"
 group :development, :test, :production do
 	# Generates UML from Model.
 	gem 'railroady'
-	gem 'sass-rails'
-end
-
-group :assets do
-	gem 'sass-rails'
 end
 
 group :doc do
