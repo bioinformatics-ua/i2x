@@ -33,8 +33,12 @@ gem 'kramdown'
 gem  'mysql2'
 gem 'pg'
 
-# Support for executing R scripts on templates. Read more: https://github.com/clbustos/rinruby
+# Executing R scripts on templates. Read more: https://github.com/clbustos/rinruby
 gem 'rinruby'
+
+# RDF and SPARQL support. Read more: https://github.com/ruby-rdf
+gem 'rdf'
+gem 'sparql'
 
 # Extract zip files. Read more: https://bitbucket.org/winebarrel/libarchive-ruby
 gem 'libarchive'

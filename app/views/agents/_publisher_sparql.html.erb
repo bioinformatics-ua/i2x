@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_payload_host" class="right inline">Host</label>
+  </div>
+  <div class="small-9 columns">
+    <input type="text" id="agent_payload_host" tabindex="<%= autotab %>" value="<%= @agent.host.nil? ? '' : @agent.host %>" name="agent[host]"  placeholder="E.g.: localhost" />
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label for="agent_payload_query" class="right inline">Query</label>
+  </div>
+  <div class="small-9 columns">
+    <textarea id="agent_payload_query" tabindex="<%= autotab %>" name="agent[query]" placeholder="E.g.: SELECT * FROM..."><%= @agent.query.nil? ? '' : @agent.query %></textarea>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <label class="right inline">Cache</label>
+  </div>
+  <div class="small-9 columns">
+    <input id="agent_payload_cache" tabindex="<%= autotab %>" name="agent[cache]" value="<%= @agent.cache.nil? ? '' : @agent.cache %>"  type="text" />
+  </div>
+</div>
+<%= render :partial => "agents/edit_selectors", locals: {:agent => @agent} %>

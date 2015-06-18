@@ -22,6 +22,8 @@ function agent_update_publisher_view(event) {
 		$('#publisher_content').html("<%= j render(:partial => 'publisher_json') %>");
 	} else if (publisher === 'sql') {
 		$('#publisher_content').html("<%= j render(:partial => 'publisher_sql') %>");
+	} } else if (publisher === 'sparql') {
+		$('#publisher_content').html("<%= j render(:partial => 'publisher_sparql') %>");
 	}
 	update_payload_selector_add();
 }
