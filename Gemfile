@@ -33,6 +33,8 @@ gem 'kramdown'
 gem  'mysql2'
 gem 'pg'
 
+# Extract zip files. Read more: https://bitbucket.org/winebarrel/libarchive-ruby
+gem 'libarchive'
 
 # Authentication and security stuff. Read more: http://devise.plataformatec.com.br
 gem 'devise'
