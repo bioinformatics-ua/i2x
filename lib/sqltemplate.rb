@@ -2,6 +2,7 @@ require 'delivery'
 require 'raven'
 require 'mysql2'
 require 'pg'
+require 'rinruby'
 
 
 module Services
@@ -49,12 +50,12 @@ module Services
         if @template[:payload][:server].nil? then
           @template[:payload][:server] = 'mysql'
         end
-        
+
         if @template[:payload][:host].nil? then
           @template[:payload][:host] = 'localhost'
         end
-        
-        
+
+
         case @template[:payload][:server]
         when 'mysql'
           if (@template[:payload][:host].nil?) then

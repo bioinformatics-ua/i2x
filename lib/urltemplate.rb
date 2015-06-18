@@ -1,5 +1,6 @@
 require 'delivery'
 require 'raven'
+require 'rinruby'
 
 
 module Services

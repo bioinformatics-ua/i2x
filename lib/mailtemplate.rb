@@ -1,6 +1,7 @@
 require 'delivery'
 require 'slog'
 require 'mail'
+require 'rinruby'
 
 module Services
   class MailTemplate < Delivery
@@ -12,7 +13,7 @@ module Services
     #
     def execute
       Services::Slog.debug({:message => "Sending email for #{@template[:identifier]}", :module => "MailTemplate", :task => "execute", :extra => {:template => @template[:identifier], :payload => @template[:payload]}})
-      
+
       begin
 
         Mail.defaults do
@@ -34,7 +35,7 @@ module Services
         Services::Slog.exception e
         response = { :status => "400", :message => "Unable to send email, #{e}"  }
       end
-      response = { :status => "200", :message => "Email sent to #{@template[:payload][:to]}", :id =>  @template[:identifier]}            
+      response = { :status => "200", :message => "Email sent to #{@template[:payload][:to]}", :id =>  @template[:identifier]}
     end
 
 

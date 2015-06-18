@@ -1,5 +1,6 @@
 require 'delivery'
 require 'slog'
+require 'rinruby'
 
 module Services
   class FileTemplate < Delivery
@@ -14,7 +15,7 @@ module Services
       case @template[:payload][:method]
       when 'create'
         begin
-          
+
           @template.users.each do |user|
             File.open("data/users/#{user.id}/#{@template[:payload][:uri]}", "w+") { |file| file.write("\n") }
             response = { :status => "200", :message => "File created.", :id =>  @template[:payload][:uri]}
